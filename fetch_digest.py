@@ -21,37 +21,139 @@ import requests    # pip install requests
 # ─────────────────────────────────────────────
 FEEDS = [
     ("Variety",                  "https://feeds.feedburner.com/variety/headlines"),
-    ("The Hollywood Reporter",   "https://www.hollywoodreporter.com/feed/"),
-    ("Deadline Hollywood",       "https://deadline.com/feed/"),
-    ("TechCrunch",               "https://techcrunch.com/feed/"),
-    ("Digiday",                  "https://digiday.com/feed/"),
-    ("Broadband TV News",        "https://www.broadbandtvnews.com/feed/"),
-    ("Marketing Directo (ES)",   "https://www.marketingdirecto.com/feed"),
-    ("Xataka (ES)",              "https://www.xataka.com/feedburner.xml"),
-    ("IPMARK (ES)",              "https://ipmark.com/feed/"),
-    ("DWDL.de (DE)",             "https://www.dwdl.de/rss/allethemen.xml"),
-    ("Horizont Medien (DE)",     "https://www.horizont.net/news/feed/medien/"),
+("The Hollywood Reporter",   "https://www.hollywoodreporter.com/feed/"),
+("Deadline Hollywood",       "https://deadline.com/feed/"),
+("TechCrunch",               "https://techcrunch.com/feed/"),
+("Digiday",                  "https://digiday.com/feed/"),
+("Broadband TV News",        "https://www.broadbandtvnews.com/feed/"),
+("Marketing Directo (ES)",   "https://www.marketingdirecto.com/feed"),
+("Xataka (ES)",              "https://www.xataka.com/feedburner.xml"),
+("IPMARK (ES)",              "https://ipmark.com/feed/"),
+("DWDL.de (DE)",             "https://www.dwdl.de/rss/allethemen.xml"),
+("Horizont Medien (DE)",     "https://www.horizont.net/news/feed/medien/"),
+("Adweek",                   "https://www.adweek.com/feed/"),
+("Ad Age",                   "https://adage.com/feeds/feed.rss"),
+("Campaign",                 "https://www.campaignlive.com/feeds/rss"),
+("Broadcasting & Cable / Next TV", "https://www.nexttv.com/.rss/full/"),
+("TVNewsCheck",              "https://tvnewscheck.com/feed/"),
+("Advanced Television",      "https://advanced-television.com/feed/"),
+("Fierce Video",             "https://www.fiercevideo.com/rss.xml"),
+("El País – Tecnología/Medios (ES)", "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia"),
+("Cinco Días – Empresas/Telecos (ES)", "https://cincodias.elpais.com/rss/empresas.xml"),
+("Expansión – Medios/Telecom (ES)", "https://e00-expansion.uecdn.es/rss/tecnologia.xml"),
+("El Economista – Telecom/Medios (ES)", "https://www.eleconomista.es/rss/rss-economia-tecnologia.php"),
+("ReasonWhy (ES)",           "https://www.reasonwhy.es/rss.xml"),
+("Dircomfidencial (ES)",     "https://dircomfidencial.com/feed/"),
+("Control Publicidad (ES)",  "https://www.ctrl.es/feed/"),
+("Anuncios (ES)",            "https://www.anuncios.com/rss/"),
+("PuroMarketing (ES)",       "https://www.puromarketing.com/feed/"),
+("La Publicidad (ES)",       "https://lapublicidad.net/feed/"),
+("Xataka Smart TV (ES)",     "https://www.xatakahome.com/tag/smart-tv/rss"),
+("Hipertextual (ES)",        "https://hipertextual.com/feed"),
+("El Output (ES)",           "https://eloutput.com/feed/"),
+("MuyComputer (ES)",         "https://www.muycomputer.com/feed/"),
+("Variety – TV (section)",   "https://variety.com/v/tv/feed/"),
+("Hollywood Reporter – TV (section)", "https://www.hollywoodreporter.com/t/tv/feed/"),
+("Deadline – TV (section)",  "https://deadline.com/v/tv/feed/"),
+("Adsmurai – Connected TV / Paid Media (ES)", "https://www.adsmurai.com/es/blog/rss.xml"),
+("Making Science – Marketing digital/CTV (ES)", "https://www.makingscience.es/feed/"),
+("VivaConversion – Publicidad digital/CTV (ES)", "https://vivaconversion.com/feed/"),
 ]
 
 # ─────────────────────────────────────────────
 # 2. PALABRAS CLAVE (insensible a mayúsculas)
 # ─────────────────────────────────────────────
 KEYWORDS = [
-    # Plataformas
-    "netflix", "disney+", "max", "hbo", "hulu", "prime video", "apple tv",
-    "peacock", "paramount+", "sky showtime", "fubotv", "youtube", "movistar+",
-    "mitele", "rtl+", "joyn", "itvx", "sky", "claro video",
-    # Modelos de negocio
-    "avod", "svod", "tvod", "fast", "ctv", "connected tv", "ott", "vod",
-    "streaming", "digital advertising", "publicidad digital", "publicidad online",
-    "programmatic", "ad-supported", "subscription", "suscripción",
-    # Empresas
-    "warner bros", "nbcuniversal", "comcast", "rtl group", "prosieben",
-    "televisaunivision", "paramount global", "mfe", "mediaset", "amazon",
-    "disney", "apple", "google tv", "samsung tv",
-    # Tecnología
-    "smart tv", "tizen", "google tv", "fire tv", "chromecast", "roku",
-    "set-top box", "streaming device",
+   # Plataformas
+"netflix", "disney+", "max", "hbo", "hulu", "prime video", "apple tv",
+"peacock", "paramount+", "sky showtime", "fubotv", "youtube", "movistar+",
+"mitele", "rtl+", "joyn", "itvx", "sky", "claro video",
+
+"pluto tv", "tubi", "rakuten tv", "filmin", "atresplayer", "rtve play",
+"starzplay", "now tv", "crunchyroll", "sling tv", "samsung tv plus",
+"roku channel", "freevee", "viaplay", "canal+", "hbo max", "hotstar",
+"dstv", "viu", "dazn",
+
+# Modelos de negocio
+"avod", "svod", "tvod", "fast", "ctv", "connected tv", "ott", "vod",
+"streaming", "digital advertising", "publicidad digital", "publicidad online",
+"programmatic", "ad-supported", "subscription", "suscripción",
+
+"freemium", "pay tv", "televisión de pago", "televisión en abierto",
+"pay per view", "ppv", "transactional vod", "hybrid model",
+"ad-funded", "ad-supported streaming", "branded content",
+"sponsorship", "patrocinio", "product placement",
+"addressable tv", "televisión direccionable",
+
+# Empresas
+"warner bros", "nbcuniversal", "comcast", "rtl group", "prosieben",
+"televisaunivision", "paramount global", "mfe", "mediaset", "amazon",
+"disney", "apple", "google tv", "samsung tv",
+
+"sony pictures", "universal pictures", "lionsgate", "fox", "amc networks",
+"sky group", "vodafone tv", "orange tv", "altice", "telefónica",
+"at&t", "discovery", "warner bros discovery",
+"banijay", "fremantle", "itv studios", "bbc studios",
+
+# Tecnología / dispositivos
+"smart tv", "tizen", "google tv", "fire tv", "chromecast", "roku",
+"set-top box", "streaming device",
+
+"android tv", "webos", "tvos", "vidaa", "hisense", "lg tv",
+"samsung smart tv", "apple tv 4k", "playstation", "xbox",
+"set-top box 4k", "hbbtv", "iptv", "ott box",
+
+# Publicidad, medición y datos
+"programmatic advertising", "publicidad programática", "adtech", "martech",
+"ssp", "dsp", "data management platform", "dmp", "customer data platform", "cdp",
+"audience measurement", "medición de audiencias", "cross-media measurement",
+"cross-platform measurement", "viewability", "brand safety",
+"cpv", "cpc", "cpm", "ctr", "grps", "trps",
+
+"first-party data", "third-party cookies", "cookieless", "privacy sandbox",
+"brand lift", "incremental reach", "incrementalidad", "multitouch attribution",
+"marketing mix modeling", "mmx", "attribution modeling",
+
+# IA, automatización y recomendación
+"artificial intelligence", "inteligencia artificial",
+"machine learning", "deep learning", "ai-generated content",
+"generative ai", "ia generativa", "chatbot", "llm",
+"recommendation engine", "algoritmo de recomendación",
+"personalized recommendations", "content personalization",
+"automated ad buying", "campaign optimization",
+"predictive analytics", "computer vision",
+"natural language processing", "nlp", "speech to text",
+
+# Redes sociales / creadores
+"social media", "redes sociales", "facebook", "instagram", "tiktok",
+"twitter", "x", "snapchat", "pinterest", "linkedin", "twitch",
+"youtube shorts", "instagram reels", "tiktok videos",
+"short-form video", "live streaming",
+
+"influencers", "creadores de contenido", "creator economy",
+"ugc", "user generated content", "fan communities",
+"social commerce", "shoppable video", "brand collaborations",
+
+# Industria de medios y televisión
+"broadcast tv", "televisión lineal", "free-to-air", "fta",
+"cable tv", "satellite tv", "pay tv operators",
+"public service broadcasting", "psb",
+"news channels", "sports channels", "movie channels",
+
+"media and entertainment", "medios de comunicación",
+"industria audiovisual", "formatos de entretenimiento",
+"unscripted", "scripted series", "miniseries",
+"showrunner", "writers room", "upfronts", "pilot season",
+"content licensing", "licencias de contenido",
+"windowing", "ventanas de explotación",
+"international distribution", "distribución internacional",
+
+# Regulación y políticas
+"media regulation", "regulación de medios", "audiovisual regulation",
+"eu audiovisual", "quotas", "cuotas de pantalla",
+"csr", "brand purpose", "advertising standards",
+"data protection", "gdpr", "privacy regulation",
+"children advertising", "age-gating", "content rating",
 ]
 
 # Términos que EXCLUYEN el artículo
