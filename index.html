@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digest Streaming & VOD — Atresmedia</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#f2f2f7;color:#1c1c1e;font-size:15px}
+a{color:inherit;text-decoration:none}
+
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between}
+.site-header h1{font-size:17px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:12px;color:#8e8e93;margin-top:2px}
+.refresh-btn{font-size:12px;color:#007aff;cursor:pointer;background:none;border:none;padding:6px 10px}
+
+.container{max-width:680px;margin:0 auto;padding:16px 0 48px}
+
+.section{margin-bottom:28px}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.08em;color:#8e8e93;text-transform:uppercase;padding:0 16px 8px}
+
+.group{background:#fff;border-radius:12px;overflow:hidden;margin:0 12px 10px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.group-title{font-size:13px;font-weight:600;color:#1c1c1e;padding:12px 14px 10px;border-bottom:1px solid #f2f2f7;line-height:1.4;background:#fafafa}
+
+.card{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-bottom:1px solid #f2f2f7;cursor:pointer;transition:background .1s}
+.card:last-child{border-bottom:none}
+.card:hover{background:#f9f9f9}
+.card:active{background:#f2f2f7}
+.card-accent{width:3px;min-height:42px;border-radius:2px;flex-shrink:0;margin-top:2px}
+.card-body{flex:1;min-width:0}
+.card-title{font-size:14px;font-weight:500;line-height:1.4;color:#1c1c1e;margin-bottom:5px}
+.card-meta{display:flex;align-items:center;gap:5px;flex-wrap:nowrap;overflow:hidden}
+.card-source{font-size:11px;font-weight:600;color:#8e8e93;flex-shrink:0}
+.card-sep{font-size:10px;color:#c7c7cc;flex-shrink:0}
+.card-url{font-size:11px;color:#c7c7cc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-ext{font-size:12px;color:#007aff;margin-left:auto;flex-shrink:0;padding-left:8px}
+
+.analysis{background:#fff;border-radius:12px;margin:0 12px;box-shadow:0 1px 3px rgba(0,0,0,.07);overflow:hidden}
+.analysis-header{background:#1c1c1e;color:#fff;padding:11px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.analysis-row{padding:12px 14px;border-bottom:1px solid #f2f2f7}
+.analysis-row:last-child{border-bottom:none}
+.analysis-label{font-size:11px;font-weight:700;color:#007aff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.analysis-text{font-size:13px;color:#3a3a3c;line-height:1.55}
+
+.site-footer{text-align:center;padding:20px;font-size:11px;color:#c7c7cc}
+
+.spinner{text-align:center;padding:60px 20px;color:#8e8e93;font-size:14px}
+.error-msg{margin:20px 16px;background:#fff;border-radius:12px;padding:16px;color:#ff3b30;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div>
+    <h1>Digest Streaming &amp; VOD</h1>
+    <p id="header-date">Cargando…</p>
+  </div>
+  <button class="refresh-btn" onclick="loadDigest()">↺ Actualizar</button>
+</div>
+
+<div class="container" id="main">
+  <div class="spinner">Cargando digest…</div>
+</div>
+
+<div class="site-footer" id="footer"></div>
+
+<script>
+// ── SECCIÓN DEFINITIONS ────────────────────────────────────────────────────
+const SECTIONS = [
+  {
+    id: "ia",
+    label: "IA",
+    headline: "Inteligencia artificial en el sector audiovisual y publicitario",
+    keywords: ["artificial intelligence"," ai ","ai-","generative","chatgpt","openai","llm","machine learning",
+               "aws","snowflake","chip","inteligencia artificial","agentes de ia","upfront","ai-created",
+               "ai agent","ai tools","ai plan"]
+  },
+  {
+    id: "ctv",
+    label: "CTV",
+    headline: "Televisión conectada y publicidad programática",
+    keywords: ["ctv","connected tv","acr data","programmatic","dsp","fast channel","avod","ad tier",
+               "ad-supported","home screen ad","titan os","equativ"]
+  },
+  {
+    id: "regulacion",
+    label: "Regulación",
+    headline: "Regulación y política audiovisual",
+    keywords: ["invest","quota","regulation","regulat","mandate","law ","legislation","government",
+               "kabinett","investitionspflicht","pflicht","mindestens"]
+  },
+  {
+    id: "plataformas",
+    label: "Plataformas y sector",
+    headline: "Plataformas de streaming y modelo de negocio",
+    keywords: ["netflix","disney+","hbo","max ","hulu","prime video","apple tv","peacock","paramount+",
+               "sky showtime","atresplayer","streaming","svod","tvod","ott","vod","platform","suscri",
+               "subscri","churn","acquisition","season","serie","show","original","content","white lotus",
+               "mallorca","hub","production"]
+  },
+  {
+    id: "medios",
+    label: "Medios y televisión",
+    headline: "Televisión lineal, medios y deporte en directo",
+    keywords: ["emmy","nbc","abc","cbs","cnn","bbc","wbd","warner","tnts","eurosport","sky sport",
+               "football","fútbol","mundial","world cup","broadcast","broadcaster","channel","live sport",
+               "television","tv network","ratings","audience","gntm","reality","talkshow","news"]
+  },
+  {
+    id: "redes",
+    label: "Redes sociales",
+    headline: "Redes sociales y nuevas plataformas digitales",
+    keywords: ["instagram","facebook","whatsapp","tiktok","twitter"," x ","meta ","social media",
+               "youtube","reels","stories","shorts","snap","influenc"]
+  },
+  {
+    id: "fabricantes",
+    label: "Fabricantes",
+    headline: "Fabricantes de dispositivos y pantallas",
+    keywords: ["samsung","sony","bravia","lg ","panasonic","miniled","qled","oled","intel","qualcomm",
+               "tsmc","iphone","apple watch","macbook","android tv","fire tv","chromecast","roku",
+               "smart tv","device","set-top"]
+  },
+  {
+    id: "publicidad",
+    label: "Publicidad",
+    headline: "Publicidad y agencias de comunicación",
+    keywords: ["advertising","agencia","agency","campaña","campaign","creative","brand","marketing",
+               "publicidad","anuncio","directora creativa"]
+  },
+  {
+    id: "informes",
+    label: "Estudios e informes",
+    headline: "Datos, estudios e informes del sector",
+    keywords: ["study","studie","report","survey","research","data","analysis","ampere","nielsen",
+               "mediavision","record","piracy","illegal","ilegal","schaden"]
+  },
+  {
+    id: "otros",
+    label: "Otros",
+    headline: "Otras noticias tecnológicas y de interés general",
+    keywords: []  // catch-all
+  }
+];
+
+// Source accent colors
+const SOURCE_COLORS = {
+  "variety":               "#d84040",
+  "hollywood reporter":    "#c0392b",
+  "deadline":              "#555555",
+  "broadband tv news":     "#1a9e75",
+  "digiday":               "#7b68ee",
+  "dwdl":                  "#e6a817",
+  "horizont":              "#2980b9",
+  "techcrunch":            "#4caf50",
+  "xataka":                "#0077cc",
+  "marketing directo":     "#e91e8c",
+  "vertele":               "#e74c3c",
+  "formulatv":             "#e67e22",
+  "bluper":                "#9b59b6",
+  "confidencial":          "#16a085",
+  "espinof":               "#2c3e50",
+  "default":               "#999999"
+};
+
+function sourceColor(name) {
+  const n = name.toLowerCase();
+  for (const [key, color] of Object.entries(SOURCE_COLORS)) {
+    if (n.includes(key)) return color;
+  }
+  return SOURCE_COLORS.default;
+}
+
+// Assign each article to best matching section
+function categorize(articles) {
+  const result = {};
+  SECTIONS.forEach(s => result[s.id] = []);
+
+  for (const art of articles) {
+    const haystack = (art.title + " " + (art.source || "")).toLowerCase();
+    let assigned = false;
+    for (const sec of SECTIONS) {
+      if (sec.keywords.length === 0) continue;
+      if (sec.keywords.some(kw => haystack.includes(kw))) {
+        result[sec.id].push(art);
+        assigned = true;
+        break;
+      }
+    }
+    if (!assigned) result["otros"].push(art);
+  }
+  return result;
+}
+
+// Filter out purely content/entertainment articles with no industry value
+const FILTER_OUT = [
+  /season \d+ (recap|review|episode)/i,
+  /spoiler/i,
+  /dies at/i,
+  /passes away/i,
+  /hair oiling/i,
+  /avellana/i,
+  /yates más caros/i,
+  /ferrari luce/i,
+  /cigüeña ucraniana/i,
+  /pila de hidrógeno/i,
+  /frutos secos/i,
+  /kaspersky/i,
+  /zeekr/i,
+  /chuwi/i,
+  /smartwatch/i,
+  /superdeportivo/i,
+];
+
+function shouldFilter(title) {
+  return FILTER_OUT.some(rx => rx.test(title));
+}
+
+function shortUrl(url) {
+  try {
+    const u = new URL(url);
+    const path = u.pathname.length > 40 ? u.pathname.slice(0, 38) + "…" : u.pathname;
+    return u.hostname.replace("www.","") + path;
+  } catch { return url.slice(0, 55); }
+}
+
+function buildCard(art) {
+  const color = sourceColor(art.source || "");
+  const short = shortUrl(art.url);
+  return `
+    <a class="card" href="${art.url}" target="_blank" rel="noopener">
+      <div class="card-accent" style="background:${color}"></div>
+      <div class="card-body">
+        <div class="card-title">${art.title}</div>
+        <div class="card-meta">
+          <span class="card-source">${art.source}</span>
+          <span class="card-sep">·</span>
+          <span class="card-url">${short}</span>
+          <span class="card-ext">↗</span>
+        </div>
+      </div>
+    </a>`;
+}
+
+function buildAnalysis(sources, allArticles) {
+  // top 3 sources
+  const counts = {};
+  allArticles.forEach(a => { counts[a.source] = (counts[a.source]||0)+1; });
+  const top3 = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,3)
+    .map(([s,n])=>`${s} (${n})`).join(" · ");
+
+  return `
+  <div class="section">
+    <div class="section-label">Análisis del día</div>
+    <div class="analysis">
+      <div class="analysis-header">Análisis del día</div>
+      <div class="analysis-row">
+        <div class="analysis-label">Fuentes más activas</div>
+        <div class="analysis-text">${top3}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+async function loadDigest() {
+  const main = document.getElementById("main");
+  main.innerHTML = '<div class="spinner">Cargando digest…</div>';
+
+  const DIGEST_URL = "https://raw.githubusercontent.com/morenopascual/streaming-digest/main/digest.json";
+
+  let data;
+  try {
+    const res = await fetch(DIGEST_URL + "?t=" + Date.now());
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    data = await res.json();
+  } catch(e) {
+    main.innerHTML = `<div class="error-msg">No se pudo cargar el digest: ${e.message}</div>`;
+    return;
+  }
+
+  // Flatten all articles
+  const allArticles = [];
+  for (const src of data.sources || []) {
+    for (const art of src.articles || []) {
+      if (!shouldFilter(art.title)) allArticles.push(art);
+    }
+  }
+
+  const bySection = categorize(allArticles);
+
+  // Update header
+  document.getElementById("header-date").textContent =
+    (data.date || "") + "  ·  Atresmedia";
+  document.getElementById("footer").textContent =
+    "Generado automáticamente · " + (data.date || "") + " · " + (data.total_articles||0) + " artículos · Atresmedia";
+
+  // Build HTML
+  let html = "";
+  for (const sec of SECTIONS) {
+    const arts = bySection[sec.id] || [];
+    if (arts.length === 0) continue;
+
+    html += `<div class="section">`;
+    html += `<div class="section-label">${sec.label}</div>`;
+    html += `<div class="group">`;
+    html += `<div class="group-title">${sec.headline}</div>`;
+    arts.forEach(a => { html += buildCard(a); });
+    html += `</div></div>`;
+  }
+
+  html += buildAnalysis(data.sources||[], allArticles);
+  main.innerHTML = html;
+}
+
+loadDigest();
+</script>
+</body>
+</html>
