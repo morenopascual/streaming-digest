@@ -1,0 +1,390 @@
+{
+  "generated_at": "2026-05-28T07:42:15.159591+00:00",
+  "date": "28/05/2026",
+  "window_hours": 48,
+  "total_articles": 51,
+  "sources": [
+    {
+      "name": "Variety",
+      "url": "https://feeds.feedburner.com/variety/headlines",
+      "articles": [
+        {
+          "title": "News Emmys: ABC, Nat Geo Top 2026 Wins, Thanks to ‘World News Tonight’ and ‘Trafficked With Mariana van Zeller’",
+          "url": "https://variety.com/2026/tv/news/news-emmys-2026-winners-abc-nat-geo-trafficked-1236760791/",
+          "published": "28/05/2026 02:44 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Student Scholarship Winner Calls Out CBS at News Emmys: ‘The Recent Direction of the Outlet Stains the Legacy of Mike Wallace’",
+          "url": "https://variety.com/2026/tv/news/student-scholarship-winner-calls-out-cbs-at-news-emmys-1236760720/",
+          "published": "28/05/2026 01:19 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Inside the ‘Widow’s Bay’ Flashback to 1702: How Betty Gilpin and Hamish Linklater Reveal the Town’s Evil Origins",
+          "url": "https://variety.com/2026/tv/news/widows-bay-flashback-betty-gilpin-hamish-linklater-town-evil-origins-1236759853/",
+          "published": "27/05/2026 23:15 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "‘The Testaments’ Finale: Elisabeth Moss and Creator Bruce Miller on Agnes’ Huge Twist, Daisy Parentage Theories and What’s Planned for Season 2",
+          "url": "https://variety.com/2026/tv/news/the-testaments-finale-agnes-june-daisy-parents-season-2-plans-1236759392/",
+          "published": "27/05/2026 22:36 UTC",
+          "source": "Variety"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "The Hollywood Reporter",
+      "url": "https://www.hollywoodreporter.com/feed/",
+      "articles": [
+        {
+          "title": "‘Good Advice Cupcake’ Creator Slams BuzzFeed for Partnering With Amazon on AI-Created Show About Character: “Disgusted”",
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/good-advice-cupcake-creator-slams-buzzfeed-selling-amazon-ai-1236607298/",
+          "published": "28/05/2026 01:32 UTC",
+          "source": "The Hollywood Reporter"
+        },
+        {
+          "title": "Box Office Stunner: ‘Obsession’ Makes History With Biggest Second-Weekend Spike in Modern Times Outside of Christmas",
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/box-office-obsession-second-weekend-spike-1236606229/",
+          "published": "27/05/2026 23:15 UTC",
+          "source": "The Hollywood Reporter"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Deadline Hollywood",
+      "url": "https://deadline.com/feed/",
+      "articles": [
+        {
+          "title": "‘Love Island USA’ Urges Viewers To “Keep It Kind” Ahead Of Season 8: “The Villa Runs On Good Vibes”",
+          "url": "https://deadline.com/2026/05/love-island-usa-urges-keep-it-kind-season-8-1236928823/",
+          "published": "28/05/2026 03:46 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "Hamish Linklater On His “Little Haunted Island” Roles In ‘Midnight Mass’, ‘Widow’s Bay’: “You’ve Got To Defend Your Territory”",
+          "url": "https://deadline.com/2026/05/hamish-linklater-haunted-island-roles-midnight-mass-widows-bay-1236928780/",
+          "published": "28/05/2026 01:38 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "‘The Testaments’ EP Warren Littlefield On Discovering Chase Infiniti & Lucy Halliday; A Season 2 Tease; ‘Fargo’ Season 6 & More – Crew Call Podcast",
+          "url": "https://deadline.com/2026/05/the-testaments-warren-littlefield-interview-fargo-1236928377/",
+          "published": "28/05/2026 01:37 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "Everything We Know About ‘The Pitt’ Season 3 So Far",
+          "url": "https://deadline.com/feature/the-pitt-season-3-news-updates-everything-we-know-1236928731/",
+          "published": "28/05/2026 00:33 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "“Self Sabotage”: Keanu Reeves Urges Leniency For  Director Who Scammed $11M From Netflix",
+          "url": "https://deadline.com/2026/05/keanu-reeves-asks-leniency-netflix-scammer-1236928598/",
+          "published": "27/05/2026 23:35 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "Everything We Know About ‘Emily In Paris’ Season 6 So Far",
+          "url": "https://deadline.com/feature/emily-in-paris-season-6-news-updates-everything-we-know-1236928610/",
+          "published": "27/05/2026 22:56 UTC",
+          "source": "Deadline Hollywood"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "articles": [
+        {
+          "title": "In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU chips",
+          "url": "https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/",
+          "published": "27/05/2026 20:10 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to come, including AI plans",
+          "url": "https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/",
+          "published": "27/05/2026 18:00 UTC",
+          "source": "TechCrunch"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Digiday",
+      "url": "https://digiday.com/feed/",
+      "articles": [
+        {
+          "title": "ACR data is invaluable, but only if it lives within DSPs",
+          "url": "https://digiday.com/sponsored/acr-data-is-invaluable-but-only-if-it-lives-within-dsps/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "published": "27/05/2026 17:48 UTC",
+          "source": "Digiday"
+        },
+        {
+          "title": "Future of TV Briefing: How AI agents will figure into this year’s upfront negotiations",
+          "url": "https://digiday.com/future-of-tv/future-of-tv-briefing-how-ai-agents-will-figure-into-this-years-upfront-negotiations/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "published": "27/05/2026 04:01 UTC",
+          "source": "Digiday"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Broadband TV News",
+      "url": "https://www.broadbandtvnews.com/feed/",
+      "articles": [
+        {
+          "title": "Germany introduces mandatory investment quota for streamers and broadcasters",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/germany-introduces-mandatory-investment-quota-for-streamers-and-broadcasters/",
+          "published": "27/05/2026 18:34 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Equativ and Titan OS open CTV home screen ads to programmatic buying",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/equativ-and-titan-os-open-ctv-home-screen-ads-to-programmatic-buying/",
+          "published": "27/05/2026 11:22 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "WBD lines up 300-hour live sport weekend across TNT Sports and Eurosport",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/wbd-lines-up-300-hour-live-sport-weekend-across-tnt-sports-and-eurosport/",
+          "published": "27/05/2026 11:07 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Streaming viewers wait longer for returning originals, says Ampere",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/streaming-viewers-wait-longer-for-returning-originals-says-ampere/",
+          "published": "27/05/2026 10:29 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Sky Sports reports record football season",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/sky-sports-reports-record-football-season/",
+          "published": "27/05/2026 10:24 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Ad tiers drive Nordic streaming growth, says Mediavision",
+          "url": "https://www.broadbandtvnews.com/2026/05/27/ad-tiers-drive-nordic-streaming-growth-says-mediavision/",
+          "published": "27/05/2026 09:53 UTC",
+          "source": "Broadband TV News"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Marketing Directo (ES)",
+      "url": "https://www.marketingdirecto.com/feed",
+      "articles": [
+        {
+          "title": "True incorpora a Andrea Balaguer como directora creativa",
+          "url": "https://www.marketingdirecto.com/marketing-general/gente/true-andrea-balaguer-directora-creativa",
+          "published": "27/05/2026 09:53 UTC",
+          "source": "Marketing Directo (ES)"
+        },
+        {
+          "title": "Cuando conexión emocional y aventura se unen: así son las Kipsummit Max de KIPRUN",
+          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/kipsummit-max-kiprun-conexion-emocional-aventura-unen",
+          "published": "27/05/2026 09:38 UTC",
+          "source": "Marketing Directo (ES)"
+        },
+        {
+          "title": "APPLE TREE elegida como la Mejor Agencia de Comunicación de Europa 2026",
+          "url": "https://www.marketingdirecto.com/marketing-general/agencias/apple-tree-elegida-mejor-agencia-comunicacion-europa-2026",
+          "published": "26/05/2026 12:04 UTC",
+          "source": "Marketing Directo (ES)"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Xataka (ES)",
+      "url": "https://www.xataka.com/feedburner.xml",
+      "articles": [
+        {
+          "title": "Tirón detectado, móvil bloqueado: Apple desarrolla la función antirrobo que faltaba en el iPhone",
+          "url": "https://www.xataka.com/moviles/tiron-detectado-movil-bloqueado-apple-desarrolla-funcion-antirrobo-que-faltaba-iphone",
+          "published": "28/05/2026 07:01 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "El Chuwi Unibook es el portátil Windows de 450 dólares que aspira a tumbar al MacBook Neo. El problema no son las especificaciones",
+          "url": "https://www.xataka.com/ordenadores/chuwi-unibook-portatil-windows-450-dolares-que-aspira-a-tumbar-al-macbook-neo-problema-no-especificaciones",
+          "published": "28/05/2026 06:01 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Stephen King recomienda sin medias tintas el nuevo número 1 de Netflix: es \"un placer absoluto\"",
+          "url": "https://www.xataka.com/streaming/stephen-king-recomienda-medias-tintas-nuevo-numero-1-netflix-placer-absoluto",
+          "published": "27/05/2026 18:31 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "No necesita instalación de profesionales y está casi a mitad de precio: esta herramienta de seguridad para empresas tiene hasta VPN",
+          "url": "https://www.xataka.com/seleccion/herramienta-seguridad-para-toda-tu-empresa-que-puedes-instalar-tu-kaspersky-ahora-sale-casi-a-mitad-precio",
+          "published": "27/05/2026 16:45 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Intel tiene un plan para plantar cara a TSMC en 2027. Antes tiene que sobrevivir a 2026",
+          "url": "https://www.xataka.com/empresas-y-economia/intel-tiene-plan-para-plantar-cara-a-tsmc-2027-antes-tiene-que-sobrevivir-a-2026",
+          "published": "27/05/2026 16:31 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "\"Hacemos accesible la exclusividad\": Zeekr llega con el complicadísimo reto de romper prejuicios. Tiene motivos para creérselo",
+          "url": "https://www.xataka.com/movilidad/hacemos-accesible-exclusividad-zeekr-llega-complicadisimo-reto-romper-prejuicios-tiene-motivos-para-creerselo",
+          "published": "27/05/2026 16:21 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "\"Comer frutos secos mixtos ayuda a tu salud cerebral\": lo que la ciencia sabe sobre cómo una avellana afecta a tu memoria",
+          "url": "https://www.xataka.com/medicina-y-salud/comer-frutos-secos-mixtos-ayuda-a-tu-salud-cerebral-que-ciencia-sabe-como-avellana-afecta-a-tu-memoria",
+          "published": "27/05/2026 16:10 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Sony entra en el RGB MiniLED por la puerta grande con la Bravia 9 II: hasta 115 pulgadas y la precisión de color más extrema",
+          "url": "https://www.xataka.com/televisores/sony-entra-rgb-miniled-puerta-grande-bravia-9-ii-115-pulgadas-precision-color-extrema",
+          "published": "27/05/2026 16:00 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "TikTok se ha obsesionado con el 'hair oiling' para multiplicar la densidad del pelo. Los dermatólogos tienen algo que objetar",
+          "url": "https://www.xataka.com/magnet/nos-prometieron-pelo-rapunzel-cosmeticos-carisimos-ciencia-dice-que-verdadero-secreto-lleva-milenios-tu-cocina",
+          "published": "27/05/2026 15:30 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Una cigüeña ucraniana ha logrado burlar en vuelo a un dron ruso. El vídeo es la mejor pista sobre quién ganará la guerra",
+          "url": "https://www.xataka.com/magnet/ciguena-ucraniana-ha-logrado-burlar-vuelo-a-dron-ruso-video-mejor-pista-quien-ganara-guerra",
+          "published": "27/05/2026 15:00 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "\"¿Alguna alternativa a un smartwatch más discreta, fina, y sin pantalla?\" - Esto es lo que recomendamos",
+          "url": "https://www.xataka.com/xataka-xtra/alguna-alternativa-a-smartwatch-discreta-fina-pantalla-esto-que-recomendamos",
+          "published": "27/05/2026 14:46 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "A Samsung le va tan bien que sus trabajadores amenazaron con una huelga si no repartía beneficios. Y han salido ganando",
+          "url": "https://www.xataka.com/empresas-y-economia/samsung-ha-ganado-muchisimo-dinero-crisis-memorias-sus-empleados-querian-su-parte-resultado-bonus-340-000-dolares",
+          "published": "27/05/2026 14:30 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Un superdeportivo no solo tiene que ser rápido, tiene que vender una experiencia. Y el Ferrari Luce nos despoja de ellas",
+          "url": "https://www.xataka.com/movilidad/ferrari-luce-juego-mentiras-eso-dice-mucho-problemas-que-tienen-todos-superdeportivos-electricos",
+          "published": "27/05/2026 14:00 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "La pila de hidrógeno a 250º C que resuelve un problema de hace décadas: el de la necesidad constante de agua",
+          "url": "https://www.xataka.com/movilidad/pila-hidrogeno-que-funciona-a-250-c-gota-agua-investigadores-resuelven-problema-que-llevaba-decadas-atascado",
+          "published": "27/05/2026 13:00 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Sistemas antidrones, piscinas, jacuzzis y tanques de langostas vivas: el precio de los yates más caros del mundo",
+          "url": "https://www.xataka.com/transporte/hay-indicador-infalible-para-saber-alguien-milmillonario-ver-dueno-alguno-yates-grandes-mundo",
+          "published": "27/05/2026 12:16 UTC",
+          "source": "Xataka (ES)"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "IPMARK (ES)",
+      "url": "https://ipmark.com/feed/",
+      "articles": [],
+      "error": null
+    },
+    {
+      "name": "DWDL.de (DE)",
+      "url": "https://www.dwdl.de/rss/allethemen.xml",
+      "articles": [
+        {
+          "title": "Studie: 2,4 Milliarden Euro Schaden durch illegales Streaming",
+          "url": "https://www.dwdl.de/nachrichten/106635/studie_24_milliarden_euro_schaden_durch_illegales_streaming/",
+          "published": "27/05/2026 22:01 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Hat \"Harper's Bazaar\" die \"GNTM\"-Gewinner schon gespoilert?",
+          "url": "https://www.dwdl.de/nachrichten/106637/hat_harpers_bazaar_die_gntmgewinner_schon_gespoilert/",
+          "published": "27/05/2026 16:57 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Noch mehr Reality: \"Couple Challenge\" bekommt Spin-Off",
+          "url": "https://www.dwdl.de/nachrichten/106627/noch_mehr_reality_couple_challenge_bekommt_spinoff/",
+          "published": "27/05/2026 08:55 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Der Streamingmarkt reift: \"Churn is the new acquisition\"",
+          "url": "https://www.dwdl.de/nachrichten/106625/der_streamingmarkt_reift_churn_is_the_new_acquisition/",
+          "published": "27/05/2026 07:34 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "\"Sing meinen Song\" schwächelt mit Ausgabe über Tream",
+          "url": "https://www.dwdl.de/zahlenzentrale/106624/sing_meinen_song_schwaechelt_mit_ausgabe_ueber_tream__/",
+          "published": "27/05/2026 07:23 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "ZDF verschiebt Veröffentlichung von \"Krank Berlin\"",
+          "url": "https://www.dwdl.de/nachrichten/106619/zdf_verschiebt_veroeffentlichung_von_krank_berlin/",
+          "published": "26/05/2026 14:25 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "\"LOL\" übertrumpft \"Maxton Hall\" noch, \"ESC\" ganz vorn",
+          "url": "https://www.dwdl.de/zahlenzentrale/106613/lol_uebertrumpft_maxton_hall_noch_esc_ganz_vorn/",
+          "published": "26/05/2026 10:58 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Production-Hub: Mallorca träumt vom \"White Lotus\"-Effekt",
+          "url": "https://www.dwdl.de/nachrichten/106617/productionhub_mallorca_traeumt_vom_white_lotuseffekt/",
+          "published": "26/05/2026 10:07 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Das sind die Pläne von Sky zur Fußball-Weltmeisterschaft",
+          "url": "https://www.dwdl.de/nachrichten/106616/das_sind_die_plaene_von_sky_zur_fussballweltmeisterschaft/",
+          "published": "26/05/2026 10:04 UTC",
+          "source": "DWDL.de (DE)"
+        }
+      ],
+      "error": null
+    },
+    {
+      "name": "Horizont Medien (DE)",
+      "url": "https://www.horizont.net/news/feed/medien/",
+      "articles": [
+        {
+          "title": "Mindestens 8 Prozent: Kabinett beschließt Investitionspflicht für Sender und Streamer",
+          "url": "https://www.horizont.net/medien/nachrichten/mindestens-8-prozent-kabinett-beschliesst-investitionspflicht-fuer-sender-und-streamer-234510?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "27/05/2026 18:39 UTC",
+          "source": "Horizont Medien (DE)"
+        },
+        {
+          "title": "Panne oder PR-Stunt?: GNTM-Sieger womöglich vor Finale verraten",
+          "url": "https://www.horizont.net/medien/nachrichten/panne-oder-pr-stunt-gntm-sieger-womoeglich-vor-finale-verraten-234501?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "27/05/2026 12:08 UTC",
+          "source": "Horizont Medien (DE)"
+        }
+      ],
+      "error": null
+    }
+  ]
+}
