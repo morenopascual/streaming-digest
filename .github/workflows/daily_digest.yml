@@ -1,29 +1,24 @@
 name: Daily Streaming Digest
-
 on:
   schedule:
     - cron: '0 5 * * *'
   workflow_dispatch:
-
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout repositorio
         uses: actions/checkout@v4
-
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Instalar dependencias
         run: pip install feedparser requests
-
       - name: Ejecutar fetch_digest.py
         run: python fetch_digest.py
-
       - name: Commit y push de digest.json
         run: |
           git config user.name "github-actions[bot]"
@@ -31,3 +26,11 @@ jobs:
           git add digest.json
           git diff --staged --quiet || git commit -m "digest: actualización automática $(date -u +%Y-%m-%d)"
           git push
+      - name: Install anthropic
+        run: pip install anthropic requests
+      - name: Generate HTML with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python generate_html.py
