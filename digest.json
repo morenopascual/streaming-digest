@@ -1,13 +1,19 @@
 {
-  "generated_at": "2026-05-29T07:56:16.064528+00:00",
+  "generated_at": "2026-05-29T08:03:25.031373+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
-  "total_articles": 195,
+  "total_articles": 188,
   "sources": [
     {
       "name": "Variety",
       "url": "https://feeds.feedburner.com/variety/headlines",
       "articles": [
+        {
+          "title": "Netflix Reality Show ‘Calabasas Confidential’ Fails to Find the New Kardashians: TV Review",
+          "url": "https://variety.com/2026/tv/reviews/calabasas-confidential-review-netflix-reality-kardashian-1236761504/",
+          "published": "29/05/2026 07:01 UTC",
+          "source": "Variety"
+        },
         {
           "title": "Lorca Documentary ‘The Broken Voice,’ Featuring Rare Footage of Poet, Acquired by Sideral for Sales, Spanish Distribution (EXCLUSIVE)",
           "url": "https://variety.com/2026/film/global/lorca-the-broken-voice-sideral-documentary-sales-1236759632/",
@@ -31,12 +37,6 @@
           "url": "https://variety.com/2026/tv/global/half-man-richard-gadd-season-finale-ruben-niall-really-dead-1236758844/",
           "published": "29/05/2026 02:00 UTC",
           "source": "Variety"
-        },
-        {
-          "title": "The Series Finale of ‘Hacks’ Showed What the Rest of Season 5 Was Missing",
-          "url": "https://variety.com/2026/tv/columns/hacks-series-finale-review-deborah-ava-hbo-max-1236759475/",
-          "published": "29/05/2026 01:45 UTC",
-          "source": "Variety"
         }
       ],
       "error": null
@@ -45,6 +45,12 @@
       "name": "The Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/feed/",
       "articles": [
+        {
+          "title": "SXSW London Presents New Music in Unorthodox Settings at a Time “Algorithms Are Flattening the Way We Experience Culture”",
+          "url": "https://www.hollywoodreporter.com/music/music-news/sxsw-london-2026-music-preview-tiwa-savage-korea-algorithms-1236605878/",
+          "published": "29/05/2026 08:00 UTC",
+          "source": "The Hollywood Reporter"
+        },
         {
           "title": "‘Project Hail Mary’ Wins Best of Show Prize at 2026 Golden Trailer Awards",
           "url": "https://www.hollywoodreporter.com/movies/movie-news/2026-golden-trailer-awards-winners-list-1236608412/",
@@ -70,6 +76,12 @@
       "name": "Deadline Hollywood",
       "url": "https://deadline.com/feed/",
       "articles": [
+        {
+          "title": "Trailer: ‘House Of The Dragon’ Actor Ewan Mitchell Stars In Short Comedy ‘Still Life’ As Lonely Man Living With Mannequins",
+          "url": "https://deadline.com/2026/05/trailer-ewan-mitchell-still-life-1236929995/",
+          "published": "29/05/2026 07:58 UTC",
+          "source": "Deadline Hollywood"
+        },
         {
           "title": "Korean Officials & Industry Execs Launch Committee To Discuss Six-Month Theatrical Window",
           "url": "https://deadline.com/2026/05/korea-cinema-culture-streamers-kofic-theatrical-window-1236929991/",
@@ -110,12 +122,6 @@
           "title": "How ‘Hacks’ Wrapped Up Deborah & Ava’s Story In Emotional Paris-Set Series Finale",
           "url": "https://deadline.com/2026/05/how-hacks-wrapped-up-deborah-ava-story-series-finale-1236929722/",
           "published": "29/05/2026 01:45 UTC",
-          "source": "Deadline Hollywood"
-        },
-        {
-          "title": "Curry Barker Teases Next Film ‘Anything But Ghosts’ Exists In Same Universe As ‘Obsession’",
-          "url": "https://deadline.com/2026/05/curry-barker-anything-but-ghosts-same-universe-obsession-1236929829/",
-          "published": "28/05/2026 23:52 UTC",
           "source": "Deadline Hollywood"
         }
       ],
@@ -271,152 +277,19 @@
     {
       "name": "Marketing Directo (ES)",
       "url": "https://www.marketingdirecto.com/feed",
-      "articles": [
-        {
-          "title": "Hablamos con María Pombo sobre Yuzz, el nuevo refresco de skincare: «Soy yo hecha lata»",
-          "url": "https://www.marketingdirecto.com/marketing-general/entrevistas/maria-pombo-yuzz-nuevo-refresco-skincare-mahou",
-          "published": "29/05/2026 07:36 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Meta lanza versiones «vitaminadas» de pago de Instagram, Facebook y WhatsApp",
-          "url": "https://www.marketingdirecto.com/digital-general/social-media-marketing/meta-lanza-versiones-vitaminadas-pago-instagram-facebook-whatsapp",
-          "published": "29/05/2026 07:05 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Corona vuelve a desvelar los 100 mejores locales para disfrutar del atardecer: la guía definitiva",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/corona-vuelve-desvelar-mejores-locales-disfrutar-atardecer-guia-definitiva",
-          "published": "28/05/2026 12:31 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Piedad Siegfried vuelve a Exterior Plus como directora general",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/piedad-siegfried-vuelve-exterior-plus-directora-general",
-          "published": "28/05/2026 12:25 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Iberia Express programa ocho vuelos y casi 1.500 plazas adicionales con motivo de la visita del Papa",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/iberia-express-programa-ocho-vuelos-1-500-plazas-adicionales-motivo-visita-papa",
-          "published": "28/05/2026 11:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Adissey lanza «el viaje a lo extraordinario», un podcast para entender las decisiones que hacen crecer a las marcas",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/adissey-lanza-viaje-extraordinario-podcast-entender-decisiones-hacen-crecer-marcas",
-          "published": "28/05/2026 10:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Sara Blázquez, la dircom de Coca-Cola en España, se desliga de la multinacional de Atlanta",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/sara-blazquez-dircom-coca-cola-espana-desliga-multinacional-atlanta",
-          "published": "28/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "VML The Cocktail refuerza su área de Social Media con Auxi Barea e Iratxe del Brio",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/vml-the-cocktail-refuerza-area-social-media-auxi-barea-iratxe-brio",
-          "published": "28/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "La IA, una jugosa tecnología que las empresas están aún lejos de exprimir hasta la última gota",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/publicaciones/ia-jugosa-tecnologia-empresas-estan-lejos-exprimir-ultima-gota",
-          "published": "28/05/2026 09:04 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Fuze Tea se une al formato Attention Hook de Atresmedia: así se redefine la atención publicitaria en televisión",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/fuze-tea-formato-attention-hook-atresmedia-redefine-atencion-publicitaria-television",
-          "published": "28/05/2026 08:29 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Finalistas de los Premios Nacionales Marketing 2026: la lista corta de la AMKT",
-          "url": "https://www.marketingdirecto.com/marketing-general/eventos-y-formacion/finalistas-premios-nacionales-marketing-2026-shortlist-amkt",
-          "published": "28/05/2026 08:27 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Mediaset y la NFL amplían su alianza plurianual con un nuevo acuerdo estratégico",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/medios/mediaset-nfl-amplian-alianza-plurianual-nuevo-acuerdo-estrategico",
-          "published": "28/05/2026 08:21 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "B&B HOTELS impulsa una nueva edición de «Hoteles Donde Bien Estar» con su mayor campaña de marca en España y Portugal",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/bb-hotels-impulsa-nueva-edicion-hoteles-donde-bien-estar-mayor-campana-marca-espana-portugal",
-          "published": "28/05/2026 06:00 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Grupoidex y Jesús Cubero convierten Alicante en la capital de la relevancia",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/grupoidex-jesus-cubero-convierten-alicante-capital-relevancia",
-          "published": "27/05/2026 15:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Loewe diseñará el vestuario de viaje de la Selección española hasta 2030",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/loewe-disenara-vestuario-viaje-seleccion-espanola-hasta-2030",
-          "published": "27/05/2026 15:34 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "WAH Show se convierte en una experiencia exclusiva y única en MADRING para FORMULA 1 TAG HEUER GRAN PREMIO DE ESPAÑA 2026",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/wah-show-convierte-experiencia-exclusiva-unica-madring-formula-1",
-          "published": "27/05/2026 15:33 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Adsmurai impulsa un nuevo modelo de creatividad escalable para marcas en TikTok",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/adsmurai-impulsa-un-nuevo-modelo-de-creatividad-escalable-para-marcas-en-tiktok",
-          "published": "27/05/2026 12:29 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "INNN abre una nueva era digital en Palacio Sancti Petri, Gran Meliá",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/innn-abre-una-nueva-era-digital-en-palacio-sancti-petri-gran-melia",
-          "published": "27/05/2026 12:20 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Daniel Craig, el rostro de la nueva era de DENZA, la marca de coches de lujo de BYD",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/daniel-craig-denza-byd-coches-premium",
-          "published": "27/05/2026 11:56 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "True incorpora a Andrea Balaguer como directora creativa",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/true-andrea-balaguer-directora-creativa",
-          "published": "27/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Daitsu convierte la ciudad en un juego urbano con su nueva campaña exterior",
-          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/daitsu-convierte-ciudad-juego-urbano-nueva-campana-exterior",
-          "published": "27/05/2026 09:45 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Cuando conexión emocional y aventura se unen: así son las Kipsummit Max de KIPRUN",
-          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/kipsummit-max-kiprun-conexion-emocional-aventura-unen",
-          "published": "27/05/2026 09:38 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "OpenAI recluta a Colin Fleming como CMO para dar fuelle al marketing B2B",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/openai-recluta-colin-fleming-cmo-dar-fuelle-marketing-b2b",
-          "published": "27/05/2026 08:15 UTC",
-          "source": "Marketing Directo (ES)"
-        }
-      ],
-      "error": null
+      "articles": [],
+      "error": "Error al parsear el feed: <unknown>:2:116: not well-formed (invalid token)"
     },
     {
       "name": "Xataka (ES)",
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
+        {
+          "title": "Este valle noruego tiene rocas a cada lado del río que actúan como una pila gigante. Puede que eso explique sus luces fantasma",
+          "url": "https://www.xataka.com/espacio/este-valle-noruego-tiene-rocas-a-cada-lado-rio-que-actuan-como-pila-gigante-puede-que-eso-explique-sus-luces-fantasma",
+          "published": "29/05/2026 08:01 UTC",
+          "source": "Xataka (ES)"
+        },
         {
           "title": "La sorpresa del nuevo Claude Opus 4.8 no es que sea (un poco) mejor. La sorpresa es el \"solo sé que no sé nada\"",
           "url": "https://www.xataka.com/robotica-e-ia/sorpresa-nuevo-claude-opus-4-8-no-que-sea-poco-mejor-sorpresa-solo-se-que-no-se-nada",
@@ -566,12 +439,6 @@
           "url": "https://www.xataka.com/empresas-y-economia/caballo-troya-xiaomi-se-ha-colado-cocina-nevera-lavadora-spoiler-esto-no-va-lavadoras",
           "published": "28/05/2026 13:01 UTC",
           "source": "Xataka (ES)"
-        },
-        {
-          "title": "Xiaomi 17T y 17T Pro: el teleobjetivo Leica llega a toda la gama con un salto masivo en autonomía",
-          "url": "https://www.xataka.com/moviles/xiaomi-17t-xiaomi-17t-pro-caracteristicas-precio-ficha-tecnica",
-          "published": "28/05/2026 13:01 UTC",
-          "source": "Xataka (ES)"
         }
       ],
       "error": null
@@ -616,8 +483,99 @@
     {
       "name": "DWDL.de (DE)",
       "url": "https://www.dwdl.de/rss/allethemen.xml",
-      "articles": [],
-      "error": "Error al parsear el feed: <urlopen error [Errno 110] Connection timed out>"
+      "articles": [
+        {
+          "title": "Wie RTL seinen Sport-Bereich personell aufstellen will",
+          "url": "https://www.dwdl.de/nachrichten/106652/wie_rtl_seinen_sportbereich_personell_aufstellen_will/",
+          "published": "29/05/2026 07:55 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "RTLzwei siegt im Film-Duell gegen Vox und überholt Pilawa",
+          "url": "https://www.dwdl.de/zahlenzentrale/106651/rtlzwei_siegt_im_filmduell_gegen_vox_und_ueberholt_pilawa/",
+          "published": "29/05/2026 07:26 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Trotz Sieger-Leak: \"GNTM\" endet mit Staffel-Bestwert",
+          "url": "https://www.dwdl.de/zahlenzentrale/106649/trotz_siegerleak_gntm_endet_mit_staffelbestwert/",
+          "published": "29/05/2026 06:42 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Was aktuell auf Instagram und TikTok viral geht",
+          "url": "https://www.dwdl.de/magazin/105105/was_aktuell_auf_instagram_und_tiktok_viral_geht/",
+          "published": "29/05/2026 05:27 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Magenta TV macht Helene Fischers neuen Song zur WM-Hymne",
+          "url": "https://www.dwdl.de/nachrichten/106648/magenta_tv_macht_helene_fischers_neuen_song_zur_wmhymne/",
+          "published": "29/05/2026 05:22 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Auf den letzten Metern: Charly Classen verlässt Sky Deutschland",
+          "url": "https://www.dwdl.de/nachrichten/106647/auf_den_letzten_metern_charly_classen_verlaesst_sky_deutschland/",
+          "published": "28/05/2026 16:24 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Mit \"Grip\" und \"Geissens\": RTLzwei baut FAST-Geschäft aus",
+          "url": "https://www.dwdl.de/nachrichten/106642/mit_grip_und_geissens_rtlzwei_baut_fastgeschaeft_aus/",
+          "published": "28/05/2026 09:09 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Starttermin für \"Landarztpraxis\"-Ableger steht nun fest",
+          "url": "https://www.dwdl.de/nachrichten/106643/starttermin_fuer_landarztpraxisableger_steht_nun_fest/",
+          "published": "28/05/2026 08:53 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Max Lotter leitet DasDing, neuer Podcast mit Hella von Sinnen",
+          "url": "https://www.dwdl.de/audioupdate/106641/max_lotter_leitet_dasding_neuer_podcast_mit_hella_von_sinnen/",
+          "published": "28/05/2026 08:37 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Reichweiten-Tief für Joko & Klaas, aber bei Jüngeren noch vor RTL",
+          "url": "https://www.dwdl.de/zahlenzentrale/106640/reichweitentief_fuer_joko__klaas_aber_bei_juengeren_noch_vor_rtl/",
+          "published": "28/05/2026 07:42 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Nach Absturz: \"Küchenschlacht\" verliert in der Primetime weiter",
+          "url": "https://www.dwdl.de/zahlenzentrale/106639/nach_absturz_kuechenschlacht_verliert_in_der_primetime_weiter/",
+          "published": "28/05/2026 07:20 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "\"Der Maschinenraum dampft\": So steht es um die Quotenrevolution",
+          "url": "https://www.dwdl.de/magazin/106620/der_maschinenraum_dampft_so_steht_es_um_die_quotenrevolution/",
+          "published": "28/05/2026 05:59 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Studie: 2,4 Milliarden Euro Schaden durch illegales Streaming",
+          "url": "https://www.dwdl.de/nachrichten/106635/studie_24_milliarden_euro_schaden_durch_illegales_streaming/",
+          "published": "27/05/2026 22:01 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Hat \"Harper's Bazaar\" die \"GNTM\"-Gewinner schon gespoilert?",
+          "url": "https://www.dwdl.de/nachrichten/106637/hat_harpers_bazaar_die_gntmgewinner_schon_gespoilert/",
+          "published": "27/05/2026 16:57 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Noch mehr Reality: \"Couple Challenge\" bekommt Spin-Off",
+          "url": "https://www.dwdl.de/nachrichten/106627/noch_mehr_reality_couple_challenge_bekommt_spinoff/",
+          "published": "27/05/2026 08:55 UTC",
+          "source": "DWDL.de (DE)"
+        }
+      ],
+      "error": null
     },
     {
       "name": "Horizont Medien (DE)",
@@ -1048,7 +1006,7 @@
       "name": "La Publicidad (ES)",
       "url": "https://lapublicidad.net/feed/",
       "articles": [],
-      "error": "Error al parsear el feed: <unknown>:2:1326: not well-formed (invalid token)"
+      "error": "Error al parsear el feed: <unknown>:2:0: syntax error"
     },
     {
       "name": "Xataka Smart TV (ES)",
