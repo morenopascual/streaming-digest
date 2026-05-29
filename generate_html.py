@@ -18,36 +18,24 @@ import requests
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 
-SOURCE_COLORS = {
-    "variety":              "#d84040",
-    "hollywood reporter":   "#c0392b",
-    "deadline":             "#555555",
-    "broadband tv news":    "#1a9e75",
-    "advanced television":  "#17a589",
-    "digiday":              "#7b68ee",
-    "dwdl":                 "#e6a817",
-    "horizont":             "#2980b9",
-    "techcrunch":           "#4caf50",
-    "xataka":               "#0077cc",
-    "marketing directo":    "#e91e8c",
-    "ipmark":               "#8e44ad",
-    "vertele":              "#e74c3c",
-    "formulatv":            "#e67e22",
-    "bluper":               "#9b59b6",
-    "confidencial":         "#16a085",
-    "espinof":              "#2c3e50",
+SECTION_COLORS = {
+    "PLATAFORMAS Y SECTOR": "#2980b9",
+    "IA":                   "#7b68ee",
+    "CTV":                  "#1a9e75",
+    "REDES SOCIALES":       "#e6a817",
+    "MEDIOS Y TELEVISIÓN":  "#d84040",
+    "REGULACIÓN":           "#e67e22",
+    "FABRICANTES":          "#555555",
+    "PUBLICIDAD":           "#e91e8c",
+    "ESTUDIOS E INFORMES":  "#16a085",
 }
 
 CLAUDE_MODEL = "claude-opus-4-6"
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
 
-def source_color(name):
-    n = name.lower()
-    for key, color in SOURCE_COLORS.items():
-        if key in n:
-            return color
-    return "#888888"
+def section_color(epigrafe):
+    return SECTION_COLORS.get(epigrafe.upper(), "#888888")
 
 def short_url(url):
     try:
@@ -119,9 +107,12 @@ Devuelve ÚNICAMENTE un bloque JSON válido (sin texto antes ni después, sin ma
 }}"""
 
 def process_with_claude(digest):
+    # Build a lookup: url -> published date
+    url_to_published = {}
     articles = []
     for src in digest.get("sources", []):
         for art in src.get("articles", []):
+            url_to_published[art["url"]] = art.get("published", "")
             articles.append({
                 "title":     art["title"],
                 "url":       art["url"],
@@ -156,30 +147,62 @@ def process_with_claude(digest):
             raw = raw[4:]
         raw = raw.strip()
 
-    return json.loads(raw)
+    processed = json.loads(raw)
+    # Attach published dates from original digest (Claude may not preserve them)
+    for sec in processed.get("sections", []):
+        for group in sec.get("groups", []):
+            for art in group.get("articles", []):
+                if not art.get("published"):
+                    art["published"] = url_to_published.get(art.get("url", ""), "")
+    return processed
+
+# ─── HELPERS ─────────────────────────────────────────────────────────────────
+
+def fmt_date(raw):
+    """Try to format an ISO or RFC date string as 'DD MMM' in Spanish."""
+    if not raw:
+        return ""
+    MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"]
+    try:
+        from email.utils import parsedate
+        t = parsedate(raw)
+        if t:
+            return f"{t[2]} {MESES[t[1]-1]}"
+    except Exception:
+        pass
+    try:
+        dt = datetime.fromisoformat(raw[:19])
+        return f"{dt.day} {MESES[dt.month-1]}"
+    except Exception:
+        pass
+    return ""
 
 # ─── STEP 3: GENERATE HTML ───────────────────────────────────────────────────
 
 def build_cards(sections):
     html = ""
     for sec in sections:
+        epigrafe = sec["epigrafe"]
+        color    = section_color(epigrafe)
         html += f'<div class="section">\n'
-        html += f'<div class="section-label">{sec["epigrafe"]}</div>\n'
+        html += f'<div class="section-label" style="color:{color}">{epigrafe}</div>\n'
         for group in sec.get("groups", []):
             html += '<div class="group">\n'
-            html += f'<div class="group-title">{group["titular"]}</div>\n'
+            html += f'<div class="group-title" style="border-left:3px solid {color}">{group["titular"]}</div>\n'
             for art in group.get("articles", []):
-                color   = source_color(art.get("source", ""))
                 url     = art.get("url", "#")
                 title   = art.get("title_es", "")
                 source  = art.get("source", "")
+                pub     = fmt_date(art.get("published", ""))
                 surl    = short_url(url)
+                date_html = f'<span class="card-sep">·</span><span class="card-date">{pub}</span>' if pub else ""
                 html += f'''<a class="card" href="{url}" target="_blank" rel="noopener">
   <div class="card-accent" style="background:{color}"></div>
   <div class="card-body">
     <div class="card-title">{title}</div>
     <div class="card-meta">
       <span class="card-source">{source}</span>
+      {date_html}
       <span class="card-sep">·</span>
       <span class="card-url">{surl}</span>
       <span class="card-ext">↗</span>
@@ -225,7 +248,7 @@ a{{color:inherit;text-decoration:none}}
 .section{{margin-bottom:28px}}
 .section-label{{font-size:12px;font-weight:700;letter-spacing:.09em;color:#8e8e93;text-transform:uppercase;padding:0 16px 8px}}
 .group{{background:#fff;border-radius:12px;overflow:hidden;margin:0 12px 10px;box-shadow:0 1px 3px rgba(0,0,0,.07)}}
-.group-title{{font-size:14px;font-weight:600;color:#1c1c1e;padding:13px 15px 11px;border-bottom:1px solid #f2f2f7;line-height:1.4;background:#fafafa}}
+.group-title{{font-size:14px;font-weight:600;color:#1c1c1e;padding:13px 15px 11px;border-bottom:1px solid #f2f2f7;line-height:1.4;background:#fafafa;border-left-width:3px;border-left-style:solid}}
 .card{{display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border-bottom:1px solid #f2f2f7;cursor:pointer;transition:background .1s}}
 .card:last-child{{border-bottom:none}}
 .card:hover{{background:#f9f9f9}}
@@ -236,6 +259,7 @@ a{{color:inherit;text-decoration:none}}
 .card-source{{font-size:12px;font-weight:600;color:#8e8e93;flex-shrink:0}}
 .card-sep{{font-size:10px;color:#c7c7cc;flex-shrink:0}}
 .card-url{{font-size:12px;color:#c7c7cc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.card-date{{font-size:12px;color:#aaaaaa;flex-shrink:0}}
 .card-ext{{font-size:12px;color:#007aff;margin-left:auto;flex-shrink:0;padding-left:8px}}
 .analysis{{background:#fff;border-radius:12px;margin:0 12px;box-shadow:0 1px 3px rgba(0,0,0,.07);overflow:hidden}}
 .analysis-header{{background:#1c1c1e;color:#fff;padding:12px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}}
