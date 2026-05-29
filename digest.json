@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-29T09:12:12.344400+00:00",
+  "generated_at": "2026-05-29T09:16:13.919012+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
-  "total_articles": 210,
+  "total_articles": 187,
   "sources": [
     {
       "name": "Variety",
@@ -283,147 +283,8 @@
     {
       "name": "Marketing Directo (ES)",
       "url": "https://www.marketingdirecto.com/feed",
-      "articles": [
-        {
-          "title": "Lola Índigo y Google propagan la cultura andaluza en «GRX La Feria» con el Modo IA de La Búsqueda",
-          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/lola-indigo-google-propagan-cultura-andaluza-grxferia-modo-ia-busqueda",
-          "published": "29/05/2026 08:59 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Hablamos con María Pombo sobre Yuzz, el nuevo refresco de skincare: «Soy yo hecha lata»",
-          "url": "https://www.marketingdirecto.com/marketing-general/entrevistas/maria-pombo-yuzz-nuevo-refresco-skincare-mahou",
-          "published": "29/05/2026 07:36 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Meta lanza versiones «vitaminadas» de pago de Instagram, Facebook y WhatsApp",
-          "url": "https://www.marketingdirecto.com/digital-general/social-media-marketing/meta-lanza-versiones-vitaminadas-pago-instagram-facebook-whatsapp",
-          "published": "29/05/2026 07:05 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Corona vuelve a desvelar los 100 mejores locales para disfrutar del atardecer: la guía definitiva",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/corona-vuelve-desvelar-mejores-locales-disfrutar-atardecer-guia-definitiva",
-          "published": "28/05/2026 12:31 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Piedad Siegfried vuelve a Exterior Plus como directora general",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/piedad-siegfried-vuelve-exterior-plus-directora-general",
-          "published": "28/05/2026 12:25 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Iberia Express programa ocho vuelos y casi 1.500 plazas adicionales con motivo de la visita del Papa",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/iberia-express-programa-ocho-vuelos-1-500-plazas-adicionales-motivo-visita-papa",
-          "published": "28/05/2026 11:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Adissey lanza «el viaje a lo extraordinario», un podcast para entender las decisiones que hacen crecer a las marcas",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/adissey-lanza-viaje-extraordinario-podcast-entender-decisiones-hacen-crecer-marcas",
-          "published": "28/05/2026 10:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Sara Blázquez, la dircom de Coca-Cola en España, se desliga de la multinacional de Atlanta",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/sara-blazquez-dircom-coca-cola-espana-desliga-multinacional-atlanta",
-          "published": "28/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "VML The Cocktail refuerza su área de Social Media con Auxi Barea e Iratxe del Brio",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/vml-the-cocktail-refuerza-area-social-media-auxi-barea-iratxe-brio",
-          "published": "28/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "La IA, una jugosa tecnología que las empresas están aún lejos de exprimir hasta la última gota",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/publicaciones/ia-jugosa-tecnologia-empresas-estan-lejos-exprimir-ultima-gota",
-          "published": "28/05/2026 09:04 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Fuze Tea se une al formato Attention Hook de Atresmedia: así se redefine la atención publicitaria en televisión",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/fuze-tea-formato-attention-hook-atresmedia-redefine-atencion-publicitaria-television",
-          "published": "28/05/2026 08:29 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Finalistas de los Premios Nacionales Marketing 2026: la lista corta de la AMKT",
-          "url": "https://www.marketingdirecto.com/marketing-general/eventos-y-formacion/finalistas-premios-nacionales-marketing-2026-shortlist-amkt",
-          "published": "28/05/2026 08:27 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Mediaset y la NFL amplían su alianza plurianual con un nuevo acuerdo estratégico",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/medios/mediaset-nfl-amplian-alianza-plurianual-nuevo-acuerdo-estrategico",
-          "published": "28/05/2026 08:21 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "B&B HOTELS impulsa una nueva edición de «Hoteles Donde Bien Estar» con su mayor campaña de marca en España y Portugal",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/bb-hotels-impulsa-nueva-edicion-hoteles-donde-bien-estar-mayor-campana-marca-espana-portugal",
-          "published": "28/05/2026 06:00 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Grupoidex y Jesús Cubero convierten Alicante en la capital de la relevancia",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/grupoidex-jesus-cubero-convierten-alicante-capital-relevancia",
-          "published": "27/05/2026 15:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Loewe diseñará el vestuario de viaje de la Selección española hasta 2030",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/loewe-disenara-vestuario-viaje-seleccion-espanola-hasta-2030",
-          "published": "27/05/2026 15:34 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "WAH Show se convierte en una experiencia exclusiva y única en MADRING para FORMULA 1 TAG HEUER GRAN PREMIO DE ESPAÑA 2026",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/wah-show-convierte-experiencia-exclusiva-unica-madring-formula-1",
-          "published": "27/05/2026 15:33 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Adsmurai impulsa un nuevo modelo de creatividad escalable para marcas en TikTok",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/adsmurai-impulsa-un-nuevo-modelo-de-creatividad-escalable-para-marcas-en-tiktok",
-          "published": "27/05/2026 12:29 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "INNN abre una nueva era digital en Palacio Sancti Petri, Gran Meliá",
-          "url": "https://www.marketingdirecto.com/marketing-general/agencias/innn-abre-una-nueva-era-digital-en-palacio-sancti-petri-gran-melia",
-          "published": "27/05/2026 12:20 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Daniel Craig, el rostro de la nueva era de DENZA, la marca de coches de lujo de BYD",
-          "url": "https://www.marketingdirecto.com/anunciantes-general/daniel-craig-denza-byd-coches-premium",
-          "published": "27/05/2026 11:56 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "True incorpora a Andrea Balaguer como directora creativa",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/true-andrea-balaguer-directora-creativa",
-          "published": "27/05/2026 09:53 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Daitsu convierte la ciudad en un juego urbano con su nueva campaña exterior",
-          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/daitsu-convierte-ciudad-juego-urbano-nueva-campana-exterior",
-          "published": "27/05/2026 09:45 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "Cuando conexión emocional y aventura se unen: así son las Kipsummit Max de KIPRUN",
-          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/kipsummit-max-kiprun-conexion-emocional-aventura-unen",
-          "published": "27/05/2026 09:38 UTC",
-          "source": "Marketing Directo (ES)"
-        }
-      ],
-      "error": null
+      "articles": [],
+      "error": "Error al parsear el feed: <unknown>:2:116: not well-formed (invalid token)"
     },
     {
       "name": "Xataka (ES)",
@@ -1036,15 +897,15 @@
           "source": "Advanced Television"
         },
         {
-          "title": "DVEO partners with StreamVX",
-          "url": "https://www.advanced-television.com/2026/05/29/dveo-partners-with-streamvx/",
-          "published": "28/05/2026 23:00 UTC",
+          "title": "Love Island trio to front ITV’s The Debrief vodcast",
+          "url": "https://www.advanced-television.com/2026/05/29/love-island-trio-to-front-itvs-the-debrief-vodcast/",
+          "published": "28/05/2026 23:09 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "France: Anti-piracy tech trialled at Roland-Garros",
-          "url": "https://www.advanced-television.com/2026/05/28/france-anti-piracy-tech-trialled-at-roland-garros/",
-          "published": "28/05/2026 14:13 UTC",
+          "title": "DVEO partners with StreamVX",
+          "url": "https://www.advanced-television.com/2026/05/29/dveo-partners-with-streamvx/",
+          "published": "28/05/2026 23:00 UTC",
           "source": "Advanced Television"
         }
       ],
