@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-29T09:04:31.921728+00:00",
+  "generated_at": "2026-05-29T09:12:12.344400+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
-  "total_articles": 199,
+  "total_articles": 210,
   "sources": [
     {
       "name": "Variety",
@@ -76,6 +76,12 @@
       "name": "Deadline Hollywood",
       "url": "https://deadline.com/feed/",
       "articles": [
+        {
+          "title": "The Match Factory Locks Distribution Deals On Cannes Titles ‘Fatherland’, ‘Coward’, ‘The Dreamed Adventure’ & ‘Teenage Sex And Death At Camp Miasma’",
+          "url": "https://deadline.com/2026/05/the-match-factory-fatherland-coward-distribution-mubi-1236930011/",
+          "published": "29/05/2026 09:07 UTC",
+          "source": "Deadline Hollywood"
+        },
         {
           "title": "Trailer: ‘House Of The Dragon’ Actor Ewan Mitchell Stars In Short Comedy ‘Still Life’ As Lonely Man Living With Mannequins",
           "url": "https://deadline.com/2026/05/trailer-ewan-mitchell-still-life-1236929995/",
@@ -424,6 +430,12 @@
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
         {
+          "title": "Ni misiles, ni fusiles, ni bombas. Los drones ucranianos están llevando un tipo de carga inédita en la guerra: ancianos",
+          "url": "https://www.xataka.com/magnet/misiles-fusiles-bombas-drones-ucranianos-estan-llevando-tipo-carga-inedita-guerra-ancianos",
+          "published": "29/05/2026 09:01 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
           "title": "Claude 4.8 Opus: lista de novedades de la nueva versión del modelo de Inteligencia Artificial de Anthropic",
           "url": "https://www.xataka.com/basics/claude-4-8-opus-lista-novedades-nueva-version-modelo-inteligencia-artificial-anthropic",
           "published": "29/05/2026 08:48 UTC",
@@ -572,12 +584,6 @@
           "url": "https://www.xataka.com/seleccion/lidl-este-aspirador-dos-uno-cables-que-funciona-seco-como-humedo-no-llega-a-85-euros",
           "published": "28/05/2026 13:45 UTC",
           "source": "Xataka (ES)"
-        },
-        {
-          "title": "Telecinco acaba de anunciar que tiene los derechos y planes para El Rosco de 'Pasapalabra'. Pero eso no incluye 'Pasapalabra'",
-          "url": "https://www.xataka.com/cine-y-tv/tribunal-supremo-le-ha-quitado-rosco-a-antena-3-ahora-telecinco-tiene-derechos-solo-le-falta-todo-demas",
-          "published": "28/05/2026 13:31 UTC",
-          "source": "Xataka (ES)"
         }
       ],
       "error": null
@@ -586,6 +592,12 @@
       "name": "IPMARK (ES)",
       "url": "https://ipmark.com/feed/",
       "articles": [
+        {
+          "title": "Branward inicia una nueva etapa bajo el liderazgo de Jaime Dolagaray",
+          "url": "https://ipmark.com/branward-nueva-etapa-bajo-liderazgo-jaime-dolagaray/",
+          "published": "29/05/2026 09:02 UTC",
+          "source": "IPMARK (ES)"
+        },
         {
           "title": "Best!N Auto 2026. El palmarés",
           "url": "https://ipmark.com/best-n-auto-2026-el-palmares/",
@@ -1034,12 +1046,6 @@
           "url": "https://www.advanced-television.com/2026/05/28/france-anti-piracy-tech-trialled-at-roland-garros/",
           "published": "28/05/2026 14:13 UTC",
           "source": "Advanced Television"
-        },
-        {
-          "title": "Streamers push back on German production levies",
-          "url": "https://www.advanced-television.com/2026/05/28/germany-mandatory-quota-on-domestic-productions/",
-          "published": "28/05/2026 07:43 UTC",
-          "source": "Advanced Television"
         }
       ],
       "error": null
@@ -1290,8 +1296,69 @@
     {
       "name": "MuyComputer (ES)",
       "url": "https://www.muycomputer.com/feed/",
-      "articles": [],
-      "error": "Error al parsear el feed: <urlopen error [Errno 110] Connection timed out>"
+      "articles": [
+        {
+          "title": "Todo lo que debes saber de la cara oculta de la inteligencia artificial",
+          "url": "https://www.muycomputer.com/2026/05/29/todo-lo-que-debes-saber-de-la-cara-oculta-de-la-inteligencia-artificial/",
+          "published": "29/05/2026 08:49 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "Call of Duty: Modern Warfare 4 quiere devolver a la saga a su mejor versión",
+          "url": "https://www.muycomputer.com/2026/05/29/call-of-duty-modern-warfare-4-quiere-devolver-a-la-saga-a-su-mejor-version/",
+          "published": "29/05/2026 08:14 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "Qualcomm promete portátiles Windows a 300 dólares con su Snapdragon C",
+          "url": "https://www.muycomputer.com/2026/05/29/qualcomm-promete-portatiles-windows-a-300-dolares-con-su-snapdragon-c/",
+          "published": "29/05/2026 06:04 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "La IA entra en una nueva fase: aprender a usarla en el trabajo real",
+          "url": "https://www.muycomputer.com/2026/05/28/la-ia-entra-en-una-nueva-fase-aprender-a-usarla-en-el-trabajo-real/",
+          "published": "28/05/2026 16:40 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "El buscador de Google cambia para siempre y es hora de explorar alternativas",
+          "url": "https://www.muycomputer.com/2026/05/28/el-buscador-de-google-cambia-para-siempre-y-es-hora-de-explorar-alternativas/",
+          "published": "28/05/2026 15:09 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "Una Radeon RX 9070 XT muere por el peso de su sistema de refrigeración, así puedes evitar que te ocurra a ti",
+          "url": "https://www.muycomputer.com/2026/05/28/una-radeon-rx-9070-xt-muere-por-el-peso-de-su-sistema-de-refrigeracion-asi-puedes-evitar-que-te-ocurra-a-ti/",
+          "published": "28/05/2026 12:26 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "FRITZ!Powerline 1240 AX o FRITZ!Powerline 1260: qué modelo deberías elegir",
+          "url": "https://www.muycomputer.com/2026/05/28/fritzpowerline-1240-ax-o-fritzpowerline-1260-que-modelo-deberias-elegir/",
+          "published": "28/05/2026 11:22 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "ASUS quiere llevar el gaming a otra dimensión con las ROG XREAL R1",
+          "url": "https://www.muycomputer.com/2026/05/27/asus-quiere-llevar-el-gaming-a-otra-dimension-con-las-rog-xreal-r1/",
+          "published": "27/05/2026 16:43 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "The Witcher 3 se remasteriza y recibe otro DLC once años después, tiene nuevos requisitos",
+          "url": "https://www.muycomputer.com/2026/05/27/the-witcher-3-se-remasteriza-y-recibe-otro-dlc-once-anos-despues-tiene-nuevos-requisitos/",
+          "published": "27/05/2026 13:43 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "El Ryzen 7 7700X3D aparece en CPU-Z para ampliar el uso de los X3D",
+          "url": "https://www.muycomputer.com/2026/05/27/el-ryzen-7-7700x3d-aparece-en-cpu-z-para-ampliar-el-uso-de-los-x3d/",
+          "published": "27/05/2026 11:17 UTC",
+          "source": "MuyComputer (ES)"
+        }
+      ],
+      "error": null
     },
     {
       "name": "Variety – TV (section)",
