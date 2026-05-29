@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-29T08:14:55.975023+00:00",
+  "generated_at": "2026-05-29T08:36:33.366487+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
-  "total_articles": 212,
+  "total_articles": 211,
   "sources": [
     {
       "name": "Variety",
@@ -408,12 +408,6 @@
           "title": "Cuando conexión emocional y aventura se unen: así son las Kipsummit Max de KIPRUN",
           "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/kipsummit-max-kiprun-conexion-emocional-aventura-unen",
           "published": "27/05/2026 09:38 UTC",
-          "source": "Marketing Directo (ES)"
-        },
-        {
-          "title": "OpenAI recluta a Colin Fleming como CMO para dar fuelle al marketing B2B",
-          "url": "https://www.marketingdirecto.com/marketing-general/gente/openai-recluta-colin-fleming-cmo-dar-fuelle-marketing-b2b",
-          "published": "27/05/2026 08:15 UTC",
           "source": "Marketing Directo (ES)"
         }
       ],
@@ -1006,21 +1000,21 @@
       "url": "https://advanced-television.com/feed/",
       "articles": [
         {
+          "title": "Study: YouTube leads streaming ad investment growth",
+          "url": "https://www.advanced-television.com/2026/05/29/study-youtube-leads-streaming-ad-investment-growth/",
+          "published": "29/05/2026 08:31 UTC",
+          "source": "Advanced Television"
+        },
+        {
           "title": "New Glenn rocket lost in explosion",
           "url": "https://www.advanced-television.com/2026/05/29/new-glenn-rocket-lost-in-explosion/",
           "published": "29/05/2026 05:31 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Study: YouTube leads streaming ad investment growth",
-          "url": "https://www.advanced-television.com/2026/05/29/study-youtube-leads-streaming-ad-investment-growth/",
-          "published": "28/05/2026 23:01 UTC",
-          "source": "Advanced Television"
-        },
-        {
           "title": "DirecTV expands distribution deal with Tribeca Festival",
           "url": "https://www.advanced-television.com/2026/05/29/directv-expands-distribution-deal-with-tribeca-festival/",
-          "published": "28/05/2026 23:00 UTC",
+          "published": "28/05/2026 23:40 UTC",
           "source": "Advanced Television"
         },
         {
@@ -1310,6 +1304,12 @@
       "url": "https://www.muycomputer.com/feed/",
       "articles": [
         {
+          "title": "Call of Duty: Modern Warfare 4 quiere devolver a la saga a su mejor versión",
+          "url": "https://www.muycomputer.com/2026/05/29/call-of-duty-modern-warfare-4-quiere-devolver-a-la-saga-a-su-mejor-version/",
+          "published": "29/05/2026 08:14 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
           "title": "Qualcomm promete portátiles Windows a 300 dólares con su Snapdragon C",
           "url": "https://www.muycomputer.com/2026/05/29/qualcomm-promete-portatiles-windows-a-300-dolares-con-su-snapdragon-c/",
           "published": "29/05/2026 06:04 UTC",
@@ -1362,12 +1362,6 @@
           "url": "https://www.muycomputer.com/2026/05/27/diez-errores-frecuentes-al-montar-un-pc-que-debes-evitar/",
           "published": "27/05/2026 10:21 UTC",
           "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "Trust Acira, nuevo teclado mecánico gaming compacto",
-          "url": "https://www.muycomputer.com/2026/05/27/trust-acira-nuevo-teclado-mecanico-gaming-compacto/",
-          "published": "27/05/2026 09:55 UTC",
-          "source": "MuyComputer (ES)"
         }
       ],
       "error": null
@@ -1376,6 +1370,12 @@
       "name": "Variety – TV (section)",
       "url": "https://variety.com/v/tv/feed/",
       "articles": [
+        {
+          "title": "Ali Fazal, Sonali Bendre’s ‘Raakh’ Sets June Prime Video Premiere (EXCLUSIVE)",
+          "url": "https://variety.com/2026/tv/news/ali-fazal-sonali-bendre-raakh-june-prime-video-premiere-1236761940/",
+          "published": "29/05/2026 08:25 UTC",
+          "source": "Variety – TV (section)"
+        },
         {
           "title": "Netflix Reality Show ‘Calabasas Confidential’ Fails to Find the New Kardashians: TV Review",
           "url": "https://variety.com/2026/tv/reviews/calabasas-confidential-review-netflix-reality-kardashian-1236761504/",
@@ -1422,12 +1422,6 @@
           "title": "LISTEN: ‘The U.S. Against the World’ Director-Producer Rand Getlin Documents the Road to the World Cup: ‘It’s a Coming of Age Story’",
           "url": "https://variety.com/2026/tv/news/rand-getlin-u-s-against-the-world-hbo-docu-daily-variety-1236761761/",
           "published": "28/05/2026 23:45 UTC",
-          "source": "Variety – TV (section)"
-        },
-        {
-          "title": "‘The White Lotus’ Recreates Dramatic Cannes Closing Night With Laura Dern, Steve Coogan, Ari Graynor and Max Greenfield",
-          "url": "https://variety.com/2026/tv/global/the-white-lotus-recreates-cannes-closing-night-laura-dern-1236761653/",
-          "published": "28/05/2026 23:03 UTC",
           "source": "Variety – TV (section)"
         }
       ],
