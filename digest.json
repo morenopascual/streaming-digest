@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T08:36:33.366487+00:00",
+  "generated_at": "2026-05-29T08:41:59.120793+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
   "total_articles": 211,
@@ -418,6 +418,12 @@
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
         {
+          "title": "La LG OLED C5 mucho más barata, packs de localizadores para iOS y Android, el iPhone 17 a precio mínimo y más. Cazando Gangas",
+          "url": "https://www.xataka.com/seleccion/lg-oled-c5-mucho-barata-packs-localizadores-para-ios-android-iphone-17-a-precio-minimo-cazando-gangas",
+          "published": "29/05/2026 08:31 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
           "title": "Este valle noruego tiene rocas a cada lado del río que actúan como una pila gigante. Puede que eso explique sus luces fantasma",
           "url": "https://www.xataka.com/espacio/este-valle-noruego-tiene-rocas-a-cada-lado-rio-que-actuan-como-pila-gigante-puede-que-eso-explique-sus-luces-fantasma",
           "published": "29/05/2026 08:01 UTC",
@@ -564,12 +570,6 @@
         {
           "title": "Ninguna pulsera podía conectarse a la vez a un Android y un iPhone. La Xiaomi Smart Band 10 Pro: sujétame el cubata",
           "url": "https://www.xataka.com/wearables/xiaomi-smart-band-10-pro-caracteristicas-precio-ficha-tecnica",
-          "published": "28/05/2026 13:01 UTC",
-          "source": "Xataka (ES)"
-        },
-        {
-          "title": "Primero el móvil, luego el coche y ahora la nevera y la lavadora. El plan de Xiaomi empieza a tener sentido",
-          "url": "https://www.xataka.com/empresas-y-economia/caballo-troya-xiaomi-se-ha-colado-cocina-nevera-lavadora-spoiler-esto-no-va-lavadoras",
           "published": "28/05/2026 13:01 UTC",
           "source": "Xataka (ES)"
         }
