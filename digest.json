@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-29T08:46:45.596572+00:00",
+  "generated_at": "2026-05-29T09:04:31.921728+00:00",
   "date": "29/05/2026",
   "window_hours": 48,
-  "total_articles": 211,
+  "total_articles": 199,
   "sources": [
     {
       "name": "Variety",
@@ -279,6 +279,12 @@
       "url": "https://www.marketingdirecto.com/feed",
       "articles": [
         {
+          "title": "Lola Índigo y Google propagan la cultura andaluza en «GRX La Feria» con el Modo IA de La Búsqueda",
+          "url": "https://www.marketingdirecto.com/creacion/campanas-de-marketing/lola-indigo-google-propagan-cultura-andaluza-grxferia-modo-ia-busqueda",
+          "published": "29/05/2026 08:59 UTC",
+          "source": "Marketing Directo (ES)"
+        },
+        {
           "title": "Hablamos con María Pombo sobre Yuzz, el nuevo refresco de skincare: «Soy yo hecha lata»",
           "url": "https://www.marketingdirecto.com/marketing-general/entrevistas/maria-pombo-yuzz-nuevo-refresco-skincare-mahou",
           "published": "29/05/2026 07:36 UTC",
@@ -417,6 +423,18 @@
       "name": "Xataka (ES)",
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
+        {
+          "title": "Claude 4.8 Opus: lista de novedades de la nueva versión del modelo de Inteligencia Artificial de Anthropic",
+          "url": "https://www.xataka.com/basics/claude-4-8-opus-lista-novedades-nueva-version-modelo-inteligencia-artificial-anthropic",
+          "published": "29/05/2026 08:48 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
+          "title": "Sorpasso histórico en Silicon Valley: Anthropic acaba de superar a OpenAI como la startup de IA más valiosa del mundo",
+          "url": "https://www.xataka.com/robotica-e-ia/sorpasso-historico-silicon-valley-anthropic-acaba-superar-a-openai-como-startup-ia-valiosa-mundo",
+          "published": "29/05/2026 08:45 UTC",
+          "source": "Xataka (ES)"
+        },
         {
           "title": "La LG OLED C5 mucho más barata, packs de localizadores para iOS y Android, el iPhone 17 a precio mínimo y más. Cazando Gangas",
           "url": "https://www.xataka.com/seleccion/lg-oled-c5-mucho-barata-packs-localizadores-para-ios-android-iphone-17-a-precio-minimo-cazando-gangas",
@@ -560,18 +578,6 @@
           "url": "https://www.xataka.com/cine-y-tv/tribunal-supremo-le-ha-quitado-rosco-a-antena-3-ahora-telecinco-tiene-derechos-solo-le-falta-todo-demas",
           "published": "28/05/2026 13:31 UTC",
           "source": "Xataka (ES)"
-        },
-        {
-          "title": "Xiaomi 17T Pro, análisis: una batería que no te acabas en un móvil que condensa a la perfección la familia 'T' de Xiaomi",
-          "url": "https://www.xataka.com/analisis/xiaomi-17t-pro-analisis-caracteristicas-precio-especificaciones",
-          "published": "28/05/2026 13:07 UTC",
-          "source": "Xataka (ES)"
-        },
-        {
-          "title": "Ninguna pulsera podía conectarse a la vez a un Android y un iPhone. La Xiaomi Smart Band 10 Pro: sujétame el cubata",
-          "url": "https://www.xataka.com/wearables/xiaomi-smart-band-10-pro-caracteristicas-precio-ficha-tecnica",
-          "published": "28/05/2026 13:01 UTC",
-          "source": "Xataka (ES)"
         }
       ],
       "error": null
@@ -602,12 +608,6 @@
           "title": "Piedad Siegfried vuelve a Exterior Plus como directora general",
           "url": "https://ipmark.com/piedad-siegfried-exterior-plus-directora-general/",
           "published": "28/05/2026 11:42 UTC",
-          "source": "IPMARK (ES)"
-        },
-        {
-          "title": "Los Premios Aspid 2026 ya tienen ganadores",
-          "url": "https://ipmark.com/los-premios-aspid-2026-tienen-ganadores/",
-          "published": "28/05/2026 09:05 UTC",
           "source": "IPMARK (ES)"
         }
       ],
@@ -699,12 +699,6 @@
           "title": "Hat \"Harper's Bazaar\" die \"GNTM\"-Gewinner schon gespoilert?",
           "url": "https://www.dwdl.de/nachrichten/106637/hat_harpers_bazaar_die_gntmgewinner_schon_gespoilert/",
           "published": "27/05/2026 16:57 UTC",
-          "source": "DWDL.de (DE)"
-        },
-        {
-          "title": "Noch mehr Reality: \"Couple Challenge\" bekommt Spin-Off",
-          "url": "https://www.dwdl.de/nachrichten/106627/noch_mehr_reality_couple_challenge_bekommt_spinoff/",
-          "published": "27/05/2026 08:55 UTC",
           "source": "DWDL.de (DE)"
         }
       ],
@@ -1012,6 +1006,12 @@
           "source": "Advanced Television"
         },
         {
+          "title": "Study: UK emerges as Europe’s leading microdrama market",
+          "url": "https://www.advanced-television.com/2026/05/29/study-uk-emerges-as-europes-leading-microdrama-market/",
+          "published": "29/05/2026 06:11 UTC",
+          "source": "Advanced Television"
+        },
+        {
           "title": "New Glenn rocket lost in explosion",
           "url": "https://www.advanced-television.com/2026/05/29/new-glenn-rocket-lost-in-explosion/",
           "published": "29/05/2026 05:31 UTC",
@@ -1024,6 +1024,12 @@
           "source": "Advanced Television"
         },
         {
+          "title": "DVEO partners with StreamVX",
+          "url": "https://www.advanced-television.com/2026/05/29/dveo-partners-with-streamvx/",
+          "published": "28/05/2026 23:00 UTC",
+          "source": "Advanced Television"
+        },
+        {
           "title": "France: Anti-piracy tech trialled at Roland-Garros",
           "url": "https://www.advanced-television.com/2026/05/28/france-anti-piracy-tech-trialled-at-roland-garros/",
           "published": "28/05/2026 14:13 UTC",
@@ -1033,24 +1039,6 @@
           "title": "Streamers push back on German production levies",
           "url": "https://www.advanced-television.com/2026/05/28/germany-mandatory-quota-on-domestic-productions/",
           "published": "28/05/2026 07:43 UTC",
-          "source": "Advanced Television"
-        },
-        {
-          "title": "Roku rolls out new TV Home Screen",
-          "url": "https://www.advanced-television.com/2026/05/28/roku-rolls-out-new-tv-home-screen/",
-          "published": "28/05/2026 06:51 UTC",
-          "source": "Advanced Television"
-        },
-        {
-          "title": "Virgin TV adds 8 out of 10 Cats and Pointless FAST channels",
-          "url": "https://www.advanced-television.com/2026/05/28/virgin-tv-adds-8-out-of-10-cats-and-pointless-fast-channels/",
-          "published": "28/05/2026 04:13 UTC",
-          "source": "Advanced Television"
-        },
-        {
-          "title": "Forecast: Starlink could reach 100m subs by 2034",
-          "url": "https://www.advanced-television.com/2026/05/28/forecast-starlink-could-reach-100m-subs-by-2034/",
-          "published": "28/05/2026 01:03 UTC",
           "source": "Advanced Television"
         }
       ],
@@ -1302,74 +1290,19 @@
     {
       "name": "MuyComputer (ES)",
       "url": "https://www.muycomputer.com/feed/",
-      "articles": [
-        {
-          "title": "Call of Duty: Modern Warfare 4 quiere devolver a la saga a su mejor versión",
-          "url": "https://www.muycomputer.com/2026/05/29/call-of-duty-modern-warfare-4-quiere-devolver-a-la-saga-a-su-mejor-version/",
-          "published": "29/05/2026 08:14 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "Qualcomm promete portátiles Windows a 300 dólares con su Snapdragon C",
-          "url": "https://www.muycomputer.com/2026/05/29/qualcomm-promete-portatiles-windows-a-300-dolares-con-su-snapdragon-c/",
-          "published": "29/05/2026 06:04 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "La IA entra en una nueva fase: aprender a usarla en el trabajo real",
-          "url": "https://www.muycomputer.com/2026/05/28/la-ia-entra-en-una-nueva-fase-aprender-a-usarla-en-el-trabajo-real/",
-          "published": "28/05/2026 16:40 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "El buscador de Google cambia para siempre y es hora de explorar alternativas",
-          "url": "https://www.muycomputer.com/2026/05/28/el-buscador-de-google-cambia-para-siempre-y-es-hora-de-explorar-alternativas/",
-          "published": "28/05/2026 15:09 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "Una Radeon RX 9070 XT muere por el peso de su sistema de refrigeración, así puedes evitar que te ocurra a ti",
-          "url": "https://www.muycomputer.com/2026/05/28/una-radeon-rx-9070-xt-muere-por-el-peso-de-su-sistema-de-refrigeracion-asi-puedes-evitar-que-te-ocurra-a-ti/",
-          "published": "28/05/2026 12:26 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "FRITZ!Powerline 1240 AX o FRITZ!Powerline 1260: qué modelo deberías elegir",
-          "url": "https://www.muycomputer.com/2026/05/28/fritzpowerline-1240-ax-o-fritzpowerline-1260-que-modelo-deberias-elegir/",
-          "published": "28/05/2026 11:22 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "ASUS quiere llevar el gaming a otra dimensión con las ROG XREAL R1",
-          "url": "https://www.muycomputer.com/2026/05/27/asus-quiere-llevar-el-gaming-a-otra-dimension-con-las-rog-xreal-r1/",
-          "published": "27/05/2026 16:43 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "The Witcher 3 se remasteriza y recibe otro DLC once años después, tiene nuevos requisitos",
-          "url": "https://www.muycomputer.com/2026/05/27/the-witcher-3-se-remasteriza-y-recibe-otro-dlc-once-anos-despues-tiene-nuevos-requisitos/",
-          "published": "27/05/2026 13:43 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "El Ryzen 7 7700X3D aparece en CPU-Z para ampliar el uso de los X3D",
-          "url": "https://www.muycomputer.com/2026/05/27/el-ryzen-7-7700x3d-aparece-en-cpu-z-para-ampliar-el-uso-de-los-x3d/",
-          "published": "27/05/2026 11:17 UTC",
-          "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "Diez errores frecuentes al montar un PC que debes evitar",
-          "url": "https://www.muycomputer.com/2026/05/27/diez-errores-frecuentes-al-montar-un-pc-que-debes-evitar/",
-          "published": "27/05/2026 10:21 UTC",
-          "source": "MuyComputer (ES)"
-        }
-      ],
-      "error": null
+      "articles": [],
+      "error": "Error al parsear el feed: <urlopen error [Errno 110] Connection timed out>"
     },
     {
       "name": "Variety – TV (section)",
       "url": "https://variety.com/v/tv/feed/",
       "articles": [
+        {
+          "title": "‘She Means Justice 2: Breakout’ Launches on FlareFlow, GammaTime as Sequel to Microdrama Hit",
+          "url": "https://variety.com/2026/tv/news/she-means-justice-sequel-flareflow-gammatime-1236761952/",
+          "published": "29/05/2026 09:00 UTC",
+          "source": "Variety – TV (section)"
+        },
         {
           "title": "Ali Fazal, Sonali Bendre’s ‘Raakh’ Sets June Prime Video Premiere (EXCLUSIVE)",
           "url": "https://variety.com/2026/tv/news/ali-fazal-sonali-bendre-raakh-june-prime-video-premiere-1236761940/",
@@ -1416,12 +1349,6 @@
           "title": "CBS Says Late-Night Deal With Byron Allen Will Generate $15 Million in Profit",
           "url": "https://variety.com/2026/tv/news/cbs-late-night-deal-byron-allen-15-million-profit-1236761806/",
           "published": "29/05/2026 00:25 UTC",
-          "source": "Variety – TV (section)"
-        },
-        {
-          "title": "LISTEN: ‘The U.S. Against the World’ Director-Producer Rand Getlin Documents the Road to the World Cup: ‘It’s a Coming of Age Story’",
-          "url": "https://variety.com/2026/tv/news/rand-getlin-u-s-against-the-world-hbo-docu-daily-variety-1236761761/",
-          "published": "28/05/2026 23:45 UTC",
           "source": "Variety – TV (section)"
         }
       ],
