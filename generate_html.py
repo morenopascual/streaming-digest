@@ -143,7 +143,7 @@ def process_with_claude(digest):
     print(f"  Enviando {len(articles)} artículos a Claude ({CLAUDE_MODEL})…")
     message = client.messages.create(
         model=CLAUDE_MODEL,
-        max_tokens=4096,
+        max_tokens=16000,
         messages=[{"role": "user", "content": prompt}],
     )
 
