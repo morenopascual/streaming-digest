@@ -159,19 +159,20 @@ def process_with_claude(digest):
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
 
 def fmt_date(raw):
-    """Try to format an ISO or RFC date string as 'DD MMM' in Spanish."""
+    """Format date string as 'DD MMM' in Spanish. Handles DD/MM/YYYY HH:MM UTC and ISO."""
     if not raw:
         return ""
     MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"]
+    # Format: "28/05/2026 02:44 UTC"
     try:
-        from email.utils import parsedate
-        t = parsedate(raw)
-        if t:
-            return f"{t[2]} {MESES[t[1]-1]}"
+        part = raw.split(" ")[0]  # "28/05/2026"
+        d, m, y = part.split("/")
+        return f"{int(d)} {MESES[int(m)-1]}"
     except Exception:
         pass
+    # ISO: "2026-05-28T..."
     try:
-        dt = datetime.fromisoformat(raw[:19])
+        dt = datetime.fromisoformat(raw[:10])
         return f"{dt.day} {MESES[dt.month-1]}"
     except Exception:
         pass
