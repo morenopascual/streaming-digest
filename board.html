@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablero — Digest Streaming &amp; VOD</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#f2f2f7;color:#1c1c1e;font-size:16px}
+a{color:inherit;text-decoration:none}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.header-actions{display:flex;gap:8px;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:opacity .15s}
+.btn:hover{opacity:.85}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-back{background:#f2f2f7;color:#1c1c1e}
+.btn-clear{background:#ff3b30;color:#fff}
+.btn-copy{background:#34c759;color:#fff}
+.container{max-width:680px;margin:0 auto;padding:16px 0 52px}
+.day-section{margin-bottom:28px}
+.day-label{font-size:12px;font-weight:700;letter-spacing:.09em;color:#8e8e93;text-transform:uppercase;padding:0 16px 8px;display:flex;align-items:center;justify-content:space-between}
+.day-label-count{font-weight:400;color:#c7c7cc}
+.card{display:flex;align-items:flex-start;gap:10px;padding:13px 15px;background:#fff;border-radius:12px;margin:0 12px 8px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.card-link{flex:1;min-width:0;display:block}
+.card-title{font-size:15px;font-weight:500;line-height:1.45;color:#1c1c1e;margin-bottom:6px}
+.card-meta{display:flex;align-items:center;gap:5px;overflow:hidden;flex-wrap:wrap}
+.card-source{font-size:12px;font-weight:600;color:#8e8e93;flex-shrink:0}
+.card-sep{font-size:10px;color:#c7c7cc;flex-shrink:0}
+.card-url{font-size:12px;color:#c7c7cc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.card-date{font-size:12px;color:#aaaaaa;flex-shrink:0}
+.card-ext{font-size:12px;color:#007aff;flex-shrink:0}
+.btn-delete{background:none;border:none;color:#c7c7cc;font-size:20px;cursor:pointer;padding:0 2px;flex-shrink:0;line-height:1;transition:color .15s;align-self:center}
+.btn-delete:hover{color:#ff3b30}
+.empty{text-align:center;padding:60px 20px;color:#8e8e93}
+.empty-icon{font-size:44px;margin-bottom:12px}
+.empty-text{font-size:16px;font-weight:600}
+.empty-sub{font-size:13px;margin-top:6px;color:#c7c7cc}
+.site-footer{text-align:center;padding:20px;font-size:12px;color:#c7c7cc}
+.badge{display:inline-flex;align-items:center;justify-content:center;background:#007aff;color:#fff;border-radius:10px;font-size:11px;font-weight:700;min-width:18px;height:18px;padding:0 5px;margin-left:6px;vertical-align:middle}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div>
+    <h1>Tablero <span id="badge" class="badge" style="display:none">0</span></h1>
+    <p>Noticias guardadas · <span id="subtitle">cargando…</span></p>
+  </div>
+  <div class="header-actions">
+    <button class="btn btn-copy" id="btn-copy" onclick="copyAll()" style="display:none">⎘ Copiar</button>
+    <button class="btn btn-clear" id="btn-clear" onclick="clearAll()" style="display:none">✕ Vaciar</button>
+    <a href="index.html" class="btn btn-back">← Digest</a>
+  </div>
+</div>
+
+<div class="container" id="container"></div>
+
+<div class="site-footer">Digest Streaming &amp; VOD · Atresmedia</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
+const GH_TOKEN = "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";   // mismo token que en index.html
+const REPO     = "morenopascual/streaming-digest";
+const FILE     = "curated.json";
+
+// ─── GITHUB API ───────────────────────────────────────────────────────────────
+async function ghGet() {
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
+    { headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
+  );
+  if (res.status === 404) return { items: [], sha: null };
+  const data = await res.json();
+  const items = JSON.parse(atob(data.content.replace(/\s/g, "")));
+  return { items, sha: data.sha };
+}
+
+async function ghPut(items, sha) {
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(items, null, 2))));
+  await fetch(
+    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
+    {
+      method: "PUT",
+      headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+      body: JSON.stringify({ message: `Tablero actualizado`, content, ...(sha && { sha }) })
+    }
+  );
+}
+
+// ─── UI ───────────────────────────────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2500);
+}
+
+async function deleteItem(id) {
+  const { items, sha } = await ghGet();
+  const updated = items.filter(i => i.id !== id);
+  await ghPut(updated, sha);
+  render(updated);
+  showToast("Noticia eliminada");
+}
+
+async function clearAll() {
+  if (!confirm("¿Vaciar el tablero para todos?")) return;
+  const { sha } = await ghGet();
+  await ghPut([], sha);
+  render([]);
+  showToast("Tablero vaciado");
+}
+
+function copyAll(items) {
+  const text = items.map(i => `${i.title}\n${i.source} · ${i.date}\n${i.url}`).join("\n\n");
+  navigator.clipboard.writeText(text).then(() => showToast("¡Copiado al portapapeles!"));
+}
+
+function render(items) {
+  const container  = document.getElementById("container");
+  const badge      = document.getElementById("badge");
+  const subtitle   = document.getElementById("subtitle");
+  const btnClear   = document.getElementById("btn-clear");
+  const btnCopy    = document.getElementById("btn-copy");
+
+  subtitle.textContent = `${items.length} noticia${items.length !== 1 ? "s" : ""}`;
+
+  if (!items.length) {
+    badge.style.display = "none";
+    btnClear.style.display = "none";
+    btnCopy.style.display = "none";
+    container.innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">📋</div>
+        <div class="empty-text">El tablero está vacío</div>
+        <div class="empty-sub">Selecciona noticias en el digest y pulsa "Guardar en tablero"</div>
+      </div>`;
+    return;
+  }
+
+  badge.textContent = items.length;
+  badge.style.display = "";
+  btnClear.style.display = "";
+  btnCopy.style.display = "";
+  btnCopy.onclick = () => copyAll(items);
+
+  // Agrupar por día guardado (más reciente primero)
+  const byDay = {};
+  [...items].reverse().forEach(item => {
+    const day = item.savedOn || "Sin fecha";
+    if (!byDay[day]) byDay[day] = [];
+    byDay[day].push(item);
+  });
+
+  container.innerHTML = Object.entries(byDay).map(([day, dayItems]) => `
+    <div class="day-section">
+      <div class="day-label">
+        <span>Guardado el ${day}</span>
+        <span class="day-label-count">${dayItems.length} noticia${dayItems.length !== 1 ? "s" : ""}</span>
+      </div>
+      ${dayItems.map(item => `
+        <div class="card">
+          <a class="card-link" href="${item.url}" target="_blank" rel="noopener">
+            <div class="card-title">${item.title}</div>
+            <div class="card-meta">
+              <span class="card-source">${item.source}</span>
+              <span class="card-sep">·</span>
+              <span class="card-date">${item.date}</span>
+              <span class="card-sep">·</span>
+              <span class="card-url">${item.urlShort || item.url}</span>
+              <span class="card-ext">↗</span>
+            </div>
+          </a>
+          <button class="btn-delete" onclick="deleteItem('${item.id}')" title="Eliminar">×</button>
+        </div>
+      `).join("")}
+    </div>
+  `).join("");
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+(async () => {
+  try {
+    const { items } = await ghGet();
+    render(items);
+  } catch(e) {
+    document.getElementById("subtitle").textContent = "error al cargar";
+    document.getElementById("container").innerHTML =
+      `<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">No se pudo cargar el tablero</div><div class="empty-sub">Comprueba que el token tiene permiso Contents: write</div></div>`;
+  }
+})();
+</script>
+</body>
+</html>
