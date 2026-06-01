@@ -8,9 +8,12 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#f2f2f7;color:#1c1c1e;font-size:16px}
 a{color:inherit;text-decoration:none}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
 .site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.btn-update{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
+.btn-update:hover{opacity:.85}
+.btn-update:disabled{opacity:.5;cursor:default}
 .container{max-width:680px;margin:0 auto;padding:16px 0 52px}
 .section{margin-bottom:28px}
 .section-label{font-size:12px;font-weight:700;letter-spacing:.09em;color:#8e8e93;text-transform:uppercase;padding:0 16px 8px}
@@ -39,8 +42,11 @@ a{color:inherit;text-decoration:none}
 </head>
 <body>
 <div class="site-header">
-  <h1>Digest Streaming &amp; VOD</h1>
-  <p>31/05/2026 &nbsp;·&nbsp; Atresmedia</p>
+  <div>
+    <h1>Digest Streaming &amp; VOD</h1>
+    <p>31/05/2026 &nbsp;·&nbsp; Atresmedia</p>
+  </div>
+  <button class="btn-update" id="update-btn" onclick="triggerUpdate()">↻ Actualizar</button>
 </div>
 <div class="container">
 <div class="section">
@@ -684,8 +690,39 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 </div>
-
 </div>
 <div class="site-footer">Generado automáticamente · 31/05/2026 · Atresmedia</div>
+
+<script>
+async function triggerUpdate() {
+  const btn = document.getElementById("update-btn");
+  btn.textContent = "⏳ Lanzando…";
+  btn.disabled = true;
+  try {
+    const res = await fetch(
+      "https://api.github.com/repos/morenopascual/streaming-digest/actions/workflows/update-digest.yml/dispatches",
+      {
+        method: "POST",
+        headers: {
+          "Authorization": "token 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",
+          "Accept": "application/vnd.github.v3+json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ ref: "main" })
+      }
+    );
+    if (res.status === 204) {
+      btn.textContent = "✓ Listo en ~2 min";
+      setTimeout(() => location.reload(), 130000);
+    } else {
+      btn.textContent = "✕ Error";
+      btn.disabled = false;
+    }
+  } catch(e) {
+    btn.textContent = "✕ Error de red";
+    btn.disabled = false;
+  }
+}
+</script>
 </body>
 </html>
