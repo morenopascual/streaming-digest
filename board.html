@@ -64,32 +64,20 @@ a{color:inherit;text-decoration:none}
 
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-const GH_TOKEN = "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";   // mismo token que en index.html
-const REPO     = "morenopascual/streaming-digest";
-const FILE     = "curated.json";
+const WORKER_URL = "https://digest-board.morenopascual.workers.dev";
 
-// ─── GITHUB API ───────────────────────────────────────────────────────────────
+// ─── API (vía Cloudflare Worker) ─────────────────────────────────────────────
 async function ghGet() {
-  const res = await fetch(
-    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
-    { headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
-  );
-  if (res.status === 404) return { items: [], sha: null };
-  const data = await res.json();
-  const items = JSON.parse(atob(data.content.replace(/\s/g, "")));
-  return { items, sha: data.sha };
+  const res = await fetch(WORKER_URL);
+  return res.json();
 }
 
 async function ghPut(items, sha) {
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(items, null, 2))));
-  await fetch(
-    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
-    {
-      method: "PUT",
-      headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
-      body: JSON.stringify({ message: `Tablero actualizado`, content, ...(sha && { sha }) })
-    }
-  );
+  await fetch(WORKER_URL, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items, sha })
+  });
 }
 
 // ─── UI ───────────────────────────────────────────────────────────────────────
