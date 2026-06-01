@@ -723,9 +723,9 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-const GH_TOKEN = "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";   // necesita Actions:write + Contents:write
-const REPO     = "morenopascual/streaming-digest";
-const FILE     = "curated.json";
+const WORKER_URL = "https://digest-board.morenopascual.workers.dev";   // necesita Actions:write + Contents:write
+
+
 
 // ─── SELECCIÓN ────────────────────────────────────────────────────────────────
 let selectMode = false;
@@ -765,27 +765,18 @@ function updateSaveBar() {
   bar.classList.toggle("visible", n > 0);
 }
 
-// ─── GUARDAR EN TABLERO ───────────────────────────────────────────────────────
+// ─── GUARDAR EN TABLERO (vía Cloudflare Worker) ──────────────────────────────
 async function ghGet() {
-  const res = await fetch(
-    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
-    { headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
-  );
-  if (res.status === 404) return { items: [], sha: null };
-  const data = await res.json();
-  return { items: JSON.parse(atob(data.content.replace(/\s/g, ""))), sha: data.sha };
+  const res = await fetch(WORKER_URL);
+  return res.json();
 }
 
 async function ghPut(items, sha) {
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(items, null, 2))));
-  return fetch(
-    `https://api.github.com/repos/${REPO}/contents/${FILE}`,
-    {
-      method: "PUT",
-      headers: { Authorization: `token ${GH_TOKEN}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
-      body: JSON.stringify({ message: "Tablero actualizado", content, ...(sha && { sha }) })
-    }
-  );
+  return fetch(WORKER_URL, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items, sha })
+  });
 }
 
 function showToast(msg) {
@@ -833,19 +824,8 @@ async function triggerUpdate() {
   btn.textContent = "⏳ Lanzando…";
   btn.disabled = true;
   try {
-    const res = await fetch(
-      "https://api.github.com/repos/morenopascual/streaming-digest/actions/workflows/update-digest.yml/dispatches",
-      {
-        method: "POST",
-        headers: {
-          "Authorization": "token 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",
-          "Accept": "application/vnd.github.v3+json",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ ref: "main" })
-      }
-    );
-    if (res.status === 204) {
+    const res = await fetch(WORKER_URL + "/trigger", { method: "POST" });
+    if (res.ok) {
       btn.textContent = "✓ Listo en ~2 min";
       setTimeout(() => location.reload(), 130000);
     } else {
@@ -857,6 +837,3 @@ async function triggerUpdate() {
     btn.disabled = false;
   }
 }
-</script>
-</body>
-</html>
