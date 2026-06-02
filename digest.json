@@ -1,65 +1,47 @@
 {
-  "generated_at": "2026-06-01T10:28:06.847630+00:00",
-  "date": "01/06/2026",
+  "generated_at": "2026-06-02T09:15:21.318370+00:00",
+  "date": "02/06/2026",
   "window_hours": 48,
-  "total_articles": 141,
+  "total_articles": 175,
   "sources": [
     {
       "name": "Variety",
       "url": "https://feeds.feedburner.com/variety/headlines",
       "articles": [
         {
-          "title": "Jimmy Kimmel Thanks ‘Pumpkin McPornhumper’ Trump for His Peabody; ‘Andor’ Creator Tony Gilroy Urges Crowd to Take on Fascism Before It’s Too Late: ‘F— the Empire’",
-          "url": "https://variety.com/2026/tv/news/jimmy-kimmel-peabody-winner-speech-trump-andor-1236763724/",
-          "published": "01/06/2026 08:31 UTC",
+          "title": "Bill Owens, Ex-’60 Minutes’ Boss, Scorns CBS News Overhaul of Show",
+          "url": "https://variety.com/2026/tv/news/bill-owens-60-minutes-boss-scorns-cbs-news-1236764634/",
+          "published": "02/06/2026 02:50 UTC",
           "source": "Variety"
         },
         {
-          "title": "Hasan Piker, Cenk Uygur Reportedly Barred from Attending SXSW London by U.K. Home Office",
-          "url": "https://variety.com/2026/digital/global/hasan-piker-cenk-uygur-banned-uk-sxsw-london-1236763721/",
-          "published": "01/06/2026 07:19 UTC",
+          "title": "Gotham TV Award Winners: ‘I Love LA,’ ‘Pluribus’ and ‘DTF St. Louis’ Take Top Honors; Tim Robinson, Chase Infiniti and Michael Shannon Win Acting Prizes",
+          "url": "https://variety.com/2026/tv/news/gotham-tv-award-winners-i-love-la-pluribus-dtf-st-louis-1236764600/",
+          "published": "02/06/2026 01:37 UTC",
           "source": "Variety"
         },
         {
-          "title": "‘Euphoria’ Officially Ending With Season 3, HBO Confirms",
-          "url": "https://variety.com/2026/tv/news/euphoria-ending-season-3-hbo-1236760319/",
-          "published": "01/06/2026 04:10 UTC",
+          "title": "The Academy Launches Global Award Recognizing Exceptional Movie Theaters Worldwide – Film News in Brief",
+          "url": "https://variety.com/2026/film/news/film-news-in-brief-june-1-2026-1236763966/",
+          "published": "01/06/2026 23:51 UTC",
           "source": "Variety"
         },
         {
-          "title": "John Oliver Goes Off on Trump’s Freedom 250 Concert Debacle",
-          "url": "https://variety.com/2026/tv/news/john-oliver-goes-off-trump-freedom-250-concerts-last-week-tonight-1236763669/",
-          "published": "01/06/2026 03:47 UTC",
+          "title": "Longtime Disney Exec Jim Kapenstein, Who Helped Oversee Some Of Its Biggest Acquisitions, Joins Starz as Chief Legal and Strategy Officer",
+          "url": "https://variety.com/2026/tv/news/disney-jim-kapenstein-starz-chief-legal-strategy-officer-1236764548/",
+          "published": "01/06/2026 23:38 UTC",
           "source": "Variety"
         },
         {
-          "title": "Adewale Akinnuoye-Agbaje Breaks Down ‘Euphoria’ Finale, From Alamo vs. Rue to That Final Showdown: ‘He Enjoys the Chess Game of Death’",
-          "url": "https://variety.com/2026/tv/news/euphoria-finale-why-alamo-kills-rue-explained-adewale-akinnuoye-agbaje-1236762391/",
-          "published": "01/06/2026 02:41 UTC",
+          "title": "Haley Bennett and Jack Whitehall Open SXSW London Film Section With World Premiere of ‘Virginia Woolf’s Night and Day’",
+          "url": "https://variety.com/2026/film/global/virginia-woolfs-night-and-day-world-premiere-sxsw-london-1236763990/",
+          "published": "01/06/2026 22:24 UTC",
           "source": "Variety"
         },
         {
-          "title": "‘Euphoria’ Finale Recap: [SPOILER] Dies, [SPOILER] Takes Revenge and Cassie Doubles Down on OnlyFans",
-          "url": "https://variety.com/2026/tv/news/euphoria-season-3-finale-how-does-rue-die-1236754928/",
-          "published": "01/06/2026 02:36 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "‘Euphoria’ Finale: Colman Domingo Goes Deep on Ali’s Journey With Rue, Revenge and His ‘Christ on the Cross Moment’",
-          "url": "https://variety.com/2026/tv/news/euphoria-finale-colman-domingo-ali-revenge-1236761847/",
-          "published": "01/06/2026 02:36 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "DirecTV and Scripps Locked in Retransmission Battle, as 54 Local TV Stations Go Dark on the Service Across 36 Markets",
-          "url": "https://variety.com/2026/tv/news/directv-scripps-retransmission-battle-local-tv-stations-dark-1236763561/",
-          "published": "31/05/2026 23:38 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "M.I.A. Sues Kid Cudi for $2.8 Million After She Was Kicked Off His Rebel Ragers Tour",
-          "url": "https://variety.com/2026/music/news/mia-sues-kid-cudi-kicked-off-rebel-ragers-tour-1236763557/",
-          "published": "31/05/2026 23:29 UTC",
+          "title": "New ‘60 Minutes’ Boss Will Grapple With Demoralized Staff, High Costs, Hard-Core Attitudes",
+          "url": "https://variety.com/2026/tv/news/60-minutes-boss-scott-pelley-nick-bilton-high-costs-1236763571/",
+          "published": "01/06/2026 20:05 UTC",
           "source": "Variety"
         }
       ],
@@ -70,45 +52,33 @@
       "url": "https://www.hollywoodreporter.com/feed/",
       "articles": [
         {
-          "title": "U.K. Music Tech Firms Face Growth Investment Crisis, “AI Raises Stakes for Gov’t Action,” Study Warns",
-          "url": "https://www.hollywoodreporter.com/business/business-news/uk-music-tech-report-2026-funding-crisis-ai-government-mtuk-1236609771/",
-          "published": "01/06/2026 09:00 UTC",
+          "title": "“My Grandmother Told Me Not to Bring Home a Blue-Eyed Wife. But I’m a Gay Guy”",
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/the-boy-with-the-light-blue-eyes-film-director-interview-1236609561/",
+          "published": "02/06/2026 08:00 UTC",
           "source": "The Hollywood Reporter"
         },
         {
-          "title": "‘Warrior Cats’ Animated Series Secures Director and Showrunner",
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/warrior-cats-animated-series-greenlit-1236610312/",
-          "published": "01/06/2026 08:00 UTC",
+          "title": "Netflix’s New Releases Coming in June 2026",
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-june-2026-new-releases-movies-tv-1236610298/",
+          "published": "02/06/2026 06:54 UTC",
           "source": "The Hollywood Reporter"
         },
         {
-          "title": "‘All Night Wrong’ Director on His Hitchcock-Meets-Wilder Film With ‘Severance’s’ Zach Cherry and Maria Bakalova as Broken Souls",
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/all-night-wrong-film-sxsw-london-wilder-hitchcock-severance-1236609345/",
-          "published": "01/06/2026 08:00 UTC",
+          "title": "Emmy Predictions via Feinberg Forecast: Updated Standings With 10 Days Until Nominations Voting",
+          "url": "https://www.hollywoodreporter.com/lists/emmy-predictions-feinberg-forecast-10-days-noms-voting/",
+          "published": "02/06/2026 01:54 UTC",
           "source": "The Hollywood Reporter"
         },
         {
-          "title": "John Oliver Debuts FYC Ad for ‘Last Week Tonight’ Featuring Guns, a Wine-Drinking Horse and The Fonz Wielding a Pickax",
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/john-oliver-debuts-fyc-ad-for-last-week-tonight-1236610277/",
-          "published": "01/06/2026 06:29 UTC",
+          "title": "Gail Simmons Will Gladly Show You the Rules for ‘Top Chef’ Judging",
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/gail-simmons-top-chef-judging-interview-1236611171/",
+          "published": "02/06/2026 01:49 UTC",
           "source": "The Hollywood Reporter"
         },
         {
-          "title": "Sam Levinson Defends That Major Death in ‘Euphoria’ Season 3 Finale: “It Just Felt Like an Honest Ending”",
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/sam-levinson-defends-major-death-euphoria-season-3-finale-1236610149/",
-          "published": "01/06/2026 05:50 UTC",
-          "source": "The Hollywood Reporter"
-        },
-        {
-          "title": "‘Euphoria’ Season 3 Finale Pays Tribute to Angus Cloud; Sam Levinson Says “He Deserved More Time”",
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/euphoria-season-3-finale-features-angus-cloud-1236610057/",
-          "published": "01/06/2026 05:10 UTC",
-          "source": "The Hollywood Reporter"
-        },
-        {
-          "title": "‘Euphoria’ Is Officially Over — Show Ends With Season 3, HBO Confirms",
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/euphoria-officially-ends-with-season-3-1236610134/",
-          "published": "01/06/2026 04:30 UTC",
+          "title": "‘Not Suitable for Work’ Review: Mindy Kaling’s Gen Z Hulu Comedy Is a Fun, if Dated, Hang",
+          "url": "https://www.hollywoodreporter.com/tv/tv-reviews/not-suitable-for-work-review-mindy-kaling-hulu-1236610520/",
+          "published": "02/06/2026 00:29 UTC",
           "source": "The Hollywood Reporter"
         }
       ],
@@ -119,57 +89,57 @@
       "url": "https://deadline.com/feed/",
       "articles": [
         {
-          "title": "Kiki Gyan Documentary Among Projects Set For 2026 Locarno Open Doors",
-          "url": "https://deadline.com/2026/06/locarno-open-doors-kiki-gyan-documentary-2026-1236931814/",
-          "published": "01/06/2026 10:27 UTC",
+          "title": "Gary Lineker & Andrew Callaghan Set For ‘The Louis Theroux Podcast’ Season 8",
+          "url": "https://deadline.com/2026/06/louis-theroux-podcast-season-8-olivia-wilde-gary-lineker-1236933965/",
+          "published": "02/06/2026 09:00 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "UK Home Office Confirms SXSW London Speakers Cenk Uygur & Hasan Piker Blocked From Entering Country",
-          "url": "https://deadline.com/2026/06/cenk-uygur-hasan-piker-blocked-uk-entry-miss-sxsw-london-1236931792/",
-          "published": "01/06/2026 09:13 UTC",
+          "title": "Andrew Scott & George MacKay Lead Voice Cast Of Russell Tovey’s Debut Novel ‘Starlings’, Which Is Being Published By Audible",
+          "url": "https://deadline.com/2026/06/andrew-scott-george-mackay-russell-tovey-starlings-audible-1236937944/",
+          "published": "02/06/2026 07:01 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "KSI Leaving The Sidemen After 13 Years",
-          "url": "https://deadline.com/2026/06/ksi-leaving-the-sidemen-youtube-1236931786/",
-          "published": "01/06/2026 07:50 UTC",
+          "title": "BFI Pleaded With Government To Exclude UK Screen Industries From Trump Trade Deal, Saying It Would Cause “Fundamental Harm”",
+          "url": "https://deadline.com/2026/06/bfi-uk-government-film-tv-deal-donald-trump-1236932021/",
+          "published": "02/06/2026 06:59 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "‘Who Do You Think You Are?’ & ‘The Bachelor’ Set For Little Dot Studios Channels Through WBITVP Deal",
-          "url": "https://deadline.com/2026/06/wbitvp-little-dot-studios-bachelor-who-do-you-think-you-are-1236930021/",
-          "published": "01/06/2026 07:00 UTC",
+          "title": "Former ’60 Minutes’ Executive Producer Bill Owens Praises Scott Pelley For Speaking Out, Blasts CBS News For Purge Of Top Staffers And Correspondents",
+          "url": "https://deadline.com/2026/06/60-minutes-bill-ownes-scott-pelley-1236938426/",
+          "published": "02/06/2026 03:48 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "RTL Completes Deal To Buy Sky Deutschland From Comcast",
-          "url": "https://deadline.com/2026/05/rtl-closes-sky-deutschland-deal-comcast-1236931764/",
-          "published": "01/06/2026 06:40 UTC",
+          "title": "‘Stranger Things’ Creator Matt Duffer Says Young Film And TV Audiences “Are Telling Us Very Loudly That They’re Hungry For Original Stories”",
+          "url": "https://deadline.com/2026/06/stranger-things-young-film-tv-audiences-original-stories-1236938362/",
+          "published": "02/06/2026 02:17 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "‘Euphoria’ Is Over: HBO Series Officially Ending With Season 3",
-          "url": "https://deadline.com/2026/05/euphoria-ending-hbo-series-finale-three-seasons-1236931756/",
-          "published": "01/06/2026 06:06 UTC",
+          "title": "‘Backrooms 2’: Here’s What’s Up At This Minute With A Kane Parsons Sequel – The Dish",
+          "url": "https://deadline.com/2026/06/backrooms-sequel-kane-parsons-1236938378/",
+          "published": "02/06/2026 01:45 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "‘Sapne Vs Everyone’ Star Ambrish Verma Lands IMDb Breakout Star Award",
-          "url": "https://deadline.com/2026/05/sapne-vs-everyone-star-ambrish-verma-imdb-starmeter-award-1236931268/",
-          "published": "01/06/2026 04:30 UTC",
+          "title": "Gotham TV Awards: ‘DTF: St. Louis,’ ‘Pluribus’ & ‘I Love LA’ Win Top Series Prizes; Lead Acting Honors To Chase Infiniti, Michael Shannon & Tim Robinson – Full List",
+          "url": "https://deadline.com/2026/06/2026-gotham-tv-awards-winners-list-1236937998/",
+          "published": "02/06/2026 01:10 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "‘Euphoria’s Season 3 Finale Tribute To Angus Cloud’s Fezco O’Neill",
-          "url": "https://deadline.com/2026/05/euphoria-season-3-finale-tribute-angus-clouds-fezco-oneill-1236931624/",
-          "published": "01/06/2026 03:25 UTC",
+          "title": "Zach Cregger Parts Ways With Artists First, Will Not Seek New Management",
+          "url": "https://deadline.com/2026/06/zach-cregger-leaves-artists-first-1236938268/",
+          "published": "02/06/2026 01:00 UTC",
           "source": "Deadline Hollywood"
         },
         {
-          "title": "Scripps’ 54 Local Stations Go Dark On DirecTV Amid Retransmission Dispute",
-          "url": "https://deadline.com/2026/05/scripps-directv-retransmission-battle-tv-stations-go-dark-1236931598/",
-          "published": "01/06/2026 00:32 UTC",
+          "title": "Lex Luthor’s Iconic Warsuit He Uses To Fight Superman Teased In ‘Man Of Tomorrow’ Set Image",
+          "url": "https://deadline.com/2026/06/lex-luthor-warsuit-superman-man-of-tomorrow-photo-1236938059/",
+          "published": "01/06/2026 23:27 UTC",
           "source": "Deadline Hollywood"
         }
       ],
@@ -180,39 +150,57 @@
       "url": "https://techcrunch.com/feed/",
       "articles": [
         {
+          "title": "Alphabet plans to raise $80B to pay for AI buildout",
+          "url": "https://techcrunch.com/2026/06/01/alphabet-plans-to-raise-80-billion-to-pay-for-ai-buildout/",
+          "published": "01/06/2026 22:55 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Defense tech darling Mach Industries hits $1.8B valuation, a 4x jump in a year",
+          "url": "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+          "published": "01/06/2026 21:40 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Hackers hijacked Instagram accounts by tricking Meta AI support chatbot into granting access",
+          "url": "https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/",
+          "published": "01/06/2026 18:34 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Water access is now a risk factor in SpaceX’s IPO",
+          "url": "https://techcrunch.com/2026/06/01/water-access-is-now-a-risk-factor-in-spacexs-ipo/",
+          "published": "01/06/2026 18:19 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Grand Theft Auto V cheat service gets hacked, exposing thousands of gamers",
+          "url": "https://techcrunch.com/2026/06/01/grand-theft-auto-v-cheat-service-gets-hacked-exposing-thousands-of-gamers/",
+          "published": "01/06/2026 17:22 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "Zigging when most are zagging, ex-Meta CTO raises $250M climate fund",
+          "url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+          "published": "01/06/2026 16:42 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "SpaceX says it may issue ‘significant’ equity in ‘future transactions’",
+          "url": "https://techcrunch.com/2026/06/01/spacex-says-it-may-issue-significant-equity-in-future-transactions/",
+          "published": "01/06/2026 16:09 UTC",
+          "source": "TechCrunch"
+        },
+        {
+          "title": "DuckDuckGo makes its ‘no-AI’ search engine easier to access as its traffic booms",
+          "url": "https://techcrunch.com/2026/06/01/duckduckgo-makes-its-no-ai-search-engine-easier-to-access-as-its-traffic-booms/",
+          "published": "01/06/2026 14:49 UTC",
+          "source": "TechCrunch"
+        },
+        {
           "title": "This weekend’s two biggest movies were both directed by YouTubers",
           "url": "https://techcrunch.com/2026/05/31/this-weekends-two-biggest-movies-were-both-directed-by-youtubers/",
           "published": "31/05/2026 18:34 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "Snap alums unveil Ghost Angels fund",
-          "url": "https://techcrunch.com/2026/05/30/snap-alums-unveil-ghost-angels-fund/",
-          "published": "30/05/2026 17:00 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "I put Google’s 24/7 AI assistant Gemini Spark to work, and it’s actually pretty useful",
-          "url": "https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/",
-          "published": "30/05/2026 15:30 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "The groupthink boom: what three top VCs really think about the AI frenzy",
-          "url": "https://techcrunch.com/2026/05/30/the-groupthink-boom-what-three-top-vcs-really-think-about-the-ai-frenzy/",
-          "published": "30/05/2026 14:49 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "As the browser wars heat up, here are the hottest alternatives to Chrome and Safari in 2026",
-          "url": "https://techcrunch.com/2026/05/30/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
-          "published": "30/05/2026 13:00 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "TikTok’s road to becoming a super app",
-          "url": "https://techcrunch.com/2026/05/30/tiktoks-road-to-becoming-a-super-app/",
-          "published": "30/05/2026 13:00 UTC",
           "source": "TechCrunch"
         }
       ],
@@ -222,6 +210,12 @@
       "name": "Digiday",
       "url": "https://digiday.com/feed/",
       "articles": [
+        {
+          "title": "Rising gas prices may push more household spending toward Amazon",
+          "url": "https://digiday.com/media/rising-gas-prices-may-push-more-household-spending-toward-amazon/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+          "published": "02/06/2026 04:01 UTC",
+          "source": "Digiday"
+        },
         {
           "title": "Dhar Mann is going to Tribeca X to prove CTV can do TV’s job — and that creators belong in the conversation",
           "url": "https://digiday.com/media/dhar-mann-is-going-to-tribeca-x-to-prove-ctv-can-do-tvs-job-and-that-creators-belong-in-the-conversation/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
@@ -253,6 +247,36 @@
       "name": "Broadband TV News",
       "url": "https://www.broadbandtvnews.com/feed/",
       "articles": [
+        {
+          "title": "WeltN24 extends German DTT distribution deal with Media Broadcast",
+          "url": "https://www.broadbandtvnews.com/2026/06/02/weltn24-extends-german-dtt-distribution-deal-with-media-broadcast/",
+          "published": "02/06/2026 09:04 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Liberty Global creates Ziggo Group ahead of planned 2027 Amsterdam listing",
+          "url": "https://www.broadbandtvnews.com/2026/06/01/liberty-global-creates-ziggo-group-ahead-of-planned-2027-amsterdam-listing/",
+          "published": "01/06/2026 11:15 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Sky exits Sky News Arabia joint venture as IMI takes control",
+          "url": "https://www.broadbandtvnews.com/2026/06/01/sky-exits-sky-news-arabia-joint-venture-as-imi-takes-control/",
+          "published": "01/06/2026 11:03 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Online video overtakes pay-TV revenue, says Omdia",
+          "url": "https://www.broadbandtvnews.com/2026/06/01/online-video-overtakes-pay-tv-revenue-says-omdia/",
+          "published": "01/06/2026 10:42 UTC",
+          "source": "Broadband TV News"
+        },
+        {
+          "title": "Police shut down UK illegal streaming data centre",
+          "url": "https://www.broadbandtvnews.com/2026/06/01/police-shut-down-uk-illegal-streaming-data-centre/",
+          "published": "01/06/2026 10:30 UTC",
+          "source": "Broadband TV News"
+        },
         {
           "title": "ProSiebenSat.1 invests in happybrush with Manuel Neuer as strategic partner",
           "url": "https://www.broadbandtvnews.com/2026/06/01/prosiebensat-1-invests-in-happybrush-as-manuel-neuer-becomes-strategic-partner/",
@@ -291,159 +315,159 @@
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
         {
-          "title": "Renovar consola no estaba en mis planes, pero es difícil resistirse a estas ofertas de AliExpress: hay Nintendo Switch 2 y varias PS5",
-          "url": "https://www.xataka.com/seleccion/renovar-consola-no-estaba-mis-planes-dificil-resistirse-a-estas-ofertas-aliexpress-hay-nintendo-switch-2-varias-ps5",
-          "published": "01/06/2026 10:16 UTC",
+          "title": "Jeff Bezos pidió a sus padres los ahorros de toda su vida para fundar Amazon. Solo le hicieron una pregunta: \"Qué es Internet?",
+          "url": "https://www.xataka.com/empresas-y-economia/jeff-bezos-pidio-a-sus-padres-ahorros-toda-su-vida-para-fundar-amazon-solo-le-hicieron-pregunta-que-internet-1",
+          "published": "02/06/2026 09:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "EEUU intentó borrar a Huawei del mapa. Huawei tiene algo que decirles: \"gracias”",
-          "url": "https://www.xataka.com/empresas-y-economia/eeuu-intento-borrar-a-huawei-mapa-huawei-tiene-algo-que-decirles-gracias",
-          "published": "01/06/2026 09:00 UTC",
+          "title": "Los mejores auriculares de diadema de Sony, varios Garmin y más: cinco chollos en auriculares y relojes de AliExpress",
+          "url": "https://www.xataka.com/seleccion/mejores-auriculares-diadema-sony-varios-garmin-cinco-chollos-auriculares-relojes-aliexpress",
+          "published": "02/06/2026 08:45 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Declaración de la Renta 2025 presencial: qué necesitas y cómo pedir la cita previa para hacerla en persona en este 2026",
-          "url": "https://www.xataka.com/basics/declaracion-renta-2025-presencial-que-necesitas-como-pedir-cita-previa-para-hacerla-persona-este-2026",
-          "published": "01/06/2026 08:53 UTC",
+          "title": "Reino Unido mira a una “marina híbrida” para el futuro. Navantia ya tiene una propuesta autónoma: el LASV75",
+          "url": "https://www.xataka.com/magnet/reino-unido-mira-a-marina-hibrida-para-futuro-navantia-tiene-propuesta-autonoma-lasv75",
+          "published": "02/06/2026 08:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Un Google Pixel 10 por menos de 500 euros, Galaxy A57, varios Xiaomi y más: estas son las mejores ofertas en móviles de AliExpress",
-          "url": "https://www.xataka.com/seleccion/google-pixel-10-500-euros-galaxy-a57-varios-xiaomi-estas-mejores-ofertas-moviles-aliexpress",
-          "published": "01/06/2026 08:46 UTC",
+          "title": "Sabemos exactamente lo que cuesta la IA, pero somos incapaces de medir lo que produce. Y eso es un problema serio",
+          "url": "https://www.xataka.com/empresas-y-economia/sabemos-exactamente-que-cuesta-ia-somos-incapaces-medir-que-produce-eso-empieza-a-ser-problema-serio",
+          "published": "02/06/2026 08:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Que Irán derribara un F-15 de EEUU era algo insólito. El problema es que han abierto el misil... y todo apunta a China",
-          "url": "https://www.xataka.com/magnet/que-iran-derribara-f-15-eeuu-era-insolito-problema-que-eeuu-ha-abierto-misil-todo-apunta-a-china",
-          "published": "01/06/2026 08:30 UTC",
+          "title": "Los repelentes anti-mosquito han sido eficientes durante 40 años. Ahora los mosquitos están aprendiendo a apreciarlos",
+          "url": "https://www.xataka.com/ecologia-y-naturaleza/repelentes-anti-mosquito-han-sido-eficientes-durante-40-anos-ahora-mosquitos-estan-aprendiendo-a-apreciarlos",
+          "published": "02/06/2026 07:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Un hombre pagó 23 dólares por una caja de PC en una subasta. Descubrió en su interior una CPU de 24 núcleos y una RTX 3080 Ti",
-          "url": "https://www.xataka.com/ordenadores/hombre-pago-23-dolares-caja-pc-subasta-descubrio-su-interior-cpu-24-nucleos-rtx-3080-ti",
-          "published": "01/06/2026 08:16 UTC",
+          "title": "CATL va a fabricar baterías de sodio en masa este 2026. Su objetivo: alcanzar los 600 km de autonomía",
+          "url": "https://www.xataka.com/movilidad/catl-va-a-fabricar-baterias-sodio-masa-este-2026-su-objetivo-alcanzar-600-km-autonomia",
+          "published": "02/06/2026 07:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Elon Musk no quiere solo llegar a la Luna, también quiere convertirla en una fábrica de satélites lanzados con catapultas",
-          "url": "https://www.xataka.com/espacio/elon-musk-no-quiere-solo-llegar-a-luna-tambien-quiere-convertirla-fabrica-satelites-lanzados-catapultas",
-          "published": "01/06/2026 08:00 UTC",
+          "title": "Los chips de IA siempre han querido ser más y más potentes. TSMC acaba de señalar el verdadero límite: la eficiencia",
+          "url": "https://www.xataka.com/componentes/chips-ia-siempre-han-querido-ser-potentes-tsmc-acaba-senalar-verdadero-limite-eficiencia",
+          "published": "01/06/2026 20:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Nvidia acaba de lanzar su misil contra el dominio de Intel AMD en PCs y portátiles. Hay un problema: es un misil un poco obsoleto",
-          "url": "https://www.xataka.com/ordenadores/nvidia-acaba-lanzar-su-misil-dominio-intel-amd-pcs-portatiles-hay-problema-misil-poco-obsoleto",
-          "published": "01/06/2026 05:30 UTC",
+          "title": "El James Webb ha encontrado algo que no debería existir: una barra estelar en una galaxia demasiado joven y gaseosa",
+          "url": "https://www.xataka.com/espacio/james-webb-ha-resuelto-dos-misterios-golpe-que-existe-barra-estelar-imposible-que-algunas-galaxias-mueren-jovenes",
+          "published": "01/06/2026 19:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "AliExpress empieza en unas horas su Promo de Verano: hay cupones de hasta 110 euros y descuentazos en móviles, consolas y más",
-          "url": "https://www.xataka.com/seleccion/aliexpress-empieza-unas-horas-su-promo-verano-hay-cupones-110-euros-descuentazos-moviles-consolas",
-          "published": "31/05/2026 19:16 UTC",
+          "title": "Amazon lo tenía todo listo para atacar el monopolio de Starlink. Hasta que Blue Origin explotó en pedazos",
+          "url": "https://www.xataka.com/espacio/no-todas-explosiones-iguales-que-fallo-new-glenn-mucho-grave-que-fuegos-artificiales-spacex",
+          "published": "01/06/2026 19:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "China acaba de poner en marcha un “DNI” para robots humanoides: la ambición va mucho más allá del registro",
-          "url": "https://www.xataka.com/robotica-e-ia/china-acaba-poner-marcha-dni-para-robots-humanoides-ambicion-va-mucho-alla-registro",
-          "published": "31/05/2026 19:00 UTC",
+          "title": "Madrid ha sumado 5.900 nuevos millonarios a su censo: ahora necesitan más de dos millones de euros para comprarse un piso",
+          "url": "https://www.xataka.com/magnet/madrid-ha-sumado-5-900-nuevos-millonarios-a-su-censo-ahora-necesitan-dos-millones-euros-para-comprarse-piso",
+          "published": "01/06/2026 18:45 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "El robot con el que quieren explorar los túneles de Marte es un bicho bola relleno de drones diente de león",
-          "url": "https://www.xataka.com/espacio/robot-que-quieren-explorar-tuneles-marte-bicho-bola-relleno-drones-diente-leon",
-          "published": "31/05/2026 18:00 UTC",
+          "title": "19 estrenos en Netflix esta semana: un documental que ahonda en lo que 'Michael' no quiso contar y un excelente thriller español",
+          "url": "https://www.xataka.com/streaming/19-estrenos-netflix-esta-semana-documental-que-ahonda-que-michael-no-quiso-contar-excelente-thriller-espanol",
+          "published": "01/06/2026 18:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "La fiebre de los perros guardianes en España: cuestan hasta 15.000 euros y la ley los trata igual que a un caniche",
-          "url": "https://www.xataka.com/magnet/cada-vez-hay-perros-guardianes-espana-cuestan-15-000-euros-ley-trata-igual-que-a-caniche",
-          "published": "31/05/2026 17:30 UTC",
+          "title": "Alguien pensó que era buena idea subir con un dispositivo Bluetooth llamado \"Bomba\" a un avión. Pasó lo que tenía que pasar",
+          "url": "https://www.xataka.com/transporte/alguien-penso-que-era-buena-idea-subir-dispositivo-bluetooth-llamado-bomba-a-avion-paso-que-tenia-que-pasar",
+          "published": "01/06/2026 18:15 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Las casas de barro eran símbolo de pobreza en el Himalaya. Hasta que llegó Airbnb",
-          "url": "https://www.xataka.com/magnet/dos-arquitectos-huyeron-caos-nueva-delhi-para-construir-casa-barro-himalaya-ahora-airbnb",
-          "published": "31/05/2026 17:00 UTC",
+          "title": "El Surface Laptop más potente jamás creado por Microsoft llega con una gran novedad: apuesta por un chip ARM de NVIDIA",
+          "url": "https://www.xataka.com/ordenadores/surface-laptop-potente-jamas-creado-microsoft-llega-gran-novedad-apuesta-chip-arm-nvidia",
+          "published": "01/06/2026 18:00 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Llevamos años mirando el síndrome de Noé como un problema minoritario y controlado. Nos equivocábamos",
-          "url": "https://www.xataka.com/magnet/sindrome-noe-cada-vez-hay-personas-que-acumulan-acumulan-perros-gatos-sus-casas",
-          "published": "31/05/2026 16:30 UTC",
+          "title": "Mientras el mundo avanza hacia la muerte del efectivo, el Banco de España tiene un consejo: guarda 70 euros en casa",
+          "url": "https://www.xataka.com/empresas-y-economia/mundo-entero-avanza-futuro-dinero-efectivo-banco-espana-tiene-consejo-tener-70-euros-casa",
+          "published": "01/06/2026 17:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "El nuevo coloso de Norteamérica está en Canadá: un soberbio rascacielos de 12 lados y 351 metros de altura",
-          "url": "https://www.xataka.com/ingenieria-y-megaconstrucciones/canada-tiene-a-punto-rascacielos-residencial-pisos-norteamerica-tiene-12-lados-351-metros-altura",
-          "published": "31/05/2026 16:00 UTC",
+          "title": "Ni Casita ni casito: la auténtica fiesta de Bad Bunny se da en el Sector T, los \"tiesos\" fuera del Metropolitano",
+          "url": "https://www.xataka.com/musica/casita-casito-autentica-fiesta-bad-bunny-se-da-sector-t-tiesos-fuera-metropolitano",
+          "published": "01/06/2026 17:15 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "China ha resucitado el concepto más extraño de la Guerra Fría: un avión, un barco y un lanzamisiles en una sola máquina",
-          "url": "https://www.xataka.com/magnet/china-ha-resucitado-concepto-extrano-guerra-fria-avion-barco-lanzamisiles-sola-maquina",
-          "published": "31/05/2026 15:30 UTC",
+          "title": "Las mangueras de gasolina tienen un agujerito diminuto en la punta. Sin chips de por medio, es la pieza más lista de todo el surtidor",
+          "url": "https://www.xataka.com/movilidad/mangueras-gasolina-tienen-agujerito-diminuto-punta-chips-medio-pieza-lista-todo-surtidor",
+          "published": "01/06/2026 17:01 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Hace 2.000 años, un esclavo cojo y calvo empezó a hablar en las tabernas de Roma. Su \"teoría de las dos asas\" ha marcado la psicología moderna",
-          "url": "https://www.xataka.com/magnet/hace-2000-anos-esclavo-cojo-calvo-empezo-a-hablar-tabernas-roma-su-teoria-dos-asas-sigue-ha-marcado-mundo-moderno",
-          "published": "31/05/2026 15:00 UTC",
+          "title": "El primer día de la Promo de Verano de AliExpress sigue cargado de chollos: estos son los mejores que hemos encontrado",
+          "url": "https://www.xataka.com/seleccion/primer-dia-promo-verano-aliexpress-sigue-cargado-chollos-estos-mejores-que-hemos-encontrado",
+          "published": "01/06/2026 16:45 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "La explosión nuclear que cambió el mundo también creó un material que no existe en ningún otro lugar del universo conocido",
-          "url": "https://www.xataka.com/energia/explosion-nuclear-que-cambio-mundo-tambien-creo-material-que-no-existe-ningun-otro-lugar-universo-conocido",
-          "published": "31/05/2026 14:30 UTC",
+          "title": "México quería acabar con el anonimato telefónico. Ya se venden SIM con la identidad de otro en el mercado negro",
+          "url": "https://www.xataka.com/empresas-y-economia/mexico-quiere-acabar-anonimato-telefonico-problema-que-se-venden-sim-registradas-mercado-negro",
+          "published": "01/06/2026 16:31 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "El escándalo literario del año lo protagoniza un texto que nadie sabe si es IA: es la punta del iceberg de un problema sin control",
-          "url": "https://www.xataka.com/robotica-e-ia/hay-caos-desatado-textos-escritos-ia-ganan-premios-revolucionan-universidades-detectores-no-sirven-nada",
-          "published": "31/05/2026 14:00 UTC",
+          "title": "Resolviendo la paradoja de la vivienda en España: por qué suben los precios si bajan las compraventas",
+          "url": "https://www.xataka.com/magnet/espana-se-esta-vendiendo-mucha-vivienda-que-hace-ano-problema-que-precios-no-paran-crecer",
+          "published": "01/06/2026 16:15 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Tenemos agujeros negros pequeños y gigantes, pero los intermedios no aparecen. Ahora unos científicos han diseñado un método para buscarlos y ya tienen dos candidatos",
-          "url": "https://www.xataka.com/espacio/tenemos-agujeros-negros-pequenos-gigantes-intermedios-no-aparecen-ahora-unos-cientificos-han-disenado-metodo-para-buscarlos-tienen-dos-candidatos",
-          "published": "31/05/2026 13:30 UTC",
+          "title": "MG fabricará en Galicia: la marca china que más coches vende en Europa se decide por España",
+          "url": "https://www.xataka.com/movilidad/mg-fabricara-galicia-marca-china-que-coches-vende-europa-se-decide-espana",
+          "published": "01/06/2026 16:09 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Los routers WiFi 7 están muy bien, pero no los vas a aprovechar si no tienes un móvil compatible: estos son los que lo soportan en 2026",
-          "url": "https://www.xataka.com/seleccion/routers-wifi-7-estan-muy-bien-no-vas-a-aprovechar-no-tienes-movil-compatible-estos-que-soportan-2026",
-          "published": "31/05/2026 13:16 UTC",
+          "title": "El cáncer de páncreas era casi invencible. Una nueva terapia dirigida acaba de duplicar la supervivencia",
+          "url": "https://www.xataka.com/medicina-y-salud/cancer-pancreas-se-veia-como-fortaleza-inexpugnable-nueva-terapia-encontro-su-mayor-vulnerabilidad",
+          "published": "01/06/2026 16:00 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "En tiempos atomizados, la generación Z española está encontrando un extraño refugio en 'Los Serrano' y 'Aquí no hay quien viva'",
-          "url": "https://www.xataka.com/cine-y-tv/tiempos-atomizados-generacion-z-espanola-esta-encontrando-extrano-refugio-serrano-aqui-no-hay-quien-viva",
-          "published": "31/05/2026 13:16 UTC",
+          "title": "La mayor mudanza de la historia será en Dubai: 35.000 millones de dólares para construir el aeropuerto más grande del mundo",
+          "url": "https://www.xataka.com/movilidad/mayor-mudanza-historia-sera-dubai-35-000-millones-dolares-para-construir-aeropuerto-grande-mundo",
+          "published": "01/06/2026 15:30 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Inyectarse un hígado en miniatura: la revolucionaria solución científica contra las listas de espera",
-          "url": "https://www.xataka.com/medicina-y-salud/lista-espera-para-transplante-higado-puede-ser-eterna-asi-que-han-creado-solucion-inyectarse-uno-miniatura",
-          "published": "31/05/2026 13:00 UTC",
+          "title": "Europa se las prometía felices apagando el 2G y el 3G. No tuvo en cuenta que hay 64 millones de coches que lo necesitan",
+          "url": "https://www.xataka.com/movilidad/europa-se-prometia-felices-apagando-2g-3g-no-tuvo-cuenta-que-hay-64-millones-coches-que-necesitan",
+          "published": "01/06/2026 15:16 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "En 1972 Italia quiso meter una ciudad entera en un edificio de un kilómetro. Medio siglo después sigue pagando las consecuencias",
-          "url": "https://www.xataka.com/magnet/1972-italia-quiso-meter-ciudad-entera-edificio-kilometro-medio-siglo-despues-sigue-pagando-consecuencias",
-          "published": "31/05/2026 12:30 UTC",
+          "title": "Le han preguntado a 1.600 expertos cómo funciona el Universo. No se ponen de acuerdo en casi nada",
+          "url": "https://www.xataka.com/espacio/le-han-preguntado-a-1-600-expertos-como-funciona-universo-no-se-ponen-acuerdo-casi-nada",
+          "published": "01/06/2026 15:00 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Un 'plan de mierda' para salvar el campo: Europa recurre al  estiércol para hacer frente a la crisis del fertilizante",
-          "url": "https://www.xataka.com/energia/europa-tiene-plan-mierda-perdon-para-acabar-crisis-fertilizante-estiercol",
-          "published": "31/05/2026 12:16 UTC",
+          "title": "Jensen Huang, CEO de Nvidia: \"La gente habla de la IA eliminando trabajos. Es una completa tontería\"",
+          "url": "https://www.xataka.com/robotica-e-ia/tienes-miedo-que-ia-te-quite-trabajo-ceo-nvidia-tiene-mensaje-completa-tonteria",
+          "published": "01/06/2026 14:30 UTC",
           "source": "Xataka (ES)"
         },
         {
-          "title": "Qué es la memoria en la IA y cómo exprimirla al máximo y usarla corréctamente",
-          "url": "https://www.xataka.com/basics/que-memoria-ia-como-exprimirla-al-maximo-usarla-correctamente",
-          "published": "31/05/2026 12:00 UTC",
+          "title": "Australia tiene una tuneladora de 137 toneladas, tan grande que necesita un camión de 152 ruedas solo para transportarla",
+          "url": "https://www.xataka.com/movilidad/para-mover-cabezal-corte-tuneladora-monica-hizo-falta-camion-152-ruedas-clave-para-bateria-agua-australia",
+          "published": "01/06/2026 14:00 UTC",
           "source": "Xataka (ES)"
         }
       ],
@@ -452,13 +476,74 @@
     {
       "name": "IPMARK (ES)",
       "url": "https://ipmark.com/feed/",
-      "articles": [],
+      "articles": [
+        {
+          "title": "Zalando reivindica el verano español en su nueva campaña",
+          "url": "https://ipmark.com/zalando-reivindica-verano-espanol-nueva-campana/",
+          "published": "01/06/2026 14:25 UTC",
+          "source": "IPMARK (ES)"
+        },
+        {
+          "title": "La inversión publicitaria creció un 6,3% en abril",
+          "url": "https://ipmark.com/inversion-publicitaria-crece-abril-2026-infoadex/",
+          "published": "01/06/2026 14:18 UTC",
+          "source": "IPMARK (ES)"
+        },
+        {
+          "title": "‘El Puchero de Canal Cocina’, un streaming de AMC Global Media dedicado a la cocina tradicional",
+          "url": "https://ipmark.com/el-puchero-de-canal-cocina-un-streaming-de-amc-global-media-dedicado-a-la-cocina-tradicional/",
+          "published": "01/06/2026 13:43 UTC",
+          "source": "IPMARK (ES)"
+        },
+        {
+          "title": "La metodología BrandIndex mide la fortaleza de marca del Top20 CMOs 2026",
+          "url": "https://ipmark.com/la-metodologia-brandindex-mide-la-fortaleza-de-marca-del-top20-cmos-2026/",
+          "published": "01/06/2026 12:24 UTC",
+          "source": "IPMARK (ES)"
+        }
+      ],
       "error": null
     },
     {
       "name": "DWDL.de (DE)",
       "url": "https://www.dwdl.de/rss/allethemen.xml",
       "articles": [
+        {
+          "title": "Frank Vogel verantwortet Vermarktung von Sky und RTL AdAlliance",
+          "url": "https://www.dwdl.de/nachrichten/106695/frank_vogel_verantwortet_vermarktung_von_sky_und_rtl_adalliance/",
+          "published": "02/06/2026 08:30 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Starttermin für dritte Staffel von \"Kaulitz & Kaulitz\" steht fest",
+          "url": "https://www.dwdl.de/nachrichten/106694/starttermin_fuer_dritte_staffel_von_kaulitz__kaulitz_steht_fest/",
+          "published": "02/06/2026 08:17 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "\"First Dates Hotel\" verliert bei Vox immer mehr an Zugkraft",
+          "url": "https://www.dwdl.de/zahlenzentrale/106692/first_dates_hotel_verliert_bei_vox_immer_mehr_an_zugkraft/",
+          "published": "02/06/2026 07:14 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "TikTok-News-Charts: Erst die Welle, dann der Wal",
+          "url": "https://www.dwdl.de/zahlenzentrale/106679/tiktoknewscharts_erst_die_welle_dann_der_wal/",
+          "published": "02/06/2026 06:10 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "Neue Verantwortungsbereiche: RTL News wandert zu Stephan Schmitter",
+          "url": "https://www.dwdl.de/nachrichten/106687/neue_verantwortungsbereiche_rtl_news_wandert_zu_stephan_schmitter/",
+          "published": "01/06/2026 16:56 UTC",
+          "source": "DWDL.de (DE)"
+        },
+        {
+          "title": "ProSieben verrät neue Besetzung von \"Wer stiehlt mir die Show?\"",
+          "url": "https://www.dwdl.de/nachrichten/106685/prosieben_verraet_neue_besetzung_von_wer_stiehlt_mir_die_show/",
+          "published": "01/06/2026 14:47 UTC",
+          "source": "DWDL.de (DE)"
+        },
         {
           "title": "ProSieben überträgt von Lego initiierte Fußball-Creator-Show",
           "url": "https://www.dwdl.de/nachrichten/106678/prosieben_uebertraegt_von_lego_initiierte_fussballcreatorshow/",
@@ -494,18 +579,6 @@
           "url": "https://www.dwdl.de/magazin/105105/was_aktuell_auf_instagram_und_tiktok_viral_geht/",
           "published": "01/06/2026 05:54 UTC",
           "source": "DWDL.de (DE)"
-        },
-        {
-          "title": "ProSieben schließt im Frische-Ranking fast zur ARD auf",
-          "url": "https://www.dwdl.de/nachrichten/106632/prosieben_schliesst_im_frischeranking_fast_zur_ard_auf/",
-          "published": "31/05/2026 08:20 UTC",
-          "source": "DWDL.de (DE)"
-        },
-        {
-          "title": "RTL überzeugt mit TV-Momenten, ProSieben geht mit Eishockey unter",
-          "url": "https://www.dwdl.de/zahlenzentrale/106666/rtl_ueberzeugt_mit_tvmomenten_prosieben_geht_mit_eishockey_unter/",
-          "published": "31/05/2026 07:27 UTC",
-          "source": "DWDL.de (DE)"
         }
       ],
       "error": null
@@ -514,6 +587,30 @@
       "name": "Horizont Medien (DE)",
       "url": "https://www.horizont.net/news/feed/medien/",
       "articles": [
+        {
+          "title": "Ad Alliance: Frank Vogel übernimmt RTL- und Sky-Vermarktung und passt TKP-Modell an",
+          "url": "https://www.horizont.net/medien/nachrichten/ad-alliance-frank-vogel-uebernimmt-rtl--und-sky-vermarktung-und-passt-tkp-modell-an-234559?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "02/06/2026 08:30 UTC",
+          "source": "Horizont Medien (DE)"
+        },
+        {
+          "title": "OVK-Studie: Wieso User großflächige Werbeformate bevorzugen",
+          "url": "https://www.horizont.net/medien/nachrichten/ovk-studie-wieso-user-grossflaechige-werbeformate-bevorzugen-234525?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "02/06/2026 05:30 UTC",
+          "source": "Horizont Medien (DE)"
+        },
+        {
+          "title": "Mediahouse Berlin: Wie Rolling Stone und Musikexpress ihre Fans bei der Stange halten",
+          "url": "https://www.horizont.net/medien/nachrichten/mediahouse-berlin-wie-rolling-stone-und-musikexpress-ihre-fans-bei-der-stange-halten-234533?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "02/06/2026 04:36 UTC",
+          "source": "Horizont Medien (DE)"
+        },
+        {
+          "title": "&quot;Concept Creep&quot; &amp; Medien: Warum der Journalismus die Drama-Alltagssprache nicht übernehmen sollte",
+          "url": "https://www.horizont.net/medien/kommentare/concept-creep--medien-warum-der-journalismus-die-drama-alltagssprache-nicht-uebernehmen-sollte-234541?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
+          "published": "02/06/2026 04:00 UTC",
+          "source": "Horizont Medien (DE)"
+        },
         {
           "title": "Der TV-Markt im Mai: Sat 1 vor Pro Sieben und Vox, RTL Zwei mit neuem Jahresbestwert",
           "url": "https://www.horizont.net/medien/nachrichten/der-tv-markt-im-mai-sat-1-vor-pro-sieben-und-vox-rtl-zwei-mit-neuem-jahresbestwert-234556?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=",
@@ -527,6 +624,30 @@
       "name": "Adweek",
       "url": "https://www.adweek.com/feed/",
       "articles": [
+        {
+          "title": "The Trade Desk Appoints Nate Olmstead CFO After a Year of Executive Turnover",
+          "url": "https://www.adweek.com/media/the-trade-desk-appoints-nate-olmstead-cfo-after-a-year-of-executive-turnover/",
+          "published": "01/06/2026 17:41 UTC",
+          "source": "Adweek"
+        },
+        {
+          "title": "Ticker: ABC News Wins Big at the Emmys",
+          "url": "https://www.adweek.com/tvnewser/ticker-abc-news-wins-big-at-the-emmys/",
+          "published": "01/06/2026 14:44 UTC",
+          "source": "Adweek"
+        },
+        {
+          "title": "Why the Industry Needs to Stop Talking About Neutrality",
+          "url": "https://www.adweek.com/media/why-the-industry-needs-to-stop-talking-about-neutrality/",
+          "published": "01/06/2026 11:28 UTC",
+          "source": "Adweek"
+        },
+        {
+          "title": "This New Tool Cuts Out Identity Providers By Linking Trade Desk Data With Brands’ First-Party IDs",
+          "url": "https://www.adweek.com/media/this-new-tool-cuts-out-identity-providers-by-linking-trade-desk-data-with-brands-first-party-ids/",
+          "published": "01/06/2026 10:14 UTC",
+          "source": "Adweek"
+        },
         {
           "title": "Wyclef Jean on Owning the Future of the Creator Economy",
           "url": "https://www.adweek.com/brand-marketing/wyclef-jean-on-owning-the-future-of-the-creator-economy/",
@@ -565,6 +686,102 @@
       "url": "https://tvnewscheck.com/feed/",
       "articles": [
         {
+          "title": "KXLY Brands To Operate KAYU Spokane; Tery Garras Named VP-GM",
+          "url": "https://tvnewscheck.com/business/article/kxly-brands-to-operate-kayu-spokane-tery-garras-named-vp-gm/",
+          "published": "01/06/2026 23:58 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Fox Weather Gains Distribution On SiriusXM",
+          "url": "https://variety.com/2026/tv/news/fox-weather-siriusxm-1236763923/",
+          "published": "01/06/2026 18:27 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "ESPN2, Women’s National Football Conference Expand Rights Deal",
+          "url": "https://variety.com/2026/tv/news/espn-womens-national-football-conference-rights-deal-1236763586/",
+          "published": "01/06/2026 18:25 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "New CBS Daytime Campaign Parodies ‘Afternoon Delight’ While Reminding Viewers They Can Watch Soaps Anytime",
+          "url": "https://tvnewscheck.com/promotion/article/new-cbs-daytime-campaign-parodies-afternoon-delight-while-reminding-viewers-they-can-watch-soaps-anytime/",
+          "published": "01/06/2026 18:20 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Roku Launches The Roku Soccer Zone",
+          "url": "https://www.tvtechnology.com/platform/streaming/roku-launches-the-roku-soccer-zone",
+          "published": "01/06/2026 18:10 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "U.S. Broadcasters Ready For Most Complex FIFA World Cup Ever",
+          "url": "https://tvnewscheck.com/programming/article/u-s-broadcasters-ready-for-most-complex-fifa-world-cup-ever/",
+          "published": "01/06/2026 18:06 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Scott Pelley Accuses Bari Weiss Of ‘Murdering 60 Minutes’",
+          "url": "https://tvnewscheck.com/journalism/article/scott-pelley-accuses-bari-weiss-of-murdering-60-minutes/",
+          "published": "01/06/2026 17:44 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "YouTube Adds Fox One to Primetime Channels; Peacock Coming Soon",
+          "url": "https://tvnewscheck.com/digital/article/youtube-adds-fox-one-to-primetime-channels-peacock-coming-soon/",
+          "published": "01/06/2026 17:41 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Nexstar Foundation Doubles ‘30 Days Of Giving,’ Awards First $5,000 Grants",
+          "url": "https://tvnewscheck.com/promotion/article/nexstar-foundation-doubles-30-days-of-giving-awards-first-5000-grants/",
+          "published": "01/06/2026 16:34 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Sinclair Expands ‘Criminally Obsessed’ Franchise With Documentary on Celeste Beard Case",
+          "url": "https://tvnewscheck.com/journalism/article/sinclair-expands-criminally-obsessed-franchise-with-documentary-on-celeste-beard-case/",
+          "published": "01/06/2026 14:32 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "BBC Comedy Boss Jon Petrie Exiting To Hat Trick",
+          "url": "https://deadline.com/2026/06/bbc-comedy-boss-jon-petrie-exiting-to-hat-trick-1236931819/#recipient_hashed=2ec9ce834f7dfcbd8366c088aae71c4495ea058de393aaa911e79a0a64eaa988&recipient_salt=1647efd76c5fdce2b562fb95bdf916387b7d2ea6936a1d5940c4336463521675&utm_medium=email&utm_source=exacttarget&utm_campaign=Deadline_BreakingNews&utm_content=685319_06-01-2026&utm_term=3234612?utm_medium=email&utm_source=exacttarget&utm_campaign=1780312005-Breaking+News+Alert&utm_content=685319_6-1-2026&utm_id=685319",
+          "published": "01/06/2026 12:18 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Australia’s ABC Names Reuters Executive Simon Robinson As News Director",
+          "url": "https://www.reuters.com/business/media-telecom/australias-abc-names-reuters-executive-robinson-news-director-2026-05-28/",
+          "published": "01/06/2026 11:55 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Disney Is Poised To Ramp Its Already Booming Advertising Business. Rita Ferro Is Behind The Push",
+          "url": "https://tvnewscheck.com/business/article/disney-is-poised-to-ramp-its-already-booming-advertising-business-rita-ferro-is-behind-the-push/",
+          "published": "01/06/2026 11:49 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Paramount’s Delrahim Slams ‘Fear-Mongering’ And Partisan Politics Clouding Warner Bros. Deal",
+          "url": "https://tvnewscheck.com/business/article/paramounts-delrahim-slams-fear-mongering-and-partisan-politics-clouding-warner-bros-deal/",
+          "published": "01/06/2026 11:41 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Axios Bets That AI Can Make Local News Pay, One Market At A Time",
+          "url": "https://tvnewscheck.com/ai/article/axios-bets-that-ai-can-make-local-news-pay-one-market-at-a-time/",
+          "published": "01/06/2026 11:25 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
+          "title": "Gary L. Pudney, Former ABC Television Executive, Dies At 91",
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/gary-l-pudney-dead-abc-television-1236609647/",
+          "published": "01/06/2026 10:29 UTC",
+          "source": "TVNewsCheck"
+        },
+        {
           "title": "‘Euphoria’ Is Officially Over — Show Ends With Season 3, HBO Confirms",
           "url": "https://tvnewscheck.com/programming/article/euphoria-is-officially-over-show-ends-with-season-3-hbo-confirms/",
           "published": "01/06/2026 10:27 UTC",
@@ -589,7 +806,7 @@
           "source": "TVNewsCheck"
         },
         {
-          "title": "DirecTV Loses Over 50 Scripps Stations",
+          "title": "DirecTV Loses 54 Scripps Stations In Retrans Fight",
           "url": "https://tvnewscheck.com/business/article/directv-loses-52-scripps-stations/",
           "published": "01/06/2026 00:37 UTC",
           "source": "TVNewsCheck"
@@ -602,51 +819,45 @@
       "url": "https://advanced-television.com/feed/",
       "articles": [
         {
-          "title": "RTL Group closes Sky Deutschland acquisition",
-          "url": "https://www.advanced-television.com/2026/06/01/rtl-group-closes-sky-deutschland-acquisition/",
-          "published": "01/06/2026 08:33 UTC",
+          "title": "Study: TV still the UK’s most culturally significant medium",
+          "url": "https://www.advanced-television.com/2026/06/02/study-tv-still-the-uks-most-culturally-significant-medium/",
+          "published": "02/06/2026 06:00 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Police shut down pirate streaming data centre in Hampshire",
-          "url": "https://www.advanced-television.com/2026/06/01/police-shut-down-pirate-streaming-data-centre-in-hampshire/",
-          "published": "01/06/2026 08:19 UTC",
+          "title": "SES, TV ISLA expand broadband access on Providencia Island",
+          "url": "https://www.advanced-television.com/2026/06/02/ses-tv-isla-expand-broadband-access-on-providencia-island/",
+          "published": "02/06/2026 00:51 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Data: Poland tops mobile download speeds",
-          "url": "https://www.advanced-television.com/2026/06/01/data-poland-tops-mobile-download-speeds/",
-          "published": "01/06/2026 07:11 UTC",
+          "title": "ULA success takes Amazon Leo to 331",
+          "url": "https://www.advanced-television.com/2026/06/02/ula-success-takes-amazon-leo-to-331/",
+          "published": "02/06/2026 00:31 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Survey: UK failing to deliver reliable digital connectivity",
-          "url": "https://www.advanced-television.com/2026/06/01/survey-uk-failing-to-deliver-reliable-digital-connectivity/",
-          "published": "01/06/2026 02:08 UTC",
+          "title": "SES wins Viva Mexico for IFE",
+          "url": "https://www.advanced-television.com/2026/06/02/ses-wins-viva-mexico-for-ife/",
+          "published": "02/06/2026 00:07 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Blue Origin launch pad destroyed",
-          "url": "https://www.advanced-television.com/2026/06/01/blue-origin-launch-pad-destroyed/",
-          "published": "01/06/2026 01:37 UTC",
+          "title": "Viasat confident despite SpaceX threats",
+          "url": "https://www.advanced-television.com/2026/06/02/viasat-confident-despite-spacex-threats/",
+          "published": "01/06/2026 23:54 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Viasat: Space42 JV news “imminent”",
-          "url": "https://www.advanced-television.com/2026/06/01/viasat-space42-jv-news-imminent/",
-          "published": "01/06/2026 00:41 UTC",
+          "title": "MINT Square partners with adnomaly",
+          "url": "https://www.advanced-television.com/2026/06/02/mint-square-partners-with-adnomaly/",
+          "published": "01/06/2026 23:01 UTC",
           "source": "Advanced Television"
         },
         {
-          "title": "Forecast: Philippines fixed comms services revenue to grow at 2.7% CAGR",
-          "url": "https://www.advanced-television.com/2026/06/01/forecast-philippines-fixed-comms-services-revenue-to-grow-at-2-7-cagr/",
-          "published": "01/06/2026 00:11 UTC",
-          "source": "Advanced Television"
-        },
-        {
-          "title": "Warner Bros, Little Dot Studios expand partnership",
-          "url": "https://www.advanced-television.com/2026/06/01/warner-bros-little-dot-studios-expand-partnership/",
-          "published": "31/05/2026 23:35 UTC",
+          "title": "Andrew Scott, George MacKay to star in Russell Tovey’s novel on Audible",
+          "url": "https://www.advanced-television.com/2026/06/02/andrew-scott-george-mackay-to-star-in-russell-toveys-novel-on-audible/",
+          "published": "01/06/2026 23:00 UTC",
           "source": "Advanced Television"
         }
       ],
@@ -693,6 +904,12 @@
       "url": "https://dircomfidencial.com/feed/",
       "articles": [
         {
+          "title": "El Gobierno concede a RTVE 113 entrevistas a ministros en 3 meses",
+          "url": "https://dircomfidencial.com/medios/el-gobierno-concede-a-rtve-113-entrevistas-a-ministros-en-3-meses-20260602-0405/",
+          "published": "02/06/2026 02:05 UTC",
+          "source": "Dircomfidencial (ES)"
+        },
+        {
           "title": "Los creadores europeos generarán 135.000 M en 2032 frente a los 28.000 de 2025",
           "url": "https://dircomfidencial.com/marketing-digital/los-creadores-europeos-generaran-135-000-m-en-2032-frente-a-los-28-000-de-2025-20260601-1111/",
           "published": "01/06/2026 09:11 UTC",
@@ -702,24 +919,6 @@
           "title": "Anthropic supera a OpenAI como startup de inteligencia artificial más valorada del mundo",
           "url": "https://dircomfidencial.com/marketing-digital/anthropic-supera-a-openai-como-startup-de-inteligencia-artificial-mas-valorada-del-mundo-20260601-1108/",
           "published": "01/06/2026 09:08 UTC",
-          "source": "Dircomfidencial (ES)"
-        },
-        {
-          "title": "YouTube marcará automáticamente los vídeos con uso significativo de inteligencia artificial",
-          "url": "https://dircomfidencial.com/marketing-digital/youtube-marcara-automaticamente-los-videos-con-uso-significativo-de-inteligencia-artificial-20260601-1053/",
-          "published": "01/06/2026 08:53 UTC",
-          "source": "Dircomfidencial (ES)"
-        },
-        {
-          "title": "Julia Sizova (Comscore): «Los anunciantes no solo buscan medir más, sino medir mejor»",
-          "url": "https://dircomfidencial.com/marketing-digital/julia-sizova-comscore-los-anunciantes-no-solo-buscan-medir-mas-sino-medir-mejor-20260601-0404/",
-          "published": "01/06/2026 02:04 UTC",
-          "source": "Dircomfidencial (ES)"
-        },
-        {
-          "title": "Loterías busca agencia creativa para las próximas campañas de ‘El Gordo’ de Navidad",
-          "url": "https://dircomfidencial.com/marketing/loterias-busca-agencia-creativa-para-las-proximas-campanas-de-el-gordo-de-navidad-20260601-0403/",
-          "published": "01/06/2026 02:03 UTC",
           "source": "Dircomfidencial (ES)"
         }
       ],
@@ -760,93 +959,93 @@
       "url": "https://hipertextual.com/feed",
       "articles": [
         {
-          "title": "A partir de hoy no podrás ver Movistar Plus si tienes este decodificador: así puedes evitarlo",
-          "url": "https://hipertextual.com/cine-television/a-partir-de-hoy-no-podras-ver-movistar-plus-si-tienes-este-decodificador-asi-puedes-evitarlo/",
-          "published": "01/06/2026 09:46 UTC",
+          "title": "Apunta esta fecha: el Amazon Prime Day se celebra este mes y llega con más ofertas que nunca",
+          "url": "https://hipertextual.com/actualidad/apunta-esta-fecha-el-amazon-prime-day-se-celebra-este-mes-y-llega-con-mas-ofertas-que-nunca/",
+          "published": "02/06/2026 08:41 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Este es el mejor complemento que he visto compatible con MagSafe para sacar todo el partido a mi teléfono",
-          "url": "https://hipertextual.com/brands/mejor-complemento-magsafe/",
-          "published": "01/06/2026 09:23 UTC",
+          "title": "El Snapdragon X2 Elite da el esperado salto a los mini PC con el nuevo Asus Ascent QN10",
+          "url": "https://hipertextual.com/tecnologia/asus-ascent-qn10-primer-mini-pc-snapdragon-x2-elite/",
+          "published": "02/06/2026 01:30 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Después de esto nadie va a querer unos AirPods. Apple va a revolucionar la industria con algo que TODO el mundo querrá",
-          "url": "https://hipertextual.com/apple/despues-de-esto-nadie-va-a-querer-unos-airpods-apple-va-a-revolucionar-la-industria-con-algo-que-todo-el-mundo-querra/",
-          "published": "01/06/2026 08:49 UTC",
+          "title": "Descubren un peligroso malware que roba datos en miles de servidores Linux",
+          "url": "https://hipertextual.com/seguridad/malware-miasma-paquetes-red-hat-linux/",
+          "published": "01/06/2026 23:30 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "¡Ya es oficial! HBO confirma el final de ‘Euphoria’ para siempre: no habrá temporada 4",
-          "url": "https://hipertextual.com/cine-television/hbo-anuncia-oficial-final-de-euphoria-para-siempre-no-habra-temporada-4/",
-          "published": "01/06/2026 08:34 UTC",
+          "title": "Hackean un popular servicio de trampas para GTA V y exponen los datos de miles de usuarios",
+          "url": "https://hipertextual.com/videojuegos/hackeo-atlas-menu-cheats-gta-v/",
+          "published": "01/06/2026 21:30 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Qualcomm quiere ser el cerebro de tu próximo robot, coche autónomo o dron. Y motivos no le faltan",
-          "url": "https://hipertextual.com/tecnologia/qualcomm-dragonwing-iq10-rrd/",
-          "published": "01/06/2026 08:25 UTC",
+          "title": "Apple soluciona un fallo que impedía cargar la batería de los iPhone 17 y Air: actualiza ahora a iOS 26.5.1",
+          "url": "https://hipertextual.com/apple/actualizacion-ios-26-5-1-iphone-17-y-air/",
+          "published": "01/06/2026 20:32 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Nvidia provoca un terremoto con RTX Spark: un superchip basado en ARM para Windows que cambia las reglas de la IA",
-          "url": "https://hipertextual.com/tecnologia/nvidia-rtx-spark/",
-          "published": "01/06/2026 06:11 UTC",
+          "title": "Microsoft está por anunciar cambios importantes en Windows y nuevos modelos de IA",
+          "url": "https://hipertextual.com/software/microsoft-build-2026-modelos-ia-windows/",
+          "published": "01/06/2026 19:18 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Windows 11 se vuelve más rápido con su última actualización",
-          "url": "https://hipertextual.com/software/windows-11-actualizacion-kb5089573-mejora-rendimiento/",
-          "published": "31/05/2026 19:00 UTC",
+          "title": "Claude Code aumenta sus límites de uso para que programes por más tiempo sin interrupciones",
+          "url": "https://hipertextual.com/inteligencia-artificial/claude-code-aumento-limites-uso-opus-48/",
+          "published": "01/06/2026 18:05 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Esta función de NotebookLM transforma tus cuadernos en vídeos cinematográficos con IA",
-          "url": "https://hipertextual.com/inteligencia-artificial/notebooklm-cinematic-video-overviews/",
-          "published": "31/05/2026 18:00 UTC",
+          "title": "Anthropic se adelanta a OpenAI y pone en marcha su salida a bolsa",
+          "url": "https://hipertextual.com/economia-empresas/anthropic-pone-en-marcha-salida-a-bolsa/",
+          "published": "01/06/2026 17:02 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "¿El WiFi de tu portátil se arrastra pero tienes buena señal? La culpa es, para variar, de Windows 11",
-          "url": "https://hipertextual.com/software/windows-11-problemas-wifi-modo-de-espera-moderno/",
-          "published": "31/05/2026 17:00 UTC",
+          "title": "‘La Bola Negra’ de los Javis adelanta su fecha de estreno después de triunfar en el Festival de Cannes",
+          "url": "https://hipertextual.com/cine-television/la-bola-negra-de-los-javis-adelanta-su-fecha-de-estreno-despues-de-triunfar-en-el-festival-de-cannes/",
+          "published": "01/06/2026 15:51 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "De qué va ‘Hombre a medias’, la polémica serie de HBO Max de la que todo el mundo habla",
-          "url": "https://hipertextual.com/cine-television/de-que-va-hombre-a-medias-la-polemica-serie-de-hbo-max-de-la-que-todo-el-mundo-habla/",
-          "published": "31/05/2026 16:00 UTC",
+          "title": "Un Pixel Watch 5 se filtra del modo más insólito tras aparecer en el fondo del mar",
+          "url": "https://hipertextual.com/tecnologia/google-pixel-watch-5-filtracion/",
+          "published": "01/06/2026 15:50 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "10 películas de los 90 que envejecieron muy bien",
-          "url": "https://hipertextual.com/cine-television/10-peliculas-de-los-90-que-envejecieron-muy-bien/",
-          "published": "31/05/2026 15:00 UTC",
+          "title": "Viajes en el tiempo, dinosaurios, Anne Hathaway y Ewan McGregor: mira el loquísimo tráiler de ‘El final de Oak Street’",
+          "url": "https://hipertextual.com/cine-television/trailer-el-final-de-oak-street-viajes-en-el-tiempo-dinosaurios-anne-hathaway-ewan-mcgregor/",
+          "published": "01/06/2026 15:21 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Lo mejor y lo peor de ‘Spider-Noir’ de Prime Video",
-          "url": "https://hipertextual.com/cine-television/lo-mejor-y-lo-peor-de-spider-noir-de-prime-video/",
-          "published": "31/05/2026 14:00 UTC",
+          "title": "¿Tienes uno de estos Samsung Galaxy icónicos? Pues olvídate de actualizar a One UI 8.5",
+          "url": "https://hipertextual.com/mobile/tienes-uno-de-estos-samsung-galaxy-iconicos-pues-olvidate-de-actualizar-a-one-ui-8-5/",
+          "published": "01/06/2026 15:17 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Por qué EE. UU. y China no quieren impedir que sus máquinas militares con IA puedan matar humanos",
-          "url": "https://hipertextual.com/inteligencia-artificial/eeuu-china-maquinas-con-ia-inteligencia-artificial-militar/",
-          "published": "31/05/2026 13:00 UTC",
+          "title": "Los nuevos colores del iPhone 18 Pro se dejan ver en imágenes reales: Apple se va a arriesgar muchísimo",
+          "url": "https://hipertextual.com/apple/los-nuevos-colores-del-iphone-18-pro-se-dejan-ver-en-imagenes-reales-apple-se-va-a-arriesgar-muchisimo/",
+          "published": "01/06/2026 15:06 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "3.500 plazas libres para profesor de autoescuela en España: requisitos, sueldos y cómo aplicar",
-          "url": "https://hipertextual.com/actualidad/3-500-plazas-libres-para-profesor-de-autoescuela-en-espana-requisitos-sueldos-y-como-aplicar/",
-          "published": "31/05/2026 12:00 UTC",
+          "title": "Filtración de Marvel deja al descubierto una nueva imagen de ‘Avengers: Doomsday’ con el Doctor Doom, Capitán América, los X-Men y más",
+          "url": "https://hipertextual.com/cine-television/filtracion-marvel-nueva-imagen-avengers-doomsday-doctor-doom-capitan-america-x-men/",
+          "published": "01/06/2026 14:41 UTC",
           "source": "Hipertextual (ES)"
         },
         {
-          "title": "Las 10 mejores series de la historia de Netflix según IMDb",
-          "url": "https://hipertextual.com/cine-television/las-10-mejores-series-de-la-historia-de-netflix-segun-imdb/",
-          "published": "31/05/2026 11:00 UTC",
+          "title": "Asus celebra los 20 años de ROG con la nueva Xbox Ally X20: una auténtica bestia del gaming",
+          "url": "https://hipertextual.com/videojuegos/nueva-asus-rog-xbox-ally-x20/",
+          "published": "01/06/2026 13:05 UTC",
           "source": "Hipertextual (ES)"
         }
       ],
@@ -857,27 +1056,15 @@
       "url": "https://eloutput.com/feed/",
       "articles": [
         {
-          "title": "La música española vive su mejor momento en Spotify con cifras récord de ingresos",
-          "url": "https://eloutput.com/noticias/streaming/la-musica-espanola-vive-su-mejor-momento-en-spotify-con-cifras-record-de-ingresos/",
-          "published": "30/05/2026 18:19 UTC",
+          "title": "Meta revoluciona sus redes con las nuevas suscripciones Plus para Instagram, Facebook y WhatsApp",
+          "url": "https://eloutput.com/noticias/redes-sociales/meta-revoluciona-sus-redes-con-las-nuevas-suscripciones-plus-para-instagram-facebook-y-whatsapp/",
+          "published": "02/06/2026 08:15 UTC",
           "source": "El Output (ES)"
         },
         {
-          "title": "La histórica unión de Paramount y Warner Discovery ante su recta final",
-          "url": "https://eloutput.com/noticias/series/la-historica-union-de-paramount-y-warner-discovery-ante-su-recta-final/",
-          "published": "30/05/2026 15:50 UTC",
-          "source": "El Output (ES)"
-        },
-        {
-          "title": "Sony redefine el cine en casa con la llegada de la tecnología Bravia True RGB",
-          "url": "https://eloutput.com/noticias/imagen-sonido/sony-redefine-el-cine-en-casa-con-la-llegada-de-la-tecnologia-bravia-true-rgb/",
-          "published": "30/05/2026 13:23 UTC",
-          "source": "El Output (ES)"
-        },
-        {
-          "title": "Madrid impulsa el conocimiento del patrimonio con su gran liga escolar de Minecraft",
-          "url": "https://eloutput.com/noticias/tecnologia/madrid-impulsa-el-conocimiento-del-patrimonio-con-su-gran-liga-escolar-de-minecraft/",
-          "published": "30/05/2026 10:54 UTC",
+          "title": "NVIDIA RTX Spark: El superchip ARM que llega para transformar los ordenadores Windows",
+          "url": "https://eloutput.com/noticias/tecnologia/nvidia-rtx-spark-el-superchip-arm-que-llega-para-transformar-los-ordenadores-windows/",
+          "published": "02/06/2026 00:47 UTC",
           "source": "El Output (ES)"
         }
       ],
@@ -887,6 +1074,48 @@
       "name": "MuyComputer (ES)",
       "url": "https://www.muycomputer.com/feed/",
       "articles": [
+        {
+          "title": "MSI celebra su 40º aniversario en el Computex 2026",
+          "url": "https://www.muycomputer.com/2026/06/02/msi-celebra-su-40o-aniversario-en-el-computex-2026/",
+          "published": "02/06/2026 09:15 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "ASUS en Computex 2026: una visión completa del PC impulsado por IA",
+          "url": "https://www.muycomputer.com/2026/06/02/asus-en-computex-2026-una-vision-completa-del-pc-impulsado-por-ia/",
+          "published": "02/06/2026 08:21 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "GIGABYTE presenta sus nuevos monitores AORUS ELITE",
+          "url": "https://www.muycomputer.com/2026/06/02/gigabyte-presenta-sus-nuevos-monitores-aorus-elite/",
+          "published": "02/06/2026 06:19 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "Radeon RX 9070 GRE análisis completo",
+          "url": "https://www.muycomputer.com/2026/06/02/radeon-rx-9070-gre-analisis-completo/",
+          "published": "02/06/2026 00:00 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "AMD en el Computex 2026: Radeon RX, Ryzen X3D, Ryzen AI PRO 400 y más",
+          "url": "https://www.muycomputer.com/2026/06/01/amd-en-el-computex-2026-radeon-rx-ryzen-x3d-ryzen-ai-pro-400-y-mas/",
+          "published": "01/06/2026 15:11 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "PNY presenta la GeForce RTX 5090 AIO LYNK+",
+          "url": "https://www.muycomputer.com/2026/06/01/pny-presenta-la-geforce-rtx-5090-aio-lynk/",
+          "published": "01/06/2026 13:41 UTC",
+          "source": "MuyComputer (ES)"
+        },
+        {
+          "title": "Un vistazo a las novedades de QNAP en Computex 2026",
+          "url": "https://www.muycomputer.com/2026/06/01/un-vistazo-a-las-novedades-de-qnap-en-computex-2026/",
+          "published": "01/06/2026 12:22 UTC",
+          "source": "MuyComputer (ES)"
+        },
         {
           "title": "El socket AM5 recibirá nuevos procesadores hasta 2029",
           "url": "https://www.muycomputer.com/2026/06/01/el-socket-am5-recibira-nuevos-procesadores-hasta-2029/",
@@ -928,12 +1157,6 @@
           "url": "https://www.muycomputer.com/2026/05/31/fable-se-retrasa-a-2027-pero-no-por-lo-que-piensas/",
           "published": "31/05/2026 11:32 UTC",
           "source": "MuyComputer (ES)"
-        },
-        {
-          "title": "DuckDuckGo, el éxito de la búsqueda sin IA",
-          "url": "https://www.muycomputer.com/2026/05/31/duckduckgo-el-exito-de-la-busqueda-sin-ia/",
-          "published": "31/05/2026 09:03 UTC",
-          "source": "MuyComputer (ES)"
         }
       ],
       "error": null
@@ -943,63 +1166,51 @@
       "url": "https://variety.com/v/tv/feed/",
       "articles": [
         {
-          "title": "Zee Lands FIFA Soccer Rights for India, Covering World Cups Through 2034",
-          "url": "https://variety.com/2026/sports/global/zee-fifa-soccer-rights-india-world-cups-2034-1236763758/",
-          "published": "01/06/2026 09:20 UTC",
+          "title": "Bill Owens, Ex-’60 Minutes’ Boss, Scorns CBS News Overhaul of Show",
+          "url": "https://variety.com/2026/tv/news/bill-owens-60-minutes-boss-scorns-cbs-news-1236764634/",
+          "published": "02/06/2026 02:50 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "Jimmy Kimmel Thanks ‘Pumpkin McPornhumper’ Trump for His Peabody; ‘Andor’ Creator Tony Gilroy Urges Crowd to Take on Fascism Before It’s Too Late: ‘F— the Empire’",
-          "url": "https://variety.com/2026/tv/news/jimmy-kimmel-peabody-winner-speech-trump-andor-1236763724/",
-          "published": "01/06/2026 08:31 UTC",
+          "title": "Gotham TV Award Winners: ‘I Love LA,’ ‘Pluribus’ and ‘DTF St. Louis’ Take Top Honors; Tim Robinson, Chase Infiniti and Michael Shannon Win Acting Prizes",
+          "url": "https://variety.com/2026/tv/news/gotham-tv-award-winners-i-love-la-pluribus-dtf-st-louis-1236764600/",
+          "published": "02/06/2026 01:37 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "‘Euphoria’ Officially Ending With Season 3, HBO Confirms",
-          "url": "https://variety.com/2026/tv/news/euphoria-ending-season-3-hbo-1236760319/",
-          "published": "01/06/2026 04:10 UTC",
+          "title": "Longtime Disney Exec Jim Kapenstein, Who Helped Oversee Some Of Its Biggest Acquisitions, Joins Starz as Chief Legal and Strategy Officer",
+          "url": "https://variety.com/2026/tv/news/disney-jim-kapenstein-starz-chief-legal-strategy-officer-1236764548/",
+          "published": "01/06/2026 23:38 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "John Oliver Goes Off on Trump’s Freedom 250 Concert Debacle",
-          "url": "https://variety.com/2026/tv/news/john-oliver-goes-off-trump-freedom-250-concerts-last-week-tonight-1236763669/",
-          "published": "01/06/2026 03:47 UTC",
+          "title": "New ‘60 Minutes’ Boss Will Grapple With Demoralized Staff, High Costs, Hard-Core Attitudes",
+          "url": "https://variety.com/2026/tv/news/60-minutes-boss-scott-pelley-nick-bilton-high-costs-1236763571/",
+          "published": "01/06/2026 20:05 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "Adewale Akinnuoye-Agbaje Breaks Down ‘Euphoria’ Finale, From Alamo vs. Rue to That Final Showdown: ‘He Enjoys the Chess Game of Death’",
-          "url": "https://variety.com/2026/tv/news/euphoria-finale-why-alamo-kills-rue-explained-adewale-akinnuoye-agbaje-1236762391/",
-          "published": "01/06/2026 02:41 UTC",
+          "title": "Antoni Porowski Addresses the ‘Queer Eye’ Drama, Finding LGBTQ+ Community on ‘Best of the World,’ and Why He’s Still ‘Left With More Questions Than Answers’",
+          "url": "https://variety.com/2026/tv/news/antoni-porowski-queer-eye-drama-best-of-the-world-questions-karamo-brown-1236761706/",
+          "published": "01/06/2026 19:30 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "‘Euphoria’ Finale Recap: [SPOILER] Dies, [SPOILER] Takes Revenge and Cassie Doubles Down on OnlyFans",
-          "url": "https://variety.com/2026/tv/news/euphoria-season-3-finale-how-does-rue-die-1236754928/",
-          "published": "01/06/2026 02:36 UTC",
+          "title": "‘Deli Boys’ Makes Broadway History as the Hulu Comedy Takes A Bite Out of Emmy FYC Season (EXCLUSIVE)",
+          "url": "https://variety.com/2026/tv/awards/deli-boys-broadway-the-burbs-bus-benches-emmy-awards-hq-1236764346/",
+          "published": "01/06/2026 19:26 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "‘Euphoria’ Finale: Colman Domingo Goes Deep on Ali’s Journey With Rue, Revenge and His ‘Christ on the Cross Moment’",
-          "url": "https://variety.com/2026/tv/news/euphoria-finale-colman-domingo-ali-revenge-1236761847/",
-          "published": "01/06/2026 02:36 UTC",
+          "title": "How ‘Drag Race’ Makeup Artist David Petruschin Spends Six Hours Transforming RuPaul With a ‘Complete Reconstruction’",
+          "url": "https://variety.com/2026/artisans/news/drag-race-makeup-artist-david-petruschin-transforming-rupaul-1236764234/",
+          "published": "01/06/2026 19:04 UTC",
           "source": "Variety – TV (section)"
         },
         {
-          "title": "DirecTV and Scripps Locked in Retransmission Battle, as 54 Local TV Stations Go Dark on the Service Across 36 Markets",
-          "url": "https://variety.com/2026/tv/news/directv-scripps-retransmission-battle-local-tv-stations-dark-1236763561/",
-          "published": "31/05/2026 23:38 UTC",
-          "source": "Variety – TV (section)"
-        },
-        {
-          "title": "Sadly, the Stars of ‘Heated Rivalry’ Turned Down Actors on Actors — And Here’s Why",
-          "url": "https://variety.com/2026/tv/columns/heated-rivalry-actors-on-actors-1236762668/",
-          "published": "31/05/2026 21:00 UTC",
-          "source": "Variety – TV (section)"
-        },
-        {
-          "title": "Matt Brown, ‘Alaskan Bush People’ Star, Dies at 42",
-          "url": "https://variety.com/2026/tv/news/matt-brown-dead-alaskan-bush-people-1236763418/",
-          "published": "31/05/2026 16:22 UTC",
+          "title": "The Series Finale of ‘Euphoria’ Let the Characters Down: TV Review",
+          "url": "https://variety.com/2026/tv/reviews/euphoria-series-finale-review-rue-death-letdown-1236764247/",
+          "published": "01/06/2026 18:52 UTC",
           "source": "Variety – TV (section)"
         }
       ],
@@ -1016,63 +1227,57 @@
       "url": "https://deadline.com/v/tv/feed/",
       "articles": [
         {
-          "title": "KSI Leaving The Sidemen After 13 Years",
-          "url": "https://deadline.com/2026/06/ksi-leaving-the-sidemen-youtube-1236931786/",
-          "published": "01/06/2026 07:50 UTC",
+          "title": "Gary Lineker & Andrew Callaghan Set For ‘The Louis Theroux Podcast’ Season 8",
+          "url": "https://deadline.com/2026/06/louis-theroux-podcast-season-8-olivia-wilde-gary-lineker-1236933965/",
+          "published": "02/06/2026 09:00 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Who Do You Think You Are?’ & ‘The Bachelor’ Set For Little Dot Studios Channels Through WBITVP Deal",
-          "url": "https://deadline.com/2026/06/wbitvp-little-dot-studios-bachelor-who-do-you-think-you-are-1236930021/",
-          "published": "01/06/2026 07:00 UTC",
+          "title": "BFI Pleaded With Government To Exclude UK Screen Industries From Trump Trade Deal, Saying It Would Cause “Fundamental Harm”",
+          "url": "https://deadline.com/2026/06/bfi-uk-government-film-tv-deal-donald-trump-1236932021/",
+          "published": "02/06/2026 06:59 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "RTL Completes Deal To Buy Sky Deutschland From Comcast",
-          "url": "https://deadline.com/2026/05/rtl-closes-sky-deutschland-deal-comcast-1236931764/",
-          "published": "01/06/2026 06:40 UTC",
+          "title": "‘Stranger Things’ Creator Matt Duffer Says Young Film And TV Audiences “Are Telling Us Very Loudly That They’re Hungry For Original Stories”",
+          "url": "https://deadline.com/2026/06/stranger-things-young-film-tv-audiences-original-stories-1236938362/",
+          "published": "02/06/2026 02:17 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Euphoria’ Is Over: HBO Series Officially Ending With Season 3",
-          "url": "https://deadline.com/2026/05/euphoria-ending-hbo-series-finale-three-seasons-1236931756/",
-          "published": "01/06/2026 06:06 UTC",
+          "title": "Gotham TV Awards: ‘DTF: St. Louis,’ ‘Pluribus’ & ‘I Love LA’ Win Top Series Prizes; Lead Acting Honors To Chase Infiniti, Michael Shannon & Tim Robinson – Full List",
+          "url": "https://deadline.com/2026/06/2026-gotham-tv-awards-winners-list-1236937998/",
+          "published": "02/06/2026 01:10 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Sapne Vs Everyone’ Star Ambrish Verma Lands IMDb Breakout Star Award",
-          "url": "https://deadline.com/2026/05/sapne-vs-everyone-star-ambrish-verma-imdb-starmeter-award-1236931268/",
-          "published": "01/06/2026 04:30 UTC",
+          "title": "Gotham Television Awards 2026 Red Carpet Photos: Kerry Washington, 50 Cent, Michelle Pfeiffer, Rachel Sennott & More",
+          "url": "https://deadline.com/gallery/gotham-television-awards-2026-red-carpet-photos/",
+          "published": "01/06/2026 23:22 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Euphoria’s Season 3 Finale Tribute To Angus Cloud’s Fezco O’Neill",
-          "url": "https://deadline.com/2026/05/euphoria-season-3-finale-tribute-angus-clouds-fezco-oneill-1236931624/",
-          "published": "01/06/2026 03:25 UTC",
+          "title": "‘Euphoria’ Creator Sam Levinson & Cast On Telling The “Honest Ending” After 3 Seasons: “There’s No Reason To Sugarcoat”",
+          "url": "https://deadline.com/2026/06/euphoria-season-3-finale-explained-sam-levinson-cast-reactions-1236937949/",
+          "published": "01/06/2026 21:31 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Euphoria’ Season 3 Finale: How Things End For Zendaya’s Rue & The Rest Of The Cast",
-          "url": "https://deadline.com/gallery/euphoria-season-3-finale-recap-zendaya-hbo/",
-          "published": "01/06/2026 02:43 UTC",
+          "title": "‘Jury Duty Presents: Company Retreat’ Team Calls Show’s Secret Sauce “A Celebration Of Common Decency”",
+          "url": "https://deadline.com/2026/06/jury-duty-presents-company-retreat-team-interview-1236930336/",
+          "published": "01/06/2026 21:15 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "Scripps’ 54 Local Stations Go Dark On DirecTV Amid Retransmission Dispute",
-          "url": "https://deadline.com/2026/05/scripps-directv-retransmission-battle-tv-stations-go-dark-1236931598/",
-          "published": "01/06/2026 00:32 UTC",
+          "title": "Reese’s Book Club Pick ‘The Fine Art of Lying’ To Be Adapted As TV Series By UCP With Scarlett Johansson’s These Pictures Producing",
+          "url": "https://deadline.com/2026/06/the-fine-art-of-lying-book-series-ucp-scarlett-johansson-1236935843/",
+          "published": "01/06/2026 20:30 UTC",
           "source": "Deadline – TV (section)"
         },
         {
-          "title": "‘Off Campus’ Star Antonio Cipriano Previews How Grace & Logan’s Romance Will Factor Into Season 2",
-          "url": "https://deadline.com/2026/05/off-campus-antonio-cipriano-grace-logan-romance-season-2-1236931594/",
-          "published": "31/05/2026 23:48 UTC",
-          "source": "Deadline – TV (section)"
-        },
-        {
-          "title": "‘The Four Seasons’ Co-Creator Explains How David Tennant Was Cast In “Romantic Cliffhanger”",
-          "url": "https://deadline.com/2026/05/four-seasons-how-david-tennant-cast-romantic-cliffhanger-1236931562/",
-          "published": "31/05/2026 21:41 UTC",
+          "title": "Richard Gadd On Going From ‘Baby Reindeer’ To The Even More Intense ‘Half Man’ And The Toll It Took On Him – Behind The Lens",
+          "url": "https://deadline.com/video/richard-gadd-video-interview-half-man-baby-reindeer/",
+          "published": "01/06/2026 20:19 UTC",
           "source": "Deadline – TV (section)"
         }
       ],
