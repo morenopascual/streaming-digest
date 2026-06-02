@@ -1,53 +1,53 @@
 {
-  "generated_at": "2026-06-02T14:51:48.389399+00:00",
+  "generated_at": "2026-06-02T15:18:35.511942+00:00",
   "date": "02/06/2026",
   "window_hours": 48,
-  "total_articles": 272,
+  "total_articles": 273,
   "sources": [
     {
       "name": "Variety",
       "url": "https://feeds.feedburner.com/variety/headlines",
       "articles": [
         {
+          "title": "Netflix’s U.K. Unscripted Chief Warns of Dangers of Using AI in Reality Shows: ‘It’s Hard Now to Tell What Is Fake and What Is Real’",
+          "url": "https://variety.com/2026/tv/global/netflix-uk-unscripted-ai-reality-shows-1236764848/",
+          "published": "02/06/2026 14:48 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Tom Holland Called Sony Pictures Boss to Delay ‘Spider-Man: Brand New Day’ Filming So He Could Star in ‘The Odyssey’: ‘A Tough Pill to Swallow’ at First",
+          "url": "https://variety.com/2026/film/news/tom-holland-sony-spider-man-brand-new-day-delay-the-odyssey-1236764785/",
+          "published": "02/06/2026 14:37 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Mediawan, BYD Unveil Special ‘Miraculous Chibi’ Episode (EXCLUSIVE)",
+          "url": "https://variety.com/2026/tv/global/mediawan-byd-special-miraculous-chibi-episode-1236764832/",
+          "published": "02/06/2026 14:20 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Why YouTubers Are Turning Hollywood Upside Down",
+          "url": "https://variety.com/2026/film/features/backrooms-obsession-youtubers-hollywood-kane-parsons-curry-barker-1236764464/",
+          "published": "02/06/2026 14:00 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "Rotterdam Tiger Award Winner Paz Fábrega Sets ‘To the Future’ With Spain’s Edna Cinema and Uruguay’s La Mayor Cine Ahead of ECAM Forum (EXCLUSIVE)",
+          "url": "https://variety.com/2026/film/news/paz-fabrega-edna-cinema-la-mayor-cine-ecam-forum-1236764814/",
+          "published": "02/06/2026 13:30 UTC",
+          "source": "Variety"
+        },
+        {
+          "title": "‘Twin Peaks’ Actor Owain Rhys Davies Dies at 44; Family Says It Was Sudden and ‘There Are Still Questions That Remain Unanswered’",
+          "url": "https://variety.com/2026/tv/global/owain-rhys-davies-dead-twin-peaks-actor-1236764815/",
+          "published": "02/06/2026 13:26 UTC",
+          "source": "Variety"
+        },
+        {
           "title": "‘Two Strangers (Carry a Cake Across New York)’: How Two Brits Turned a Love Letter to the Big Apple Into an Unlikely Broadway Hit",
           "url": "https://variety.com/2026/legit/features/two-strangers-carry-a-cake-across-new-york-broadway-hit-1236764211/",
           "published": "02/06/2026 13:15 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "Netflix Launches Hub Featuring ‘Bridgerton,’ More Book-to-Screen Adaptations Targeting Nine Reader Types",
-          "url": "https://variety.com/2026/tv/news/bridgerton-netflix-book-adaptations-hub-1236764322/",
-          "published": "02/06/2026 13:00 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "Inside Ranveer Singh’s ‘Don 3’ Exit, Bollywood’s Biggest Industry Standoff in Years",
-          "url": "https://variety.com/2026/film/news/ranveer-singh-don-3-exit-excel-entertainment-dispute-1236763685/",
-          "published": "02/06/2026 12:12 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "AI Firm Utopai Studios Launches Enhanced 2.0 Version of Generative Video Platform",
-          "url": "https://variety.com/2026/digital/tech/ai-utopai-studios-pai-2-generative-video-platform-1236764434/",
-          "published": "02/06/2026 12:00 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "Michelle Obama Praises Dave Chappelle as ‘One of the Smartest People on the Planet’ After ‘IMO’ Podcast Appearance: ‘One of Our Favorite Guests’",
-          "url": "https://variety.com/2026/digital/global/michelle-obama-dave-chappelle-favorite-podcast-guest-sxsw-london-1236764703/",
-          "published": "02/06/2026 11:24 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "‘Hunger Games: Sunrise on the Reaping’ Star Iona Bell Signs With Paradigm (EXCLUSIVE)",
-          "url": "https://variety.com/2026/film/global/hunger-games-sunrise-on-the-reaping-iona-bell-paradigm-1236764730/",
-          "published": "02/06/2026 10:48 UTC",
-          "source": "Variety"
-        },
-        {
-          "title": "Rosamund Pike Calls Out Audience Member for Texting During West End Performance of ‘Inter Alia’: ‘You Know Who You Are’",
-          "url": "https://variety.com/2026/legit/news/rosamund-pike-texting-inter-alia-1236764726/",
-          "published": "02/06/2026 10:25 UTC",
           "source": "Variety"
         }
       ],
@@ -57,6 +57,12 @@
       "name": "Variety – TV (section)",
       "url": "https://variety.com/v/tv/feed/",
       "articles": [
+        {
+          "title": "BET Forms First-Ever Advisory Board, Tapping Queen Latifah, LL Cool J, Founder Bob Johnson and More",
+          "url": "https://variety.com/2026/tv/news/bet-board-of-advisers-queen-latifah-ll-cool-j-bob-johnson-1236764847/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "Variety – TV (section)"
+        },
         {
           "title": "Netflix’s U.K. Unscripted Chief Warns of Dangers of Using AI in Reality Shows: ‘It’s Hard Now to Tell What Is Fake and What Is Real’",
           "url": "https://variety.com/2026/tv/global/netflix-uk-unscripted-ai-reality-shows-1236764848/",
@@ -104,12 +110,6 @@
           "url": "https://variety.com/2026/tv/news/disney-jim-kapenstein-starz-chief-legal-strategy-officer-1236764548/",
           "published": "01/06/2026 23:38 UTC",
           "source": "Variety – TV (section)"
-        },
-        {
-          "title": "New ‘60 Minutes’ Boss Will Grapple With Demoralized Staff, High Costs, Hard-Core Attitudes",
-          "url": "https://variety.com/2026/tv/news/60-minutes-boss-scott-pelley-nick-bilton-high-costs-1236763571/",
-          "published": "01/06/2026 20:05 UTC",
-          "source": "Variety – TV (section)"
         }
       ],
       "error": null
@@ -118,6 +118,12 @@
       "name": "The Hollywood Reporter",
       "url": "https://www.hollywoodreporter.com/feed/",
       "articles": [
+        {
+          "title": "Will Arnett Joins Kristen Stewart in ‘The Challenger’ Drama at Prime Video",
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/will-arnett-the-challenger-kristen-stewart-prime-video-1236611048/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "The Hollywood Reporter"
+        },
         {
           "title": "Owain Rhys Davies, ‘Twin Peaks’ Revival Actor, Dies at 44",
           "url": "https://www.hollywoodreporter.com/tv/tv-news/owain-rhys-davies-dead-twin-peaks-1236611639/",
@@ -147,12 +153,6 @@
           "url": "https://www.hollywoodreporter.com/business/digital/siriusxm-conan-obrien-trevor-noah-podcasts-tubi-1236610492/",
           "published": "02/06/2026 12:00 UTC",
           "source": "The Hollywood Reporter"
-        },
-        {
-          "title": "Michelle Obama Embraces Her “Last Chapter” as a Podcaster: “The Choices I Make Now Are Going to Be for Me — Not My Husband, Kids, the Country”",
-          "url": "https://www.hollywoodreporter.com/news/politics-news/michelle-obama-sxsw-london-craig-robinson-imo-podcast-1236611540/",
-          "published": "02/06/2026 11:14 UTC",
-          "source": "The Hollywood Reporter"
         }
       ],
       "error": null
@@ -167,6 +167,24 @@
       "name": "Deadline Hollywood",
       "url": "https://deadline.com/feed/",
       "articles": [
+        {
+          "title": "Tom Holland Had To Have “Very Uncomfortable” Conversation About ‘Spider-Man’ Filming Dates To Squeeze In ‘The Odyssey’ Shoot",
+          "url": "https://deadline.com/2026/06/tom-holland-uncomfortable-spider-man-the-odyssey-1236938689/",
+          "published": "02/06/2026 15:16 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "‘The Marlow Murder Club’ Renewed For Season 4 At Masterpiece PBS",
+          "url": "https://deadline.com/2026/06/the-marlow-murder-club-renewed-season-4-masterpiece-pbs-1236938676/",
+          "published": "02/06/2026 15:02 UTC",
+          "source": "Deadline Hollywood"
+        },
+        {
+          "title": "Will Arnett Joins Kristen Stewart In ‘The Challenger’ 1980s NASA Limited Series For Prime Video",
+          "url": "https://deadline.com/2026/06/will-arnett-the-challenger-limited-series-prime-video-1236938295/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "Deadline Hollywood"
+        },
         {
           "title": "‘Silo’ Season 3 Trailer Teases A Split Timeline Plot As Juliette Faces Her Most Dangerous Challenge Yet",
           "url": "https://deadline.com/2026/06/silo-season-3-release-date-trailer-photos-apple-tv-1236866439/",
@@ -184,12 +202,6 @@
           "url": "https://deadline.com/2026/06/owain-rhys-davies-dead-twin-peaks-the-oa-1236938559/",
           "published": "02/06/2026 13:13 UTC",
           "source": "Deadline Hollywood"
-        },
-        {
-          "title": "In A Time Of Conflict, Franco-Iranian Web Series ‘Happiness’ Reminds Us That Teenhood Is Universal",
-          "url": "https://deadline.com/2026/06/happiness-arte-france-iranian-web-series-american-honey-1236931911/",
-          "published": "02/06/2026 13:00 UTC",
-          "source": "Deadline Hollywood"
         }
       ],
       "error": null
@@ -198,6 +210,18 @@
       "name": "Deadline – TV (section)",
       "url": "https://deadline.com/v/tv/feed/",
       "articles": [
+        {
+          "title": "‘The Marlow Murder Club’ Renewed For Season 4 At Masterpiece PBS",
+          "url": "https://deadline.com/2026/06/the-marlow-murder-club-renewed-season-4-masterpiece-pbs-1236938676/",
+          "published": "02/06/2026 15:02 UTC",
+          "source": "Deadline – TV (section)"
+        },
+        {
+          "title": "Will Arnett Joins Kristen Stewart In ‘The Challenger’ 1980s NASA Limited Series For Prime Video",
+          "url": "https://deadline.com/2026/06/will-arnett-the-challenger-limited-series-prime-video-1236938295/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "Deadline – TV (section)"
+        },
         {
           "title": "‘Silo’ Season 3 Trailer Teases A Split Timeline Plot As Juliette Faces Her Most Dangerous Challenge Yet",
           "url": "https://deadline.com/2026/06/silo-season-3-release-date-trailer-photos-apple-tv-1236866439/",
@@ -245,18 +269,6 @@
           "url": "https://deadline.com/2026/06/jon-stewart-olivia-munn-the-daily-show-stephen-colbert-1236938427/",
           "published": "02/06/2026 04:13 UTC",
           "source": "Deadline – TV (section)"
-        },
-        {
-          "title": "‘Stranger Things’ Creator Matt Duffer Says Young Film And TV Audiences “Are Telling Us Very Loudly That They’re Hungry For Original Stories”",
-          "url": "https://deadline.com/2026/06/stranger-things-young-film-tv-audiences-original-stories-1236938362/",
-          "published": "02/06/2026 02:17 UTC",
-          "source": "Deadline – TV (section)"
-        },
-        {
-          "title": "Gotham TV Awards: ‘DTF: St. Louis,’ ‘Pluribus’ & ‘I Love LA’ Win Top Series Prizes; Lead Acting Honors To Chase Infiniti, Michael Shannon & Tim Robinson – Full List",
-          "url": "https://deadline.com/2026/06/2026-gotham-tv-awards-winners-list-1236937998/",
-          "published": "02/06/2026 01:10 UTC",
-          "source": "Deadline – TV (section)"
         }
       ],
       "error": null
@@ -265,6 +277,12 @@
       "name": "The Verge",
       "url": "https://www.theverge.com/rss/index.xml",
       "articles": [
+        {
+          "title": "The screenless Camp Snap 2 is slimmer and comes with more filters",
+          "url": "https://www.theverge.com/tech/941427/camp-snap-2-digital-screenless-camera-filters-kid-lock",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "The Verge"
+        },
         {
           "title": "Amazon’s four-day Prime Day begins on June 23rd",
           "url": "https://www.theverge.com/gadgets/940021/amazon-prime-day-2026-june-dates-deals",
@@ -306,12 +324,6 @@
           "url": "https://www.theverge.com/tech/941215/windows-laptops-nvidia-rtx-spark-apple-m1-arm-price-ram",
           "published": "01/06/2026 20:02 UTC",
           "source": "The Verge"
-        },
-        {
-          "title": "Gemini’s new AI agent is about as good as Google’s demo",
-          "url": "https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on",
-          "published": "01/06/2026 20:00 UTC",
-          "source": "The Verge"
         }
       ],
       "error": null
@@ -320,6 +332,12 @@
       "name": "TechCrunch",
       "url": "https://techcrunch.com/feed/",
       "articles": [
+        {
+          "title": "Meta tests ‘Series’ for episodic Reels on Instagram and Facebook",
+          "url": "https://techcrunch.com/2026/06/02/meta-tests-series-for-episodic-reels-on-instagram-and-facebook/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "TechCrunch"
+        },
         {
           "title": "Apple’s MacBook Neo is winning over a new generation of buyers",
           "url": "https://techcrunch.com/2026/06/02/apples-macbook-neo-is-winning-over-a-new-generation-of-buyers/",
@@ -348,12 +366,6 @@
           "title": "Hackers hijacked Instagram accounts by tricking Meta AI support chatbot into granting access",
           "url": "https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/",
           "published": "01/06/2026 18:34 UTC",
-          "source": "TechCrunch"
-        },
-        {
-          "title": "Zigging when most are zagging, ex-Meta CTO raises $250M climate fund",
-          "url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
-          "published": "01/06/2026 16:42 UTC",
           "source": "TechCrunch"
         }
       ],
@@ -1109,6 +1121,12 @@
       "url": "https://todotvnews.com/feed/",
       "articles": [
         {
+          "title": "Las 5 noticias más destacadas de la jornada",
+          "url": "https://todotvnews.com/las-5-noticias-mas-destacadas-de-la-jornada-1261/",
+          "published": "02/06/2026 15:00 UTC",
+          "source": "TodoTVNews (ES)"
+        },
+        {
           "title": "Divergente, la plataforma OTT de ISII Group, se relanza con tres fichajes clave",
           "url": "https://todotvnews.com/divergente-la-plataforma-ott-de-isii-group-se-relanza-con-tres-fichajes-clave/",
           "published": "02/06/2026 14:18 UTC",
@@ -1142,12 +1160,6 @@
           "title": "Hemisphere Media Group lanza plataforma de streaming Todo Novelas, Más Pasiones",
           "url": "https://todotvnews.com/hemisphere-media-group-lanza-plataforma-de-streaming-todo-novelas-mas-pasiones/",
           "published": "02/06/2026 12:34 UTC",
-          "source": "TodoTVNews (ES)"
-        },
-        {
-          "title": "Movistar Plus anuncia el estreno de ¡Mátalo ya!, nuevo true crime de Carles Porta",
-          "url": "https://todotvnews.com/movistar-plus-anuncia-el-estreno-de-matalo-ya-nuevo-true-crime-de-carles-porta/",
-          "published": "02/06/2026 11:28 UTC",
           "source": "TodoTVNews (ES)"
         }
       ],
@@ -1410,6 +1422,12 @@
       "url": "https://www.xataka.com/feedburner.xml",
       "articles": [
         {
+          "title": "Nos han vendido la melatonina como el suplemento inofensivo definitivo para dormir. La ciencia no opina lo mismo",
+          "url": "https://www.xataka.com/medicina-y-salud/nos-han-vendido-melatonina-como-suplemento-inofensivo-definitivo-para-dormir-ciencia-no-opina",
+          "published": "02/06/2026 15:01 UTC",
+          "source": "Xataka (ES)"
+        },
+        {
           "title": "Mova ViAX 500, análisis: sí, existen robots cortacésped para jardines más pequeños y sí, este funciona de miedo",
           "url": "https://www.xataka.com/analisis/mova-viax-500-analisis-caracteristicas-precio-especificaciones",
           "published": "02/06/2026 14:45 UTC",
@@ -1546,12 +1564,6 @@
           "url": "https://www.xataka.com/empresas-y-economia/sabemos-exactamente-que-cuesta-ia-somos-incapaces-medir-que-produce-eso-empieza-a-ser-problema-serio",
           "published": "02/06/2026 08:01 UTC",
           "source": "Xataka (ES)"
-        },
-        {
-          "title": "Los repelentes anti-mosquito han sido eficientes durante 40 años. Ahora los mosquitos están aprendiendo a apreciarlos",
-          "url": "https://www.xataka.com/ecologia-y-naturaleza/repelentes-anti-mosquito-han-sido-eficientes-durante-40-anos-ahora-mosquitos-estan-aprendiendo-a-apreciarlos",
-          "published": "02/06/2026 07:31 UTC",
-          "source": "Xataka (ES)"
         }
       ],
       "error": null
@@ -1612,12 +1624,6 @@
           "title": "Apple soluciona un fallo que impedía cargar la batería de los iPhone 17 y Air: actualiza ahora a iOS 26.5.1",
           "url": "https://hipertextual.com/apple/actualizacion-ios-26-5-1-iphone-17-y-air/",
           "published": "01/06/2026 20:32 UTC",
-          "source": "Hipertextual (ES)"
-        },
-        {
-          "title": "Microsoft está por anunciar cambios importantes en Windows y nuevos modelos de IA",
-          "url": "https://hipertextual.com/software/microsoft-build-2026-modelos-ia-windows/",
-          "published": "01/06/2026 19:18 UTC",
           "source": "Hipertextual (ES)"
         }
       ],
