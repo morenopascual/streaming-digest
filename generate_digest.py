@@ -2,7 +2,6 @@
 Digest Streaming & VOD — Atresmedia
 Genera el index.html con los artículos más relevantes de las últimas 48h.
 """
-
 import os
 import json
 import feedparser
@@ -10,39 +9,248 @@ import anthropic
 from datetime import datetime, timezone, timedelta
 
 # ─── FUENTES RSS ──────────────────────────────────────────────────────────────
-
 FEEDS = [
-    ("Variety",               "https://feeds.feedburner.com/variety/headlines"),
-    ("The Hollywood Reporter","https://www.hollywoodreporter.com/feed/"),
-    ("Deadline Hollywood",    "https://deadline.com/feed/"),
-    ("TechCrunch",            "https://techcrunch.com/feed/"),
-    ("Digiday",               "https://digiday.com/feed/"),
-    ("Broadband TV News",     "https://www.broadbandtvnews.com/feed/"),
-    ("Marketing Directo",     "https://www.marketingdirecto.com/feed"),
-    ("Xataka",                "https://www.xataka.com/feedburner.xml"),
-    ("IPMARK",                "https://ipmark.com/feed/"),
-    ("DWDL.de",               "http://www.dwdl.de/rss/allethemen.xml"),
-    ("Horizont Medien",       "https://www.horizont.net/news/feed/medien/"),
+    # ── Medios anglosajones premium ───────────────────────────────────────────
+    ("Variety",                              "https://feeds.feedburner.com/variety/headlines"),
+    ("Variety – TV (section)",               "https://variety.com/v/tv/feed/"),
+    ("The Hollywood Reporter",               "https://www.hollywoodreporter.com/feed/"),
+    ("Hollywood Reporter – TV (section)",    "https://www.hollywoodreporter.com/t/tv/feed/"),
+    ("Deadline Hollywood",                   "https://deadline.com/feed/"),
+    ("Deadline – TV (section)",              "https://deadline.com/v/tv/feed/"),
+    ("The Verge",                            "https://www.theverge.com/rss/index.xml"),
+    ("TechCrunch",                           "https://techcrunch.com/feed/"),
+    ("Adweek",                               "https://www.adweek.com/feed/"),
+    ("Ad Age",                               "https://adage.com/feeds/feed.rss"),
+    ("Campaign",                             "https://www.campaignlive.com/feeds/rss"),
+    ("Digiday",                              "https://digiday.com/feed/"),
+    ("Press Gazette (UK)",                   "https://pressgazette.co.uk/feed/"),
+    # ── Medios especializados streaming / broadcast ───────────────────────────
+    ("Broadband TV News",                    "https://www.broadbandtvnews.com/feed/"),
+    ("Advanced Television",                  "https://advanced-television.com/feed/"),
+    ("Broadcasting & Cable / Next TV",       "https://www.nexttv.com/.rss/full/"),
+    ("TVNewsCheck",                          "https://tvnewscheck.com/feed/"),
+    ("Fierce Video",                         "https://www.fiercevideo.com/rss.xml"),
+    ("TV Technology",                        "https://www.tvtechnology.com/rss"),
+    ("TVB Europe",                           "https://www.tvbeurope.com/feed/"),
+    ("VideoWeek",                            "https://videoweek.com/feed/"),
+    ("Streaming Media",                      "https://www.streamingmedia.com/RSS/"),
+    ("StreamTV Insider",                     "https://www.streamtvinsider.com/rss.xml"),
+    ("The Media Leader (UK)",                "https://uk.themedialeader.com/feed/"),
+    ("nScreenMedia",                         "https://nscreenmedia.com/feed/"),
+    ("Screen Daily",                         "https://www.screendaily.com/rss"),
+    ("C21 Media",                            "https://www.c21media.net/feed/"),
+    ("MIDiA Research",                       "https://www.midiaresearch.com/blog/feed/"),
+    ("The Audiencers",                       "https://theaudiencers.com/feed/"),
+    # ── Medios españoles – audiovisual y streaming ────────────────────────────
+    ("CVeintiuno (ES)",                      "https://cveintiuno.com/feed/"),
+    ("TodoTVNews (ES)",                      "https://todotvnews.com/feed/"),
+    ("Audiovisual451 (ES)",                  "https://www.audiovisual451.com/feed/"),
+    ("Panorama Audiovisual (ES)",            "https://www.panoramaaudiovisual.com/feed/"),
+    ("The Daily Television (ES)",            "https://www.thedailytelevision.com/feed/"),
+    ("SatCesc (ES)",                         "https://satcesc.com/feed/"),
+    # ── Medios españoles – marketing y publicidad ─────────────────────────────
+    ("Marketing Directo (ES)",               "https://www.marketingdirecto.com/feed"),
+    ("IPMARK (ES)",                          "https://ipmark.com/feed/"),
+    ("ReasonWhy (ES)",                       "https://www.reasonwhy.es/rss.xml"),
+    ("Dircomfidencial (ES)",                 "https://dircomfidencial.com/feed/"),
+    ("Control Publicidad (ES)",              "https://www.ctrl.es/feed/"),
+    ("Anuncios (ES)",                        "https://www.anuncios.com/rss/"),
+    ("PuroMarketing (ES)",                   "https://www.puromarketing.com/feed/"),
+    ("La Publicidad (ES)",                   "https://lapublicidad.net/feed/"),
+    ("Programaticaly (ES)",                  "https://www.programaticaly.com/feed/"),
+    ("AMI Info (ES/FR)",                     "https://www.ami.info/feed/"),
+    # ── Medios españoles – tecnología y economía ──────────────────────────────
+    ("Xataka (ES)",                          "https://www.xataka.com/feedburner.xml"),
+    ("Xataka Smart TV (ES)",                 "https://www.xatakahome.com/tag/smart-tv/rss"),
+    ("Hipertextual (ES)",                    "https://hipertextual.com/feed"),
+    ("El Output (ES)",                       "https://eloutput.com/feed/"),
+    ("MuyComputer (ES)",                     "https://www.muycomputer.com/feed/"),
+    ("El País – Tecnología/Medios (ES)",     "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia"),
+    ("Cinco Días – Empresas/Telecos (ES)",   "https://cincodias.elpais.com/rss/empresas.xml"),
+    ("Expansión – Medios/Telecom (ES)",      "https://e00-expansion.uecdn.es/rss/tecnologia.xml"),
+    ("El Economista – Telecom/Medios (ES)",  "https://www.eleconomista.es/rss/rss-economia-tecnologia.php"),
+    ("Business Insider ES",                  "https://www.businessinsider.es/feed/"),
+    ("Laboratorio de Periodismo (ES)",       "https://laboratoriodeperiodismo.org/feed/"),
+    # ── CTV/Paid Media agencias España ────────────────────────────────────────
+    ("Adsmurai – CTV/Paid Media (ES)",       "https://www.adsmurai.com/es/blog/rss.xml"),
+    ("Making Science – Marketing/CTV (ES)",  "https://www.makingscience.es/feed/"),
+    ("VivaConversion – CTV/Digital (ES)",    "https://vivaconversion.com/feed/"),
+    # ── Medios alemanes ───────────────────────────────────────────────────────
+    ("DWDL.de (DE)",                         "https://www.dwdl.de/rss/allethemen.xml"),
+    ("Horizont Medien (DE)",                 "https://www.horizont.net/news/feed/medien/"),
+    # ── Medios franceses e italianos ──────────────────────────────────────────
+    ("Siècle Digital (FR)",                  "https://siecledigital.fr/feed/"),
+    ("Prima Online (IT)",                    "https://www.primaonline.it/feed/"),
 ]
 
 # ─── FILTROS ──────────────────────────────────────────────────────────────────
-
 KEYWORDS = [
-    "netflix","disney+","max","hbo","hulu","prime video","apple tv","peacock",
-    "paramount+","sky showtime","fubotv","youtube","movistar+","mitele","rtl+",
-    "joyn","itvx","sky","claro video","avod","svod","tvod","fast","ctv",
-    "connected tv","ott","vod","streaming","digital advertising",
-    "publicidad digital","publicidad online","programmatic","ad-supported",
-    "subscription","suscripción","warner bros discovery","nbcuniversal",
-    "comcast","rtl group","prosieben","televisaunivision","paramount global",
-    "mfe","mediaset","amazon","disney","google tv","samsung tv","smart tv",
-    "tizen","fire tv","chromecast","roku",
+    # ── Plataformas ───────────────────────────────────────────────────────────
+    "netflix", "disney+", "disney plus", "max", "hbo", "hulu",
+    "prime video", "apple tv", "peacock", "paramount+",
+    "sky showtime", "fubotv", "youtube", "movistar+",
+    "mitele", "rtl+", "joyn", "joyn+", "itvx", "sky",
+    "claro video", "pluto tv", "tubi", "rakuten tv", "filmin",
+    "atresplayer", "rtve play", "starzplay", "now tv", "crunchyroll",
+    "sling tv", "samsung tv plus", "roku channel", "freevee",
+    "viaplay", "canal+", "hbo max", "hotstar", "dstv", "viu", "dazn",
+    "showdowntv", "howdy", "bet+", "zully", "tlmad",
+    "globopop", "canela media", "vix", "espn",
+    "channel 4", "m6+", "rtl group", "rtl deutschland",
+    "prosiebensat", "prosieben", "bedrock", "banijay", "secuoya",
+    # ── Formatos de contenido ─────────────────────────────────────────────────
+    "microdrama", "microdramas", "vertical video", "vídeo vertical",
+    "video vertical", "duanju", "short-form content", "short-form video",
+    "clips feed", "vertical feed", "reelshort",
+    "video podcast", "video podcasts", "podcast", "live streaming", "live show",
+    # ── Modelos de negocio ────────────────────────────────────────────────────
+    "avod", "svod", "tvod", "fast", "ctv", "connected tv", "ott", "vod",
+    "streaming", "digital advertising", "publicidad digital", "publicidad online",
+    "programmatic", "ad-supported", "subscription", "suscripción",
+    "freemium", "pay tv", "televisión de pago", "televisión en abierto",
+    "pay per view", "ppv", "transactional vod", "hybrid model",
+    "ad-funded", "ad-supported streaming", "branded content",
+    "sponsorship", "patrocinio", "product placement",
+    "addressable tv", "televisión direccionable",
+    "bundling", "bundle", "super app", "superapp",
+    "acquisition-first", "peak tv", "long tail",
+    "content discovery", "subscriber retention", "retention funnel",
+    "fandom", "superfan", "direct-to-consumer", "d2c",
+    "ad-free", "price hike", "churn", "arpu",
+    # ── Empresas ──────────────────────────────────────────────────────────────
+    "warner bros", "warner bros discovery", "wbd",
+    "nbcuniversal", "comcast", "televisaunivision", "paramount global",
+    "paramount skydance", "mfe", "mediaset", "amazon", "disney", "apple",
+    "google tv", "samsung tv", "sony pictures", "universal pictures",
+    "lionsgate", "fox", "amc networks", "sky group", "vodafone tv",
+    "orange tv", "altice", "telefónica", "at&t", "discovery",
+    "fremantle", "itv studios", "bbc studios", "itv", "channel 4",
+    "bbc", "tf1", "m6", "rtve", "atresmedia", "movistar plus",
+    "mediaset españa", "spotify", "roku", "tiktok", "meta", "snap",
+    # ── Tecnología / dispositivos ─────────────────────────────────────────────
+    "smart tv", "tizen", "fire tv", "chromecast", "set-top box",
+    "streaming device", "android tv", "webos", "tvos", "vidaa", "titan os",
+    "hisense", "lg tv", "samsung smart tv", "apple tv 4k",
+    "playstation", "xbox", "hbbtv", "iptv", "ott box", "tivo",
+    # ── Publicidad, medición y datos ──────────────────────────────────────────
+    "programmatic advertising", "publicidad programática", "adtech", "martech",
+    "ssp", "dsp", "data management platform", "dmp",
+    "customer data platform", "cdp",
+    "audience measurement", "medición de audiencias",
+    "cross-media measurement", "cross-platform measurement",
+    "viewability", "brand safety",
+    "cpv", "cpc", "cpm", "ctr", "grps", "trps",
+    "first-party data", "third-party cookies", "cookieless",
+    "privacy sandbox", "brand lift", "incremental reach",
+    "incrementalidad", "multitouch attribution",
+    "marketing mix modeling", "mmx", "attribution modeling",
+    "home screen ads", "shoppable ads", "shoppable video",
+    "interactive ads", "pre-roll", "full-funnel",
+    "attention measurement", "acr data",
+    "ctv measurement", "unified measurement",
+    "addressable advertising", "programmatic tv",
+    "upfronts", "brandcast", "newfronts", "upfront 2026",
+    # ── Inteligencia artificial ───────────────────────────────────────────────
+    "artificial intelligence", "inteligencia artificial",
+    "machine learning", "deep learning",
+    "ai-generated content", "generative ai", "ia generativa",
+    "chatbot", "llm", "recommendation engine",
+    "algoritmo de recomendación", "personalized recommendations",
+    "content personalization", "automated ad buying",
+    "campaign optimization", "predictive analytics",
+    "computer vision", "natural language processing", "nlp",
+    "speech to text", "ai video", "deepfake detection", "ai covers",
+    "ai labeling", "ai voice search", "ai overviews", "gemini",
+    "agentic ai", "agentic ads", "void ai", "seedance",
+    "ai-generated show", "ai content", "ai tool", "ai search",
+    "chatgpt", "perplexity", "openai", "sora",
+    # ── Redes sociales / creadores ────────────────────────────────────────────
+    "social media", "redes sociales", "facebook", "instagram", "tiktok",
+    "twitter", "snapchat", "pinterest", "linkedin", "twitch",
+    "youtube shorts", "instagram reels",
+    "influencers", "creadores de contenido", "creator economy",
+    "ugc", "user generated content", "fan communities",
+    "social commerce", "brand collaborations",
+    # ── Industria de medios y televisión ─────────────────────────────────────
+    "broadcast tv", "televisión lineal", "free-to-air", "fta",
+    "cable tv", "satellite tv", "pay tv operators",
+    "public service broadcasting", "psb",
+    "news channels", "sports channels", "movie channels",
+    "media and entertainment", "medios de comunicación",
+    "industria audiovisual", "formatos de entretenimiento",
+    "unscripted", "scripted series", "miniseries",
+    "showrunner", "writers room", "pilot season",
+    "content licensing", "licencias de contenido",
+    "windowing", "ventanas de explotación",
+    "international distribution", "distribución internacional",
+    "la screenings", "seriesmania",
+    # ── Deportes y derechos ───────────────────────────────────────────────────
+    "fifa world cup", "copa mundial", "world cup 2026",
+    "mls", "nfl", "serie a", "laliga", "sports rights",
+    "live sports", "sports streaming", "sports ad spend", "derechos deportivos",
+    # ── Regulación y políticas ────────────────────────────────────────────────
+    "media regulation", "regulación de medios", "audiovisual regulation",
+    "eu audiovisual", "quotas", "cuotas de pantalla",
+    "csr", "brand purpose", "advertising standards",
+    "data protection", "gdpr", "privacy regulation",
+    "children advertising", "age-gating", "content rating",
+    "ofcom", "investment quota", "cuota inversión",
+    "licence fee", "luxembourg declaration",
+    "copyright infringement", "ai regulation", "streaming rules",
+    # ── Medios y publishers ───────────────────────────────────────────────────
+    "google discover", "dark social", "zero-click",
+    "publisher", "paywall", "news aggregator",
+    "propensity", "reader revenue", "subscription growth",
+    "search traffic", "organic traffic",
 ]
 
-EXCLUDE = ["max verstappen","verstappen"]
+EXCLUDE = [
+    "max verstappen",
+    "max holloway",
+    "formula 1",
+    "f1 grand prix",
+    "hair oiling",
+    "frutos secos",
+    "ciguena",
+    "yates más caros",
+    "ferrari luce",
+    "hidrogeno",
+    "smartwatch",
+    "portátil windows",
+    "pila de hidrógeno",
+]
+
+DISNEY_EXCLUDE_TOPICS = [
+    "theme park", "disneyland", "disney world",
+    "pixar", "marvel", "star wars", "box office",
+]
+
+# ─── FIX SELECCIÓN: se inyecta siempre después de que Claude genere el HTML ──
+# Las cards son <a href> con target="_blank". Sin este bloque, al hacer clic
+# en modo selección el navegador abre el enlace antes de que el JS pueda
+# seleccionar la card — de ahí el comportamiento errático.
+# Usar fase de captura (tercer argumento = true) garantiza que este listener
+# se dispara ANTES de que el <a> propague el evento de navegación.
+SELECT_FIX_SCRIPT = """
+<script>
+/* ── Fix selección de cards (fase de captura) ── */
+document.addEventListener('click', function(e) {
+  var card = e.target.closest('.card');
+  if (!card || !document.body.classList.contains('select-mode')) return;
+  e.preventDefault();
+  card.classList.toggle('selected');
+  var n   = document.querySelectorAll('.card.selected').length;
+  var txt = document.getElementById('save-bar-text');
+  var btn = document.getElementById('btn-save');
+  var bar = document.getElementById('save-bar');
+  if (txt) txt.textContent = n + (n === 1 ? ' noticia seleccionada' : ' noticias seleccionadas');
+  if (btn) btn.disabled = n === 0;
+  if (bar) bar.classList.toggle('visible', n > 0);
+}, true); /* true = captura, dispara antes de la navegación del <a> */
+</script>
+"""
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
-
 def is_recent(entry, hours=48):
     pub = entry.get("published_parsed") or entry.get("updated_parsed")
     if not pub:
@@ -53,18 +261,18 @@ def is_recent(entry, hours=48):
     except Exception:
         return True
 
-
 def is_relevant(title, summary=""):
     text = (title + " " + summary).lower()
     if any(ex in text for ex in EXCLUDE):
         return False
+    if "disney" in text and "disney+" not in text and "disney plus" not in text:
+        if any(topic in text for topic in DISNEY_EXCLUDE_TOPICS):
+            return False
     return any(kw in text for kw in KEYWORDS)
-
 
 def short_url(url):
     url = url.replace("https://","").replace("http://","").replace("www.","")
     return url[:55] + "…" if len(url) > 55 else url
-
 
 def format_date(entry):
     pub = entry.get("published_parsed") or entry.get("updated_parsed")
@@ -79,7 +287,6 @@ def format_date(entry):
         return "hoy"
 
 # ─── FETCH ────────────────────────────────────────────────────────────────────
-
 def fetch_articles():
     articles = []
     for source, url in FEEDS:
@@ -91,12 +298,12 @@ def fetch_articles():
                 link    = entry.get("link","")
                 if title and link and is_recent(entry) and is_relevant(title, summary):
                     articles.append({
-                        "source":  source,
-                        "title":   title,
-                        "url":     link,
+                        "source":    source,
+                        "title":     title,
+                        "url":       link,
                         "url_short": short_url(link),
-                        "date":    format_date(entry),
-                        "summary": summary[:400],
+                        "date":      format_date(entry),
+                        "summary":   summary[:400],
                     })
         except Exception as e:
             print(f"  ✗ {source}: {e}")
@@ -104,7 +311,6 @@ def fetch_articles():
     return articles
 
 # ─── GENERATE ─────────────────────────────────────────────────────────────────
-
 SYSTEM_PROMPT = """Eres un editor especializado en el sector del streaming, VOD y publicidad digital.
 Tu tarea es generar el HTML completo del digest diario de Atresmedia a partir de artículos en JSON.
 Devuelves ÚNICAMENTE el HTML completo, sin markdown, sin ``` ni explicaciones."""
@@ -112,12 +318,9 @@ Devuelves ÚNICAMENTE el HTML completo, sin markdown, sin ``` ni explicaciones."
 def generate_html(articles, template_html):
     today = datetime.now().strftime("%d/%m/%Y")
     articles_json = json.dumps(articles, ensure_ascii=False, indent=2)
-
     user_prompt = f"""Fecha de hoy: {today}
-
 Artículos disponibles (JSON):
 {articles_json}
-
 CATEGORÍAS a usar (solo las que tengan contenido):
 • PLATAFORMAS Y SECTOR  → plataformas streaming, OTT, modelos SVOD/AVOD/FAST
 • PUBLICIDAD            → inversión publicitaria, ad-tech, CTV advertising
@@ -128,14 +331,12 @@ CATEGORÍAS a usar (solo las que tengan contenido):
 • REDES SOCIALES        → TikTok, Instagram, YouTube como plataformas sociales
 • REGULACIÓN            → legislación, reguladores, política audiovisual
 • ESTUDIOS E INFORMES   → research, datos de mercado, audiencias
-
 REGLAS:
 - Excluye titulares sobre Disney NO relacionados con Disney+ (cine, parques, Marvel, Star Wars)
 - Excluye cualquier mención a Max Verstappen
 - Si no hay artículos para una categoría, omítela
 - El análisis final debe incluir "Temas del día" (4-5 puntos) y "Para seguir" (2-3 tendencias relevantes para Atresmedia/atresplayer)
 - Mantén el botón "↻ Actualizar" en el header
-
 Genera el HTML completo con los nuevos artículos. Usa EXACTAMENTE el mismo CSS del template.
 Template actual:
 {template_html}"""
@@ -156,8 +357,17 @@ Template actual:
         html = html[:-3]
     return html.strip()
 
-# ─── MAIN ─────────────────────────────────────────────────────────────────────
+def inject_select_fix(html):
+    """Inyecta el fix de selección justo antes de </body>.
+    Se ejecuta siempre después de la generación para que el fix
+    sea determinista e independiente de lo que Claude produzca."""
+    tag = "</body>"
+    if tag in html:
+        return html.replace(tag, SELECT_FIX_SCRIPT + tag, 1)
+    # Fallback: añadir al final si no hay </body>
+    return html + SELECT_FIX_SCRIPT
 
+# ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     print("1/3  Leyendo feeds RSS…")
     articles = fetch_articles()
@@ -172,10 +382,12 @@ def main():
     print("3/3  Generando HTML con Claude…")
     html = generate_html(articles, template)
 
+    # Inyectar fix de selección (post-procesado determinista)
+    html = inject_select_fix(html)
+
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html)
     print("✓  index.html actualizado")
-
 
 if __name__ == "__main__":
     main()
