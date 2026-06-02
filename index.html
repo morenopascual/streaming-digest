@@ -8,12 +8,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#f2f2f7;color:#1c1c1e;font-size:16px}
 a{color:inherit;text-decoration:none}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10}
 .site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
 .site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
-.btn-update{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s}
-.btn-update:hover{opacity:.85}
-.btn-update:disabled{opacity:.5;cursor:default}
 .container{max-width:680px;margin:0 auto;padding:16px 0 52px}
 .section{margin-bottom:28px}
 .section-label{font-size:12px;font-weight:700;letter-spacing:.09em;color:#8e8e93;text-transform:uppercase;padding:0 16px 8px}
@@ -38,234 +35,231 @@ a{color:inherit;text-decoration:none}
 .analysis-label{font-size:12px;font-weight:700;color:#007aff;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
 .analysis-text{font-size:14px;color:#3a3a3c;line-height:1.6}
 .site-footer{text-align:center;padding:20px;font-size:12px;color:#c7c7cc}
-.btn-select{background:#f2f2f7;color:#1c1c1e}
-.btn-select.active{background:#007aff;color:#fff}
-body.select-mode .card{cursor:pointer;user-select:none}
-body.select-mode .card:hover{background:#f0f6ff}
-.card-check{display:none;width:20px;height:20px;border-radius:50%;border:2px solid #c7c7cc;flex-shrink:0;align-self:center;transition:all .15s}
-body.select-mode .card-check{display:flex;align-items:center;justify-content:center}
-.card.selected .card-check{background:#007aff;border-color:#007aff}
-.card.selected .card-check::after{content:"✓";color:#fff;font-size:11px;font-weight:700}
-.card.selected{background:#f0f6ff}
-.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
-.save-bar.visible{display:flex}
-.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
-.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
-.btn-save:disabled{opacity:.5;cursor:default}
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
-.toast.show{opacity:1}
 </style>
 </head>
 <body>
 <div class="site-header">
-  <div>
-    <h1>Digest Streaming &amp; VOD</h1>
-    <p>02/06/2026 &nbsp;·&nbsp; Atresmedia</p>
-  </div>
-  <div style="display:flex;gap:8px;flex-shrink:0">
-    <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
-    <button class="btn-update btn-select" id="btn-select" onclick="toggleSelect()">Seleccionar</button>
-    <button class="btn-update" id="update-btn" onclick="triggerUpdate()">↻ Actualizar</button>
-  </div>
+  <h1>Digest Streaming &amp; VOD</h1>
+  <p>02/06/2026 &nbsp;·&nbsp; Atresmedia</p>
 </div>
-
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()">Guardar en tablero →</button>
-</div>
-<div class="toast" id="toast"></div>
 <div class="container">
-
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- PLATAFORMAS Y SECTOR -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">RTL completa la adquisición de Sky Deutschland por solo 68 M€ iniciales y reorganiza su estructura</div>
-<a class="card" href="https://www.dwdl.de/nachrichten/106672/skyuebernahme_rtl_zahlt_vorerst_nur_68_mio_an_comcast/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix lanza un hub de adaptaciones literarias segmentado por nueve perfiles de lector</div>
+<a class="card" href="https://variety.com/2026/tv/news/bridgerton-netflix-book-adaptations-hub-1236764322/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">RTL paga inicialmente solo 68 M€ a Comcast por Sky Deutschland, con posibilidad de aumento significativo</div>
+    <div class="card-title">Netflix lanza un hub con 'Bridgerton' y más adaptaciones de libros dirigidas a nueve tipos de lectores</div>
     <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
-      <span class="card-sep">·</span><span class="card-date">1 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/nachrichten/106672/skyuebernahme_rtl_zahlt_vore…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-<a class="card" href="https://www.dwdl.de/nachrichten/106687/neue_verantwortungsbereiche_rtl_news_wandert_zu_stephan_schmitter/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">Tras la compra de Sky, RTL reorganiza áreas: RTL News y el grupo 'Stern' pasan a depender del CEO Stephan Schmitter</div>
-    <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
-      <span class="card-sep">·</span><span class="card-date">1 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/nachrichten/106687/neue_verantwortungsbereiche_…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-<a class="card" href="https://www.dwdl.de/nachrichten/106696/wir_spielen_auf_angriff_so_lief_der_day_one_bei_rtl__sky/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">"Jugamos al ataque": así fue el 'Day One' de la nueva dirección de RTL Deutschland tras integrar Sky</div>
-    <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
+      <span class="card-source">Variety</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/nachrichten/106696/wir_spielen_auf_angriff_so_l…</span>
+      <span class="card-url">variety.com/2026/tv/news/bridgerton-netflix-boo…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: nuevos estrenos de junio 2026 y los 19 lanzamientos de esta semana</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/netflix-june-2026-new-releases-movies-tv-1236610298/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">SiriusXM llevará los pódcasts de Conan O'Brien y Trevor Noah a Tubi</div>
+<a class="card" href="https://www.hollywoodreporter.com/business/digital/siriusxm-conan-obrien-trevor-noah-podcasts-tubi-1236610492/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Netflix revela todas las nuevas películas y series que llegan en junio de 2026</div>
+    <div class="card-title">SiriusXM acuerda distribuir los pódcasts de Conan O'Brien y Trevor Noah en Tubi</div>
     <div class="card-meta">
       <span class="card-source">The Hollywood Reporter</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">hollywoodreporter.com/tv/tv-news/netflix-june-2026-new-…</span>
+      <span class="card-url">hollywoodreporter.com/business/digital/siriusxm-conan-obr…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
-</a>
-<a class="card" href="https://www.xataka.com/streaming/19-estrenos-netflix-esta-semana-documental-que-ahonda-que-michael-no-quiso-contar-excelente-thriller-espanol" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">19 estrenos en Netflix esta semana: un documental sobre Michael Jackson y un excelente thriller español</div>
-    <div class="card-meta">
-      <span class="card-source">Xataka</span>
-      <span class="card-sep">·</span><span class="card-date">1 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">xataka.com/streaming/19-estrenos-netflix-esta-semana-do…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-<a class="card" href="https://www.dwdl.de/nachrichten/106694/starttermin_fuer_dritte_staffel_von_kaulitz__kaulitz_steht_fest/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">Netflix confirma fecha de estreno de la tercera temporada de 'Kaulitz &amp; Kaulitz', la dokusoap de los gemelos de Tokio Hotel</div>
-    <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
-      <span class="card-sep">·</span><span class="card-date">2 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/nachrichten/106694/starttermin_fuer_dritte_staf…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Amazon domina el streaming en Alemania en mayo con 'LOL' y 'Off Campus' a nivel de 'Maxton Hall'</div>
-<a class="card" href="https://www.dwdl.de/zahlenzentrale/106698/amazon_gelingt_mit_off_campus_der_naechste_serienhit/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Apple TV+ publica el tráiler de la tercera temporada de 'Silo' con doble línea temporal</div>
+<a class="card" href="https://deadline.com/2026/06/silo-season-3-release-date-trailer-photos-apple-tv-1236866439/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Amazon lidera el ranking de streaming AGF en mayo: 'Off Campus' alcanza cifras al nivel de 'Maxton Hall'</div>
-    <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
-      <span class="card-sep">·</span><span class="card-date">2 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/zahlenzentrale/106698/amazon_gelingt_mit_off_ca…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Starz ficha al ejecutivo veterano de Disney Jim Kapenstein como Chief Legal and Strategy Officer</div>
-<a class="card" href="https://variety.com/2026/tv/news/disney-jim-kapenstein-starz-chief-legal-strategy-officer-1236764548/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">Jim Kapenstein, que lideró grandes adquisiciones de Disney, se une a Starz para dirigir estrategia y asuntos legales</div>
-    <div class="card-meta">
-      <span class="card-source">Variety</span>
-      <span class="card-sep">·</span><span class="card-date">1 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">variety.com/2026/tv/news/disney-jim-kapenstein-starz-ch…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">La plataforma española Divergente se relanza con tres fichajes clave en contenidos, comercial y marketing</div>
-<a class="card" href="https://www.marketingdirecto.com/marketing-general/gente/plataforma-streaming-divergente-impulsa-relanzamiento-tres-fichajes-clave" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">Divergente ficha a Eduard Martí (Adquisiciones), Natalia Ávila (Comercial) y Óscar Mallorquí (Marketing) para impulsar su relanzamiento</div>
-    <div class="card-meta">
-      <span class="card-source">Marketing Directo</span>
-      <span class="card-sep">·</span><span class="card-date">2 jun</span>
-      <span class="card-sep">·</span>
-      <span class="card-url">marketingdirecto.com/marketing-general/gente/plataforma…</span>
-      <span class="card-ext">↗</span>
-    </div>
-  </div>
-  <div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Backrooms 2' en marcha: la pipeline YouTube-Hollywood se consolida con 118 M$ en taquilla</div>
-<a class="card" href="https://deadline.com/2026/06/backrooms-sequel-kane-parsons-1236938378/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#2980b9"></div>
-  <div class="card-body">
-    <div class="card-title">A24 confirma 'Backrooms 2': Kane Parsons expandirá la IP de YouTube al largometraje tras un debut de 118 M$</div>
+    <div class="card-title">El tráiler de 'Silo' T3 adelanta una trama con línea temporal dividida</div>
     <div class="card-meta">
       <span class="card-source">Deadline Hollywood</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">deadline.com/2026/06/backrooms-sequel-kane-parsons-1236…</span>
+      <span class="card-url">deadline.com/2026/06/silo-season-3-release-date-…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
-<a class="card" href="https://variety.com/2026/film/box-office/uk-ireland-box-office-backrooms-mandalorian-grogu-1236764683/" target="_blank" rel="noopener">
+<a class="card" href="https://hipertextual.com/cine-television/mira-el-impactante-trailer-de-silo-temporada-3-la-gran-serie-de-ciencia-ficcion-vuelve-mas-fuerte-que-nunca/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">'Backrooms' bate el récord histórico de A24 en UK e Irlanda con £4,2 M en su fin de semana de debut</div>
+    <div class="card-title">'Silo' temporada 3: la gran serie de ciencia ficción de Apple TV+ presenta un potente tráiler</div>
     <div class="card-meta">
-      <span class="card-source">Variety</span>
+      <span class="card-source">Hipertextual (ES)</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">variety.com/2026/film/box-office/uk-ireland-box-office-…</span>
+      <span class="card-url">hipertextual.com/cine-television/mira-el-impactante-…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Zattoo añade Rally.TV a su portfolio FAST en Alemania, Austria y Suiza</div>
+<div class="group-title" style="border-left:3px solid #2980b9">Disney+ UK e Irlanda adquiere la serie australiana 'Gnomes'</div>
+<a class="card" href="https://deadline.com/2026/06/gnomes-disney-uk-ireland-1236938573/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Disney+ UK e Irlanda incorpora la serie australiana 'Gnomes' a su catálogo</div>
+    <div class="card-meta">
+      <span class="card-source">Deadline Hollywood</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">deadline.com/2026/06/gnomes-disney-uk-ireland-12…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video adquiere el drama de la BBC 'What It Feels Like for a Girl' para EE. UU.</div>
+<a class="card" href="https://www.c21media.net/news/prime-video-picks-up-bbc-coming-of-age-drama-what-it-feels-like-for-a-girl-for-us/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Prime Video compra los derechos en EE. UU. del drama juvenil de la BBC 'What It Feels Like for a Girl'</div>
+    <div class="card-meta">
+      <span class="card-source">C21 Media</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">c21media.net/news/prime-video-picks-up-bbc-comin…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">WBITVP licencia más de 4.000 horas de contenido a Little Dot Studios para YouTube</div>
+<a class="card" href="https://www.c21media.net/news/wbitvp-to-license-4000-plus-hours-to-little-dot-studios-as-content-partnership-grows/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">WBITVP licencia más de 4.000 horas a Little Dot Studios para sus canales de YouTube</div>
+    <div class="card-meta">
+      <span class="card-source">C21 Media</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">c21media.net/news/wbitvp-to-license-4000-plus-ho…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://cveintiuno.com/wbitvp-licencia-mas-de-4-000-horas-a-los-canales-de-youtube-de-little-dot-studios/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">WBITVP licencia más de 4.000 horas a los canales de YouTube de Little Dot Studios</div>
+    <div class="card-meta">
+      <span class="card-source">CVeintiuno (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">cveintiuno.com/wbitvp-licencia-mas-de-4-000-horas-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Hemisphere Media lanza una plataforma AVOD especializada en telenovelas</div>
+<a class="card" href="https://cveintiuno.com/hemisphere-lanza-plataforma-avod-especializada-en-telenovelas/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Hemisphere lanza plataforma AVOD especializada en telenovelas</div>
+    <div class="card-meta">
+      <span class="card-source">CVeintiuno (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">cveintiuno.com/hemisphere-lanza-plataforma-avod-es…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://todotvnews.com/hemisphere-media-group-lanza-plataforma-de-streaming-todo-novelas-mas-pasiones/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Hemisphere Media Group lanza la plataforma de streaming 'Todo Novelas, Más Pasiones'</div>
+    <div class="card-meta">
+      <span class="card-source">TodoTVNews (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">todotvnews.com/hemisphere-media-group-lanza-plataf…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">La plataforma de streaming Divergente (ISII Group) se relanza con el ex Amazon Eduard Martí al frente de contenidos</div>
+<a class="card" href="https://cveintiuno.com/el-ex-amazon-eduard-marti-liderara-adquisiciones-y-contenidos-de-divergente-la-plataforma-de-isii-group/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">El ex Amazon Eduard Martí liderará adquisiciones y contenidos de Divergente, la plataforma de ISII Group</div>
+    <div class="card-meta">
+      <span class="card-source">CVeintiuno (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">cveintiuno.com/el-ex-amazon-eduard-marti-liderara-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://todotvnews.com/divergente-la-plataforma-ott-de-isii-group-se-relanza-con-tres-fichajes-clave/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Divergente, la plataforma OTT de ISII Group, se relanza con tres fichajes clave</div>
+    <div class="card-meta">
+      <span class="card-source">TodoTVNews (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">todotvnews.com/divergente-la-plataforma-ott-de-isi…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.audiovisual451.com/la-plataforma-de-streaming-divergente-de-isii-group-se-relanza-con-la-incorporacion-de-tres-ejecutivos/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">La plataforma de streaming Divergente, de ISII Group, se relanza con tres ejecutivos</div>
+    <div class="card-meta">
+      <span class="card-source">Audiovisual451 (ES)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">audiovisual451.com/la-plataforma-de-streaming-divergen…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Spotify desembarca en los televisores Hisense con VIDAA OS</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/spotify-launches-on-hisense-vidaa-tvs/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Spotify llega a los televisores Hisense con sistema VIDAA</div>
+    <div class="card-meta">
+      <span class="card-source">Broadband TV News</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">broadbandtvnews.com/2026/06/02/spotify-launches-on-hise…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Zattoo incorpora Rally.TV a su oferta de canales FAST</div>
 <a class="card" href="https://www.broadbandtvnews.com/2026/06/02/zattoo-adds-rally-tv-to-fast-channel-portfolio/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Zattoo incorpora Rally.TV a su oferta de canales FAST gratuitos en la región DACH</div>
+    <div class="card-title">Zattoo añade Rally.TV a su cartera de canales FAST</div>
     <div class="card-meta">
       <span class="card-source">Broadband TV News</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
@@ -274,60 +268,569 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Audible ficha a Andrew Scott y George MacKay para la novela debut de Russell Tovey</div>
-<a class="card" href="https://deadline.com/2026/06/andrew-scott-george-mackay-russell-tovey-starlings-audible-1236937944/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Stingray Hooked debuta en The Roku Channel en EE. UU.</div>
+<a class="card" href="https://tvnewscheck.com/programming/article/stingray-hooked-makes-its-debut-on-the-roku-channel-in-the-u-s/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Andrew Scott y George MacKay protagonizan 'Starlings', la novela debut de Russell Tovey publicada como Audible Original</div>
+    <div class="card-title">Stingray Hooked se estrena en The Roku Channel en Estados Unidos</div>
     <div class="card-meta">
-      <span class="card-source">Deadline Hollywood</span>
+      <span class="card-source">TVNewsCheck</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">deadline.com/2026/06/andrew-scott-george-mackay-russell…</span>
+      <span class="card-url">tvnewscheck.com/programming/article/stingray-hooked…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Liberty Global crea Ziggo Group (VodafoneZiggo + Telenet) para salir a bolsa en Ámsterdam en 2027</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/06/01/liberty-global-creates-ziggo-group-ahead-of-planned-2027-amsterdam-listing/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">YouTube añade Fox One a sus canales premium; Peacock llegará próximamente</div>
+<a class="card" href="https://tvnewscheck.com/digital/article/youtube-adds-fox-one-to-primetime-channels-peacock-coming-soon/" target="_blank" rel="noopener">
   <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Liberty Global fusiona VodafoneZiggo y Telenet en Ziggo Group, con salida a bolsa prevista en Ámsterdam en 2027</div>
+    <div class="card-title">YouTube suma Fox One a sus Primetime Channels; Peacock se incorporará en breve</div>
     <div class="card-meta">
-      <span class="card-source">Broadband TV News</span>
+      <span class="card-source">TVNewsCheck</span>
       <span class="card-sep">·</span><span class="card-date">1 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">broadbandtvnews.com/2026/06/01/liberty-global-creates-z…</span>
+      <span class="card-url">tvnewscheck.com/digital/article/youtube-adds-fox-on…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
 </div>
-
-</div>
-
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<!-- PUBLICIDAD -->
-<!-- ════════════════════════════════════════════════════════════════════════ -->
-<div class="section">
-<div class="section-label" style="color:#e91e8c">PUBLICIDAD</div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e91e8c">Frank Vogel asume la comercialización conjunta de RTL y Sky Deutschland y ajusta el modelo TKP</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/frank-vogel-takes-charge-of-rtl-deutschland-and-sky-advertising-sales/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#e91e8c"></div>
+<div class="group-title" style="border-left:3px solid #2980b9">Inkitt lanza una app de microdramas de acción generados con IA</div>
+<a class="card" href="https://www.c21media.net/news/inkitt-launches-microdrama-app-focused-on-action-series-generated-by-ai/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
   <div class="card-body">
-    <div class="card-title">Frank Vogel asume la dirección de ventas publicitarias conjuntas de RTL Deutschland y Sky Deutschland</div>
+    <div class="card-title">Inkitt lanza una app de microdramas de acción generados por inteligencia artificial</div>
+    <div class="card-meta">
+      <span class="card-source">C21 Media</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">c21media.net/news/inkitt-launches-microdrama-app…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">La industria se lanza a los microdramas sin entender el formato, advierte el fundador de Vertifilms</div>
+<a class="card" href="https://cveintiuno.com/la-industria-esta-lanzandose-a-los-microdramas-sin-entender-el-formato-dice-el-fundador-de-vertifilms/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">La industria se lanza a los microdramas sin entender el formato, según el fundador de Vertifilms</div>
+    <div class="card-meta">
+      <span class="card-source">CVeintiuno (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">cveintiuno.com/la-industria-esta-lanzandose-a-los-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Matt Duffer ('Stranger Things') afirma que las audiencias jóvenes reclaman historias originales</div>
+<a class="card" href="https://deadline.com/2026/06/stranger-things-young-film-tv-audiences-original-stories-1236938362/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Matt Duffer asegura que las audiencias jóvenes piden a gritos historias originales</div>
+    <div class="card-meta">
+      <span class="card-source">Deadline – TV</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">deadline.com/2026/06/stranger-things-young-film-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Dhar Mann acude a Tribeca X para demostrar que la CTV y los creadores pueden competir con la TV tradicional</div>
+<a class="card" href="https://digiday.com/media/dhar-mann-is-going-to-tribeca-x-to-prove-ctv-can-do-tvs-job-and-that-creators-belong-in-the-conversation/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Dhar Mann lleva a Tribeca X su apuesta por la CTV como sustituto de la TV lineal</div>
+    <div class="card-meta">
+      <span class="card-source">Digiday</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">digiday.com/media/dhar-mann-is-going-to-tribeca…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Amazon Prime Day 2026 se celebrará del 23 al 26 de junio, con cuatro días de duración</div>
+<a class="card" href="https://www.theverge.com/gadgets/940021/amazon-prime-day-2026-june-dates-deals" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Amazon anuncia que su Prime Day de cuatro días comenzará el 23 de junio</div>
+    <div class="card-meta">
+      <span class="card-source">The Verge</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">theverge.com/gadgets/940021/amazon-prime-day-202…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://techcrunch.com/2026/06/02/amazon-prime-day-2026-takes-place-june-23-26/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#2980b9"></div>
+  <div class="card-body">
+    <div class="card-title">Amazon Prime Day 2026: del 23 al 26 de junio</div>
+    <div class="card-meta">
+      <span class="card-source">TechCrunch</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">techcrunch.com/2026/06/02/amazon-prime-day-2026-ta…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#7b68ee">IA</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Utopai Studios lanza la versión 2.0 de su plataforma de vídeo generativo con IA</div>
+<a class="card" href="https://variety.com/2026/digital/tech/ai-utopai-studios-pai-2-generative-video-platform-1236764434/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Utopai Studios presenta la versión 2.0 de su plataforma de vídeo generativo con IA</div>
+    <div class="card-meta">
+      <span class="card-source">Variety</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">variety.com/2026/digital/tech/ai-utopai-studios…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">La responsable de unscripted de Netflix UK advierte de los peligros de la IA en los realities: 'Es difícil distinguir lo falso de lo real'</div>
+<a class="card" href="https://variety.com/2026/tv/global/netflix-uk-unscripted-ai-reality-shows-1236764848/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La jefa de unscripted de Netflix UK alerta sobre el uso de IA en realities: 'Cuesta distinguir lo falso de lo real'</div>
+    <div class="card-meta">
+      <span class="card-source">Variety – TV</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">variety.com/2026/tv/global/netflix-uk-unscripte…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://deadline.com/2026/06/netflix-uk-unscripted-chief-audacious-slate-1236938528/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La nueva responsable de unscripted de Netflix UK anuncia una primera tanda de originales 'audaz'</div>
+    <div class="card-meta">
+      <span class="card-source">Deadline – TV</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">deadline.com/2026/06/netflix-uk-unscripted-chief…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">La tecnología de Animaj promete acelerar la producción de animación mediante IA</div>
+<a class="card" href="https://www.c21media.net/department/the-ai-report/how-animajs-ai-tech-is-setting-animation-in-motion/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Animaj busca transformar la animación con herramientas de IA</div>
+    <div class="card-meta">
+      <span class="card-source">C21 Media</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">c21media.net/department/the-ai-report/how-animaj…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Los asistentes de IA ofrecen respuestas inconsistentes sobre la disponibilidad de contenido en streaming</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/analysis-ai-assistants-inconsistent-on-answering-on-streaming-availability-queries/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Análisis: los asistentes de IA fallan al informar sobre la disponibilidad de títulos en plataformas de streaming</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/analysis-ai-assistants-i…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Florida demanda a OpenAI y Sam Altman en un caso pionero por incidentes violentos vinculados a la IA</div>
+<a class="card" href="https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Florida presenta una demanda sin precedentes contra OpenAI y Sam Altman por incidentes violentos</div>
+    <div class="card-meta">
+      <span class="card-source">TechCrunch</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">techcrunch.com/2026/06/01/florida-sues-openai-sam-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://tvnewscheck.com/ai/article/openai-sued-by-floridas-attorney-general-over-ai-harms/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">El fiscal general de Florida demanda a OpenAI por daños causados por la IA</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/ai/article/openai-sued-by-floridas-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Hackers piratean cuentas de Instagram engañando al chatbot de soporte de Meta con IA</div>
+<a class="card" href="https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Piratas informáticos secuestran cuentas de Instagram engañando al chatbot de soporte de Meta basado en IA</div>
+    <div class="card-meta">
+      <span class="card-source">TechCrunch</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">techcrunch.com/2026/06/01/hackers-hijacked-instagr…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://siecledigital.fr/2026/06/02/lia-de-meta-aurait-permis-a-des-hackers-de-pirater-des-comptes-instagram-de-personnalites-dont-celui-de-barack-obama/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La IA de Meta habría permitido a hackers piratear cuentas de Instagram de personalidades</div>
+    <div class="card-meta">
+      <span class="card-source">Siècle Digital (FR)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">siecledigital.fr/2026/06/02/lia-de-meta-aurait-permi…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Google presenta Gemini Spark, su nuevo agente de IA: impresionante y controvertido a partes iguales</div>
+<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/941388/gemini-spark-ai-agent-trip-planning" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Gemini Spark, la experiencia de IA más impresionante e inquietante hasta la fecha, según The Verge</div>
+    <div class="card-meta">
+      <span class="card-source">The Verge</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">theverge.com/ai-artificial-intelligence/941388/g…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Primeras impresiones de Gemini Spark: el nuevo agente de IA de Google cumple lo prometido en la demo</div>
+    <div class="card-meta">
+      <span class="card-source">The Verge</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">theverge.com/tech/941138/google-gemini-spark-ai-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.xataka.com/basics/que-gemini-spark-que-puedes-hacer-como-funciona-quien-puede-usarlo" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Qué es Gemini Spark, cómo funciona y quién puede usarlo</div>
+    <div class="card-meta">
+      <span class="card-source">Xataka (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">xataka.com/basics/que-gemini-spark-que-puedes-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">La IA homogeneíza los contenidos de internet, haciéndolos menos diversos y más complacientes</div>
+<a class="card" href="https://laboratoriodeperiodismo.org/la-inteligencia-artificial-hace-que-los-contenidos-de-internet-sean-mas-homogeneos-menos-diversos-y-emocionalmente-mas-complacientes/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La IA hace que los contenidos de internet sean más homogéneos, menos diversos y emocionalmente más complacientes</div>
+    <div class="card-meta">
+      <span class="card-source">Laboratorio de Periodismo (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">laboratoriodeperiodismo.org/la-inteligencia-artificial-hace-que…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">El editor del NYT advierte de que las empresas de IA violan la ley y amenazan la sostenibilidad del periodismo</div>
+<a class="card" href="https://tvnewscheck.com/ai/article/new-york-times-publisher-warns-that-ai-companies-are-making-choices-that-violate-settled-law-and-could-cause-a-great-deal-of-unnecessary-harm/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">El editor del New York Times: las empresas de IA toman decisiones que 'violan la ley' y causan 'un daño innecesario'</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/ai/article/new-york-times-publisher…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://pressgazette.co.uk/news/new-york-times-chief-how-and-why-publishers-should-fight-ai-tsunami/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">El director del NYT explica cómo y por qué los editores deben combatir el 'tsunami' de la IA</div>
+    <div class="card-meta">
+      <span class="card-source">Press Gazette (UK)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">pressgazette.co.uk/news/new-york-times-chief-how-and-w…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://laboratoriodeperiodismo.org/la-inteligencia-artificial-amenaza-la-sostenibilidad-del-periodismo-segun-el-editor-de-the-new-york-times/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La IA amenaza la sostenibilidad del periodismo, según el editor del New York Times</div>
+    <div class="card-meta">
+      <span class="card-source">Laboratorio de Periodismo (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">laboratoriodeperiodismo.org/la-inteligencia-artificial-amenaza-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://siecledigital.fr/2026/06/02/le-patron-du-new-york-times-accuse-les-geants-de-lia-de-piller-les-medias/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">El patrón del NYT acusa a los gigantes de la IA de 'saquear' a los medios</div>
+    <div class="card-meta">
+      <span class="card-source">Siècle Digital (FR)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">siecledigital.fr/2026/06/02/le-patron-du-new-york-ti…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Axios apuesta por la IA para hacer rentable el periodismo local</div>
+<a class="card" href="https://tvnewscheck.com/ai/article/axios-bets-that-ai-can-make-local-news-pay-one-market-at-a-time/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Axios apuesta por que la IA haga viable el negocio de la información local</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/ai/article/axios-bets-that-ai-can-m…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">IAB UK prevé que la publicidad impulsada por IA acapare un tercio del gasto digital en 2030</div>
+<a class="card" href="https://uk.themedialeader.com/ai-driven-advertising-to-account-for-one-third-of-digital-adspend-by-2030-iab-uk-forecasts/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">La publicidad basada en IA supondrá un tercio de la inversión digital en 2030, según IAB UK</div>
+    <div class="card-meta">
+      <span class="card-source">The Media Leader (UK)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">uk.themedialeader.com/ai-driven-advertising-to-account-fo…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #7b68ee">Un ex directivo de marketing de Apple recauda 10 M$ para agentes de IA que analizan vídeo social</div>
+<a class="card" href="https://www.adweek.com/social-marketing/pitch-deck-ex-apple-marketer-raises-10m-to-scale-ai-agents-that-decode-social-video/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#7b68ee"></div>
+  <div class="card-body">
+    <div class="card-title">Ex responsable de marketing de Apple capta 10 M$ para agentes de IA que decodifican el vídeo en redes sociales</div>
+    <div class="card-meta">
+      <span class="card-source">Adweek</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">adweek.com/social-marketing/pitch-deck-ex-appl…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#1a9e75">CTV</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1a9e75">Frequency presenta publicidad 'in-scene' para canales de streaming</div>
+<a class="card" href="https://tvnewscheck.com/tech/article/frequency-introduces-in-scene-advertising-for-streaming-tv-channels/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#1a9e75"></div>
+  <div class="card-body">
+    <div class="card-title">Frequency introduce publicidad integrada en escena para canales de streaming</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/tech/article/frequency-introduces-i…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1a9e75">Los problemas de entrega de anuncios en ChatGPT ponen a prueba la paciencia de los anunciantes</div>
+<a class="card" href="https://digiday.com/podcasts/chatgpt-ad-delivery-struggles-are-testing-advertiser-patience/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#1a9e75"></div>
+  <div class="card-body">
+    <div class="card-title">Las dificultades de entrega publicitaria en ChatGPT empiezan a agotar la paciencia de los anunciantes</div>
+    <div class="card-meta">
+      <span class="card-source">Digiday</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">digiday.com/podcasts/chatgpt-ad-delivery-strugg…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1a9e75">Mantis lanza 'Mantis Video' para ayudar a los editores a competir por briefs centrados en vídeo</div>
+<a class="card" href="https://videoweek.com/2026/06/02/mantis-launches-mantis-video-to-help-publishers-compete-for-video-first-briefs/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#1a9e75"></div>
+  <div class="card-body">
+    <div class="card-title">Mantis presenta 'Mantis Video' para que los editores accedan a campañas de vídeo</div>
+    <div class="card-meta">
+      <span class="card-source">VideoWeek</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">videoweek.com/2026/06/02/mantis-launches-mantis-v…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#e6a817">REDES SOCIALES</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e6a817">Meta amplía las funciones de seguridad para adolescentes en sus plataformas</div>
+<a class="card" href="https://tvnewscheck.com/tech/article/meta-expands-safety-features-for-teenagers/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e6a817"></div>
+  <div class="card-body">
+    <div class="card-title">Meta amplía sus funciones de protección para adolescentes</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/tech/article/meta-expands-safety-fe…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e6a817">El alcalde de Londres respalda la prohibición de redes sociales a menores de 16 años</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/london-mayor-backs-u16-social-media-ban/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e6a817"></div>
+  <div class="card-body">
+    <div class="card-title">El alcalde de Londres apoya la prohibición de redes sociales a menores de 16 años</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/london-mayor-backs-u16-s…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e6a817">Una app de vídeo creada por creadores y respaldada por News Movement prescinde del scroll infinito</div>
+<a class="card" href="https://pressgazette.co.uk/publishers/digital-journalism/news-creator-app-sayso-uk-launch/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e6a817"></div>
+  <div class="card-body">
+    <div class="card-title">SaySo, la app de vídeo impulsada por creadores, llega al Reino Unido sin scroll infinito</div>
+    <div class="card-meta">
+      <span class="card-source">Press Gazette (UK)</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">pressgazette.co.uk/publishers/digital-journalism/news-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#d84040">MEDIOS Y TELEVISIÓN</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">RTL completa la adquisición de Sky Deutschland y reorganiza su área de contenido y ventas publicitarias</div>
+<a class="card" href="https://www.tvbeurope.com/business/rtl-completes-acquisition-of-sky-deutschland" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">RTL completa la adquisición de Sky Deutschland</div>
+    <div class="card-meta">
+      <span class="card-source">TVB Europe</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvbeurope.com/business/rtl-completes-acquisition-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://videoweek.com/2026/06/01/rtls-sky-deutschland-acquisition-makes-it-germanys-main-aggregator/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">La adquisición de Sky Deutschland convierte a RTL en el 'principal agregador' de Alemania</div>
+    <div class="card-meta">
+      <span class="card-source">VideoWeek</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">videoweek.com/2026/06/01/rtls-sky-deutschland-acq…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/frank-vogel-takes-charge-of-rtl-deutschland-and-sky-advertising-sales/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Frank Vogel asume la comercialización publicitaria conjunta de RTL y Sky en Alemania</div>
     <div class="card-meta">
       <span class="card-source">Broadband TV News</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
@@ -336,47 +839,689 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
-<a class="card" href="https://www.dwdl.de/nachrichten/106695/frank_vogel_verantwortet_vermarktung_von_sky_und_rtl_adalliance/" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#e91e8c"></div>
+<a class="card" href="https://www.dwdl.de/nachrichten/106701/so_stellt_inga_leschek_den_rtlcontentbereich_neu_auf/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
   <div class="card-body">
-    <div class="card-title">Frank Vogel (Ad Alliance) asume la responsabilidad de la comercialización conjunta de RTL y Sky en Alemania</div>
+    <div class="card-title">Inga Leschek amplía responsabilidades en el área de contenidos de RTL tras integrar Sky</div>
     <div class="card-meta">
-      <span class="card-source">DWDL.de</span>
+      <span class="card-source">DWDL.de (DE)</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">dwdl.de/nachrichten/106695/frank_vogel_verantwortet_ver…</span>
+      <span class="card-url">dwdl.de/nachrichten/106701/so_stellt_inga_l…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
 </a>
-<a class="card" href="https://www.horizont.net/medien/nachrichten/ad-alliance-frank-vogel-uebernimmt-rtl--und-sky-vermarktung-und-passt-tkp-modell-an-234559?utm_source=rss&utm_medium=referral&utm_campaign=news-medien&utm_term=" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#e91e8c"></div>
+<a class="card" href="https://www.dwdl.de/nachrichten/106696/wir_spielen_auf_angriff_so_lief_der_day_one_bei_rtl__sky/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
   <div class="card-body">
-    <div class="card-title">Ad Alliance: Vogel unifica la comercialización de RTL+Sky y adapta el modelo de coste por mil (TKP) al nuevo inventario combinado</div>
+    <div class="card-title">Así fue el 'Day One' de la integración RTL-Sky: 'Jugamos al ataque'</div>
     <div class="card-meta">
-      <span class="card-source">Horizont Medien</span>
+      <span class="card-source">DWDL.de (DE)</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">horizont.net/medien/nachrichten/ad-alliance-frank-vogel…</span>
+      <span class="card-url">dwdl.de/nachrichten/106696/wir_spielen_auf_…</span>
       <span class="card-ext">↗</span>
     </div>
   </div>
-  <div class="card-check"></div>
+</a>
+<a class="card" href="https://www.horizont.net/medien/nachrichten/ad-alliance-frank-vogel-uebernimmt-rtl--und-sky-vermarktung-und-passt-tkp-modell-an-234559" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Ad Alliance: Frank Vogel unifica la comercialización de RTL y Sky y ajusta el modelo de CPM</div>
+    <div class="card-meta">
+      <span class="card-source">Horizont Medien (DE)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">horizont.net/medien/nachrichten/ad-alliance-fran…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.horizont.net/medien/nachrichten/nach-integration-von-sky-rtl-gibt-content-chefin-inga-leschek-noch-mehr-verantwortung-234578" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">RTL otorga aún más poder a su directora de contenido Inga Leschek tras integrar Sky</div>
+    <div class="card-meta">
+      <span class="card-source">Horizont Medien (DE)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">horizont.net/medien/nachrichten/nach-integration…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
 </a>
 </div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e91e8c">La subida de la gasolina empuja el gasto doméstico hacia Amazon y reduce el tráfico en tiendas</div>
-<a class="card" href="https://digiday.com/media/rising-gas-prices-may-push-more-household-spending-toward-amazon/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-  <div class="card-accent" style="background:#e91e8c"></div>
+<div class="group-title" style="border-left:3px solid #d84040">El ex directivo de Disney Jim Kapenstein se incorpora a Starz como director legal y de estrategia</div>
+<a class="card" href="https://variety.com/2026/tv/news/disney-jim-kapenstein-starz-chief-legal-strategy-officer-1236764548/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
   <div class="card-body">
-    <div class="card-title">El alza del precio de la gasolina empuja el gasto doméstico hacia Amazon, con caídas en el tráfico presencial y recortes en gasto discrecional</div>
+    <div class="card-title">Jim Kapenstein, veterano de Disney, ficha por Starz como director legal y de estrategia</div>
     <div class="card-meta">
-      <span class="card-source">Digiday</span>
+      <span class="card-source">Variety – TV</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">variety.com/2026/tv/news/disney-jim-kapenstein-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Paramount defiende el acuerdo con Warner Bros. y critica el 'alarmismo' político</div>
+<a class="card" href="https://tvnewscheck.com/business/article/paramounts-delrahim-slams-fear-mongering-and-partisan-politics-clouding-warner-bros-deal/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Delrahim (Paramount) denuncia el 'alarmismo' y la politización en torno a la fusión con Warner Bros.</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/business/article/paramounts-delrahi…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Disney se prepara para acelerar su negocio publicitario con Rita Ferro al mando</div>
+<a class="card" href="https://tvnewscheck.com/business/article/disney-is-poised-to-ramp-its-already-booming-advertising-business-rita-ferro-is-behind-the-push/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Disney prepara un impulso a su ya boyante negocio publicitario de la mano de Rita Ferro</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/business/article/disney-is-poised-t…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">El regulador alemán aprueba la joint venture de producción entre Banijay y All3Media</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/german-regulator-clears-banijay-all3media-production-joint-venture/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">El regulador alemán da luz verde a la joint venture de producción Banijay-All3Media</div>
+    <div class="card-meta">
+      <span class="card-source">Broadband TV News</span>
       <span class="card-sep">·</span><span class="card-date">2 jun</span>
       <span class="card-sep">·</span>
-      <span class="card-url">digiday.com/media/rising-gas-prices-may-push-more-house…</span>
+      <span class="card-url">broadbandtvnews.com/2026/06/02/german-regulator-clears-…</span>
       <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Liberty Global nombra nuevo CEO del grupo Ziggo en Países Bajos</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/liberty-global-names-van-rooyen-as-new-ziggo-group-ceo/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Liberty Global nombra a Van Rooyen nuevo CEO de Ziggo Group</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/liberty-global-names-van…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Channel 4 ficha a Wade Jastremski para un cargo sénior de estrategia en ventas publicitarias</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/channel-4-appoints-wade-jastremski-to-ad-sales-strategy-role/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Channel 4 nombra a Wade Jastremski para liderar su estrategia de ventas publicitarias</div>
+    <div class="card-meta">
+      <span class="card-source">Broadband TV News</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">broadbandtvnews.com/2026/06/02/channel-4-appoints-wade-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Movistar Plus+ prepara nuevo true crime de Carles Porta y una coproducción hispanochilena</div>
+<a class="card" href="https://cveintiuno.com/carles-porta-true-crime-factory-y-goroka-firman-nuevo-true-crime-para-movistar-plus/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Carles Porta, True Crime Factory y Goroka firman nuevo true crime para Movistar Plus+</div>
+    <div class="card-meta">
+      <span class="card-source">CVeintiuno (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">cveintiuno.com/carles-porta-true-crime-factory-y-g…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://todotvnews.com/movistar-plus-anuncia-el-estreno-de-matalo-ya-nuevo-true-crime-de-carles-porta/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Movistar Plus+ anuncia '¡Mátalo ya!', nuevo true crime de Carles Porta</div>
+    <div class="card-meta">
+      <span class="card-source">TodoTVNews (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">todotvnews.com/movistar-plus-anuncia-el-estreno-de…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.panoramaaudiovisual.com/2026/06/02/atlantika-y-wood-se-unen-en-patagonia-una-coproduccion-hispanochilena-para-movistar-plus/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Atlantika y Wood coproducen 'Patagonia', serie hispano-chilena para Movistar Plus+</div>
+    <div class="card-meta">
+      <span class="card-source">Panorama Audiovisual (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">panoramaaudiovisual.com/2026/06/02/atlantika-y-wood-se-unen…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">'El verano se mueve' sustituirá a 'El tiempo justo' en la parrilla veraniega de Telecinco</div>
+<a class="card" href="https://www.audiovisual451.com/el-verano-se-mueve-sustituira-a-el-tiempo-justo-en-la-parrilla-veraniega-de-telecinco/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">'El verano se mueve' reemplazará a 'El tiempo justo' en la programación de verano de Telecinco</div>
+    <div class="card-meta">
+      <span class="card-source">Audiovisual451 (ES)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">audiovisual451.com/el-verano-se-mueve-sustituira-a-el-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Scripps suspende 54 estaciones en DirecTV en una escalada de la batalla de retransmisión en EE. UU.</div>
+<a class="card" href="https://www.c21media.net/news/scripps-suspends-54-directv-stations-as-us-retransmission-battle-escalates/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Scripps deja a oscuras 54 estaciones en DirecTV al escalar la disputa de retransmisión en EE. UU.</div>
+    <div class="card-meta">
+      <span class="card-source">C21 Media</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">c21media.net/news/scripps-suspends-54-directv-st…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.tvtechnology.com/regulatory-legal/scripps-stations-go-dark-on-directv" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Las estaciones de Scripps dejan de emitirse en DirecTV</div>
+    <div class="card-meta">
+      <span class="card-source">TV Technology</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvtechnology.com/regulatory-legal/scripps-stations-g…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Los broadcasters estadounidenses se preparan para la cobertura más compleja del Mundial FIFA 2026</div>
+<a class="card" href="https://tvnewscheck.com/programming/article/u-s-broadcasters-ready-for-most-complex-fifa-world-cup-ever/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Los broadcasters de EE. UU. afrontan la cobertura más compleja de la historia de un Mundial FIFA</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/programming/article/u-s-broadcaster…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://tvnewscheck.com/programming/article/telemundo-expands-spanish-language-digital-social-coverage-for-fifa-world-cup/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Telemundo amplía la cobertura digital y social en español del Mundial FIFA 2026</div>
+    <div class="card-meta">
+      <span class="card-source">TVNewsCheck</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvnewscheck.com/programming/article/telemundo-expan…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://www.tvbeurope.com/live-production/fifa-world-cup-2026-ibc-officially-opens" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">El IBC del Mundial FIFA 2026 abre oficialmente sus puertas</div>
+    <div class="card-meta">
+      <span class="card-source">TVB Europe</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvbeurope.com/live-production/fifa-world-cup-2026…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://todotvnews.com/telemundo-amplia-su-cobertura-multiplataforma-para-el-mundial-fifa-2026/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Telemundo amplía su cobertura multiplataforma para el Mundial FIFA 2026</div>
+    <div class="card-meta">
+      <span class="card-source">TodoTVNews (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">todotvnews.com/telemundo-amplia-su-cobertura-multi…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">waipu.tv lanza modo de baja latencia de cara al Mundial de fútbol</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/waipu-tv-launches-low-latency-streaming-mode-ahead-of-football-world-cup/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">waipu.tv estrena modo de baja latencia en streaming antes del Mundial</div>
+    <div class="card-meta">
+      <span class="card-source">Broadband TV News</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">broadbandtvnews.com/2026/06/02/waipu-tv-launches-low-la…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Roku lanza la Roku Soccer Zone con contenidos del Mundial</div>
+<a class="card" href="https://www.tvtechnology.com/platform/streaming/roku-launches-the-roku-soccer-zone" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Roku lanza su Soccer Zone como hub temático para el Mundial</div>
+    <div class="card-meta">
+      <span class="card-source">TV Technology</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvtechnology.com/platform/streaming/roku-launches-th…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Vodafone TV se suma al Mundial a través de DAZN; Movistar Plus+ lanza 4 canales dedicados</div>
+<a class="card" href="https://satcesc.com/2026/06/01/vodafone-mundial-fifa-dazn/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Vodafone TV se une al Mundial FIFA a través de DAZN</div>
+    <div class="card-meta">
+      <span class="card-source">SatCesc (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">satcesc.com/2026/06/01/vodafone-mundial-fifa-da…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://satcesc.com/2026/06/01/movistar-plus-4-canales-mundial/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Movistar Plus+ lanza 4 canales exclusivos del Mundial 2026</div>
+    <div class="card-meta">
+      <span class="card-source">SatCesc (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">satcesc.com/2026/06/01/movistar-plus-4-canales-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">A+E Networks Latam lanza A+E Precisión, su solución de vídeo multiplataforma</div>
+<a class="card" href="https://todotvnews.com/ae-networks-latam-lanza-ae-precision-su-solucion-de-video-multiplataforma/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">A+E Networks Latam presenta A+E Precisión, su solución de vídeo multiplataforma</div>
+    <div class="card-meta">
+      <span class="card-source">TodoTVNews (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">todotvnews.com/ae-networks-latam-lanza-ae-precisio…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">How All3Media International genera ingresos incrementales en streaming</div>
+<a class="card" href="https://uk.themedialeader.com/how-all3media-international-is-creating-incremental-revenues-in-streaming/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Cómo All3Media International crea ingresos adicionales en el negocio del streaming</div>
+    <div class="card-meta">
+      <span class="card-source">The Media Leader (UK)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">uk.themedialeader.com/how-all3media-international-is-crea…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d84040">Telefónica moviliza 1.300 puntos de red para la cobertura de la visita del Papa León XIV</div>
+<a class="card" href="https://www.panoramaaudiovisual.com/2026/06/02/telefonica-moviliza-1-300-puntos-red-unidades-moviles-satelite-visita-papa-leon-xiv/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#d84040"></div>
+  <div class="card-body">
+    <div class="card-title">Telefónica despliega 1.300 puntos de red, unidades móviles y satélite para cubrir la visita del Papa León XIV</div>
+    <div class="card-meta">
+      <span class="card-source">Panorama Audiovisual (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">panoramaaudiovisual.com/2026/06/02/telefonica-moviliza-1-30…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#e67e22">REGULACIÓN</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">ACE gana en Francia contra Spliiit, la plataforma de reventa de contraseñas de streaming</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/02/ace-wins-french-ruling-against-spliiit-password-selling-service/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e67e22"></div>
+  <div class="card-body">
+    <div class="card-title">ACE obtiene un fallo judicial en Francia contra Spliiit, el servicio de venta de contraseñas de streaming</div>
+    <div class="card-meta">
+      <span class="card-source">Broadband TV News</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">broadbandtvnews.com/2026/06/02/ace-wins-french-ruling-a…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+<a class="card" href="https://siecledigital.fr/2026/06/02/la-plateforme-de-partage-dabonnements-spliiit-condamnee-a-785-000-euros-apres-une-plainte-de-netflix-disney-et-apple/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e67e22"></div>
+  <div class="card-body">
+    <div class="card-title">La plataforma de reparto de suscripciones Spliiit, condenada a pagar 785.000 € tras la denuncia de Netflix, Disney y Apple</div>
+    <div class="card-meta">
+      <span class="card-source">Siècle Digital (FR)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">siecledigital.fr/2026/06/02/la-plateforme-de-partage…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">Más de 16 millones de streams ilegales durante el Arsenal-PSG de Champions</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/data-over-16m-illegal-streams-for-arsenal-v-psg/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e67e22"></div>
+  <div class="card-body">
+    <div class="card-title">16 millones de streams ilegales durante el Arsenal-PSG de Champions League</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/data-over-16m-illegal-st…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">Pena de cárcel para un pirata de la Premier League en Gales</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/prison-term-for-welsh-premier-league-pirate/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e67e22"></div>
+  <div class="card-body">
+    <div class="card-title">Un pirata de la Premier League galesa es condenado a prisión</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/prison-term-for-welsh-pr…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#555555">FABRICANTES</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #555555">Se prepara el lanzamiento de la primera plataforma TDT nacional con estándar DVB-I</div>
+<a class="card" href="https://uk.themedialeader.com/worlds-first-national-free-to-air-platform-using-dvb-i-launches-this-year/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#555555"></div>
+  <div class="card-body">
+    <div class="card-title">La primera plataforma nacional de TDT en abierto con DVB-I se lanzará este año</div>
+    <div class="card-meta">
+      <span class="card-source">The Media Leader (UK)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">uk.themedialeader.com/worlds-first-national-free-to-air-p…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#e91e8c">PUBLICIDAD</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">Peer39 adquiere Adloox (Scope3) para reforzar su oferta de verificación publicitaria</div>
+<a class="card" href="https://www.adweek.com/media/peer39-acquires-adlooks-from-scope3-in-ad-verification-push/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">Peer39 compra Adloox a Scope3 para potenciar la verificación de publicidad digital</div>
+    <div class="card-meta">
+      <span class="card-source">Adweek</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">adweek.com/media/peer39-acquires-adlooks-from-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">McDonald's prepara su mayor campaña mundialista con leyendas del fútbol</div>
+<a class="card" href="https://www.adweek.com/creativity/mcdonalds-mounts-its-largest-ever-world-cup-push-with-a-roster-of-soccer-legends/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">McDonald's lanza su mayor campaña de la historia para el Mundial con un plantel de leyendas del fútbol</div>
+    <div class="card-meta">
+      <span class="card-source">Adweek</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">adweek.com/creativity/mcdonalds-mounts-its-lar…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">Las listas de bloqueo de anunciantes se han extendido desde la pandemia y siguen empeorando</div>
+<a class="card" href="https://pressgazette.co.uk/comment-analysis/advertiser-blocklist-spread-during-pandemic-and-have-only-got-worse/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">Las listas de bloqueo de anunciantes se dispararon con la pandemia y continúan creciendo</div>
+    <div class="card-meta">
+      <span class="card-source">Press Gazette (UK)</span>
+      <span class="card-sep">·</span><span class="card-date">1 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">pressgazette.co.uk/comment-analysis/advertiser-blockli…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">La medición de atención ya se integra como input en sistemas de IA publicitaria</div>
+<a class="card" href="https://uk.themedialeader.com/attention-measurement-is-now-an-input-into-ai-systems/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">La medición de atención se convierte en variable de entrada para los sistemas de IA publicitarios</div>
+    <div class="card-meta">
+      <span class="card-source">The Media Leader (UK)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">uk.themedialeader.com/attention-measurement-is-now-an-inp…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">Dentsu despliega IA agéntica en la negociación de los upfronts</div>
+<a class="card" href="https://digiday.com/media-buying/media-buying-briefing-dentsus-agentic-ambitions-and-how-it-plays-out-in-the-upfronts/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">Las ambiciones de IA agéntica de Dentsu y su aplicación en los upfronts</div>
+    <div class="card-meta">
+      <span class="card-source">Digiday</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">digiday.com/media-buying/media-buying-briefing-…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e91e8c">Javier Campopiano regresa a Publicis para liderar la creatividad de Leo Constellation en Américas e Iberia</div>
+<a class="card" href="https://ipmark.com/javier-campopiano-regresa-a-publicis-para-liderar-la-creatividad-de-leo-constellation-en-americas-e-iberia/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#e91e8c"></div>
+  <div class="card-body">
+    <div class="card-title">Javier Campopiano vuelve a Publicis como líder creativo de Leo Constellation en Américas e Iberia</div>
+    <div class="card-meta">
+      <span class="card-source">IPMARK (ES)</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">ipmark.com/javier-campopiano-regresa-a-publici…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+<div class="section-label" style="color:#16a085">ESTUDIOS E INFORMES</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">La televisión sigue siendo el medio culturalmente más significativo en el Reino Unido, según estudio</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/02/study-tv-still-the-uks-most-culturally-significant-medium/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#16a085"></div>
+  <div class="card-body">
+    <div class="card-title">Un estudio confirma que la TV sigue siendo el medio con mayor peso cultural en el Reino Unido</div>
+    <div class="card-meta">
+      <span class="card-source">Advanced Television</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">advanced-television.com/2026/06/02/study-tv-still-the-uks-m…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">La migración al consumo de TV por internet avanza más rápido de lo previsto</div>
+<a class="card" href="https://www.tvbeurope.com/media-delivery/report-shift-to-online-tv-viewing-moving-faster-than-expected" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#16a085"></div>
+  <div class="card-body">
+    <div class="card-title">La transición al visionado de TV online se acelera más de lo esperado, según un nuevo informe</div>
+    <div class="card-meta">
+      <span class="card-source">TVB Europe</span>
+      <span class="card-sep">·</span><span class="card-date">2 jun</span>
+      <span class="card-sep">·</span>
+      <span class="card-url">tvbeurope.com/media-delivery/report-shift-to-onli…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">Los editores se preparan para un futuro con mucho menos tráfico de Google</div>
+<a class="card" href="https://digiday.com/media/how-publishers-are-modeling-and-mitigating-a-future-with-significantly-less-google-search-traffic/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#16a085"></div>
+  <div class="card-body">
+    <div class="card-title">Así modelan los editores digitales un futuro con significativamente menos tráfico de Google</div>
+    <div class="card-meta">
+      <span class="card-source">Digiday</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">digiday.com/media/how-publishers-are-modeling-a…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">Un estudio OVK revela que los usuarios prefieren formatos publicitarios de gran tamaño</div>
+<a class="card" href="https://www.horizont.net/medien/nachrichten/ovk-studie-wieso-user-grossflaechige-werbeformate-bevorzugen-234525" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#16a085"></div>
+  <div class="card-body">
+    <div class="card-title">Un estudio OVK muestra que los usuarios prefieren formatos publicitarios de mayor superficie</div>
+    <div class="card-meta">
+      <span class="card-source">Horizont Medien (DE)</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">horizont.net/medien/nachrichten/ovk-studie-wieso…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">La subida de precios de la gasolina puede redirigir más gasto doméstico hacia Amazon</div>
+<a class="card" href="https://digiday.com/media/rising-gas-prices-may-push-more-household-spending-toward-amazon/" target="_blank" rel="noopener">
+  <div class="card-accent" style="background:#16a085"></div>
+  <div class="card-body">
+    <div class="card-title">La subida del precio de la gasolina podría impulsar aún más el gasto de los hogares en Amazon</div>
+    <div class="card-meta">
+      <span class="card-source">Digiday</span>
+      
+      <span class="card-sep">·</span>
+      <span class="card-url">digiday.com/media/rising-gas-prices-may-push-mo…</span>
+      <span class="card-ext">↗</span>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+<div class="section">
+  <div class="section-label">Análisis del día</div>
+  <div class="analysis">
+    <div class="analysis-header">Análisis del día</div>
+    <div class="analysis-row">
+      <div class="analysis-label">Temas del día</div>
+      <div class="analysis-text">RTL cierra la integración de Sky Deutschland y reorganiza contenido y publicidad · El editor del NYT lidera la ofensiva global de editores contra la IA · Broadcasters y plataformas ultiman la cobertura del Mundial FIFA 2026 · La justicia francesa condena a Spliiit y refuerza la lucha contra la piratería de suscripciones · La publicidad basada en IA se consolida como motor del gasto digital futuro</div>
+    </div>
+    <div class="analysis-row">
+      <div class="analysis-label">Para seguir</div>
+      <div class="analysis-text">① La fusión RTL-Sky Deutschland crea el mayor grupo de TV en Alemania y unifica la comercialización publicitaria bajo Ad Alliance con un nuevo modelo de CPM: referente para otros mercados europeos como el español. ② El discurso del editor del NYT en la cumbre WAN-IFRA intensifica la presión legal y regulatoria contra el uso de contenidos periodísticos por plataformas de IA; coincide con la demanda pionera de Florida contra OpenAI, dos frentes que pueden marcar jurisprudencia. ③ La condena a Spliiit en Francia (785.000 €) a instancias de Netflix, Disney y Apple sienta un precedente europeo contra la reventa organizada de contraseñas de streaming, con posible efecto disuasorio en otros mercados de la UE.</div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="site-footer">Generado automáticamente · 02/06/2026 · Atresmedia</div>
+</body>
+</html>
