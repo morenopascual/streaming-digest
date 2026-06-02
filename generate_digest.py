@@ -3,6 +3,7 @@ Digest Streaming & VOD — Atresmedia
 Genera el index.html con los artículos más relevantes de las últimas 48h.
 """
 import os
+import re
 import json
 import feedparser
 import anthropic
@@ -138,17 +139,15 @@ KEYWORDS = [
     "customer data platform", "cdp",
     "audience measurement", "medición de audiencias",
     "cross-media measurement", "cross-platform measurement",
-    "viewability", "brand safety",
-    "cpv", "cpc", "cpm", "ctr", "grps", "trps",
+    "viewability", "brand safety", "cpv", "cpc", "cpm", "ctr", "grps", "trps",
     "first-party data", "third-party cookies", "cookieless",
     "privacy sandbox", "brand lift", "incremental reach",
     "incrementalidad", "multitouch attribution",
     "marketing mix modeling", "mmx", "attribution modeling",
     "home screen ads", "shoppable ads", "shoppable video",
     "interactive ads", "pre-roll", "full-funnel",
-    "attention measurement", "acr data",
-    "ctv measurement", "unified measurement",
-    "addressable advertising", "programmatic tv",
+    "attention measurement", "acr data", "ctv measurement",
+    "unified measurement", "addressable advertising", "programmatic tv",
     "upfronts", "brandcast", "newfronts", "upfront 2026",
     # ── Inteligencia artificial ───────────────────────────────────────────────
     "artificial intelligence", "inteligencia artificial",
@@ -225,15 +224,28 @@ DISNEY_EXCLUDE_TOPICS = [
     "pixar", "marvel", "star wars", "box office",
 ]
 
-# ─── FIX SELECCIÓN: se inyecta siempre después de que Claude genere el HTML ──
-# Las cards son <a href> con target="_blank". Sin este bloque, al hacer clic
-# en modo selección el navegador abre el enlace antes de que el JS pueda
-# seleccionar la card — de ahí el comportamiento errático.
-# Usar fase de captura (tercer argumento = true) garantiza que este listener
-# se dispara ANTES de que el <a> propague el evento de navegación.
-SELECT_FIX_SCRIPT = """
+# ─── ELEMENTOS UI FIJOS ───────────────────────────────────────────────────────
+# El header y el fix del selector se inyectan desde el script, no desde Claude,
+# para que no desaparezcan aunque Claude simplifique el HTML generado.
+
+HEADER_HTML = """\
+<div class="site-header">
+  <div>
+    <h1>Digest Streaming &amp; VOD</h1>
+    <p>{date} &nbsp;·&nbsp; Atresmedia</p>
+  </div>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
+    <button class="btn-update btn-select" id="btn-select" onclick="toggleSelect()">Seleccionar</button>
+    <button class="btn-update" id="update-btn" onclick="triggerUpdate()">↻ Actualizar</button>
+  </div>
+</div>"""
+
+SELECT_FIX_SCRIPT = """\
 <script>
 /* ── Fix selección de cards (fase de captura) ── */
+/* Las cards son <a href> — sin esto el navegador abre el enlace  */
+/* antes de que el JS pueda marcarla como seleccionada.           */
 document.addEventListener('click', function(e) {
   var card = e.target.closest('.card');
   if (!card || !document.body.classList.contains('select-mode')) return;
@@ -246,9 +258,8 @@ document.addEventListener('click', function(e) {
   if (txt) txt.textContent = n + (n === 1 ? ' noticia seleccionada' : ' noticias seleccionadas');
   if (btn) btn.disabled = n === 0;
   if (bar) bar.classList.toggle('visible', n > 0);
-}, true); /* true = captura, dispara antes de la navegación del <a> */
-</script>
-"""
+}, true); /* true = captura, dispara ANTES de la navegación del enlace */
+</script>"""
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
 def is_recent(entry, hours=48):
@@ -336,7 +347,7 @@ REGLAS:
 - Excluye cualquier mención a Max Verstappen
 - Si no hay artículos para una categoría, omítela
 - El análisis final debe incluir "Temas del día" (4-5 puntos) y "Para seguir" (2-3 tendencias relevantes para Atresmedia/atresplayer)
-- Mantén el botón "↻ Actualizar" en el header
+- IMPORTANTE: NO incluyas el bloque <div class="site-header">...</div> ni el bloque <script> al final — el script los gestiona automáticamente
 Genera el HTML completo con los nuevos artículos. Usa EXACTAMENTE el mismo CSS del template.
 Template actual:
 {template_html}"""
@@ -349,7 +360,6 @@ Template actual:
         messages=[{"role": "user", "content": user_prompt}],
     )
     html = msg.content[0].text.strip()
-    # Strip markdown fences if present
     for fence in ("```html", "```"):
         if html.startswith(fence):
             html = html[len(fence):]
@@ -357,15 +367,24 @@ Template actual:
         html = html[:-3]
     return html.strip()
 
+# ─── POST-PROCESADO ───────────────────────────────────────────────────────────
+def inject_header(html, date):
+    """Reemplaza el site-header generado por Claude por el canónico,
+    garantizando que los botones Tablero y Seleccionar siempre estén."""
+    header = HEADER_HTML.format(date=date)
+    html = re.sub(
+        r'<div class=["\']site-header["\']>.*?</div>',
+        header,
+        html, count=1, flags=re.DOTALL
+    )
+    return html
+
 def inject_select_fix(html):
-    """Inyecta el fix de selección justo antes de </body>.
-    Se ejecuta siempre después de la generación para que el fix
-    sea determinista e independiente de lo que Claude produzca."""
+    """Inyecta el fix de selección justo antes de </body>."""
     tag = "</body>"
     if tag in html:
-        return html.replace(tag, SELECT_FIX_SCRIPT + tag, 1)
-    # Fallback: añadir al final si no hay </body>
-    return html + SELECT_FIX_SCRIPT
+        return html.replace(tag, SELECT_FIX_SCRIPT + "\n" + tag, 1)
+    return html + "\n" + SELECT_FIX_SCRIPT
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
@@ -379,10 +398,13 @@ def main():
     with open("index.html", "r", encoding="utf-8") as f:
         template = f.read()
 
+    today = datetime.now().strftime("%d/%m/%Y")
+
     print("3/3  Generando HTML con Claude…")
     html = generate_html(articles, template)
 
-    # Inyectar fix de selección (post-procesado determinista)
+    # Post-procesado: blindar UI independientemente de lo que Claude produzca
+    html = inject_header(html, today)
     html = inject_select_fix(html)
 
     with open("index.html", "w", encoding="utf-8") as f:
