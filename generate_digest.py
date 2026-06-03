@@ -371,13 +371,20 @@ Template actual:
 
 # ─── POST-PROCESADO ───────────────────────────────────────────────────────────
 def inject_header(html, date):
-    """Reemplaza el site-header por el canónico con todos los botones."""
+    """Inyecta el header canónico justo después de <body>.
+    Primero elimina cualquier site-header que Claude haya generado,
+    luego inserta el nuestro — así funciona tanto si Claude lo incluye
+    como si no."""
     header = HEADER_HTML.format(date=date)
+    # Eliminar cualquier site-header existente (por si Claude lo generó)
     html = re.sub(
-        r'<div class=["\']site-header["\']>.*?</div>',
-        header,
-        html, count=1, flags=re.DOTALL
+        r'<div class=["\']site-header["\']>[\s\S]*?</div>\s*</div>',
+        '',
+        html, count=1
     )
+    # Inyectar el nuestro justo después de <body>
+    if '<body>' in html:
+        return html.replace('<body>', '<body>\n' + header, 1)
     return html
 
 def inject_select_fix(html):
