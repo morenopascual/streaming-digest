@@ -224,10 +224,10 @@ DISNEY_EXCLUDE_TOPICS = [
     "pixar", "marvel", "star wars", "box office",
 ]
 
-# ─── ELEMENTOS UI FIJOS ───────────────────────────────────────────────────────
-# El header y el fix del selector se inyectan desde el script, no desde Claude,
-# para que no desaparezcan aunque Claude simplifique el HTML generado.
+# Máximo de artículos enviados a Claude (evita timeouts y coste excesivo)
+MAX_ARTICLES = 60
 
+# ─── ELEMENTOS UI FIJOS ───────────────────────────────────────────────────────
 HEADER_HTML = """\
 <div class="site-header">
   <div>
@@ -243,9 +243,8 @@ HEADER_HTML = """\
 
 SELECT_FIX_SCRIPT = """\
 <script>
-/* ── Fix selección de cards (fase de captura) ── */
-/* Las cards son <a href> — sin esto el navegador abre el enlace  */
-/* antes de que el JS pueda marcarla como seleccionada.           */
+/* Fix selección de cards: las cards son <a href>, sin esto el navegador
+   abre el enlace antes de que el JS pueda marcarla como seleccionada. */
 document.addEventListener('click', function(e) {
   var card = e.target.closest('.card');
   if (!card || !document.body.classList.contains('select-mode')) return;
@@ -258,7 +257,7 @@ document.addEventListener('click', function(e) {
   if (txt) txt.textContent = n + (n === 1 ? ' noticia seleccionada' : ' noticias seleccionadas');
   if (btn) btn.disabled = n === 0;
   if (bar) bar.classList.toggle('visible', n > 0);
-}, true); /* true = captura, dispara ANTES de la navegación del enlace */
+}, true);
 </script>"""
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
@@ -318,7 +317,10 @@ def fetch_articles():
                     })
         except Exception as e:
             print(f"  ✗ {source}: {e}")
-    print(f"  → {len(articles)} artículos relevantes encontrados")
+
+    # Limitar artículos para evitar timeouts y coste excesivo
+    articles = articles[:MAX_ARTICLES]
+    print(f"  → {len(articles)} artículos enviados a Claude (máx. {MAX_ARTICLES})")
     return articles
 
 # ─── GENERATE ─────────────────────────────────────────────────────────────────
@@ -346,15 +348,15 @@ REGLAS:
 - Excluye titulares sobre Disney NO relacionados con Disney+ (cine, parques, Marvel, Star Wars)
 - Excluye cualquier mención a Max Verstappen
 - Si no hay artículos para una categoría, omítela
-- El análisis final debe incluir "Temas del día" (4-5 puntos) y "Para seguir" (2-3 tendencias relevantes para Atresmedia/atresplayer)
-- IMPORTANTE: NO incluyas el bloque <div class="site-header">...</div> ni el bloque <script> al final — el script los gestiona automáticamente
-Genera el HTML completo con los nuevos artículos. Usa EXACTAMENTE el mismo CSS del template.
+- El análisis final debe incluir "Temas del día" (4-5 puntos) y "Para seguir" (2-3 tendencias para Atresmedia/atresplayer)
+- NO incluyas el bloque <div class="site-header">...</div> ni ningún <script> al final — el script los gestiona automáticamente
+Genera el HTML completo. Usa EXACTAMENTE el mismo CSS del template.
 Template actual:
 {template_html}"""
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     msg = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=8192,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
@@ -369,8 +371,7 @@ Template actual:
 
 # ─── POST-PROCESADO ───────────────────────────────────────────────────────────
 def inject_header(html, date):
-    """Reemplaza el site-header generado por Claude por el canónico,
-    garantizando que los botones Tablero y Seleccionar siempre estén."""
+    """Reemplaza el site-header por el canónico con todos los botones."""
     header = HEADER_HTML.format(date=date)
     html = re.sub(
         r'<div class=["\']site-header["\']>.*?</div>',
@@ -400,7 +401,7 @@ def main():
 
     today = datetime.now().strftime("%d/%m/%Y")
 
-    print("3/3  Generando HTML con Claude…")
+    print("3/3  Generando HTML con Claude Haiku…")
     html = generate_html(articles, template)
 
     # Post-procesado: blindar UI independientemente de lo que Claude produzca
