@@ -152,12 +152,16 @@ MAX_ARTICLES = 60
 # ─── UI: CSS INTERACTIVO ──────────────────────────────────────────────────────
 # CSS que Claude no genera de forma fiable — se inyecta siempre en <head>
 EXTRA_CSS = """<style>
+/* ── Header layout ── */
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 /* ── Botones header ── */
-.btn-update{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;background:#007aff;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s;text-decoration:none}
+.btn-update{display:inline-flex !important;align-items:center;gap:5px;padding:8px 14px;background:#007aff;color:#fff !important;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .15s;text-decoration:none}
 .btn-update:hover{opacity:.85}
 .btn-update:disabled{opacity:.5;cursor:default}
-.btn-select{background:#f2f2f7;color:#1c1c1e}
-.btn-select.active{background:#007aff;color:#fff}
+.btn-select{background:#f2f2f7 !important;color:#1c1c1e !important}
+.btn-select.active{background:#007aff !important;color:#fff !important}
 /* ── Modo selección ── */
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
@@ -418,11 +422,13 @@ def inject_header(html, date):
     return html
 
 def inject_js(html):
-    """Elimina cualquier <script> existente e inyecta el JS completo antes de </body>."""
-    # Eliminar scripts previos (incluyendo el que Claude pueda haber generado)
+    """Elimina cualquier <script> existente e inyecta el JS completo antes de </body>.
+    Busca </body> o </html> como fallback para garantizar la inyección."""
     html = re.sub(r'<script[\s\S]*?</script>', '', html)
     if "</body>" in html:
         return html.replace("</body>", COMPLETE_JS + "\n</body>", 1)
+    if "</html>" in html:
+        return html.replace("</html>", COMPLETE_JS + "\n</html>", 1)
     return html + "\n" + COMPLETE_JS
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
