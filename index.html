@@ -51,9 +51,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -89,7 +86,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>12/06/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>15/06/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -102,29 +99,22 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
-
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
-</div>
-<div class="toast" id="toast"></div>
-
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sanjay Kapoor y Mouni Roy protagonizan 'Ab Hoga Hisaab' en Amazon MX Player desde junio 18</div>
-<a class="card" href="https://variety.com/2026/tv/news/sanjay-kapoor-amazon-mx-player-ab-hoga-hisaab-1236772350/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Fox adquiere Roku por $22 mil millones en mega operación de streaming</div>
+<a class="card" href="https://variety.com/2026/tv/news/fox-acquiring-roku-1236781308/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Sanjay Kapoor, Shaheer and Mouni Roy Amazon MX Player Revenge Drama 'Ab Hoga Hisaab' Unveils Streaming Date, Trailer</div>
+<div class="card-title">Fox Is Buying Roku in $22 Billion Deal</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/tv/news/sanjay-kapoor-amazon-mx-player…</span>
+<span class="card-url">variety.com/2026/tv/news/fox-acquiring-roku-1236781308/</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -133,16 +123,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">CJ ENM transforma modelo global de K-Drama con producciones colaborativas</div>
-<a class="card" href="https://variety.com/2026/tv/news/cj-enm-kitchen-soldier-filing-for-love-korean-wave-1236775591/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Thunder Point': Nueva serie de Robyn Carr con Fremantle y Bell Media</div>
+<a class="card" href="https://variety.com/2026/tv/global/thunder-point-sullivans-crossing-team-robyn-carr-series-1236781204/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">How CJ ENM's 'Kitchen Soldier' and 'Filing for Love' Are Rewriting K-Drama's Global Playbook</div>
+<div class="card-title">'Thunder Point' Heats Up as Fremantle, Bell Media and 'Sullivan's Crossing' Showrunner Bring Robyn Carr's Next Series to the Global Market</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/tv/news/cj-enm-kitchen-soldier-filing…</span>
+<span class="card-url">variety.com/2026/tv/global/thunder-point-sullivans-cros…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -151,16 +141,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'The Uniform' temporada 2: Producción Fremantle llega a BBC iPlayer desde DRTV</div>
-<a class="card" href="https://variety.com/2026/tv/global/fremantle-the-uniform-second-season-police-exclusive-1236779546/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Showbox y ReelShort co-producen microdramas para 70 millones de usuarios globales</div>
+<a class="card" href="https://variety.com/2026/tv/news/showbox-reelshort-korean-microdrama-coproduction-1236781210/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Fremantle's 'The Uniform' Returns for a Second Season – and Dives Into the Cracks Within the Police Force</div>
+<div class="card-title">Korea's Showbox Teams With ReelShort to Co-Produce Microdramas</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/tv/global/fremantle-the-uniform-second…</span>
+<span class="card-url">variety.com/2026/tv/news/showbox-reelshort-korean-micro…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -169,16 +159,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney+ y NPO lanzan 'Wolven' versión holandesa del juego de estrategia</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/disney-plus-dutch-broadcaster-werewolves-adaptation-wolven-1236616279/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Peacock apuesta por video vertical y contenido móvil con feed especial</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/inside-peacock-vertical-video-mobile-content-bravo-1236617466/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Disney+, Dutch Public Broadcaster NPO Team on Local 'Werewolves' Adaptation 'Wolven'</div>
+<div class="card-title">Inside Peacock's Big Bet on Vertical Video and Mobile Content</div>
 <div class="card-meta">
 <span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/disney-plus-dutch-broa…</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/inside-peacock-vertica…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -187,16 +177,124 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney+ estrategia de juegos tipo 'Traitors' en colaboración con broadcasters europeos</div>
-<a class="card" href="https://deadline.com/2026/06/werewolves-disney-plus-strategy-game-npo-wolven-1236950003/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Mae Martin narra 'Hare of High Park' en Banff: apoyo a sector canadiense</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/mae-martin-narrate-preschool-1236621865/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Disney+ Reveals Dutch Version Of Strategy Game 'Werewolves' With NPO</div>
+<div class="card-title">Banff: Mae Martin to Narrate Preschool Series 'Hare of High Park'</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/mae-martin-narrate-pre…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Amazon Prime: Manchester United en 'All or Nothing' para temporada 2026/27</div>
+<a class="card" href="https://deadline.com/2026/06/manchester-united-amazon-all-or-nothing-1236956240/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Manchester United To Be Subject Of Amazon's Next 'All Or Nothing' Documentary Series</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/werewolves-disney-plus-strategy-ga…</span>
+<span class="card-url">deadline.com/2026/06/manchester-united-amazon-all-or-no…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">DOJ aprueba fusión Paramount-WBD: mayor consolidación de medios</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/15/doj-clears-paramount-warner-bros-discovery-merger/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Department of Justice clears Paramount-Warner Bros. Discovery merger</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">broadbandtvnews.com/2026/06/15/doj-clears-paramount-war…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Ströer distribuye derechos exclusivos de publicidad de Zattoo en Alemania</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/15/stroer-secures-exclusive-zattoo-advertising-sales-rights-in-germany/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Ströer secures exclusive Zattoo advertising sales rights in Germany</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">broadbandtvnews.com/2026/06/15/stroer-secures-exclusive…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Swerve Women's Sports expande distribución en nuevas plataformas FAST</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/15/swerve-womens-sports-expands-distribution-with-new-fast-platform-deals/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Swerve Women's Sports expands distribution with new FAST platform deals</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">broadbandtvnews.com/2026/06/15/swerve-womens-sports-exp…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Life Down Under relanza con contenido de Seven Network en FAST</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/06/15/life-down-under-relaunches-with-seven-network-content/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Life Down Under relaunches with Seven Network content</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">broadbandtvnews.com/2026/06/15/life-down-under-relaunch…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Nolly Africa HD lanza en LG Channels por toda Europa</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/15/nolly-africa-hd-launches-on-lg-channels-across-europe/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Nolly Africa HD launches on LG Channels across Europe</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">advanced-television.com/2026/06/15/nolly-africa-hd-laun…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -210,16 +308,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#c0392b">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Juliette Lewis regresa a 'Cape Fear' en Apple TV+ 35 años después de película de 1991</div>
-<a class="card" href="https://deadline.com/2026/06/juliette-lewis-cape-fear-surprise-cameo-1236954376/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #c0392b">Billy Crystal anuncia show de Broadway 'Ajo' en octubre 2026</div>
+<a class="card" href="https://deadline.com/2026/06/billy-crystal-broadway-860-opening-date-venue-1236954944/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#c0392b"></div>
 <div class="card-body">
-<div class="card-title">Juliette Lewis Makes Surprise 'Cape Fear' Cameo After Starring In 1991 Movie</div>
+<div class="card-title">Billy Crystal Sets Opening Date, Venue For Broadway Solo Show '860'</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/juliette-lewis-cape-fear-surprise-c…</span>
+<span class="card-url">deadline.com/2026/06/billy-crystal-broadway-860-opening…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -228,16 +326,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">'Ludwig' temporada 2: David Mitchell regresa en BBC y BritBox con teaser exclusivo</div>
-<a class="card" href="https://deadline.com/2026/06/ludwig-season-2-teaser-trailer-david-mitchell-bbc-britbox-1236953807/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #c0392b">Mariam Musa, creadora TikTok Shop, firma con HLD Talent</div>
+<a class="card" href="https://deadline.com/2026/06/hld-talent-signs-mariam-musa-1236956189/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#c0392b"></div>
 <div class="card-body">
-<div class="card-title">'Ludwig' Season 2 Teaser Trailer: David Mitchell's Puzzling Detective Returns To BBC & BritBox</div>
+<div class="card-title">HLD Talent Signs Presenter, Creator & Reality Star Mariam Musa</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/ludwig-season-2-teaser-trailer-dav…</span>
+<span class="card-url">deadline.com/2026/06/hld-talent-signs-mariam-musa-12369…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -246,106 +344,124 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">FX 'Adults': Episodio secuela en Hulu el 31 de julio revelando origen de Paul</div>
-<a class="card" href="https://variety.com/2026/tv/news/adults-prequel-episode-1236779380/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #c0392b">Anne Schedeen, actriz de ALF, fallece a los 77 años</div>
+<a class="card" href="https://deadline.com/2026/06/anne-schedeen-dies-alf-1236956109/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#c0392b"></div>
 <div class="card-body">
-<div class="card-title">'Adults' Prequel Episode to Debut on Hulu Ahead of Season 2</div>
+<div class="card-title">Anne Schedeen Dies: Actress Who Played 'ALF's Mom Was 77</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">deadline.com/2026/06/anne-schedeen-dies-alf-1236956109/</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">'The Greatest': Drama de Muhammad Ali promete revelar lado desconocido</div>
+<a class="card" href="https://deadline.com/2026/06/the-greatest-drama-will-show-a-new-side-of-muhammad-ali-1236955916/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">'The Greatest' Showrunner Promises Muhammad Ali Drama Will Reveal What "Wasn't In Documentaries"</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">14 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">deadline.com/2026/06/the-greatest-drama-will-show-a-new…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Susanne Daniels: YouTube volverá a contenido original tras abandono de Cobra Kai</div>
+<a class="card" href="https://deadline.com/2026/06/youtube-didnt-support-cobra-kai-susanne-daniels-originals-1236956198/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">Susanne Daniels Says YouTube Didn't Know What To Do With 'Cobra Kai,' But Predicts It Will Return To Originals</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">deadline.com/2026/06/youtube-didnt-support-cobra-kai-su…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Copa del Mundo 2026: Fox y Telemundo registran récord de audiencias televisivas</div>
+<a class="card" href="https://tvnewscheck.com/programming/article/world-cup-opens-with-record-tv-audiences-for-fox-telemundo/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">World Cup Opens With Record TV Audiences For Fox, Telemundo</div>
+<div class="card-meta">
+<span class="card-source">TVNewsCheck</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">tvnewscheck.com/programming/article/world-cup-opens-wit…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Samsung regresa al liderazgo de TV en América del Norte Q1 2026</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/15/report-samsung-regains-lead-in-north-america-tv-market-in-q1-2026/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">Report: Samsung regains lead in North America TV market in Q1 2026</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">advanced-television.com/2026/06/15/report-samsung-regai…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">BBC Charter Review: Steven Knight (Peaky Blinders) comparecer ante Parliament</div>
+<a class="card" href="https://www.advanced-television.com/2026/06/15/bbc-charter-review-mps-to-quiz-peaky-blinders-writer/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">BBC Charter Review: MPs to quiz Peaky Blinders writer</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
+<span class="card-sep">·</span>
+<span class="card-url">advanced-television.com/2026/06/15/bbc-charter-review-m…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Roger Cook, periodista de investigación BAFTA, fallece a los 83 años</div>
+<a class="card" href="https://variety.com/2026/tv/global/roger-cook-dead-investigative-journalist-1236781258/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">Roger Cook, BAFTA-Winning Investigative Reporter, Dies at 83</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/tv/news/adults-prequel-episode-1236779…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">FX 'Adults' prequel "Marathon Day" se proyectó en Tribeca Festival</div>
-<a class="card" href="https://deadline.com/2026/06/fx-adults-standalone-prequel-episode-tribeca-1236954477/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">FX's 'Adults' Drops Secret Standalone Prequel Episode Revealing Paul's Origin Story</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/fx-adults-standalone-prequel-episo…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Elenco de 'Shrinking' gana premio Outstanding Comedy Ensemble en Newport Beach</div>
-<a class="card" href="https://deadline.com/2026/06/shrinking-cast-wins-newport-beach-fest-outstanding-ensemble-1236954420/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">'Shrinking' Cast Wins Newport Beach TV Festival Outstanding Comedy Ensemble Award</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/shrinking-cast-wins-newport-beach…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">BBC documenta primer arresto bajo nueva ley de seguridad nacional británica</div>
-<a class="card" href="https://deadline.com/2026/06/bbc-documentary-national-security-act-ukraine-wagner-1236953756/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">BBC Documentary To Explore First UK National Security Act Conviction After Men Burned Down Ukrainian Business</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">deadline.com/2026/06/bbc-documentary-national-security-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Jon Hamm desqualificado de Emmys por error administrativo en 'The Morning Show'</div>
-<a class="card" href="https://variety.com/2026/tv/awards/jon-hamm-emmy-disqualified-morning-show-guest-actor-1236779423/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">Jon Hamm Not Eligible for Emmy Guest Actor Race for 'The Morning Show' Due to Submission Error</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/tv/awards/jon-hamm-emmy-disqualified-m…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Taylor Swift pronuncia discurso de 21 minutos en Songwriters Hall of Fame</div>
-<a class="card" href="https://variety.com/2026/music/news/taylor-swift-songwriters-hall-of-fame-acceptance-speech-1236779180/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">Taylor Swift Tears Up While Thanking Family During Songwriters Hall of Fame Acceptance Speech</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">variety.com/2026/music/news/taylor-swift-songwriters-ha…</span>
+<span class="card-url">variety.com/2026/tv/global/roger-cook-dead-investigativ…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -359,119 +475,17 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Spotify revierte cambio de ícono disco ball tras aniversario 20 años</div>
-<a class="card" href="https://www.hollywoodreporter.com/business/digital/spotify-logo-disco-ball-app-icon-20th-anniversary-1236620162/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Electronic Arts lanza plataforma EA Advertising para captar dólares deportivos</div>
+<a class="card" href="https://variety.com/2026/tv/news/electronic-arts-videogames-sports-advertising-1236781028/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">The Disco Ball Is No More! Spotify Reverts Back to Old App Icon</div>
+<div class="card-title">Electronic Arts Makes Push for Ad Dollars Tied to Sports</div>
 <div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">15 jun</span>
 <span class="card-sep">·</span>
-<span class="card-url">hollywoodreporter.com/business/digital/spotify-logo-dis…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'Off Campus' equipo advierte sobre acoso en redes sociales a elenco</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/off-campus-team-harassment-warning-1236619930/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">'Off Campus' Team Warns Those Harassing Cast and Their Loved Ones "Will Be Removed" From Official Accounts</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/off-campus-team-harass…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">LinkedIn lanza marketplace de creadores B2B para descubrimiento más escalable</div>
-<a class="card" href="https://digiday.com/marketing/linkedin-wants-to-own-b2b-creator-discovery-with-new-creator-marketplace/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">LinkedIn wants to own B2B creator discovery with new creator marketplace</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">10 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">digiday.com/marketing/linkedin-wants-to-own-b2b-creator…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Accenture adquiere Whalar para escalar marketing con creadores en momento de complejidad</div>
-<a class="card" href="https://digiday.com/marketing/future-of-marketing-briefing-accentures-whalar-bet-own-the-room-when-creator-marketing-gets-complicated/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Future of Marketing Briefing: Accenture's Whalar bet: own the room when creator marketing gets complicated</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">digiday.com/marketing/future-of-marketing-briefing-acce…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Clones IA dividen ecosistema de creadores entre autorizados y no autorizados</div>
-<a class="card" href="https://digiday.com/media/the-rundown-ai-clones-split-the-creator-economy/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">The Rundown: AI clones split the creator economy</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">12 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">digiday.com/media/the-rundown-ai-clones-split-the-creat…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#8e44ad">IA</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Deezer lanza herramienta para identificar música IA en Spotify, Apple Music y otras</div>
-<a class="card" href="https://techcrunch.com/2026/06/11/deezers-new-tool-can-identify-ai-music-from-spotify-apple-music-and-others/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">Deezer's new tool can identify AI music from Spotify, Apple Music, and others</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">11 jun</span>
-<span class="card-sep">·</span>
-<span class="card-url">techcrunch.com/2026/06/11/deezers-new-tool-can-identify…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class
+<span class="card-url">variety.com/2026/tv/news/electronic-arts-videogames-spo…</span>
+<span class="card-ext">↗
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
