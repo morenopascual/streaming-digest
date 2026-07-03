@@ -44,16 +44,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .card.selected .card-check{background:#007aff;border-color:#007aff}
 .card.selected .card-check::after{content:"✓";color:#fff;font-size:11px;font-weight:700}
 .card.selected{background:#f0f6ff}
-.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
-.save-bar.visible{display:flex}
-.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
-.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
-.btn-save:disabled{opacity:.5;cursor:default}
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
-.toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -89,7 +79,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>02/07/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>03/07/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -102,106 +92,27 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
+
+<div class="save-bar" id="save-bar">
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+</div>
+<div class="toast" id="toast"></div>
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'I Will Find You' bate récords con 34M vistas en primera semana</div>
-<a class="card" href="https://deadline.com/2026/06/harlan-coben-i-will-find-you-avatar-season-2-netflix-ratings-1236971487/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Galaxy Play amplía ventas internacionales con Skyline Media; 'Brothers for Life' y 'Thousand Dollar Baby' lideran catálogo</div>
+<a class="card" href="https://variety.com/2026/tv/news/brothers-for-life-thousand-dollar-baby-skyline-galaxy-play-1236801240/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Harlan Coben's 'I Will Find You' Up To 34M Views In First Full Week On Netflix; 'Avatar: The Last Airbender' Season 2 Down 59%</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">30 jun</span>
-<span class="card-url">deadline.com/2026/06/harlan-coben-i-will-find-you-avata…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney+: 'Breslau' (Polonia) renovada S2, plus dos shows nuevos de Europa Central</div>
-<a class="card" href="https://deadline.com/2026/07/disney-breslau-season-2-poland-two-new-shows-1236972051/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Disney+ Renews Polish Drama 'Breslau' &amp; Orders Two More Shows From Central Europe</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">deadline.com/2026/07/disney-breslau-season-2-poland-two…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Paramount+: 'The Crow Girl' S2 trailer revela regreso julio 20 (UK/Irlanda)</div>
-<a class="card" href="https://deadline.com/2026/07/crow-girl-season-2-trailer-paramount-plus-1236972138/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'The Crow Girl': Paramount+ Reveals Trailer For Season 2 Of Dark Crime Drama</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">deadline.com/2026/07/crow-girl-season-2-trailer-paramou…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video Nordics: 'Sarek' — thriller nórdico con actores de 'Quicksand'</div>
-<a class="card" href="https://deadline.com/2026/07/prime-video-nordics-sarek-ulf-kvensler-novel-1236972077/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Prime Video Nordics Adapting Ulf Kvensler's Debut Novel 'Sarek' As Psychological Thriller Series Starring 'Quicksand' &amp; 'Barracuda Queens' Actors</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">deadline.com/2026/07/prime-video-nordics-sarek-ulf-kven…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Peacock: 'Gilmore Girls' deja Netflix, se traslada a Prime Video tras 12 años</div>
-<a class="card" href="https://deadline.com/2026/07/gilmore-girls-leaves-netflix-streams-on-prime-video-1236972641/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">It's The End Of An Era For 'Gilmore Girls' As Show Leaves Netflix, Heads To Prime Video</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">deadline.com/2026/07/gilmore-girls-leaves-netflix-strea…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Paramount+: 'JonBenét Ramsey' miniserie trasladada desde Paramount+ a Netflix, invierno 2026</div>
-<a class="card" href="https://variety.com/2026/tv/news/murder-of-jonbenet-ramsey-limited-series-netflix-paramount-1236800192/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Murder of JonBenét Ramsey' Limited Series Moves to Netflix From Paramount+</div>
+<div class="card-title">'Brothers for Life,' 'Thousand Dollar Baby' Lead Skyline Media, Galaxy Play's International Sales Slate</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">variety.com/2026/tv/news/murder-of-jonbenet-ramsey-limi…</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">variety.com/2026/tv/news/brothers-for-life-thousand-dol…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -210,49 +121,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Peacock: Lifetime microdrama 'Tides of Temptation' lanza en plataforma vertical Taye Diggs</div>
-<a class="card" href="https://deadline.com/2026/07/lifetime-microdrama-premiere-date-taye-diggs-trailer-1236972651/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Crunchyroll Founder lanza AniBiz: B2B marketplace global para anime con Aniplex, Toei y partners de IP</div>
+<a class="card" href="https://variety.com/2026/tv/news/crunchyroll-founder-new-anime-website-anibiz-1236800890/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">SwagBoyQ-Led Lifetime Microdrama Sets Premiere On Taye Diggs' Vertical Platform; Trailer Drops</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">deadline.com/2026/07/lifetime-microdrama-premiere-date-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Peacock: 'Love Island USA Aftersun' revamped con Ciara Miller y Tefi Pessoa</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-features/love-island-ciara-tefi-aftersun-revamp-dancing-with-stars-1236635520/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">How Ciara Miller's Reality TV Starpower and Tefi Pessoa's Social Media Savviness Revamped 'Love Island Aftersun'</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-features/love-island-ciara-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Fox: 'Baywatch' reboot revela primer footage en teaser 2026</div>
-<a class="card" href="https://variety.com/2026/tv/news/baywatch-fox-reboot-new-teaser-1236800181/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Baywatch' Fox Reboot Unveils First Footage in New Teaser</div>
+<div class="card-title">Crunchyroll Founder Launches AniBiz, New Global Anime Licensing Platform With Offerings From Aniplex, Toei and More Top IP Holders</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">variety.com/2026/tv/news/baywatch-fox-reboot-new-teaser…</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">variety.com/2026/tv/news/crunchyroll-founder-new-anime-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -261,15 +138,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sony PlayStation: producción de discos cesan enero 2028, era digital</div>
-<a class="card" href="https://techcrunch.com/2026/07/01/sony-to-end-physical-playstation-game-discs-in-2028/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Peacock domina Love Island USA en engagement publicitario; NBCUniversal destaca partner value</div>
+<a class="card" href="https://www.adweek.com/convergent-tv/peacock-love-island-usa-makes-perfect-partner-advertisers/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Sony to end physical PlayStation game disc production in 2028</div>
+<div class="card-title">Why Peacock's Love Island USA Makes a Perfect Partner for Advertisers</div>
 <div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">techcrunch.com/2026/07/01/sony-to-end-physical-playstat…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">adweek.com/convergent-tv/peacock-love-island-usa-makes-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -278,15 +155,168 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Xbox: 'disc-to-digital' feature permite digitalizar colecciones físicas</div>
-<a class="card" href="https://www.theverge.com/report/960173/microsoft-xbox-disc-to-digital-feature-physical-game-collection" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO Max proporciona cobertura multimedia 360° de Juegos de la Mancomunidad Glasgow 2026</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/hbo-max-puts-viewers-in-control-for-commonwealth-games-coverage/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Xbox testing disc-to-digital feature that digitizes a physical game collection</div>
+<div class="card-title">HBO Max Puts Viewers in Control for Commonwealth Games Coverage</div>
 <div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">theverge.com/report/960173/microsoft-xbox-disc-to-digit…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/03/hbo-max-puts-viewers-in-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">RTL Deutschland unifica tecnología post-fusión Sky; Patrick Sturm es CTO ejecutivo</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/rtl-deutschland-unites-rtl-and-sky-technology-under-patrick-sturm/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">RTL Deutschland Unites RTL and Sky Technology Under Patrick Sturm</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/03/rtl-deutschland-unites-r…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Sky Sport lanza canal NFL 24h en mercado germanohablante; RTL expande derechos</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/sky-sport-to-launch-24-hour-nfl-channel-as-rtl-expands-rights-deal/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Sky Sport to Launch 24-Hour NFL Channel as RTL Expands Rights Deal</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/02/sky-sport-to-launch-24-h…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">BBC amplía prueba iPlayer baja latencia a Wimbledon; acerca transmisión en línea a velocidad broadcast</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/bbc-expands-low-latency-iplayer-trial-to-wimbledon/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">BBC Expands Low-Latency iPlayer Trial to Wimbledon</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/02/bbc-expands-low-latency-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Channel 4 (UK): visualización de drama sube 43% con inversión en producciones originales 2026</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/channel-4-drama-viewing-jumps-43-as-streaming-hits-new-highs/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Channel 4 Drama Viewing Jumps 43% as Streaming Hits New Highs</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/02/channel-4-drama-viewing-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Orange Bélgica actualiza plataforma Android TV con nuevo set-top box potenciado</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/orange-belgium-refreshes-android-tv-platform-with-new-set-top-box/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Orange Belgium Refreshes Android TV Platform With New Set-Top Box</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/02/orange-belgium-refreshes…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">BBC Studios lanza Affinity Network: arquitectura publicitaria multivertical con Bluey, BBC Earth, Top Gear</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/03/bbc-studios-launches-affinity-network-for-advertisers/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">BBC Studios Launches Affinity Network for Advertisers</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">advanced-television.com/2026/07/03/bbc-studios-launches…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">TNT Sports lanza canal Commonwealth Games 360 con +600h cobertura en vivo Glasgow 2026</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/03/tnt-sports-launching-the-commonwealth-games-360-channel/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">TNT Sports Launching The Commonwealth Games 360 Channel</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">advanced-television.com/2026/07/03/tnt-sports-launching…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">S4C invierte £136M en drama galés década; 'Dal y Mellt' llegó Netflix, audiencias globales en Australia/NZ</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/03/s4c-invests-136m-in-welsh-drama-in-a-decade/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">S4C Invests £136m in Welsh Drama in a Decade</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">advanced-television.com/2026/07/03/s4c-invests-136m-in-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Coalición VOD Europea designa Manuel Marsilio director ejecutivo; regulación Bruselas inminente</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/european-vod-coalition-appoints-new-executive-director/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">European VOD Coalition Appoints New Executive Director</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/03/european-vod-coalition-a…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -297,18 +327,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
+<div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">NBCUniversal: spin-off de Comcast decide futuro Peacock independiente</div>
-<a class="card" href="https://www.theverge.com/streaming/960235/comcast-breakup-peacock-streaming" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">'The Bear' S3 ventas agotadas; influencia Disney+ se expande más allá pantalla</div>
+<a class="card" href="https://www.adweek.com/convergent-tv/how-the-bear-helped-cook-up-new-ad-interest-in-disney-shows/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Comcast's split could make or break Peacock</div>
+<div class="card-title">How The Bear Helped Cook Up New Ad Interest in Disney Shows</div>
 <div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">theverge.com/streaming/960235/comcast-breakup-peacock-s…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">adweek.com/convergent-tv/how-the-bear-helped-cook-up-ne…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -317,15 +347,105 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Oscars: Teni Melidonian pasa a consultor mientras producción traslada YouTube 2029</div>
-<a class="card" href="https://variety.com/2026/awards/awards/oscars-officer-teni-melidonian-exits-ampas-1236800583/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Electronic Arts apuesta publicidad in-game supere ingresos CTV; construye stack propietario</div>
+<a class="card" href="https://digiday.com/marketing/electronic-arts-is-betting-that-in-game-ads-can-out-earn-ctv/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Chief Oscars Officer Teni Melidonian Transitions to AMPAS Consultant as Awards Production Moves Under Jennifer Davidson</div>
+<div class="card-title">Electronic Arts Is Betting That In-Game Ads Can Out-Earn CTV</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">digiday.com/marketing/electronic-arts-is-betting-that-i…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Rise of Pharma Ad-Tech: especialistas reemplazan DSPs/SSPs legacy; targeting sofisticado</div>
+<a class="card" href="https://digiday.com/marketing/the-rise-of-pharma-ad-tech/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">The Rise of Pharma Ad Tech</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">digiday.com/marketing/the-rise-of-pharma-ad-tech/?utm_c…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">'Surveillance Pricing' — Leyes amenazarían suscripciones dinámicas publishers</div>
+<a class="card" href="https://digiday.com/media/media-briefing-surveillance-pricing-laws-are-coming-for-dynamic-subscription-strategies/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Media Briefing: 'Surveillance Pricing' Laws Are Coming for Dynamic Subscription Strategies</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">digiday.com/media/media-briefing-surveillance-pricing-l…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Fox News y MSNBC Share espolios primetime junio; crecimiento total viewers y demo</div>
+<a class="card" href="https://www.adweek.com/tvnewser/week-of-june-22-2026-cable-news-ratings/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Week of June 22 Cable News Ratings: Fox News and MS NOW Share the Spoils</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">2 jul</span>
+<span class="card-url">adweek.com/tvnewser/week-of-june-22-2026-cable-news-rat…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#8e44ad">IA</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #8e44ad">Microdrama musical IA indio 'Mohini – Khud Se Pyaar' lanza tema 'Angaat Aalay Ka'</div>
+<a class="card" href="https://variety.com/2026/tv/news/ai-indian-musical-microdrama-mohini-debut-track-1236800841/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#8e44ad"></div>
+<div class="card-body">
+<div class="card-title">AI-Created Indian Musical Microdrama 'Mohini – Khud Se Pyaar' Unveils Debut Track 'Angaat Aalay Ka'</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">3 jul</span>
+<span class="card-url">variety.com/2026/tv/news/ai-indian-musical-microdrama-m…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #8e44ad">Jodie Foster critica 'F1' Apple como "parecía hecho IA y escrito computadora"</div>
+<a class="card" href="https://variety.com/2026/film/news/jodie-foster-brad-pitt-f1-ai-written-by-computer-1236801120/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#8e44ad"></div>
+<div class="card-body">
+<div class="card-title">Jodie Foster Says Brad Pitt's 'F1' Seemed Like It Was Made by AI and Written by a Computer: 'Wasn't It?'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">variety.com/2026/awards/awards/oscars-officer-teni-meli…</span>
+<span class="card-url">variety.com/2026/film/news/jodie-foster-brad-pitt-f1-ai…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -334,127 +454,11 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Channel 4 (UK): reestructura post-Katz con promociones Louisa Compton y Kiran Nataraja</div>
-<a class="card" href="https://deadline.com/2026/07/channel-4-structure-post-ian-katz-compton-nataraja-promoted-1236972990/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #8e44ad">Tommy Harper (productor 'Wednesday') apunta VeYou "sea HBO de vertical"; lanza 'Rival Hearts'</div>
+<a class="card" href="https://deadline.com/2026/07/tommy-harper-wants-ai-powered-veyou-become-hbo-of-vertical-1236969589/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#8e44ad"></div>
 <div class="card-body">
-<div class="card-title">Channel 4 Unveils Structure For The Post-Ian Katz Era With New Roles For Louisa Compton &amp; Kiran Nataraja</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">deadline.com/2026/07/channel-4-structure-post-ian-katz-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Fox: Seana Sullivan asciende a SVP Comunicaciones Corporativas desde Tubi PR</div>
-<a class="card" href="https://variety.com/2026/tv/news/seana-sullivan-tubi-fox-promote-corporate-communications-1236800291/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Fox Promotes Tubi PR Executive Seana Sullivan to Corporate Communications</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">variety.com/2026/tv/news/seana-sullivan-tubi-fox-promot…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Cine coreano: fusión Lotte Cinema y Megabox colapsada</div>
-<a class="card" href="https://deadline.com/2026/07/lotte-cinema-megabox-joongang-group-jtbc-korea-merger-1236972927/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Proposed Merger Of Korean Cinema Chains Lotte &amp; Megabox Collapses</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">deadline.com/2026/07/lotte-cinema-megabox-joongang-grou…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Cine francés: 'De Gaulle' repunta con millennials y YouTuber Inoxtag en box office</div>
-<a class="card" href="https://variety.com/2026/film/global/pathe-de-gaulle-french-box-office-youtuber-inoxtag-1236800043/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">How Pathé's 'De Gaulle' Fought Its Way Back at the French Box Office With a Push from YouTuber  Inoxtag That Lured Younger Crowds</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">1 jul</span>
-<span class="card-url">variety.com/2026/film/global/pathe-de-gaulle-french-box…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Filme: 'Ocean's' prequel — Josh Gad suma a Margot Robbie y Bradley Cooper en WB</div>
-<a class="card" href="https://variety.com/2026/film/news/margot-robbie-bradley-cooper-oceans-prequel-josh-gad-1236799715/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Josh Gad to Join Margot Robbie and Bradley Cooper's 'Ocean's' Prequel (EXCLUSIVE)</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">variety.com/2026/film/news/margot-robbie-bradley-cooper…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Festival Edimburgo: Paul Ridd habla legado Redford, streamers ausentes, 'Obsession'</div>
-<a class="card" href="https://www.hollywoodreporter.com/movies/movie-features/edinburgh-film-festival-paul-ridd-obession-trainspotting-1236634451/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Edinburgh's Paul Ridd on Robert Redford's Legacy, Hollywood's Festival Sit-Out, and the 'Obsession' Phenomenon: "I Did Not See That Coming"</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">hollywoodreporter.com/movies/movie-features/edinburgh-f…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Cine: Ira Sachs sobre 'The Man I Love' con Rami Malek, influencias europeas</div>
-<a class="card" href="https://deadline.com/2026/07/ira-sachs-on-the-man-i-love-rami-malek-european-influences-1236972957/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Ira Sachs On Casting Rami Malek In 'The Man I Love' &amp; European Filmmaking Influences: Munich Film Festival</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">deadline.com/2026/07/ira-sachs-on-the-man-i-love-rami-m…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Emma Hayes (fútbol femenino): YMU firma como manager y broadcaster</div>
-<a class="card
+<div class="card-title">'Wednesday' & 'Beetlejuice Beetlejuice' Producer Tommy Harper Wants AI-Powered VeYou "To Become The HBO Of Vertical"; Soccer Microdrama 'Rival Hearts' Set</div>
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
