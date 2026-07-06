@@ -44,6 +44,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .card.selected .card-check{background:#007aff;border-color:#007aff}
 .card.selected .card-check::after{content:"✓";color:#fff;font-size:11px;font-weight:700}
 .card.selected{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.save-bar.visible{display:flex}
+.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
+.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -79,7 +89,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>03/07/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>06/07/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -98,21 +108,22 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
+
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Galaxy Play amplía ventas internacionales con Skyline Media; 'Brothers for Life' y 'Thousand Dollar Baby' lideran catálogo</div>
-<a class="card" href="https://variety.com/2026/tv/news/brothers-for-life-thousand-dollar-baby-skyline-galaxy-play-1236801240/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Sky adquiere ITV Media & Entertainment por £1.6B; pivota broadcasting británico con NBCUniversal</div>
+<a class="card" href="https://variety.com/2026/tv/news/sky-itv-media-entertainment-sale-1236802209/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Brothers for Life,' 'Thousand Dollar Baby' Lead Skyline Media, Galaxy Play's International Sales Slate</div>
+<div class="card-title">Sky to Buy ITV's Media Arm for Up to $2.1 Billion: 'This Is a Defining Moment for British Media'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">variety.com/2026/tv/news/brothers-for-life-thousand-dol…</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">variety.com/2026/tv/news/sky-itv-media-entertainment-sa…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -121,15 +132,168 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Crunchyroll Founder lanza AniBiz: B2B marketplace global para anime con Aniplex, Toei y partners de IP</div>
-<a class="card" href="https://variety.com/2026/tv/news/crunchyroll-founder-new-anime-website-anibiz-1236800890/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">ITV Studios se independiza tras separación Sky; bosses: "No requiere adquisición transformacional"</div>
+<a class="card" href="https://deadline.com/2026/07/itv-studios-future-after-sky-takeover-1236974580/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Crunchyroll Founder Launches AniBiz, New Global Anime Licensing Platform With Offerings From Aniplex, Toei and More Top IP Holders</div>
+<div class="card-title">ITV Studios Will Not Need A "Transformational Acquisition" After Splitting With ITV Network, Claim Bosses</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/itv-studios-future-after-sky-takeo…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Dana Strong (Sky CEO): ITV seguirá "profundamente británica"; media británica bajo control estadounidense</div>
+<a class="card" href="https://deadline.com/2026/07/sky-itv-dana-strong-deeply-british-1236974575/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Sky Chief Dana Strong Says ITV Will Remain "Deeply British" As Hollywood Tightens Grip On UK Media</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/sky-itv-dana-strong-deeply-british…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">The Assassin S2 (Prime Video): múltiples adquisiciones EMEA confirmadas; Stan + ZDF co-productores</div>
+<a class="card" href="https://deadline.com/2026/07/prime-video-drama-the-assassin-season-2-global-buyers-1236974539/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Prime Video Drama 'The Assassin' Season 2 Lands Host Of Global Buyers</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/prime-video-drama-the-assassin-sea…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Bluey audiobook colección (BBC Studios + Penguin Random House); narrador: Miranda Tapsell</div>
+<a class="card" href="https://deadline.com/2026/07/bluey-first-audiobook-collection-penguin-random-house-bbc-1236974586/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Penguin Random House &amp; BBC Studios Launching First Bluey Audiobook Collection</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/bluey-first-audiobook-collection-p…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">W-Sport expande oferta Prime Video FR/NL; canal deportes femenino en plataformas</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/06/w-sport-expands-onto-amazon-prime-video-in-france-and-netherlands/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">W-Sport Expands onto Amazon Prime Video in France and Netherlands</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/06/w-sport-expands-onto-ama…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">ATVI + BCi Digital: acuerdo multi-año HbbTV-TA addressable TV europea</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/06/atvi-and-bci-digital-join-forces-to-accelerate-hbbtv-ta-addressable-tv-deployment/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">ATVI and BCi Digital Join Forces to Accelerate HbbTV-TA Addressable TV Deployment</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/06/atvi-and-bci-digital-joi…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Coalición lanza European Media Marketplace; T Advertising Solutions + editores premium web</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/06/coalition-launches-european-media-marketplace/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Coalition Launches European Media Marketplace</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">advanced-television.com/2026/07/06/coalition-launches-e…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Fifty5Blue revalidado medición TV Noruega; contrato 2028+ broadcasters líderes</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/06/norway-fifty5blue-extends-tv-meaurement-contract/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Norway: Fifty5Blue Extends TV Measurement Contract</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">advanced-television.com/2026/07/06/norway-fifty5blue-ex…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">BBC lanza canal WhatsApp Sudán; BBC News Arabic cobertura crisis humanitaria</div>
+<a class="card" href="https://www.advanced-television.com/2026/07/06/bbc-world-service-launches-whatsapp-channel-in-sudan/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">BBC World Service Launches WhatsApp Channel in Sudan</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">advanced-television.com/2026/07/06/bbc-world-service-la…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Anime Expo LA 2026 cierra boom sector; Crunchyroll espera expansión cosplay/IP</div>
+<a class="card" href="https://variety.com/2026/tv/news/anime-expo-crunchyroll-boom-witch-hat-atelier-1236801809/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Anime Expo in Los Angeles Bookends a Boom Year for the Sector and a Growth Spurt for Crunchyroll</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">variety.com/2026/tv/news/crunchyroll-founder-new-anime-…</span>
+<span class="card-sep">·</span><span class="card-date">5 jul</span>
+<span class="card-url">variety.com/2026/tv/news/anime-expo-crunchyroll-boom-wi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -138,185 +302,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Peacock domina Love Island USA en engagement publicitario; NBCUniversal destaca partner value</div>
-<a class="card" href="https://www.adweek.com/convergent-tv/peacock-love-island-usa-makes-perfect-partner-advertisers/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Murciélago' manga adaptación anime TV 2027 HIDIVE; exclusiva EEUU/Canadá</div>
+<a class="card" href="https://variety.com/2026/tv/news/murcielago-manga-tv-anime-adaptation-hidive-1236801853/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Why Peacock's Love Island USA Makes a Perfect Partner for Advertisers</div>
+<div class="card-title">'Murciélago' Manga Gets 2027 TV Anime Adaptation on HIDIVE</div>
 <div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">adweek.com/convergent-tv/peacock-love-island-usa-makes-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">HBO Max proporciona cobertura multimedia 360° de Juegos de la Mancomunidad Glasgow 2026</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/hbo-max-puts-viewers-in-control-for-commonwealth-games-coverage/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">HBO Max Puts Viewers in Control for Commonwealth Games Coverage</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/03/hbo-max-puts-viewers-in-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">RTL Deutschland unifica tecnología post-fusión Sky; Patrick Sturm es CTO ejecutivo</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/rtl-deutschland-unites-rtl-and-sky-technology-under-patrick-sturm/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">RTL Deutschland Unites RTL and Sky Technology Under Patrick Sturm</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/03/rtl-deutschland-unites-r…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sky Sport lanza canal NFL 24h en mercado germanohablante; RTL expande derechos</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/sky-sport-to-launch-24-hour-nfl-channel-as-rtl-expands-rights-deal/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Sky Sport to Launch 24-Hour NFL Channel as RTL Expands Rights Deal</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/02/sky-sport-to-launch-24-h…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">BBC amplía prueba iPlayer baja latencia a Wimbledon; acerca transmisión en línea a velocidad broadcast</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/bbc-expands-low-latency-iplayer-trial-to-wimbledon/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">BBC Expands Low-Latency iPlayer Trial to Wimbledon</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/02/bbc-expands-low-latency-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Channel 4 (UK): visualización de drama sube 43% con inversión en producciones originales 2026</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/channel-4-drama-viewing-jumps-43-as-streaming-hits-new-highs/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Channel 4 Drama Viewing Jumps 43% as Streaming Hits New Highs</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/02/channel-4-drama-viewing-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Orange Bélgica actualiza plataforma Android TV con nuevo set-top box potenciado</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/02/orange-belgium-refreshes-android-tv-platform-with-new-set-top-box/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Orange Belgium Refreshes Android TV Platform With New Set-Top Box</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/02/orange-belgium-refreshes…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">BBC Studios lanza Affinity Network: arquitectura publicitaria multivertical con Bluey, BBC Earth, Top Gear</div>
-<a class="card" href="https://www.advanced-television.com/2026/07/03/bbc-studios-launches-affinity-network-for-advertisers/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">BBC Studios Launches Affinity Network for Advertisers</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">advanced-television.com/2026/07/03/bbc-studios-launches…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">TNT Sports lanza canal Commonwealth Games 360 con +600h cobertura en vivo Glasgow 2026</div>
-<a class="card" href="https://www.advanced-television.com/2026/07/03/tnt-sports-launching-the-commonwealth-games-360-channel/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">TNT Sports Launching The Commonwealth Games 360 Channel</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">advanced-television.com/2026/07/03/tnt-sports-launching…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">S4C invierte £136M en drama galés década; 'Dal y Mellt' llegó Netflix, audiencias globales en Australia/NZ</div>
-<a class="card" href="https://www.advanced-television.com/2026/07/03/s4c-invests-136m-in-welsh-drama-in-a-decade/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">S4C Invests £136m in Welsh Drama in a Decade</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">advanced-television.com/2026/07/03/s4c-invests-136m-in-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Coalición VOD Europea designa Manuel Marsilio director ejecutivo; regulación Bruselas inminente</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/07/03/european-vod-coalition-appoints-new-executive-director/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">European VOD Coalition Appoints New Executive Director</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">broadbandtvnews.com/2026/07/03/european-vod-coalition-a…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">5 jul</span>
+<span class="card-url">variety.com/2026/tv/news/murcielago-manga-tv-anime-adap…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -327,18 +321,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
+<div class="section-label" style="color:#e74c3c">REGULACIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'The Bear' S3 ventas agotadas; influencia Disney+ se expande más allá pantalla</div>
-<a class="card" href="https://www.adweek.com/convergent-tv/how-the-bear-helped-cook-up-new-ad-interest-in-disney-shows/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix Francia cuestiona nuevas obligaciones inversión; critica "convertir diversidad en checklist"</div>
+<a class="card" href="https://variety.com/2026/film/global/netflix-france-chief-pauline-dauvin-investment-obligations-1236802286/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">How The Bear Helped Cook Up New Ad Interest in Disney Shows</div>
+<div class="card-title">Netflix France Chief Pauline Dauvin Slams Expanded Investment Obligations: 'These New Rules Go Too Far'</div>
 <div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">adweek.com/convergent-tv/how-the-bear-helped-cook-up-ne…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">variety.com/2026/film/global/netflix-france-chief-pauli…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -347,15 +341,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Electronic Arts apuesta publicidad in-game supere ingresos CTV; construye stack propietario</div>
-<a class="card" href="https://digiday.com/marketing/electronic-arts-is-betting-that-in-game-ads-can-out-earn-ctv/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix desafía reglas francesas; Prime Video apela obligaciones gasto France</div>
+<a class="card" href="https://deadline.com/2026/07/netflix-challenges-french-funding-rules-calls-spending-cap-1236974549/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Electronic Arts Is Betting That In-Game Ads Can Out-Earn CTV</div>
+<div class="card-title">Netflix Sets Out Why It's Challenging French Funding Obligations &amp; Wants A Cap On Investment Rules; Prime Video Also Lodges Appeal</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">digiday.com/marketing/electronic-arts-is-betting-that-i…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/netflix-challenges-french-funding-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -364,15 +358,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Rise of Pharma Ad-Tech: especialistas reemplazan DSPs/SSPs legacy; targeting sofisticado</div>
-<a class="card" href="https://digiday.com/marketing/the-rise-of-pharma-ad-tech/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix defiende desafío legal reglas streaming Francia; cita libertad editorial</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/06/netflix-defends-legal-challenge-to-french-streaming-rules/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">The Rise of Pharma Ad Tech</div>
+<div class="card-title">Netflix Defends Legal Challenge to French Streaming Rules</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">digiday.com/marketing/the-rise-of-pharma-ad-tech/?utm_c…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/06/netflix-defends-legal-ch…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -381,15 +375,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'Surveillance Pricing' — Leyes amenazarían suscripciones dinámicas publishers</div>
-<a class="card" href="https://digiday.com/media/media-briefing-surveillance-pricing-laws-are-coming-for-dynamic-subscription-strategies/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">ITV CEO hopeful: reguladores despejarán compra Sky; "mercado cambió fundamentalmente"</div>
+<a class="card" href="https://variety.com/2026/biz/global/itv-sky-takeover-carolyn-mccall-regulators-1236802239/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Media Briefing: 'Surveillance Pricing' Laws Are Coming for Dynamic Subscription Strategies</div>
+<div class="card-title">ITV Boss 'Hopeful' Sky Acquisition Will Clear Regulators: 'The Market Has Changed So Fundamentally'</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">digiday.com/media/media-briefing-surveillance-pricing-l…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">variety.com/2026/biz/global/itv-sky-takeover-carolyn-mc…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -398,15 +392,49 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Fox News y MSNBC Share espolios primetime junio; crecimiento total viewers y demo</div>
-<a class="card" href="https://www.adweek.com/tvnewser/week-of-june-22-2026-cable-news-ratings/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Diljit Dosanjh 'Satluj' retirada ZEE5 India 2 días post-lanzamiento; censura derechos humanos</div>
+<a class="card" href="https://variety.com/2026/tv/news/diljit-dosanjh-satluj-punjab-95-uncut-zee5-global-1236801418/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Week of June 22 Cable News Ratings: Fox News and MS NOW Share the Spoils</div>
+<div class="card-title">Diljit Dosanjh's 'Satluj' Pulled From India by ZEE5 Two Days After Release, Platform Says Film 'Unavailable Until Further Notice'</div>
 <div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">adweek.com/tvnewser/week-of-june-22-2026-cable-news-rat…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">5 jul</span>
+<span class="card-url">variety.com/2026/tv/news/diljit-dosanjh-satluj-punjab-9…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Drama derechos humanos 'Satluj' (Dosanjh) retirada streaming India post-lanzamiento</div>
+<a class="card" href="https://deadline.com/2026/07/satluj-diljit-dosanjh-pulled-from-streaming-in-india-zee5-1236974562/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Human Rights Drama 'Satluj' Starring Diljit Dosanjh Pulled From Streaming In India Days After Launch</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 jul</span>
+<span class="card-url">deadline.com/2026/07/satluj-diljit-dosanjh-pulled-from-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Russell T. Davies elogia Starz acogida 'Tip Toe' LGBTQ; critica Trump "odio, ira"</div>
+<a class="card" href="https://deadline.com/2026/07/russell-t-davies-praises-starz-tip-toe-lgbtq-series-us-1236974254/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Russell T. Davies Praises Starz For Picking Up 'Tip Toe' LGBTQ Series In U.S. Despite Trump's "Hatred, Bile &amp; Anger"</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">4 jul</span>
+<span class="card-url">deadline.com/2026/07/russell-t-davies-praises-starz-tip…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -417,48 +445,11 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#8e44ad">IA</div>
+<div class="section-label" style="color:#27ae60">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Microdrama musical IA indio 'Mohini – Khud Se Pyaar' lanza tema 'Angaat Aalay Ka'</div>
-<a class="card" href="https://variety.com/2026/tv/news/ai-indian-musical-microdrama-mohini-debut-track-1236800841/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">AI-Created Indian Musical Microdrama 'Mohini – Khud Se Pyaar' Unveils Debut Track 'Angaat Aalay Ka'</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">3 jul</span>
-<span class="card-url">variety.com/2026/tv/news/ai-indian-musical-microdrama-m…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Jodie Foster critica 'F1' Apple como "parecía hecho IA y escrito computadora"</div>
-<a class="card" href="https://variety.com/2026/film/news/jodie-foster-brad-pitt-f1-ai-written-by-computer-1236801120/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">Jodie Foster Says Brad Pitt's 'F1' Seemed Like It Was Made by AI and Written by a Computer: 'Wasn't It?'</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">2 jul</span>
-<span class="card-url">variety.com/2026/film/news/jodie-foster-brad-pitt-f1-ai…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Tommy Harper (productor 'Wednesday') apunta VeYou "sea HBO de vertical"; lanza 'Rival Hearts'</div>
-<a class="card" href="https://deadline.com/2026/07/tommy-harper-wants-ai-powered-veyou-become-hbo-of-vertical-1236969589/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">'Wednesday' & 'Beetlejuice Beetlejuice' Producer Tommy Harper Wants AI-Powered VeYou "To Become The HBO Of Vertical"; Soccer Microdrama 'Rival Hearts' Set</div>
+<div class="group-title" style="border-left:3px solid #27ae60">House of the Dragon S3E3: Steve Toussaint (Corlys) atisba consecuencias "muy peligrosa" solicitud Rhaenyra</div>
+<a class="card" href="https://variety.com/2026/tv/features/house-of-the-dragon-corlys-rhaenyra-sons-bastards-1236800257/" target="_blank" rel="
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
