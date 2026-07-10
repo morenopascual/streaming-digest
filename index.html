@@ -50,6 +50,9 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -85,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>09/07/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>10/07/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -99,21 +102,61 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
+<div class="save-bar" id="save-bar">
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+</div>
+<div class="toast" id="toast"></div>
+
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix renueva contenido y busca modelos híbridos con publishers</div>
-<a class="card" href="https://variety.com/2026/tv/reviews/little-house-on-the-prairie-review-netflix-1236798666/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Alisa Bowen (ex Disney+) es nueva CEO de Fubo</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/10/fubo-names-former-disney-president-alisa-bowen-as-ceo/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Netflix's 'Little House on the Prairie' Is a Charming Reimagining of Laura Ingalls Wilder's Beloved Adventure</div>
+<div class="card-title">Fubo Names Former Disney+ President Alisa Bowen as CEO</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/10/fubo-names-former-disney…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">MFE lanza plataforma única europea desde enero 2027</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/10/mfe-to-launch-unified-european-streaming-platform-from-2027/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">MFE to Launch Unified European Streaming Platform from 2027</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/10/mfe-to-launch-unified-eu…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix considera canales "siempre activos" tipo Pluto TV</div>
+<a class="card" href="https://www.theverge.com/streaming/963733/netflix-always-on-channels-bundles" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Netflix Reportedly Considers Adding Always-On Channels</div>
+<div class="card-meta">
+<span class="card-source">The Verge</span>
 <span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">variety.com/2026/tv/reviews/little-house-on-the-prairie…</span>
+<span class="card-url">theverge.com/streaming/963733/netflix-always-on-channel…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -122,134 +165,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix alcanza 111 nominaciones Emmy con estrategia de calidad sobre cantidad</div>
-<a class="card" href="https://deadline.com/2026/07/jinny-howe-netflix-emmy-nominations-reaction-interview-1236977323/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Broadcasters holandeses rechazan modelo DTC para deportes premium</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/10/dutch-broadcasters-resist-direct-to-consumer-sports-amid-growing-piracy/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Jinny Howe On Netflix's Emmy Haul, 'The Diplomat' & 'Beef' Bumps, What's Next For Nominated Series</div>
+<div class="card-title">Dutch Broadcasters Resist Direct-to-Consumer Sports Amid Growing Piracy</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">8 jul</span>
-<span class="card-url">deadline.com/2026/07/jinny-howe-netflix-emmy-nomination…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix 'I Will Find You': 74.1M vistas en 18 días con Harlan Coben</div>
-<a class="card" href="https://deadline.com/2026/07/the-boroughs-cancellation-virgin-river-harlan-coben-netflix-1236977993/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Netflix Series Chief On 'I Will Find You' Success, The "Sophomore Slump" Phenomenon & 'Virgin River's Future</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/the-boroughs-cancellation-virgin-r…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video cancela 'It's Not Like That' pese a estar en Top 10</div>
-<a class="card" href="https://deadline.com/2026/07/its-not-like-that-scott-foley-reaction-cancellation-1236978127/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'It's Not Like That': Scott Foley Laments Cancellation By Prime Video After Strong Performance</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/its-not-like-that-scott-foley-reac…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Adarsh Baal Vidyalaya' llega el 24 julio en hindi</div>
-<a class="card" href="https://variety.com/2026/tv/news/kay-kay-menon-adarsh-baal-vidyalaya-prime-video-1236805411/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Kay Kay Menon's 'Adarsh Baal Vidyalaya' Sets July Prime Video Premiere</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">variety.com/2026/tv/news/kay-kay-menon-adarsh-baal-vidy…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Apple TV+: 87 nominaciones Emmy con enfoque 'quality over quantity'</div>
-<a class="card" href="https://variety.com/2026/tv/news/apple-tv-emmys-widows-bay-pluribus-severance-return-1236804984/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Matt Cherniss on Apple TV's Impressive Emmys Batting Average, Return Dates for 'Severance' & More</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">8 jul</span>
-<span class="card-url">variety.com/2026/tv/news/apple-tv-emmys-widows-bay-plur…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">TF1 + Netflix: acuerdo de carriage histórico suma 45M visualizaciones en 3 semanas</div>
-<a class="card" href="https://www.hollywoodreporter.com/business/business-news/tf1-netflix-deal-record-streaming-figures-france-1236642951/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">TF1 Says Its Netflix Deal Has Already Paid Off With Record Streaming Numbers</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">hollywoodreporter.com/business/business-news/tf1-netfli…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sky adquiere ITV por £1.6B: revoluciona paisaje audiovisual UK</div>
-<a class="card" href="https://deadline.com/2026/07/sky-put-shows-on-itv-snl-day-of-jackal-1236977205/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'SNL' On ITV? Sky Already Plotting How To Megaphone Originals On Its New $2.1B Network</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/sky-put-shows-on-itv-snl-day-of-ja…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney TV suma 125 nominaciones Emmy con renovación de 'Dancing with the Stars'</div>
-<a class="card" href="https://variety.com/2026/tv/news/disney-debra-oconnell-emmy-dancing-with-the-stars-fx-hulu-1236805393/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Disney Entertainment TV Chairman Debra O'Connell on Emmy Noms & Recognition for 'Dancing With the Stars'</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">variety.com/2026/tv/news/disney-debra-oconnell-emmy-dan…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/10/dutch-broadcasters-resis…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -260,18 +184,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">CONTENIDOS Y PRODUCCIONES</div>
+<div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Netflix: 'The Lords' Day' con Damson Idris suma elenco de calidad (Timothy Spall, Gemma Whelan)</div>
-<a class="card" href="https://deadline.com/2026/07/netflix-lords-day-harry-lawtey-arsema-thomas-timothy-spall-1236976757/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Mundial 2026: EEUU vs Bélgica bate récord con 33.1M viewers (máximo histórico fútbol USA)</div>
+<a class="card" href="https://deadline.com/2026/07/world-cup-ratings-record-usmnt-belgium-fox-1236975996/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Harry Lawtey, Arsema Thomas, Timothy Spall & More Join Damson Idris In Netflix Series 'The Lords' Day'</div>
+<div class="card-title">USMNT's World Cup Exit Scores Historic Ratings With 33M Viewers – Update</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/netflix-lords-day-harry-lawtey-ars…</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">deadline.com/2026/07/world-cup-ratings-record-usmnt-bel…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -280,15 +204,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Shawn Hatosy: 'The Pitt' arrasa con 25 nominaciones Emmy (máximo de serie 2026)</div>
-<a class="card" href="https://deadline.com/2026/07/shawn-hatosy-interview-emmy-nominations-the-pitt-2026-1236978116/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">James Corden regresa con "After Hours" para cobertura Mundial en Fox</div>
+<a class="card" href="https://variety.com/2026/tv/news/james-corden-world-cup-fox-after-hours-ben-winston-late-1236806207/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Shawn Hatosy Says His 'The Pitt' Character Is "Living On Borrowed Time," Reveals He Will Direct S3 Episode</div>
+<div class="card-title">LISTEN: James Corden Reunites 'Late Late Show' Team for Fox's 'After Hours' World Cup Show</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/shawn-hatosy-interview-emmy-nomina…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">variety.com/2026/tv/news/james-corden-world-cup-fox-aft…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -297,161 +221,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Ariana Madix (Love Island USA): primera nominación Emmy como conductora</div>
-<a class="card" href="https://deadline.com/2026/07/love-island-usa-ariana-madix-with-emmy-nomination-reaction-1236978001/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Big Brother 28: formato renovado con twist de Survivor (premiere 90 min)</div>
+<a class="card" href="https://variety.com/2026/tv/news/how-to-watch-big-brother-28-online-streaming-1236806005/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">'Love Island USA's Ariana Madix "Thrilled & Excited" With Emmy Nomination</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/love-island-usa-ariana-madix-with-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Netflix renueva 'Little House on the Prairie': reimaginación encantadora</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-reviews/little-house-on-the-prairie-review-netflix-1236642377/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">'Little House on the Prairie' Review: Netflix's Laura Ingalls Wilder Reboot Sparkles With Sincerity</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-reviews/little-house-on-the…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Fremantle: salida de Bob McCourt tras 28 años (COO de Contenidos)</div>
-<a class="card" href="https://deadline.com/2026/07/bob-mccourt-exiting-fremantle-1236977147/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Bob McCourt Exiting 'Got Talent' Maker Fremantle After 28 Years</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">deadline.com/2026/07/bob-mccourt-exiting-fremantle-1236…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#16a085">PUBLICIDAD Y AD-TECH</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">OpenAI expande publicidad a Francia, Alemania e Irlanda</div>
-<a class="card" href="https://digiday.com/marketing/openai-set-to-expand-ads-to-france-germany-and-ireland/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">OpenAI Set To Expand Ads To France, Germany and Ireland</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">digiday.com/marketing/openai-set-to-expand-ads-to-franc…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Sky-ITV: publicistas analizan oportunidades en deal de £1.6B</div>
-<a class="card" href="https://digiday.com/media-buying/advertisers-look-for-advantage-in-skys-itv-deal/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">Advertisers Look For Advantage In Sky's ITV Deal</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">digiday.com/media-buying/advertisers-look-for-advantage…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Marketers dudan de adopción de IA en influencers y CTV</div>
-<a class="card" href="https://digiday.com/marketing/d-research-marketers-hesitate-to-adopt-ai-for-influencer-and-ctv-marketing/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">D+ Research: Marketers Hesitate To Adopt AI For Influencer and CTV Marketing</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">digiday.com/marketing/d-research-marketers-hesitate-to-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Padres usan IA para optimizar compras back-to-school ante inflación</div>
-<a class="card" href="https://www.adweek.com/brand-marketing/inflation-wary-parents-turn-to-ai-to-thrift-for-back-to-school-deals/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">Inflation-Wary Parents Turn To AI To Thrift For Back-to-School Deals</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">8 jul</span>
-<span class="card-url">adweek.com/brand-marketing/inflation-wary-parents-turn-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Internet dominado por bots: líderes demand marketing reset</div>
-<a class="card" href="https://www.adweek.com/media/why-the-bot-majority-internet-demands-a-marketing-reset/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">Why the Bot-Majority Internet Demands a Marketing Reset</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">8 jul</span>
-<span class="card-url">adweek.com/media/why-the-bot-majority-internet-demands-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#8e44ad">INTELIGENCIA ARTIFICIAL</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">CAA denuncia Muse Image de Meta: política opt-out para generar contenido con usuarios</div>
-<a class="card" href="https://variety.com/2026/digital/news/caa-slams-meta-opt-out-ai-muse-image-1236805387/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">CAA Slams Meta for Using Opt-Out Policy for AI Platform Muse Image</div>
+<div class="card-title">How to Watch 'Big Brother 28' Online</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">9 jul</span>
-<span class="card-url">variety.com/2026/digital/news/caa-slams-meta-opt-out-ai…</span>
+<span class="card-url">variety.com/2026/shopping/news/how-to-watch-big-brother…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -460,14 +238,218 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">CAA denuncia riesgos de privacidad en IA Muse de Meta para redes sociales</div>
-<a class="card" href="https://www.hollywoodreporter.com/business/digital/caa-calls-out-meta-muse-ai-video-photo-tool-instagram-1236642814/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
+<div class="group-title" style="border-left:3px solid #e74c3c">Levi Banks abandona Big Brother 28: "no fue el fit correcto"</div>
+<a class="card" href="https://deadline.com/2026/07/big-brother-levi-banks-explains-dropping-out-season-28-1236978996/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">CAA Calls Out Meta For Making Its Muse AI Video and Photo Tool Opt-Out</div>
+<div class="card-title">'Big Brother's Levi Banks Explains Dropping Out Before Season 28: "Not The Right Fit"</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">deadline.com/2026/07/big-brother-levi-banks-explains-dr…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">'Alien: Earth' S2 añade Tracey Ullman, Sam Spruell, Jerome Flynn (con Dinklage)</div>
+<a class="card" href="https://variety.com/2026/tv/news/alien-earth-season-2-tracey-ullman-sam-spruell-jerome-flynn-1236805913/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Alien: Earth' Season 2 Adds Tracey Ullman, Sam Spruell, Jerome Flynn</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">variety.com/2026/tv/news/alien-earth-season-2-tracey-ul…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Mediawan distribuye gameshow 'Trojan Horse' por Europa (tema mitología griega)</div>
+<a class="card" href="https://variety.com/2026/tv/global/mediawan-kinetic-content-gameshow-trojan-horse-1236806319/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Greek Myth Summer Continues as Mediawan Rolls Out Kinetic Content Gameshow 'Trojan Horse' Across Europe</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">variety.com/2026/tv/global/mediawan-kinetic-content-gam…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Colonia de escritores de Mara Brock Akil anuncia cohortes verano-otoño 2026</div>
+<a class="card" href="https://variety.com/2026/tv/news/mara-brock-akil-writers-colony-2026-summer-fall-cohorts-1236805232/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Showrunner Mara Brock Akil's Writers' Colony Announces Cohorts for 2026 Summer and Fall Residencies</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">variety.com/2026/tv/news/mara-brock-akil-writers-colony…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">'We Were Liars' S2: Prime Video confirma continuación de serie YA (renovada septiembre 2025)</div>
+<a class="card" href="https://deadline.com/feature/we-were-liars-season-2-news-updates-everything-we-know-1236887314/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Everything We Know About 'We Were Liars' Season 2 So Far</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">deadline.com/feature/we-were-liars-season-2-news-update…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">'Diarra From Detroit' S2 adelanta estrenos: 2 eps 29 jul, luego semanales</div>
+<a class="card" href="https://deadline.com/2026/07/diarra-from-detroit-season-2-trailer-1236978888/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Diarra From Detroit' Ups The Stakes In Season 2 Trailer</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">deadline.com/2026/07/diarra-from-detroit-season-2-trail…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Zach Heinzerling (director 'Rafa' sobre Nadal) logra nominación Emmy en Wimbledon</div>
+<a class="card" href="https://deadline.com/2026/07/rafa-emmy-nomination-director-zach-heinzerling-interview-1236978921/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Rafa' Filmmaker Zach Heinzerling On Earning Emmy Nom For His Rafael Nadal Series And Netting Assist From Brother-In-Law Seth Meyers</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">deadline.com/2026/07/rafa-emmy-nomination-director-zach…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix: 'Little House on the Prairie' Season 1 finaliza con giro narrativo</div>
+<a class="card" href="https://deadline.com/2026/07/little-house-on-the-prairie-netflix-ending-explained-boss-1236978848/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Netflix's 'Little House On The Prairie' Showrunner Rebecca Sonnenshine Breaks Down Season 1 Ending; Hints At One Character's Return For Season 2</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">deadline.com/2026/07/little-house-on-the-prairie-netfli…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Emmy 2026: 48 nominados en podcast 'Awards Chatter' de Scott Feinberg</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/emmy-nominees-awards-chatter-podcast-1236641999/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Listen to 48 Emmy Nominees — from A (Apatow) to Z (Zimmer) — on THR's 'Awards Chatter' Podcast</div>
 <div class="card-meta">
 <span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">9 jul</span
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/emmy-nominees-awards-c…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Fox: Baywatch reboot en casting con influencers + 4 actores retorno</div>
+<a class="card" href="https://www.hollywoodreporter.com/lists/baywatch-reboot-cast/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Baywatch' Reboot Cast: Meet the New Stars (and Four Returning Faces) in Red Suits</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">hollywoodreporter.com/lists/baywatch-reboot-cast/</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Joy Sunday: primera nominación Emmy por 'DTF St. Louis' (Jason Bateman)</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/joy-sunday-reacts-first-emmy-nomination-dtf-st-louis-1236643516/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Joy Sunday Manifested Working With Jason Bateman, Then 'DTF St. Louis' Earned Her Her First Emmy Nomination</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">9 jul</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/joy-sunday-reacts-firs…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Biopic Fabiola Gianotti ('God Particle'): dir. Stefano Mordini (Variety exclusive)</div>
+<a class="card" href="https://variety.com/2026/film/global/mysterious-particle-fabiola-gianotti-god-particle-1236806300/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'God Particle' Physicist Fabiola Gianotti to Get Feature Biopic by 'The Invisible Witness' Director Stefano Mordini (EXCLUSIVE)</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">10 jul</span>
+<span class="card-url">variety.com/2026/film/global/mysterious-particle-fabiol…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Artists Equity lanza división scripted TV con Griffin Zucosky (ex UCP)</div>
+<a class="card" href="https://deadline.com/2026/07/artists-equity-scripted-tv-division-griffin-zucosky-ucp-1236978736/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Artists Equity Launches Scripted Television Division Headed By UCP's Griffin Zucosky</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span>
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
