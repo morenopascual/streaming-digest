@@ -43,16 +43,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
-.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
-.save-bar.visible{display:flex}
-.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
-.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
-.btn-save:disabled{opacity:.5;cursor:default}
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
-.toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -88,7 +78,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>23/07/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>24/07/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -102,30 +92,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
-
-
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
-</div>
-
-<div class="toast" id="toast"></div>
-
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix renueva con Yeon Sang-ho para nueva serie 'Parasyte: Tamiya' con Shioli Kutsuna</div>
-<a class="card" href="https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO Max: 'Stuart Fails to Save the Universe' y la ciencia del multiverso</div>
+<a class="card" href="https://variety.com/2026/tv/news/stuart-fails-to-save-the-universe-science-explained-1236818737/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Yeon Sang-ho Returns to 'Parasyte' Universe With 'Tamiya,' Starring Shioli Kutsuna, at Netflix</div>
+<div class="card-title">'Stuart Fails to Save the Universe' Co-Creator Bill Prady Explains the Science Behind the Show's Multiverse</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-s…</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">variety.com/2026/tv/news/stuart-fails-to-save-the-unive…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -134,15 +115,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Star Trek: Strange New Worlds' S4: elenco y showrunner hablan de géneros, curiosidad y episodio puppet</div>
-<a class="card" href="https://variety.com/2026/tv/news/star-trek-strange-new-worlds-season-4-92ny-1236818484/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">BBC adquiere drama 'Kabul' sobre retirada americana de Afganistán con Eric Dane</div>
+<a class="card" href="https://deadline.com/2026/07/bbc-buys-kabul-drama-series-eric-dane-afghanistan-1237002372/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Star Trek: Strange New Worlds' Cast, Co-Showrunner Talk Playing With Genres in Season 4, 'Joyful Curiosity,' and That Puppet Episode</div>
+<div class="card-title">BBC Buys 'Kabul' Drama Series About American Withdrawal From Afghanistan Starring The Late Eric Dane</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/tv/news/star-trek-strange-new-worlds-s…</span>
+<span class="card-source">Deadline Hollywood</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">deadline.com/2026/07/bbc-buys-kabul-drama-series-eric-d…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -151,15 +132,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Hello Sunshine celebra 10 años: 'Big Little Lies' S3, 'Lucky' en Apple y 'Elle' en Prime Video</div>
-<a class="card" href="https://variety.com/2026/tv/news/big-little-lies-season-3-lucky-elle-hello-sunshine-1236818329/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Cole Hauser sobre los "desafíos" de 'Dutton Ranch' sin Taylor Sheridan</div>
+<a class="card" href="https://deadline.com/2026/07/cole-hauser-challenges-dutton-ranch-without-taylor-sheridan-1237002246/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Hello Sunshine's Head of TV and Film on 10 Years of Reese Witherspoon's Production Company, 'Big Little Lies' Season 3, Apple's 'Lucky' and More 'Elle'</div>
+<div class="card-title">Cole Hauser On "Challenges" Of Making 'Dutton Ranch' Without Taylor Sheridan</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/tv/news/big-little-lies-season-3-lucky…</span>
+<span class="card-source">Deadline Hollywood</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">deadline.com/2026/07/cole-hauser-challenges-dutton-ranc…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -168,15 +149,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Reba McEntire celebra 50 años de música y tercera temporada de 'Happy's Place' en NBC</div>
-<a class="card" href="https://variety.com/2026/music/news/reba-mcentire-50-years-music-happys-place-daily-variety-1236818516/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Devon Allman en drama NASCAR 'Thunder Road' de AMC</div>
+<a class="card" href="https://deadline.com/2026/07/devon-allman-cast-amc-nascar-drama-series-thunder-road-1237002131/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">LISTEN: Reba McEntire Revels in 50 Years of Making Music and Season 3 of NBC's 'Happy's Place'</div>
+<div class="card-title">Devon Allman Says "Hot Damn" To Landing First Major Acting Role In AMC's NASCAR Drama 'Thunder Road'</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/music/news/reba-mcentire-50-years-musi…</span>
+<span class="card-source">Deadline Hollywood</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">deadline.com/2026/07/devon-allman-cast-amc-nascar-drama…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -185,15 +166,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Documental 'Disney Worldbuilders' de Leslie Iwerks llega a Disney+ en agosto con James Cameron y Kevin Feige</div>
-<a class="card" href="https://variety.com/2026/artisans/news/disney-worldbuilders-disney-plus-august-1236818262/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Maya Jama anuncia "cambios" en final de temporada 13 de 'Love Island UK'</div>
+<a class="card" href="https://deadline.com/2026/07/maya-jama-teases-shakeup-love-island-uk-season-13-finale-1237002002/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Disney Worldbuilders' Documentary by Leslie Iwerks, Featuring James Cameron, Kevin Feige and Jon Favreau, Set to Premiere on Disney+</div>
+<div class="card-title">Maya Jama Teases "Shakeup" To 'Love Island UK' Season 13 Finale</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/artisans/news/disney-worldbuilders-dis…</span>
+<span class="card-source">Deadline Hollywood</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">deadline.com/2026/07/maya-jama-teases-shakeup-love-isla…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -202,15 +183,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Toheeb Jimoh y Dujonna Gift lideran adaptación de 'Open Water' para BBC</div>
-<a class="card" href="https://deadline.com/2026/07/bbc-open-water-cast-toheeb-jimoh-dujanna-gift-caleb-nelson-1237001086/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Batman: Caped Crusader' S2: Matthew Needham voz The Joker</div>
+<a class="card" href="https://deadline.com/2026/07/batman-caped-crusader-season-2-matthew-needham-the-joker-1237001478/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Ted Lasso' Star Toheeb Jimoh &amp; 'Snow White's Dujanna Gift Leading BBC's 'Open Water' Adaptation</div>
+<div class="card-title">'Batman: Caped Crusader' Season 2 Adds Matthew Needham To Voice The Joker</div>
 <div class="card-meta">
 <span class="card-source">Deadline Hollywood</span>
 <span class="card-sep">·</span><span class="card-date">23 jul</span>
-<span class="card-url">deadline.com/2026/07/bbc-open-water-cast-toheeb-jimoh-d…</span>
+<span class="card-url">deadline.com/2026/07/batman-caped-crusader-season-2-mat…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -219,48 +200,14 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Reid Scott se va de 'Law &amp; Order'; James Badge Dale lo sucede en temporada 26 de NBC</div>
-<a class="card" href="https://deadline.com/2026/07/reid-scott-leaving-law-order-james-badge-dale-season-26-nbc-1237000929/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Stuart Fails to Save the Universe': secuencia de títulos cambia cada episodio</div>
+<a class="card" href="https://deadline.com/2026/07/stuart-fails-to-save-the-universe-title-sequence-danny-elfman-1236979832/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Reid Scott Leaving 'Law &amp; Order', James Badge Dale To Succeed Him In Season 26 Of NBC Drama</div>
+<div class="card-title">'Stuart Fails To Save The Universe' EPs & Composer On Show's Ever-Changing Title Sequence</div>
 <div class="card-meta">
 <span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">23 jul</span>
-<span class="card-url">deadline.com/2026/07/reid-scott-leaving-law-order-james…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Billkin Putthipong protagoniza 'The Untitled Snooker Project' de GDH para 2027</div>
-<a class="card" href="https://deadline.com/2026/07/billkin-putthipong-gdh-baz-poonpiriya-vanridee-pongsittisak-1237001071/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Billkin Putthipong To Star In GDH's 'Untitled Snooker Project', Produced By Team Behind 'How To Make Millions Before Grandma Dies'</div>
-<div class="card-meta">
-<span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">23 jul</span>
-<span class="card-url">deadline.com/2026/07/billkin-putthipong-gdh-baz-poonpir…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Chuck Lorre explica porqué Stuart era "la peor opción" para spin-off de 'Big Bang'</div>
-<a class="card" href="https://deadline.com/2026/07/stuart-fails-to-save-the-universe-character-worst-choice-1237000918/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Stuart Fails to Save the Universe' Creator Says 'Big Bang' Character Was "Worst Choice" To Lead Spin-Off, "Which Made Him The Perfect Choice"</div>
-<div class="card-meta">
-<span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
 <span class="card-url">deadline.com/2026/07/stuart-fails-to-save-the-universe-…</span>
 <span class="card-ext">↗</span>
 </div>
@@ -270,32 +217,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Ransom Canyon': elenco y personajes de Netflix western drama para temporada 1</div>
-<a class="card" href="https://deadline.com/lists/ransom-canyon-cast/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Stuart Fails to Save the Universe': muerte sorpresiva en premiere</div>
+<a class="card" href="https://deadline.com/2026/07/big-bang-theory-spinoff-stuart-creators-premiere-raj-death-1236979878/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Ransom Canyon' Cast And Characters Across Seasons: Who's Who In The Western Drama Show?</div>
+<div class="card-title">'Stuart Fails To Save The Universe' Creators & Stars On Premiere's Shocking OG Death & Its Aftermath</div>
 <div class="card-meta">
 <span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">23 jul</span>
-<span class="card-url">deadline.com/lists/ransom-canyon-cast/</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Voice cast de 'Stewie' spin-off de 'Family Guy': Kenan Thompson, Vanessa Bayer, Melissa O'Neil y más</div>
-<a class="card" href="https://deadline.com/2026/07/family-guy-spinoff-stewie-voice-cast-kenan-thompson-1236999895/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Stewie' Voice Cast Set: Kenan Thompson, Vanessa Bayer, Melissa O'Neil, Mike Henry &amp; More Join Seth MacFarlane In 'Family Guy' Spinoff</div>
-<div class="card-meta">
-<span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">deadline.com/2026/07/family-guy-spinoff-stewie-voice-ca…</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">deadline.com/2026/07/big-bang-theory-spinoff-stuart-cre…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -307,6 +237,40 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 <div class="section">
 <div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Hombres se lanzan por microdramas; historias de romance dominan</div>
+<a class="card" href="https://variety.com/2026/tv/news/microdramas-men-romance-sunday-holywater-my-drama-my-muse-1236819953/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Men Flock to Microdramas, Romance Stories Rule and Sunday Nights are Prime Time for Viewing</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">variety.com/2026/tv/news/microdramas-men-romance-sunday…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Google cede en controles de PMax</div>
+<a class="card" href="https://digiday.com/media-buying/google-quietly-gives-ground-on-pmax-controls/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Google quietly gives ground on PMax controls</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">digiday.com/media-buying/google-quietly-gives-ground-on…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
 
 <div class="group">
 <div class="group-title" style="border-left:3px solid #e74c3c">TikTok desglosa acuerdo con NBA y WNBA para creadores</div>
@@ -326,15 +290,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">La autoridad de marca y confianza editorial se convierten en nuevos activos IA para publishers</div>
-<a class="card" href="https://digiday.com/media/media-briefing-brand-authority-and-trust-is-becoming-publishers-newest-ai-asset/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Yospace registra récord 11.6B anuncios direccionables en Copa del Mundo</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/23/yospace-says-world-cup-drove-record-11-6-billion-addressable-ads/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Media Briefing: Brand authority and trust are becoming publishers' newest AI assets</div>
+<div class="card-title">Yospace says World Cup drove record 11.6 billion addressable ads</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
+<span class="card-source">Broadband TV News</span>
 <span class="card-sep">·</span><span class="card-date">23 jul</span>
-<span class="card-url">digiday.com/media/media-briefing-brand-authority-and-tr…</span>
+<span class="card-url">broadbandtvnews.com/2026/07/23/yospace-says-world-cup-d…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -342,33 +306,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Mercado upfront casi completado; deportes impulsan negociaciones de TV</div>
-<a class="card" href="https://digiday.com/media-buying/the-upfront-market-is-nearly-done-as-sports-acts-as-both-negotiation-driver-and-obstacle/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">The upfront market is nearly done, as sports acts as both negotiation driver and obstacle</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">digiday.com/media-buying/the-upfront-market-is-nearly-d…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
 </div>
 
+<div class="section">
+<div class="section-label" style="color:#27ae60">RESULTADOS FINANCIEROS</div>
+
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Industria de publicidad streaming finalmente tiene herramientas de control de calidad</div>
-<a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-the-streaming-ad-industry-finally-has-levers-to-pull-on-quality/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #27ae60">Peacock alcanza rentabilidad trimestral por primera vez</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/24/peacock-turns-profitable-as-comcast-talks-up-sky-itv-plan/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Future of TV Briefing: The streaming ad industry finally has levers to pull on quality</div>
+<div class="card-title">Peacock turns profitable as Comcast talks up Sky-ITV plan</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">digiday.com/future-of-tv/future-of-tv-briefing-the-stre…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/24/peacock-turns-profitable…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -380,40 +332,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 <div class="section">
 <div class="section-label" style="color:#8e44ad">IA</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">OpenAI gasto en IA se dispara a $750B hasta 2030 equivalente al PIB de Suecia</div>
-<a class="card" href="https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">OpenAI's AI spending spree has ballooned to $750B</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">techcrunch.com/2026/07/22/openais-ai-spending-spree-has…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Darren Aronofsky studio IA Primordial Soup recauda $15 millones</div>
-<a class="card" href="https://variety.com/2026/film/news/darren-aronofsky-ai-primordial-soup-raising-15-million-1236818544/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">Darren Aronofsky's AI Studio Primordial Soup Raising $15 Million</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">22 jul</span>
-<span class="card-url">variety.com/2026/film/news/darren-aronofsky-ai-primordi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
 
 <div class="group">
 <div class="group-title" style="border-left:3px solid #8e44ad">Substack promueve contenido humano con feature "scan for AI"</div>
@@ -442,7 +360,139 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <span class="card-source">Press Gazette (UK)</span>
 <span class="card-sep">·</span><span class="card-date">22 jul</span>
 <span class="card-url">pressgazette.co.uk/comment-analysis/unreliable-ai-answe…</span>
-<span class="card-ext">↗
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#c0392b">REGULACIÓN</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Emmy: Academia mueve cinco categorías fuera de la transmisión televisada</div>
+<a class="card" href="https://variety.com/2026/tv/awards/emmys-shake-up-telecast-move-categories-tv-academy-trying-1236819841/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">Shaking Up the Emmys By Moving Five Categories Out of the Telecast Might Not Work, But at Least the TV Academy Is Trying Something</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">variety.com/2026/tv/awards/emmys-shake-up-telecast-move…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Juez extiende orden bloqueando fusión Paramount-Warner Bros 14 días más</div>
+<a class="card" href="https://variety.com/2026/film/news/judge-paramount-warner-bros-merger-14-days-1236819740/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">Judge Extends Order Blocking Paramount-Warner Bros. Merger for Another 14 Days</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">variety.com/2026/film/news/judge-paramount-warner-bros-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">Reloj de Paramount-Warner Bros: ¿Qué sigue en batalla antimonopolio?</div>
+<a class="card" href="https://variety.com/2026/tv/news/paramount-warner-bros-whats-next-state-antitrust-lawsuit-1236819518/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">The Paramount-Warner Bros. Clock Is Ticking: What's Next for the Megamerger Amid Antitrust Battle With States?</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">variety.com/2026/tv/news/paramount-warner-bros-whats-ne…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">UE aprueba fusión Paramount-Warner con condiciones</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/23/eu-clears-paramount-warner-merger-with-conditions/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">EU clears Paramount-Warner merger with conditions</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/23/eu-clears-paramount-warn…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #c0392b">CMA invita comentarios sobre fusión Sky-ITV</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/07/23/cma-invites-comments-on-sky-itv-merger/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#c0392b"></div>
+<div class="card-body">
+<div class="card-title">CMA invites comments on Sky-ITV merger</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">broadbandtvnews.com/2026/07/23/cma-invites-comments-on-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#f39c12">ESTUDIOS E INFORMES</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #f39c12">Kevin Hart en 'Talento 72 Horas': Netflix apuesta por comedia generacional</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-reviews/72-hours-review-kevin-hart-netflix-comedy-1236655073/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#f39c12"></div>
+<div class="card-body">
+<div class="card-title">'72 Hours' Review: Kevin Hart Throws Himself Into the Slapstick but Netflix's Intergenerational Farce Squanders Its Premise</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">24 jul</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-reviews/72-hours-rev…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #f39c12">'Toy Story 5' ha repartido 18.000 juguetes a niños enfermos</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-news/disney-toy-story-5-childrens-hospitals-globally-1236647915/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#f39c12"></div>
+<div class="card-body">
+<div class="card-title">'Toy Story 5' Has Given Away 18,000 Toys to Sick Kids</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">23 jul</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-news/disney-toy-stor…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
