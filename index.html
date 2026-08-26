@@ -50,6 +50,9 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -85,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>25/08/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>26/08/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -99,6 +102,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
+
 <div class="save-bar" id="save-bar">
   <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
@@ -111,15 +115,117 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Hulu cancela 'Not Suitable for Work' (Mindy Kaling) tras una temporada</div>
-<a class="card" href="https://variety.com/2026/tv/news/not-suitable-for-work-hulu-canceled-mindy-kaling-one-season-1236842124/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Vidio + ReelShort: partnership Indonesia − microdramas en tab dedicado desde 1 sept</div>
+<a class="card" href="https://variety.com/2026/tv/news/vidio-reelshort-indonesia-partnership-short-drama-1236843567/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Hulu Cancels Mindy Kaling-Created Comedy 'Not Suitable for Work' After One Season</div>
+<div class="card-title">Vidio Teams With ReelShort for First Indonesian Short-Drama Partnership</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/tv/news/vidio-reelshort-indonesia-part…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Disney+: 'The Remarried Empress' (K-drama Shin Mina) − premiere 4 nov en Disney+/Hulu</div>
+<a class="card" href="https://variety.com/2026/tv/news/the-remarried-empress-november-disney-1236842398/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Shin Mina, Ju Jihoon, Lee Jongsuk's 'The Remarried Empress' Sets November Disney+, Hulu Bow</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/tv/news/the-remarried-empress-november…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'The Shooter' − acción-noir Lee Jung-eun y Kim Moo-yul en producción</div>
+<a class="card" href="https://variety.com/2026/tv/news/lee-jung-eun-kim-moo-yul-netflix-the-shooter-1236842363/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Lee Jung-eun, Kim Moo-yul Board Netflix's Action-Noir Series 'The Shooter'</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/tv/news/lee-jung-eun-kim-moo-yul-netfl…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO/Sky: 'War' (Sienna Miller, Dominic West) − legal thriller George Kay dos temporadas</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/hbo-sky-show-war-sienna-miller-dominic-west-photo-exclusive-1236679668/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Dominic West and Sienna Miller Star in Image From Sky and HBO Legal Thriller 'War'</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/hbo-sky-show-war-sienn…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Escorted' (Brett Goldstein) − Tuc Watkins se une como recurring</div>
+<a class="card" href="https://deadline.com/2026/08/tuc-watkins-cast-prime-video-series-escorted-1237050426/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Tuc Watkins Joins Prime Video Rom-Com Series 'Escorted'</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">deadline.com/2026/08/tuc-watkins-cast-prime-video-serie…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Marlo Miazga: lanza M Media con doc 'Ground Control' para CBC (producción IP-focused)</div>
+<a class="card" href="https://deadline.com/2026/08/marlo-miazga-m-media-ground-control-cbc-1237050034/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Marlo Miazga Launches M Media With CBC Order For "Deeply Personal" Doc 'Ground Control'</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">deadline.com/2026/08/marlo-miazga-m-media-ground-contro…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Sam Register: se va de Warner Bros. Animation tras 30 años (contrato no renovado)</div>
+<a class="card" href="https://variety.com/2026/tv/news/sam-register-leaving-warner-bros-animation-head-1236843053/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Sam Register to Depart as Head of Warner Bros. Animation, Cartoon Network Studios</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">variety.com/2026/tv/news/not-suitable-for-work-hulu-can…</span>
+<span class="card-url">variety.com/2026/tv/news/sam-register-leaving-warner-br…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -128,117 +234,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Peacock ordena docuserie 'Clap If You Care: The Wendy Williams Show' (3 partes, 2027)</div>
-<a class="card" href="https://variety.com/2026/tv/news/wendy-williams-documentary-clap-if-you-care-peacock-1236841933/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Appointment Viewing: regresa la TV de watercooler (shows semanales en streaming)</div>
+<a class="card" href="https://variety.com/2026/tv/news/modern-appointment-viewing-shows-watercooler-television-1236843230/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Wendy Williams Documentary Series 'Clap If You Care,' Picked Up at Peacock</div>
+<div class="card-title">How Modern Appointment Viewing Shows Are Bringing Back 'Watercooler' Television</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/tv/news/wendy-williams-documentary-cla…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix UK: ingresos £2.06B (2025) − supera a ITV por primera vez en Reino Unido</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/24/netflix-uk-revenue-surpasses-2b-in-2025-overtaking-itv-and-reshaping-the-british-tv-landscape/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Netflix UK revenue surpasses £2B in 2025, overtaking ITV</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/24/netflix-uk-revenue-surpa…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">ESPN: sube precios (Select $13.99, Unlimited $31.99) desde 17 de septiembre</div>
-<a class="card" href="https://www.theverge.com/streaming/983794/espn-disney-plus-bundles-price-increase" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">ESPN streaming plans are getting more expensive</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">theverge.com/streaming/983794/espn-disney-plus-bundles-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: evalúa integrar Peacock y Fox One en su app (terceros en plataforma)</div>
-<a class="card" href="https://www.theverge.com/streaming/983741/netflix-open-app-peacock-fox-one" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Netflix reportedly considers opening its app to other streamers</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">theverge.com/streaming/983741/netflix-open-app-peacock-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Zattoo lanza FAST channel propio 'Zeno True Crime' − contenido 24/7</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/24/zattoo-launches-its-own-fast-channel-with-zeno-true-crime/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Zattoo launches its own FAST channel with "Zeno True Crime"</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/24/zattoo-launches-its-own-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Streamers frenan alzas de precios − Netflix, Disney+, Amazon se acercan al techo de tolerancia</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/24/streaming-giants-scale-back-price-hikes-as-consumers-hit-ceiling-on-willingness-to-pay/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Streaming giants scale back price hikes as consumers hit ceiling</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/24/streaming-giants-scale-b…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">DAZN: transmitirá College Swimming League mundialmente (temporada 2026)</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/24/dazn-to-stream-college-swimming-league-worldwide/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">DAZN to stream College Swimming League worldwide</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/24/dazn-to-stream-college-s…</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">variety.com/2026/tv/news/modern-appointment-viewing-sho…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -252,66 +256,32 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#16a085">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">IAB desarrolla framework para medir ads con agentes IA − asignar crédito influencia</div>
-<a class="card" href="https://digiday.com/media/the-iab-is-developing-a-framework-to-tackle-ai-advertising-measurement/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Ad-Supported Streaming: sube en US; TV lineal cae − 71.5% share AVOD Q2 2026</div>
+<a class="card" href="https://www.advanced-television.com/2026/08/25/data-ad-supported-tv-71-5-share-of-us-viewing-in-q2/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">The IAB is developing a framework to tackle AI advertising measurement</div>
+<div class="card-title">Data: Ad supported TV 71.5% share of US viewing in Q2</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">digiday.com/media/the-iab-is-developing-a-framework-to-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">OpenAI contrata role marketing − se posiciona como 'premium advertising platform'</div>
-<a class="card" href="https://digiday.com/marketing/openai-is-sharpening-its-focus-on-enterprise-advertisers/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">OpenAI is sharpening its focus on enterprise advertisers</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">digiday.com/marketing/openai-is-sharpening-its-focus-on…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Fandoms: marcas persiguen comunidades apasionadas (no solo clientes transaccionales)</div>
-<a class="card" href="https://digiday.com/marketing/wtf-are-fandoms-and-why-are-marketers-chasing-them/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">WTF are fandoms, and why are marketers chasing them?</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">digiday.com/marketing/wtf-are-fandoms-and-why-are-marke…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Ad Tech: problema medición IA es realmente governance (estándares comunes urgentes)</div>
-<a class="card" href="https://digiday.com/media-buying/ad-tech-briefing-ai-advertisings-measurement-problem-is-really-a-governance-problem/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">AI advertising's measurement problem is really a governance problem</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
+<span class="card-source">Advanced Television</span>
 <span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">digiday.com/media-buying/ad-tech-briefing-ai-advertisin…</span>
+<span class="card-url">advanced-television.com/2026/08/25/data-ad-supported-tv…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">YouTube Shorts: agencias luchan por definir qué team lidera buy de ads (video corto)</div>
+<a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-which-agency-teams-should-be-responsible-for-youtube-shorts/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">Future of TV Briefing: Which agency team(s) should be responsible for YouTube Shorts?</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">digiday.com/future-of-tv/future-of-tv-briefing-which-ag…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -325,32 +295,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#8e44ad">IA</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">WildBrain: adquiere Personality AI por hasta $70M − IA generativa para personajes</div>
-<a class="card" href="https://deadline.com/2026/08/wildbrain-acquires-personality-ai-1237049261/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #8e44ad">InnoAsia 2026: Busan Market − Google DeepMind, AWS, Kling AI en programa tech films</div>
+<a class="card" href="https://variety.com/2026/film/news/google-deepmind-amazon-web-services-busan-market-innoasia-1236843573/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#8e44ad"></div>
 <div class="card-body">
-<div class="card-title">WildBrain Buys Personality AI In Deal Worth Up To $70 Million</div>
+<div class="card-title">Google DeepMind, Amazon Web Services, Kling AI Join Busan Market Tech Program InnoAsia</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">deadline.com/2026/08/wildbrain-acquires-personality-ai-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">OpenAI acelera ambiciones publicitarias − aplicar IA agentes a marketing empresarial</div>
-<a class="card" href="https://digiday.com/marketing/openai-is-sharpening-its-focus-on-enterprise-advertisers/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">OpenAI sharpening focus on enterprise advertisers with AI agents</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">digiday.com/marketing/openai-is-sharpening-its-focus-on…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/film/news/google-deepmind-amazon-web-s…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -364,15 +317,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#c0392b">REGULACIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">CNN vs. Azerbaiyán: demanda difamación − acusa al canal de informaciones falsas riesgosas</div>
-<a class="card" href="https://variety.com/2026/tv/news/azerbaijan-lawyer-cnn-defamation-suit-1236841531/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #c0392b">Paramount-Warner Bros merger: Iowa AG demanda a California en Corte Suprema</div>
+<a class="card" href="https://variety.com/2026/film/news/iowa-attorney-general-sue-california-paramount-warner-bros-1236843385/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#c0392b"></div>
 <div class="card-body">
-<div class="card-title">Azerbaijan's Lawyer Defends Defamation Suit Against CNN</div>
+<div class="card-title">Iowa Attorney General Says She's Taking California to the Supreme Court Over Paramount-Warner Bros. Lawsuit</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/tv/news/azerbaijan-lawyer-cnn-defamati…</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/film/news/iowa-attorney-general-sue-ca…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -381,32 +334,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Paramount Skydance: niega filtración discusiones con AG California (reunión Warner Bros.)</div>
-<a class="card" href="https://variety.com/2026/film/news/paramount-leak-discussions-california-attorney-general-1236841669/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #c0392b">Jane Fonda: defiende Mark Ruffalo − acusa a Paramount falsedad accusación antisemitismo</div>
+<a class="card" href="https://variety.com/2026/film/news/jane-fonda-paramount-mark-ruffalo-smear-merger-warner-bros-1236843419/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#c0392b"></div>
 <div class="card-body">
-<div class="card-title">Paramount Says It Did Not Leak Discussions With California's Attorney General</div>
+<div class="card-title">Jane Fonda Slams Paramount For Calling Mark Ruffalo's Comments 'Antisemitic'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/film/news/paramount-leak-discussions-c…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">BBC vs. Trump: moción rechazar demanda $10B − cuestiona emisión en EEUU (VPN)</div>
-<a class="card" href="https://deadline.com/2026/08/bbc-trump-documentary-lawsuit-1237049211/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
-<div class="card-body">
-<div class="card-title">BBC Files New Motion To Dismiss Donald Trump's $10 Billion Lawsuit</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">deadline.com/2026/08/bbc-trump-documentary-lawsuit-1237…</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">variety.com/2026/film/news/jane-fonda-paramount-mark-ru…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -417,18 +353,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#d35400">MEDIOS Y TELEVISIÓN</div>
+<div class="section-label" style="color:#d35400">CTV</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">CNN: caída de transmisión − problema técnico en Warner Bros. Discovery</div>
-<a class="card" href="https://variety.com/2026/tv/news/cnn-streaming-technical-issues-channel-loss-1236841649/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #d35400">Fawesome: rediseña CTV experience − descubrimiento en centro del journey</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/fawesome-unveils-redesigned-ctv-experience/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#d35400"></div>
 <div class="card-body">
-<div class="card-title">CNN Blames 'Technical Issue' Across Warner Bros. Discovery for Channel Outage</div>
+<div class="card-title">Fawesome unveils redesigned CTV experience</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/tv/news/cnn-streaming-technical-issues…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">broadbandtvnews.com/2026/08/25/fawesome-unveils-redesig…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -437,15 +373,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">Emily Compagno: se une a 'The Five' en Fox News como co-host (cuarto asiento)</div>
-<a class="card" href="https://variety.com/2026/tv/news/emily-compagno-fox-news-the-five-co-host-1236841577/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #d35400">DAZN: lanza canal NCAA College Sports − 200+ mercados, Big Ten/SEC/otros</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/dazn-launches-ncaa-college-sports-channel-worldwide/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#d35400"></div>
 <div class="card-body">
-<div class="card-title">Emily Compagno Joins Fox News' 'The Five' as Co-Host</div>
+<div class="card-title">DAZN launches NCAA College Sports channel worldwide</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/tv/news/emily-compagno-fox-news-the-fi…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">broadbandtvnews.com/2026/08/25/dazn-launches-ncaa-colle…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -454,19 +390,85 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">'Survivor' vs. 'The Traitors': Emmy voters − 'The Traitors' 8 Emmys en 3 años vs. 'Survivor' 25</div>
-<a class="card" href="https://variety.com/2026/tv/awards/survivor-emmys-season-50-the-traitors-reality-competition-1236841801/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #d35400">Rakuten TV UK: 'The Walking Dead Universe' FAST channel gratuito (AMC)</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/the-walking-dead-universe-channel-launches-on-rakuten-tv-in-the-uk/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#d35400"></div>
 <div class="card-body">
-<div class="card-title">'Survivor' vs. 'The Traitors': Will Emmy Voters Finally Give the Original Reality Juggernaut Its Due?</div>
+<div class="card-title">The Walking Dead Universe channel launches on Rakuten TV in the UK</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">24 ago</span>
-<span class="card-url">variety.com/2026/tv/awards/survivor-emmys-season-50-the…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">broadbandtvnews.com/2026/08/25/the-walking-dead-univers…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
-<div class="card-
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #d35400">A1 Austria: lanza A1 Select − plataforma agregadora subscripciones (streaming + fitness + learning)</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/a1-launches-a1-select-a-new-subscription-platform-for-digital-services-in-austria/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#d35400"></div>
+<div class="card-body">
+<div class="card-title">A1 launches A1 Select, a new subscription platform for digital services in Austria</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">broadbandtvnews.com/2026/08/25/a1-launches-a1-select-a-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#27ae60">REDES SOCIALES</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Instagram: 'First Draft' − edición automática Reels recorta clips 10 seg, highlight focus</div>
+<a class="card" href="https://www.theverge.com/tech/984463/instagram-first-draft-edit-reels" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Instagram's 'First Draft' trims your Reels clips for you</div>
+<div class="card-meta">
+<span class="card-source">The Verge</span>
+<span class="card-sep">·</span><span class="card-date">25 ago</span>
+<span class="card-url">theverge.com/tech/984463/instagram-first-draft-edit-ree…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#f39c12">ESTUDIOS E INFORMES</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #f39c12">Medición deportes: CIMM − fragmentation sports obliga replantear systems medición</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/08/26/cimm-paper-finds-sports-at-the-center-of-the-battle-to-measure-the-future-of-television/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#f39c12"></div>
+<div class="card-body">
+<div class="card-title">CIMM paper finds sports at the center of the battle to measure the future of television</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">26 ago</span>
+<span class="card-url">broadbandtvnews.com/2026/08/26/cimm-paper-finds-sports-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #f39c12">Mediavision Su
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
