@@ -43,6 +43,9 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 .save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
 .save-bar.visible{display:flex}
 .save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
@@ -50,9 +53,6 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -88,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>26/08/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>27/08/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -107,6 +107,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
+
 <div class="toast" id="toast"></div>
 
 <div class="container">
@@ -115,15 +116,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Vidio + ReelShort: partnership Indonesia − microdramas en tab dedicado desde 1 sept</div>
-<a class="card" href="https://variety.com/2026/tv/news/vidio-reelshort-indonesia-partnership-short-drama-1236843567/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Penn Badgley → Amazon MGM: 'Everyone in My Family Has Killed Someone' (darkly comic murder mystery)</div>
+<a class="card" href="https://deadline.com/2026/08/penn-badgley-everyone-in-my-family-has-killed-someone-show-1237060919/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Vidio Teams With ReelShort for First Indonesian Short-Drama Partnership</div>
+<div class="card-title">Amazon MGM Orders Penn Badgley Murder Mystery Series 'Everyone In My Family Has Killed Someone'</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/tv/news/vidio-reelshort-indonesia-part…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/penn-badgley-everyone-in-my-family…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -132,15 +133,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney+: 'The Remarried Empress' (K-drama Shin Mina) − premiere 4 nov en Disney+/Hulu</div>
-<a class="card" href="https://variety.com/2026/tv/news/the-remarried-empress-november-disney-1236842398/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Stephen King 'Crouch End' → Prime Video: 6-part limited series (London-set horror 1980)</div>
+<a class="card" href="https://variety.com/2026/tv/global/stephen-king-horror-story-crouch-endprime-video-adaptation-1236843728/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Shin Mina, Ju Jihoon, Lee Jongsuk's 'The Remarried Empress' Sets November Disney+, Hulu Bow</div>
+<div class="card-title">Stephen King's London-Set Horror Story 'Crouch End' Getting Prime Video Adaptation</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/tv/news/the-remarried-empress-november…</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">variety.com/2026/tv/global/stephen-king-horror-story-cr…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -149,15 +150,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'The Shooter' − acción-noir Lee Jung-eun y Kim Moo-yul en producción</div>
-<a class="card" href="https://variety.com/2026/tv/news/lee-jung-eun-kim-moo-yul-netflix-the-shooter-1236842363/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'In A Holidaze' (Christina Lauren novel) → 2 diciembre en streamer</div>
+<a class="card" href="https://deadline.com/2026/08/in-a-holidaze-movie-release-date-netflix-christina-lauren-1237061093/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Lee Jung-eun, Kim Moo-yul Board Netflix's Action-Noir Series 'The Shooter'</div>
+<div class="card-title">'In A Holidaze' Film Adaptation Of Christina Lauren's Novel Sets Release Date At Netflix</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/tv/news/lee-jung-eun-kim-moo-yul-netfl…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/in-a-holidaze-movie-release-date-n…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -166,83 +167,185 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">HBO/Sky: 'War' (Sienna Miller, Dominic West) − legal thriller George Kay dos temporadas</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/hbo-sky-show-war-sienna-miller-dominic-west-photo-exclusive-1236679668/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO: 'Youth' (Sharon Horgan) − 50yo divorcée busca sexo y amor (comedy trailer)</div>
+<a class="card" href="https://variety.com/2026/tv/news/hbo-youth-trailer-sharon-degrading-sex-1236845117/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Dominic West and Sienna Miller Star in Image From Sky and HBO Legal Thriller 'War'</div>
+<div class="card-title">Sharon Horgan Seeks 'Fun, Lightly Degrading Sex' as a 50-Year-Old Divorcee in Trailer for HBO's 'Youth'</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">variety.com/2026/tv/news/hbo-youth-trailer-sharon-degra…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO: 'I Love L.A.' S2 − Katy O'Brian, Lindsay Sloane, Michael Rispoli, Nelson Franklin cast</div>
+<a class="card" href="https://variety.com/2026/tv/news/i-love-la-season-2-cast-katy-obrian-lindsay-sloane-1236845251/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'I Love L.A.' Season 2 Casts Katy O'Brian, Lindsay Sloane, Michael Rispoli, Nelson Franklin</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">variety.com/2026/tv/news/i-love-la-season-2-cast-katy-o…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Starz: 'Outlander: Blood of My Blood' S2 − Jacobite Uprising, padres separados (trailer)</div>
+<a class="card" href="https://variety.com/2026/tv/news/outlander-blood-of-my-blood-season-2-trailer-1236845306/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Outlander: Blood of My Blood' Season 2 Trailer: Scottish Uprising Threatens 'Outlander' Prequel</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">variety.com/2026/tv/news/outlander-blood-of-my-blood-se…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Paramount+: Tyler Perry's 'Divorced Sistas' S3, 'Zatima' S6 − ex-BET+ series renewals</div>
+<a class="card" href="https://deadline.com/2026/08/divorced-sistas-zatima-family-business-black-hamptons-renewed-1237051516/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Tyler Perry's 'Divorced Sistas' &amp; 'Zatima' Among 4 Former BET+ Series Renewed By Paramount+</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/divorced-sistas-zatima-family-busi…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Paramount Television Studios: Rafe Judkins (Wheel of Time) − overall deal, world-building series</div>
+<a class="card" href="https://deadline.com/2026/08/rafe-judkins-overall-deal-paramount-television-studios-1237052047/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Rafe Judkins Inks Overall Deal With Paramount Television Studios</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/rafe-judkins-overall-deal-paramoun…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'Born in the USA' (w/t) − docuseries maternidad/hospitales (Wheelhouse producer)</div>
+<a class="card" href="https://deadline.com/2026/08/netflix-maternity-docuseries-born-in-the-usa-wheelhouse-1237051759/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Netflix Births Maternity Ward Docuseries 'Born In The USA' From Wheelhouse</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/netflix-maternity-docuseries-born-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'The Crouches' − access doc Peter Crouch + Abby Clancy, 1 year</div>
+<a class="card" href="https://deadline.com/2026/08/prime-video-doc-series-peter-crouch-abby-clancy-1237060777/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Prime Video Sets Access Doc Series On Peter Crouch &amp; Abby Clancy</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/prime-video-doc-series-peter-crouc…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Apple TV+: Jamie Dornan + Zoë Kravitz/Adèle Exarchopoulos − Megan Park mystery film</div>
+<a class="card" href="https://deadline.com/2026/08/jamie-dornan-joins-megan-park-apple-movie-1237060997/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Jamie Dornan Joins Zoë Kravitz In Megan Park's Mystery Apple Film</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/jamie-dornan-joins-megan-park-appl…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Florian Zeller 'Bunker' − Penélope Cruz y Javier Bardem (pareja real, matrimonio en crisis)</div>
+<a class="card" href="https://variety.com/2026/film/festivals/bunker-director-florian-zeller-penelope-cruz-javier-bardem-1236841747/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Bunker' Director Florian Zeller on Casting Real-Life Couple Penélope Cruz and Javier Bardem</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">variety.com/2026/film/festivals/bunker-director-florian…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Neon: 'Fjord' (Cristian Mungiu, Palme d'Or Cannes) − Renate Reinsve, Sebastian Stan, 9 oct</div>
+<a class="card" href="https://deadline.com/2026/08/fjord-trailer-neon-renate-reinsve-sebastian-stan-1237061023/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Fjord' Trailer: Neon Unveils Cristian Mungiu's Palme D'Or Winner</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">deadline.com/2026/08/fjord-trailer-neon-renate-reinsve-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Will Forte 'Coyote vs. Acme' − reseñas positivas tras 3 años en shelf Warner Bros</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-news/will-forte-reviews-coyote-vs-acme-gaslit-1236683074/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Will Forte Says Glowing Reviews for 'Coyote vs. Acme' "Make It Feel Like You're Not Crazy"</div>
 <div class="card-meta">
 <span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/hbo-sky-show-war-sienn…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Escorted' (Brett Goldstein) − Tuc Watkins se une como recurring</div>
-<a class="card" href="https://deadline.com/2026/08/tuc-watkins-cast-prime-video-series-escorted-1237050426/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Tuc Watkins Joins Prime Video Rom-Com Series 'Escorted'</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">deadline.com/2026/08/tuc-watkins-cast-prime-video-serie…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Marlo Miazga: lanza M Media con doc 'Ground Control' para CBC (producción IP-focused)</div>
-<a class="card" href="https://deadline.com/2026/08/marlo-miazga-m-media-ground-control-cbc-1237050034/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Marlo Miazga Launches M Media With CBC Order For "Deeply Personal" Doc 'Ground Control'</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">deadline.com/2026/08/marlo-miazga-m-media-ground-contro…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sam Register: se va de Warner Bros. Animation tras 30 años (contrato no renovado)</div>
-<a class="card" href="https://variety.com/2026/tv/news/sam-register-leaving-warner-bros-animation-head-1236843053/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Sam Register to Depart as Head of Warner Bros. Animation, Cartoon Network Studios</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">variety.com/2026/tv/news/sam-register-leaving-warner-br…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Appointment Viewing: regresa la TV de watercooler (shows semanales en streaming)</div>
-<a class="card" href="https://variety.com/2026/tv/news/modern-appointment-viewing-shows-watercooler-television-1236843230/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">How Modern Appointment Viewing Shows Are Bringing Back 'Watercooler' Television</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">variety.com/2026/tv/news/modern-appointment-viewing-sho…</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-news/will-forte-revi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -256,15 +359,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#16a085">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Ad-Supported Streaming: sube en US; TV lineal cae − 71.5% share AVOD Q2 2026</div>
-<a class="card" href="https://www.advanced-television.com/2026/08/25/data-ad-supported-tv-71-5-share-of-us-viewing-in-q2/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">CTV: MistPlay app pone performance en center − rigor audience strategy, creative testing</div>
+<a class="card" href="https://digiday.com/sponsored/mistplay-app-ctv-strategy/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Data: Ad supported TV 71.5% share of US viewing in Q2</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">advanced-television.com/2026/08/25/data-ad-supported-tv…</span>
+<div class="card-title">How one app is putting performance at the center of its CTV strategy</div>
+<div class="card-media">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">digiday.com/sponsored/mistplay-app-ctv-strategy/?utm_ca…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -273,15 +376,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">YouTube Shorts: agencias luchan por definir qué team lidera buy de ads (video corto)</div>
-<a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-which-agency-teams-should-be-responsible-for-youtube-shorts/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Trade Desk: Zuma (ex-Kokai) − plataforma programática refinada, harder to leave</div>
+<a class="card" href="https://digiday.com/marketing/three-years-after-kokai-the-trade-desk-is-betting-on-refinement-with-zuma/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Future of TV Briefing: Which agency team(s) should be responsible for YouTube Shorts?</div>
+<div class="card-title">Three years after Kokai, The Trade Desk is betting on refinement with Zuma</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">digiday.com/future-of-tv/future-of-tv-briefing-which-ag…</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">digiday.com/marketing/three-years-after-kokai-the-trade…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -289,21 +392,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#8e44ad">IA</div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">InnoAsia 2026: Busan Market − Google DeepMind, AWS, Kling AI en programa tech films</div>
-<a class="card" href="https://variety.com/2026/film/news/google-deepmind-amazon-web-services-busan-market-innoasia-1236843573/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
+<div class="group-title" style="border-left:3px solid #16a085">Trade Desk: Kokai Refresh − Koa agents front/center, ditches programmatic table</div>
+<a class="card" href="https://www.adweek.com/programmatic/the-trade-desks-kokai-refreshditches-the-programmatic-table-see-the-pitch-deck/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Google DeepMind, Amazon Web Services, Kling AI Join Busan Market Tech Program InnoAsia</div>
+<div class="card-title">The Trade Desk's Kokai Refresh Ditches the Programmatic Table</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/film/news/google-deepmind-amazon-web-s…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">adweek.com/programmatic/the-trade-desks-kokai-refreshdi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -311,21 +409,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#c0392b">REGULACIÓN</div>
-
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Paramount-Warner Bros merger: Iowa AG demanda a California en Corte Suprema</div>
-<a class="card" href="https://variety.com/2026/film/news/iowa-attorney-general-sue-california-paramount-warner-bros-1236843385/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
+<div class="group-title" style="border-left:3px solid #16a085">Amazon Back-to-School takeover − Gatorade, SharkNinja, Michael Kors, Gen Z block party</div>
+<a class="card" href="https://www.adweek.com/commerce/amazon-marketing-takeover-back-to-school-gatorade-sharkninja-michael-kors/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Iowa Attorney General Says She's Taking California to the Supreme Court Over Paramount-Warner Bros. Lawsuit</div>
+<div class="card-title">Amazon's Marketing Takeover for Back-to-School Includes Gatorade, SharkNinja, and Michael Kors</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/film/news/iowa-attorney-general-sue-ca…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">adweek.com/commerce/amazon-marketing-takeover-back-to-s…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -334,37 +427,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #c0392b">Jane Fonda: defiende Mark Ruffalo − acusa a Paramount falsedad accusación antisemitismo</div>
-<a class="card" href="https://variety.com/2026/film/news/jane-fonda-paramount-mark-ruffalo-smear-merger-warner-bros-1236843419/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#c0392b"></div>
+<div class="group-title" style="border-left:3px solid #16a085">OpenAI ChatGPT ads: India launch − free y Go tiers reciben publicidad (100M+ active weekly)</div>
+<a class="card" href="https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Jane Fonda Slams Paramount For Calling Mark Ruffalo's Comments 'Antisemitic'</div>
+<div class="card-title">OpenAI to start showing ads on ChatGPT's free and Go tiers in India</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">variety.com/2026/film/news/jane-fonda-paramount-mark-ru…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#d35400">CTV</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">Fawesome: rediseña CTV experience − descubrimiento en centro del journey</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/fawesome-unveils-redesigned-ctv-experience/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#d35400"></div>
-<div class="card-body">
-<div class="card-title">Fawesome unveils redesigned CTV experience</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/25/fawesome-unveils-redesig…</span>
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">27 ago</span>
+<span class="card-url">techcrunch.com/2026/08/27/openai-to-start-showing-ads-o…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -373,102 +444,8 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">DAZN: lanza canal NCAA College Sports − 200+ mercados, Big Ten/SEC/otros</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/dazn-launches-ncaa-college-sports-channel-worldwide/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#d35400"></div>
-<div class="card-body">
-<div class="card-title">DAZN launches NCAA College Sports channel worldwide</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/25/dazn-launches-ncaa-colle…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">Rakuten TV UK: 'The Walking Dead Universe' FAST channel gratuito (AMC)</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/the-walking-dead-universe-channel-launches-on-rakuten-tv-in-the-uk/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#d35400"></div>
-<div class="card-body">
-<div class="card-title">The Walking Dead Universe channel launches on Rakuten TV in the UK</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/25/the-walking-dead-univers…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #d35400">A1 Austria: lanza A1 Select − plataforma agregadora subscripciones (streaming + fitness + learning)</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/25/a1-launches-a1-select-a-new-subscription-platform-for-digital-services-in-austria/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#d35400"></div>
-<div class="card-body">
-<div class="card-title">A1 launches A1 Select, a new subscription platform for digital services in Austria</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/25/a1-launches-a1-select-a-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#27ae60">REDES SOCIALES</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Instagram: 'First Draft' − edición automática Reels recorta clips 10 seg, highlight focus</div>
-<a class="card" href="https://www.theverge.com/tech/984463/instagram-first-draft-edit-reels" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Instagram's 'First Draft' trims your Reels clips for you</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">25 ago</span>
-<span class="card-url">theverge.com/tech/984463/instagram-first-draft-edit-ree…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#f39c12">ESTUDIOS E INFORMES</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Medición deportes: CIMM − fragmentation sports obliga replantear systems medición</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/08/26/cimm-paper-finds-sports-at-the-center-of-the-battle-to-measure-the-future-of-television/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#f39c12"></div>
-<div class="card-body">
-<div class="card-title">CIMM paper finds sports at the center of the battle to measure the future of television</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">26 ago</span>
-<span class="card-url">broadbandtvnews.com/2026/08/26/cimm-paper-finds-sports-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Mediavision Su
+<div class="group-title" style="border-left:3px solid #16a085">Creator economy: programmatic-ification debate − AI ad-stack automation vs. trust→inventory</div>
+<a class="card" href="https://digiday.com/marketing/the-case-for-and-against-the-
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
