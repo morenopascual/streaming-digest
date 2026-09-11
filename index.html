@@ -43,6 +43,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.save-bar.visible{display:flex}
+.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
+.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -78,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>10/09/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>11/09/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -91,21 +101,61 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
+
+<div class="save-bar" id="save-bar">
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+</div>
+<div class="toast" id="toast"></div>
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: YA drama 'Crew Girl' recibe críticas mixtas en su estreno</div>
-<a class="card" href="https://variety.com/2026/tv/reviews/crew-girl-review-netflix-1236848333/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'The Gentlemen' S2 pierde 500k viewers en UK pese promoción Markle</div>
+<a class="card" href="https://deadline.com/2026/09/the-gentlemen-season-2-loses-half-a-million-viewers-uk-1237098684/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Netflix's YA Rowing Drama 'Crew Girl' Capsizes and Sinks: TV Review</div>
+<div class="card-title">'The Gentlemen' Season 2 Loses Half A Million Viewers In The UK</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/the-gentlemen-season-2-loses-half-a…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'Ransom Canyon' cancelada tras 2 temporadas (cancelación rápida post-S2)</div>
+<a class="card" href="https://deadline.com/2026/09/ransom-canyon-canceled-netflix-minka-kelly-josh-duhamel-1237081961/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Ransom Canyon' Canceled By Netflix After 2 Seasons</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/ransom-canyon-canceled-netflix-min…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Peacock: 'Before I Let Go' recibe greenlight (adaptación novela Kennedy Ryan)</div>
+<a class="card" href="https://variety.com/2026/tv/news/peacock-before-i-let-go-based-kennedy-ryan-novel-1236857735/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Peacock Orders 'Before I Let Go' Based on Kennedy Ryan Novel From Malcolm D. Lee, Attica Locke, Tembi Locke</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/tv/reviews/crew-girl-review-netflix-12…</span>
+<span class="card-url">variety.com/2026/tv/news/peacock-before-i-let-go-based-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -114,32 +164,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Drawn Together' — YA romance thriller de Mercedes Ron</div>
-<a class="card" href="https://www.hollywoodreporter.com/movies/movie-news/drawn-together-prime-film-mercedes-ron-interview-author-1236693241/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix: NFL gameday openers con Peter Berg (director Friday Night Lights) y Kyle Chandler</div>
+<a class="card" href="https://variety.com/2026/tv/news/netflix-peter-berg-kyle-chandler-friday-night-lights-nfl-gameday-1236858004/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Mercedes Ron Discusses Prime Video's New YA Romantic Thriller 'Drawn Together' and What's Next for Her</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">hollywoodreporter.com/movies/movie-news/drawn-together-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Vertical: Adquiere derechos de distribución de 'Sanctuary' (sci-fi serbio con Nina Kiri)</div>
-<a class="card" href="https://variety.com/2026/film/global/serbia-sci-fi-sanctuary-nina-kiri-us-distribution-1236851443/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Serbian Sci-Fi Epic 'Sanctuary,' Starring 'The Handmaid's Tale's' Nina Kiri, Acquired for U.S. Distribution</div>
+<div class="card-title">Netflix Taps 'Friday Night Lights' Director Peter Berg for NFL Gameday Openers, the First Narrated by Kyle Chandler</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/film/global/serbia-sci-fi-sanctuary-ni…</span>
+<span class="card-url">variety.com/2026/tv/news/netflix-peter-berg-kyle-chandl…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -148,15 +181,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video / ProSiebenSat.1: 'Queen Silvia' — drama de época sueco con estreno en MIPCOM</div>
-<a class="card" href="https://deadline.com/2026/09/queen-silvia-world-premiere-screening-mipcom-cannes-1237073270/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Paramount+: 'MobLand' S2 — Pierce Brosnan niega conflicto Tom Hardy como "tormenta en taza de té"</div>
+<a class="card" href="https://deadline.com/2026/09/pierce-brosnan-tom-hardy-mobland-feud-storm-in-a-teacup-1237098657/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Royal Period Drama 'Queen Silvia' To Get World Premiere Screening At MIPCOM Cannes</div>
+<div class="card-title">Pierce Brosnan Says Tom Hardy 'MobLand' Feud Was "Storm In A Teacup"</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/queen-silvia-world-premiere-screen…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/pierce-brosnan-tom-hardy-mobland-f…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -165,15 +198,49 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Fox: 'Baywatch' reboot — LA planea S2 antes de decisión de renovación</div>
-<a class="card" href="https://deadline.com/2026/09/baywatch-season-2-los-angeles-city-early-plans-renewal-1237073030/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Carrie' miniserie con Stephen King aprobación — estrena 7 oct con Summer Howell</div>
+<a class="card" href="https://deadline.com/2026/09/stephen-king-reaction-mike-flanagan-carrie-1237098524/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">LA City Officials Make Plans For 'Baywatch' Season 2 Ahead Of Renewal Decision: "They Will Be Returning"</div>
+<div class="card-title">Stephen King Calls Mike Flanagan's 'Carrie' Miniseries "Brilliant"</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/baywatch-season-2-los-angeles-city…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/stephen-king-reaction-mike-flanaga…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Hulu: 'The Mob' reality competition — Parker Posey host, $250k premio, estrena 26 oct</div>
+<a class="card" href="https://deadline.com/gallery/the-mob-season-1-first-look-photos-premiere-date-hulu/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'The Mob' Season 1 First Look Photos & Premiere Date Set At Hulu</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/gallery/the-mob-season-1-first-look-photos…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Freeform/Hulu/Disney+: 'Project Runway' S22 corona ganador en multicanal</div>
+<a class="card" href="https://deadline.com/gallery/project-runway-season-22-winner-freeform-hulu-disney-plus/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Project Runway' Season 22 Crowns Winner On Freeform, Hulu & Disney+</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/gallery/project-runway-season-22-winner-fr…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -187,15 +254,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#16a085">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Channel 4: Recorte de 340 empleos (28% de plantilla) — fusión de equipos creativos</div>
-<a class="card" href="https://deadline.com/2026/09/channel-4-combine-drama-comedy-teams-1237073256/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Comedia británica resurgimiento: SNL UK & Mock the Week lideran renovación del sector</div>
+<a class="card" href="https://variety.com/2026/tv/global/british-comedy-snl-uk-mock-the-week-1236855558/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Channel 4 To Combine Drama & Comedy Teams Under Historic Jobs Cull</div>
+<div class="card-title">British Comedy Is Back: How the U.K.'s Funny Business Is Rallying Thanks to 'SNL U.K.' and 'Mock the Week'</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/channel-4-combine-drama-comedy-tea…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">variety.com/2026/tv/global/british-comedy-snl-uk-mock-t…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -204,15 +271,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Channel 4: Fusión de unidades 'unscripted' — comisiones reducidas a la mitad</div>
-<a class="card" href="https://deadline.com/2026/09/channel-4-merge-unscripted-units-slash-commissioning-roles-1237073217/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">ABC / Jimmy Kimmel Live: Entrevista James Talarico migra a YouTube por presión FCC</div>
+<a class="card" href="https://deadline.com/2026/09/jimmy-kimmel-james-talarico-trump-fcc-1237098522/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Channel 4 To Merge Unscripted Units, Slashing Commissioning Roles In Half</div>
+<div class="card-title">Jimmy Kimmel's James Talarico Interview Posted To YouTube As Host Calls Out Trump And FCC: "They Want To Make Our Editorial Decisions For Us"</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/channel-4-merge-unscripted-units-s…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/jimmy-kimmel-james-talarico-trump-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -221,15 +288,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">BBC: Adaptación de 'The Paying Guests' de Sarah Waters por Kayleigh Llewellyn</div>
-<a class="card" href="https://deadline.com/2026/09/sarah-waters-paying-guests-kayleigh-llewellyn-bbc-studios-1237072030/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Candidato Talarico (Texas): Tilda FCC como "censura gubernamental" tras retirada ABC</div>
+<a class="card" href="https://variety.com/2026/tv/news/james-talarico-fcc-censorship-abc-jimmy-kimmel-interview-1236857957/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Kayleigh Llewellyn Adapting Sarah Waters Novel 'The Paying Guests' For BBC Studios Fiction</div>
+<div class="card-title">James Talarico Blasts 'Government Censorship' After ABC Pulls His Jimmy Kimmel Interview Over FCC Concerns: 'Dangerous Form of Cancel Culture'</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/sarah-waters-paying-guests-kayleig…</span>
+<span class="card-url">variety.com/2026/tv/news/james-talarico-fcc-censorship-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -238,15 +305,49 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Ryan Murphy: 'The Shards' — Kaia Gerber en thriller de Bret Easton Ellis con finale sorpresa</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/the-shards-finale-killer-theories-kaia-gerber-interview-1236695954/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">NBC News: Janelle Rodriguez salida tras construir NBC News Now (streaming outlet)</div>
+<a class="card" href="https://variety.com/2026/tv/news/janelle-rodriguez-nbc-news-exit-1236857830/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Kaia Gerber on 'The Shards' Finale's Surprising Killer Suspects and Her Shelley Duvall Moment</div>
+<div class="card-title">Janelle Rodriguez, Who Helped Build NBC News' Streaming Outlet, to Exit</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">10 sep</span>
+<span class="card-url">variety.com/2026/tv/news/janelle-rodriguez-nbc-news-exi…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">BBC: Recortes masivos en gasto taxi para night-shift workers mientras ejecutivos gastan $17k en 3 meses</div>
+<a class="card" href="https://deadline.com/2026/09/bbc-anger-curbing-cab-usage-night-shift-workers-1237073318/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">BBC Stokes Anger By Curbing Cab Rides For Night Shift Workers… As Senior Managers Spend $17,000 On Taxis In Three Months</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/bbc-anger-curbing-cab-usage-night-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">TIFF: 'Being Heumann' (Siân Heder drama derechos discapacidad con Ruth Madeley en Apple TV)</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-reviews/being-heumann-review-sian-heder-ruth-madeley-apple-tv-1236697415/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">'Being Heumann' Review: Siân Heder's Drama About the Fight for Disability Rights Strikes Familiar Notes but Gets the Inspirational Uplift Job Done</div>
 <div class="card-meta">
 <span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/the-shards-finale-kill…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-reviews/being-heuman…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -255,15 +356,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Mediawan: 'Witch Detectives' — serie 3D pan-europea con BBC, Rai, TF1</div>
-<a class="card" href="https://variety.com/2026/tv/global/witch-detectives-mediawan-animation-series-unifrance-1236855564/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">TIFF: 'Trash Mountain' Caleb Hearon indie dramedy inspirada en vida personal</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-features/trash-mountain-caleb-hearon-tiff-zooey-deschanel-1236694880/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Magic Meets Mystery-Solving Trio in Mediawan's Latest Hit, 'Witch Detectives'</div>
+<div class="card-title">With 'Trash Mountain,' Caleb Hearon Becomes Your New Favorite Indie Darling</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/tv/global/witch-detectives-mediawan-an…</span>
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-features/trash-mount…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -272,15 +373,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Barry Melrose muere — histórico entrenador y analista de ESPN (70 años)</div>
-<a class="card" href="https://deadline.com/2026/09/barry-melrose-dead-los-angeles-kings-coach-espn-1237073079/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Zurich Summit: Edward Berger, Robbie Brenner, Oliver Berben speakers (25-27 sep)</div>
+<a class="card" href="https://deadline.com/2026/09/zurich-summit-edward-berger-robbie-brenner-oliver-berben-1237098664/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Barry Melrose Dies: Gretzky-Era L.A. Kings Coach And Longtime ESPN Hockey Analyst Was 70</div>
+<div class="card-title">Zurich Summit: Edward Berger, Robbie Brenner, Oliver Berben, Janine Jackowski, Martin Moszkowicz & More Join Swiss Conference Lineup</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/barry-melrose-dead-los-angeles-kin…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/zurich-summit-edward-berger-robbie…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -289,15 +390,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">ABC / Jimmy Kimmel Live: Entrevista James Talarico movida a YouTube por presión FCC</div>
-<a class="card" href="https://deadline.com/2026/09/kimmel-trump-threat-james-talarico-interview-1237073160/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">TIFF: 'The Smell of Apples' (John Trengove apartheid drama) — venta Francia con ARP Sélection</div>
+<a class="card" href="https://deadline.com/2026/09/john-trengove-smell-apples-france-sells-1237098680/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Kimmel Says Trump's FCC Has Threatened Show, So His James Talarico Interview Will Air On YouTube Instead Of ABC</div>
+<div class="card-title">John Trengove's 'The Smell Of Apples' Sells To France Ahead Of TIFF Debut</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/kimmel-trump-threat-james-talarico…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/john-trengove-smell-apples-france-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -306,32 +407,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">HBO/Max: 'Shrinking', 'Paradise', 'Washington Black' lideran premios Humanitas 2026</div>
-<a class="card" href="https://variety.com/2026/tv/news/humanitas-prize-winners-list-2026-shrinking-paradise-1236856760/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">WBD: Dan Schneider demanda 'Quiet on Set' desestimada en apelación — victoria major para estudio</div>
+<a class="card" href="https://deadline.com/2026/09/dan-schneider-quiet-on-set-defamtaion-suit-dismissed-1237078586/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">'Shrinking,' 'Paradise,' 'Washington Black' Lead Humanitas Prize Winners List</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/tv/news/humanitas-prize-winners-list-2…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">BBC: Cancela 'RuPaul's Drag Race UK' por presiones financieras (ahorro £500M)</div>
-<a class="card" href="https://deadline.com/2026/09/rupaul-drag-race-uk-canceled-bbc-financial-pressures-1237073175/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">'RuPaul's Drag Race UK' Canceled By BBC Amid "Financial Pressures"</div>
+<div class="card-title">Dan Schneider's 'Quiet On Set' Defamation Suit Shut Down By Appeal Judges In Big Win For WBD</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/rupaul-drag-race-uk-canceled-bbc-f…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/dan-schneider-quiet-on-set-defamta…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -340,54 +424,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Arcade (The Sidemen): Lanza agencia de creadores europeos con Max Fosh, Friends From Work</div>
-<a class="card" href="https://deadline.com/2026/09/arcade-relaunch-sidemen-max-fosh-creators-1237072068/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">Box Office: 'Practical Magic 2' (Sandra Bullock, Nicole Kidman) estrena con $3.5-4M previews</div>
+<a class="card" href="https://deadline.com/2026/09/box-office-practical-magic-2-weekend-1237098516/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">The Sidemen Rep Arcade Signs Max Fosh, Friends From Work & More Ahead Of Europe's First Creator Upfront</div>
+<div class="card-title">'Practical Magic 2' Sparks $3.5M+ In Previews On Thursday – Box Office Update</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">deadline.com/2026/09/arcade-relaunch-sidemen-max-fosh-c…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Sony Pictures: 'Lemonade' — debut de Kim Bartley con Barry Keoghan</div>
-<a class="card" href="https://variety.com/2026/film/global/barry-keoughan-irish-film-lemonade-between-beatles-shoots-1236854561/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">How Irish Indie 'Lemonade' Landed Barry Keoghan in Between Beatles Shoots and Gave Him 'Closure' About Care System</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/film/global/barry-keoughan-irish-film-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#8e44ad">IA</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #8e44ad">Dreamkite Studios: Nuevo estudio AI de cine con ex-CEO Telepool Yoko Higuchi-Zitzmann</div>
-<a class="card" href="https://variety.com/2026/film/global/yoko-higuchi-zitzmann-mark-wachholz-dreamkite-studios-1236855876/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#8e44ad"></div>
-<div class="card-body">
-<div class="card-title">Former Telepool Chief Yoko Higuchi-Zitzmann, Filmmaker Mark Wachholz Launch AI Production Company Dreamkite Studios</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">variety.com/2026/film/global/yoko-higuchi-zitzmann-mark…</span>
+<span class="card-sep">·</span><span class="card-date">11 sep</span>
+<span class="card-url">deadline.com/2026/09/box-office-practical-magic-2-weeke…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -401,83 +446,8 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Tubi: Campaña global 'Feels' — nostalgia Y2K para audiencias internacionales</div>
-<a class="card" href="https://www.adweek.com/convergent-tv/tubi-global-campaign-feels-about-right/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Why Tubi's New Global Campaign 'Feels' About Right</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">adweek.com/convergent-tv/tubi-global-campaign-feels-abo…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Predicciones ad-spend: Previsiones al alza con AI manejando más del 25% por fin de década</div>
-<a class="card" href="https://digiday.com/media-buying/ad-spend-forecasts-revised-upward-as-more-ad-dollars-are-handled-by-ai-tools/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Ad spend forecasts revised upward as more ad dollars are handled by AI tools</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">digiday.com/media-buying/ad-spend-forecasts-revised-upw…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Instacart: Lanza asistentes AI personalizados para retailers regionales</div>
-<a class="card" href="https://digiday.com/marketing/instacart-launches-custom-ai-assistants-for-retailers/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Instacart launches custom AI assistants for retailers</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">10 sep</span>
-<span class="card-url">digiday.com/marketing/instacart-launches-custom-ai-assi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Fox Corp / Roku: Merger $22B en marcha pese a nueva revisión del DOJ</div>
-<a class="card" href="https://deadline.com/2026/09/fox-corp-roku-merger-doj-review-1237072899/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Fox Corp. COO John Nallen Says Roku Deal On Track To Close Despite "Entirely Expected" DOJ Scrutiny</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">9 sep</span>
-<span class="card-url">deadline.com/2026/09/fox-corp-roku-merger-doj-review-12…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="analysis">
-<div class="analysis-header">📊 ANÁLISIS DEL DÍA</div>
-
-<div class="analysis-row">
-<div class="analysis-label">Temas del día</div>
-<div class="analysis-text">
-<strong>1. Crisis estructural en broadcasters europeos:</strong> Channel 4 anuncia su mayor recorte en 43 años (340 empleos, 28% de plantilla), fusionando departamentos de drama/comedia y reduciendo comisiones a la mitad. Simultáneamente, BBC cancela 'RuPaul's Drag Race UK' por ahorros de £500M. Ambas decisiones reflejan presión regulatoria y financiera sin precedentes en el sector lineal británico.<br><br>
-<strong>2. Netflix mantiene dominio VOD con contenido YA fragmentado:</strong> Mientras 'Crew Girl' recibe críticas negativas (falta de diferenciación en género),
+<div class="group-title" style="border-left:3px solid #e74c3c">Amazon Ads + OpenAI: DSP Amazon integrado en ChatGPT para publicidad</div>
+<a class="card" href="https://digiday.com/media-buying/amazon
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
