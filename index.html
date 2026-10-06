@@ -46,6 +46,13 @@ body.select-mode .card:hover{background:#f0f6ff}
 .site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
 .site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.save-bar.visible{display:flex}
+.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
+.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -81,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>05/10/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>06/10/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -97,8 +104,8 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 
 <div class="save-bar" id="save-bar">
-<span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-<button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -109,15 +116,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Skydance Corp. cierra merger Paramount-Warner Bros.</div>
-<a class="card" href="https://variety.com/2026/film/news/david-ellison-skydance-new-leadership-team-1236898983/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Skydance Corp. cierra histórica fusión Paramount-Warner Bros. Discovery</div>
+<a class="card" href="https://variety.com/2026/film/news/paramount-warner-bros-merger-officially-closes-skydance-david-ellison-1236900047/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">David Ellison Names Skydance Corp.'s New Leadership Team for Movies, TV, Streaming and More</div>
+<div class="card-title">Paramount-Warner Bros. $111 Billion Merger Officially Closes: 'Today Is a Historic Day'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/film/news/david-ellison-skydance-new-l…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/film/news/paramount-warner-bros-merge…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -126,15 +133,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Mark Thompson mantiene CNN bajo Skydance</div>
-<a class="card" href="https://variety.com/2026/tv/news/mark-thompson-cnn-remain-ceo-skydance-1236899059/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Casey Bloys renueva contrato multianual en Skydance DTC</div>
+<a class="card" href="https://variety.com/2026/tv/news/casey-bloys-new-deal-hbo-max-paramount-skydance-1236899664/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Mark Thompson to Remain at CNN Following Skydance's Warner Buy</div>
+<div class="card-title">Casey Bloys Signs New Multiyear Deal to Continue Overseeing HBO Max and Paramount+</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/news/mark-thompson-cnn-remain-ceo-s…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/tv/news/casey-bloys-new-deal-hbo-max…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -143,15 +150,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">ITV Studios presenta 10 nuevos formatos en Mipcom</div>
-<a class="card" href="https://variety.com/2026/tv/global/itv-studios-mipcom-formats-slate-the-chase-around-the-world-1236898689/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Skydance reorganiza operaciones internacionales</div>
+<a class="card" href="https://variety.com/2026/film/news/skydance-reorganize-international-kevin-maclellan-1236899732/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">ITV Studios Travels to Mipcom With 10 New Titles on Its Formats Slate, Led by 'The Chase Around the World'</div>
+<div class="card-title">Skydance to Fully Reorganize International; Kevin MacLellan Will Not Lead Key Group</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/global/itv-studios-mipcom-formats-s…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/film/news/skydance-reorganize-internat…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -160,15 +167,32 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Amazon 'Things We Never Got Over': amplía elenco con 6 actores</div>
-<a class="card" href="https://variety.com/2026/tv/news/things-we-never-got-over-amazon-series-cast-1236899122/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix produce Copa Mundial Femenina FIFA 2027 con IMG</div>
+<a class="card" href="https://deadline.com/2026/10/netflix-appoints-img-fifa-womens-world-cup-2027-1237147701/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Things We Never Got Over' Amazon Series Adds Six to Cast</div>
+<div class="card-title">Netflix Appoints IMG To Produce FIFA Women's World Cup 2027</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">deadline.com/2026/10/netflix-appoints-img-fifa-womens-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Lucy Hale estrella en serie limitada 'Scarlett Holmes' de Roku</div>
+<a class="card" href="https://variety.com/2026/tv/news/lucy-hale-star-in-roku-limited-series-scarlett-holmes-1236899347/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Lucy Hale to Star in Roku Limited Series 'Scarlett Holmes'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/news/things-we-never-got-over-amazo…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/tv/news/lucy-hale-star-in-roku-limited…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -177,15 +201,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">BBC & BritBox 'Poirot': Katherine Parkinson, Omari Douglas, Toby Stephens se unen</div>
-<a class="card" href="https://deadline.com/2026/10/bbc-poirot-series-katherine-parkinson-toby-stephens-1237146589/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">MasterClass lanza podcast 'Other People's Business' con Martha Stewart</div>
+<a class="card" href="https://variety.com/2026/digital/news/masterclass-podcast-other-peoples-business-martha-stewart-1236899982/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Katherine Parkinson, Omari Douglas & Toby Stephens Join BBC & BritBox's Poirot Series</div>
+<div class="card-title">MasterClass Launches Podcast 'Other People's Business' With Martha Stewart as First Guest</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/bbc-poirot-series-katherine-parkin…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/digital/news/masterclass-podcast-other…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -194,15 +218,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">BBC Christmas 'The Bride's Chamber': Martin Freeman y Jim Broadbent</div>
-<a class="card" href="https://deadline.com/2026/10/martin-freeman-jim-broadbent-brides-chamber-bbc-1237146494/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Dirty Dancing' musical llegará a Broadway este invierno</div>
+<a class="card" href="https://deadline.com/2026/10/dirty-dancing-musical-broadway-lionsgate-1237147780/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Martin Freeman & Jim Broadbent Set For Dickensian Christmas Ghost Story 'The Bride's Chamber' At The BBC</div>
+<div class="card-title">'Dirty Dancing' Musical Heading To Broadway This Winter With Lionsgate Among Producers</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/martin-freeman-jim-broadbent-bride…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">deadline.com/2026/10/dirty-dancing-musical-broadway-lio…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -211,32 +235,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Tubi: acuerdo con Just For Laughs de 800 títulos en Canadá</div>
-<a class="card" href="https://deadline.com/2026/10/tubi-just-for-laughs-canada-comedy-deal-1237145289/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">James Corden y Ruth Jones: 'The Choir' en Apple con Hannah Waddingham y James McAvoy</div>
+<a class="card" href="https://deadline.com/2026/10/corden-jones-the-choir-apple-cast-hannah-waddingham-1237147052/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Tubi Strikes 800-Title Just For Laughs Deal In Canada</div>
+<div class="card-title">James Corden & Ruth Jones' Apple Show 'The Choir' Reveals Cast & Guest Stars</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/tubi-just-for-laughs-canada-comedy…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Lightbox lanza 'Frightbox' con horror para Hulu y HBO</div>
-<a class="card" href="https://deadline.com/2026/10/lightbox-horror-hulu-clown-panic-pet-cemetery-murders-hbo-1237146563/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Lightbox Turns On Frightbox With Hulu's 'Clown Panic' & 'The Pet Cemetery Murders' For HBO</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/lightbox-horror-hulu-clown-panic-p…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">deadline.com/2026/10/corden-jones-the-choir-apple-cast…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -250,15 +257,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Karoline Leavitt se une a Fox News como colaboradora</div>
-<a class="card" href="https://variety.com/2026/tv/news/karoline-leavit-fox-news-contrbutor-1236899073/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">LL Cool J regresa a 'NCIS: New York' en nueva serie de CBS</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/ncis-new-york-review-cbs-ll-cool-j-1236899249/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Karoline Leavitt Is Latest Trump Administration Official to Join Fox News</div>
+<div class="card-title">LL Cool J Returns to the Big Apple In CBS' Solid and Steady 'NCIS: New York'</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/news/karoline-leavit-fox-news-contr…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/tv/reviews/ncis-new-york-review-cbs-ll…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -267,15 +274,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">BBC: Rachel Jupp nombrada directora de Noticias</div>
-<a class="card" href="https://deadline.com/2026/10/bbc-news-rachel-jupp-director-news-1237146621/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">David Brindley nombrado jefe de contenidos de Channel 4 (UK)</div>
+<a class="card" href="https://deadline.com/2026/10/david-brindley-named-channel-4-content-chief-1237147700/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">BBC Names Ex-'Panorama' Editor Rachel Jupp As Director Of News</div>
+<div class="card-title">David Brindley Set To Be Named Channel 4 Content Chief</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/bbc-news-rachel-jupp-director-news…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">deadline.com/2026/10/david-brindley-named-channel-4-con…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -284,49 +291,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Channel 4: Louisa Compton entra en Junta Directiva</div>
-<a class="card" href="https://deadline.com/2026/10/channel-4-board-louisa-compton-ian-katz-replacement-1237146542/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Jon Stewart evita cobertura de Skydance en 'The Daily Show'</div>
+<a class="card" href="https://variety.com/2026/tv/news/jon-stewart-daily-show-skydance-david-ellison-ai-1236899825/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Louisa Compton Appointed To Channel 4 Board Alongside Next Content Chief</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/channel-4-board-louisa-compton-ian…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">John Oliver esquiva noticias sobre Skydance en 'Last Week Tonight'</div>
-<a class="card" href="https://variety.com/2026/tv/news/john-oliver-last-week-tonight-david-ellison-skydance-hbo-warner-bros-1236898839/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">John Oliver Dodges David Ellison-Skydance News on 'Last Week Tonight'</div>
+<div class="card-title">Jon Stewart's 'Daily Show' Skips David Ellison-Skydance News to Take on AI</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/news/john-oliver-last-week-tonight-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'Lanterns' finale HBO Max: Hal Jordan, Manhunter y Sinestro revelados</div>
-<a class="card" href="https://variety.com/2026/tv/news/lanterns-finale-hal-killer-manhunter-sinestro-yellow-lantern-1236897626/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">'Lanterns' Finale: Hal Jordan's Killer and Manhunter Revealed, Sinestro Creates [SPOILER], John Stewart Powers Up for 'Superman' Sequel</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">variety.com/2026/tv/news/lanterns-finale-hal-killer-man…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/tv/news/jon-stewart-daily-show-skydanc…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -340,15 +313,32 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#9b59b6">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">TikTok expande red publicitaria fuera de plataforma a publicistas de EE.UU.</div>
-<a class="card" href="https://www.adweek.com/media/tiktok-expands-its-off-platform-ad-network-to-us-advertisers/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Los Emmys se mudan a Prime Video en acuerdo de 6 años</div>
+<a class="card" href="https://variety.com/2026/tv/news/emmys-prime-video-six-year-deal-15-million-a-year-1236899957/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">TikTok Expands Its Off-Platform Ad Network to US Advertisers</div>
+<div class="card-title">Emmys Move to Prime Video in Six-Year, Global Deal Worth Around $15 Million a Year</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/tv/news/emmys-prime-video-six-year-dea…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #9b59b6">SAMY compra agencia de influencers Get Engaged</div>
+<a class="card" href="https://www.adweek.com/dealroom/samy-buys-get-engaged/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
+<div class="card-body">
+<div class="card-title">Social Agency SAMY Buys Influencer Shop Get Engaged in Low Nine-Figure Deal</div>
 <div class="card-meta">
 <span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">adweek.com/media/tiktok-expands-its-off-platform-ad-net…</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">adweek.com/dealroom/samy-buys-get-engaged/</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -357,100 +347,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">TikTok: compras directas de marcas y asistente IA de shopping</div>
-<a class="card" href="https://www.adweek.com/commerce/tiktok-adds-an-ai-shopping-assistant-and-lets-users-buy-direct-from-brands/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Bomani Jones lanza podcast 'The Right Time' con Playmaker</div>
+<a class="card" href="https://deadline.com/2026/10/espn-hbo-bomani-jones-playmaker-podcast-the-right-time-1237146725/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">TikTok Adds an AI Shopping Assistant and Lets Users Buy Direct From Brands</div>
+<div class="card-title">ESPN & HBO Vet Bomani Jones Teams With Playmaker For Long-Running Podcast 'The Right Time'</div>
 <div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">adweek.com/commerce/tiktok-adds-an-ai-shopping-assistan…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">OpenAI: anuncios visuales en ChatGPT junto a generación de imágenes</div>
-<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/1004655/openai-chatgpt-visual-ads" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">OpenAI is sticking more ads in ChatGPT</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">theverge.com/ai-artificial-intelligence/1004655/openai-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">OpenAI hace anuncios de ChatGPT más medibles y visuales</div>
-<a class="card" href="https://digiday.com/marketing/openai-moves-to-make-chatgpt-ads-more-measurable-and-more-visual/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">OpenAI moves to make ChatGPT ads more measurable — and more visual</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">digiday.com/marketing/openai-moves-to-make-chatgpt-ads-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Piers Morgan 'Uncensored': lanza suscripción de pago en YouTube</div>
-<a class="card" href="https://www.adweek.com/media/piers-morgans-uncensored-paid-subscriptions/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Piers Morgan's Uncensored Launches Paid Tier to Own Its Audience Beyond YouTube</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">adweek.com/media/piers-morgans-uncensored-paid-subscrip…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Amazon Prime Day octubre: test festivo para marcas</div>
-<a class="card" href="https://www.adweek.com/commerce/amazons-october-prime-day-is-the-big-holiday-test-for-brands/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Amazon's October Prime Day Is the Big Holiday Test for Brands</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">adweek.com/commerce/amazons-october-prime-day-is-the-bi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">TikTok apuesta por red de anuncios: más alcance, más presupuesto</div>
-<a class="card" href="https://digiday.com/marketing/tiktoks-ad-network-bet-more-reach-more-budget/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">TikTok's ad network bet: More reach, more budget</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">digiday.com/marketing/tiktoks-ad-network-bet-more-reach…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">deadline.com/2026/10/espn-hbo-bomani-jones-playmaker-po…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -464,15 +369,83 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#16a085">IA</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Ben Affleck: uso extensivo de IA en 'Animals' (Netflix, 9 oct)</div>
-<a class="card" href="https://deadline.com/2026/10/ben-affleck-used-ai-lots-of-things-animals-1237145166/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #16a085">'Artificial' de Guadagnino: secuela de 'The Social Network' sobre OpenAI y Sam Altman</div>
+<a class="card" href="https://variety.com/2026/film/reviews/artificial-review-andrew-garfield-luca-gaudagnino-1236898663/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#16a085"></div>
 <div class="card-body">
-<div class="card-title">Ben Affleck Used AI For "Lots Of Things" In Netflix's 'Animals': "It's A Very Human Movie"</div>
+<div class="card-title">'Artificial' Review: Luca Guadagnino Has Made the Real Sequel to 'The Social Network'</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/film/reviews/artificial-review-andrew-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">Andrew Garfield revela cómo cambió su percepción de Sam Altman tras 'Artificial'</div>
+<a class="card" href="https://variety.com/2026/film/news/andrew-garfield-sam-altman-movie-artificial-nyff-premiere-luca-guadagnino-1236894719/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">Andrew Garfield Says OpenAI's Sam Altman Seemed 'F—ing Great' Before Playing Him</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/film/news/andrew-garfield-sam-altman-m…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">Primeras reacciones: 'Artificial' de Guadagnino es "provocadora" y su "mejor filme en una década"</div>
+<a class="card" href="https://variety.com/2026/film/news/artificial-first-reactions-sam-altman-open-ai-1236899622/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">'Artificial' First Reactions: Luca Guadagnino's OpenAI Drama is 'Provocative'</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">6 oct</span>
+<span class="card-url">variety.com/2026/film/news/artificial-first-reactions-s…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">OpenAI lanza anuncios visuales junto a generación de imágenes en DALL-E</div>
+<a class="card" href="https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">OpenAI launches visual ads that appear alongside image generation results</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
 <span class="card-sep">·</span><span class="card-date">5 oct</span>
-<span class="card-url">deadline.com/2026/10/ben-affleck-used-ai-lots-of-things-…</span>
+<span class="card-url">techcrunch.com/2026/10/05/openai-launches-visual-ads-th…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">OpenAI marca textos generados por ChatGPT en la UE para cumplir normativa IA</div>
+<a class="card" href="https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">OpenAI will start watermarking ChatGPT's text in the EU</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">5 oct</span>
+<span class="card-url">techcrunch.com/2026/10/05/openai-will-start-watermarkin…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -483,7 +456,19 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#27ae60">REDES
+<div class="section-label" style="color:#e67e22">REDES SOCIALES</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">TikTok amplía red publicitaria fuera de plataforma a publicistas de EE.UU.</div>
+<a class="card" href="https://digiday.com/marketing/tiktoks-ad-network-bet-more-reach-more-budget/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
+<div class="card-body">
+<div class="card-title">TikTok's ad network bet: More reach, more budget</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">5 oct</span>
+<span class="card-url">digiday.com/marketing/tiktoks-ad-network-bet-more-reach…</span>
+<span class="card-ext">↗
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
