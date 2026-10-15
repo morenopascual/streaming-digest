@@ -43,16 +43,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
-.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
-.save-bar.visible{display:flex}
-.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
-.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
-.btn-save:disabled{opacity:.5;cursor:default}
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
-.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -88,7 +78,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>14/10/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>15/10/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -102,27 +92,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
-</div>
-<div class="toast" id="toast"></div>
-
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Rachel Nichols liderará 'The Story', nuevo show diario de Sports Illustrated</div>
-<a class="card" href="https://variety.com/2026/tv/news/rachel-nichols-the-story-sports-illustrated-1236910870/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">YouTube y consolidación industrial dominan conversaciones de Mipcom 2026</div>
+<a class="card" href="https://variety.com/2026/tv/global/youtube-consolidation-christie-brinkley-baywatch-mipcom-1236912667/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Rachel Nichols Will Lead 'The Story,' a Daily Show From Sports Illustrated</div>
+<div class="card-title">YouTube's Virtues, Industry Consolidation, Christie Brinkley and 'Baywatch': Trends and Themes From a Busy Mipcom</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">variety.com/2026/tv/news/rachel-nichols-the-story-sport…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/global/youtube-consolidation-christ…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -131,15 +115,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Banijay Kids &amp; Family vende 'Little Princess' a Sky UK</div>
-<a class="card" href="https://variety.com/2026/tv/global/banijay-kids-family-little-princess-sky-u-k-nordisk-film-1236911035/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'The Castle' de Movistar Plus gana en Mipcom con éxito de San Sebastián</div>
+<a class="card" href="https://variety.com/2026/tv/global/the-castle-movistar-plus-isabel-pena-eduardo-villanueva-1236912757/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Banijay Kids &amp; Family Sells 'Little Princess' to Sky U.K. (EXCLUSIVE)</div>
+<div class="card-title">Mipcom Title 'The Castle' Shapes Up as Another Hit From 'La Bola Negra' Producer Movistar Plus</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">variety.com/2026/tv/global/banijay-kids-family-little-p…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/global/the-castle-movistar-plus-isa…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -148,32 +132,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Forensic Files' reanuda producción original tras auge del true crime en streaming</div>
-<a class="card" href="https://variety.com/2026/tv/news/forensic-files-new-episodes-radial-content-partners-itv-1236911130/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Banijay-All3Media revela catálogo de 265.000 horas para London TV Screenings 2027</div>
+<a class="card" href="https://deadline.com/2026/10/london-tv-screenings-2027-banijay-itv-studios-fremantle-1237157961/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Forensic Files' to Resume Original Production Amid the Streaming Boom for Vintage True Crime Series</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">variety.com/2026/tv/news/forensic-files-new-episodes-ra…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Tiger TV lanza plataforma SVOD en Hindi y Punjabi en Asia y Occidente</div>
-<a class="card" href="https://deadline.com/2026/10/rohit-jain-tiger-tv-1237156538/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Lionsgate Play Boss Rohit Jain Launches Tiger TV</div>
+<div class="card-title">London TV Screenings Unveils 2027 Schedule Featuring Newly-Merged Banijay</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/rohit-jain-tiger-tv-1237156538/</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">deadline.com/2026/10/london-tv-screenings-2027-banijay-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -182,15 +149,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Skylink adoptará marca Canal+ en República Checa y Eslovaquia (22 oct)</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/14/skylink-to-become-canal-in-czech-republic-and-slovakia/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix corta 1.000 empleados (6% global) en reestructuración organizativa</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/netflix-to-cut-around-1000-jobs-in-global-restructuring/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Skylink to become Canal+ in Czech Republic and Slovakia</div>
+<div class="card-title">Netflix to cut around 1,000 jobs in global restructuring</div>
 <div class="card-meta">
 <span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/14/skylink-to-become-canal-…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/netflix-to-cut-around-10…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -199,15 +166,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix asegura derechos exclusivos del Mundial 2030 en España y Andorra</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/14/netflix-secures-2030-world-cup-rights-in-spain-and-andorra/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">AMC lanza SELEKT Light en República Checa y Eslovaquia</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/amc-launches-free-selekt-light-service-in-czech-republic-and-slovakia/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Netflix secures 2030 World Cup rights in Spain and Andorra</div>
+<div class="card-title">AMC launches free SELEKT Light service in Czech Republic and Slovakia</div>
 <div class="card-meta">
 <span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/14/netflix-secures-2030-wor…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/amc-launches-free-selekt…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -216,15 +183,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Below' bate récord de estrenos en Netflix para contenido canadiense</div>
-<a class="card" href="https://deadline.com/2026/10/below-netflix-premiere-ratings-record-canadian-1237155959/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Ingresos publicitarios de suscripciones streaming en Nórdicos triplicarán a 2030</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/nordic-streaming-subscription-ad-revenue-forecast-to-triple-by-2030/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Below' Attracts Record Debut For A Netflix Canadian Series</div>
+<div class="card-title">Nordic streaming subscription ad revenue forecast to triple by 2030</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">13 oct</span>
-<span class="card-url">deadline.com/2026/10/below-netflix-premiere-ratings-rec…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/nordic-streaming-subscri…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -238,15 +205,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Russell T Davies critica comentario sobre IA de BBC y anticipa producción de 'Doctor Who'</div>
-<a class="card" href="https://variety.com/2026/tv/global/russell-t-davies-bbc-boss-ai-doctor-who-comment-clumsy-1236911048/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Sky se abre a intervención regulatoria en compra de ITV por £1.6B</div>
+<a class="card" href="https://variety.com/2026/tv/global/lisa-nandy-intervene-itv-sky-takeover-1236912867/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Russell T Davies Calls BBC Boss' AI 'Doctor Who' Comment 'Clumsy' and Teases Show's Future</div>
+<div class="card-title">British Government 'Minded to Intervene' in Sky's Proposed $2 Billion Takeover of ITV</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">variety.com/2026/tv/global/russell-t-davies-bbc-boss-ai…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/global/lisa-nandy-intervene-itv-sky…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -255,15 +222,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Ben Frow abandona cargo de Chief Content Officer en Canal 5 (Skydance) tras 14 años</div>
-<a class="card" href="https://variety.com/2026/tv/global/ben-frow-exiting-chief-content-officer-5-skydance-uk-network-1236911166/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix 'Hollywood Arts' (Victorious spinoff) recibe crítica negativa de TV</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/hollywood-arts-review-netflix-victorious-1236909385/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Ben Frow Stepping Down as Chief Content Officer of 5, Skydance's U.K. Network, After 14 Years</div>
+<div class="card-title">Netflix's 'Victorious' Spinoff 'Hollywood Arts' Is a Bland Copy of Shows From a Past Era: TV Review</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">variety.com/2026/tv/global/ben-frow-exiting-chief-conte…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/reviews/hollywood-arts-review-netfl…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -272,15 +239,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'The Cold Song' marca retorno al drama televisivo europeo de gran presupuesto</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/mikael-marcimain-the-cold-song-first-look-images-1236729634/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Christy Carlson Romano cobra mitad que Shia LaBeouf en 'Even Stevens' pese a co-protagonismo</div>
+<a class="card" href="https://variety.com/2026/tv/news/christy-carlson-romano-salary-half-shia-labeouf-even-stevens-1236912847/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Mikael Marcimain's 'The Cold Song' Marks a Rare Return to Big Swing European TV Drama (Exclusive First Look)</div>
+<div class="card-title">Christy Carlson Romano Says Her Salary Was Half of Shia LaBeouf's on 'Even Stevens'</div>
 <div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/mikael-marcimain-the-c…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/news/christy-carlson-romano-salary-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -289,32 +256,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Urban One anuncia microdramas 'Foul Play' y 'Power &amp; Influence' en TikTok</div>
-<a class="card" href="https://deadline.com/2026/10/urban-one-tiktok-microdramas-1237155551/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">'Friends' vuelve a Channel 4 tras 15 años en enero 2027</div>
+<a class="card" href="https://deadline.com/2026/10/friends-returning-channel-4-uk-stays-hbo-max-1237157876/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Urban One Lines Up 'Foul Play' And 'Power &amp; Influence' TikTok Microdramas</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/urban-one-tiktok-microdramas-12371…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">James McAvoy revela ser víctima de bullying en rodaje de 'Band of Brothers'</div>
-<a class="card" href="https://deadline.com/2026/10/james-mcavoy-bullied-set-hbo-band-of-brothers-1237156356/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">James McAvoy Recalls Being Bullied On The Set Of HBO's 'Band Of Brothers'</div>
+<div class="card-title">'Friends' Returning To Channel 4 After 15 Years</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/james-mcavoy-bullied-set-hbo-band-…</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">deadline.com/2026/10/friends-returning-channel-4-uk-sta…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -323,15 +273,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Drake Bell denuncia pérdida de cobertura médica y critica SAG-AFTRA</div>
-<a class="card" href="https://deadline.com/2026/10/drake-bell-sag-aftra-health-insurance-1237156308/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">BBC News estrena canal en directo en YouTube (UK/US)</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/bbc-news-launches-live-youtube-channel-in-uk-and-us/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Drake Bell Calls Out SAG-AFTRA After Losing Health Insurance &amp; Urges People To "Not Become An Actor" Or "Join SAG"</div>
+<div class="card-title">BBC News launches live YouTube channel in UK and US</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/drake-bell-sag-aftra-health-insura…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/bbc-news-launches-live-y…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -340,32 +290,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'The White Lotus' S4 entra en fase final de rodaje en Cannes</div>
-<a class="card" href="https://deadline.com/2026/10/white-lotus-season-4-production-cannes-final-stretch-1237155644/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix: €1 de inversión publicitaria genera €7.20 en ventas incrementales (Francia)</div>
+<a class="card" href="https://www.advanced-television.com/2026/10/15/netflix-france-e1-ad-invested-generates-e7-20-in-incremental-sales/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">'The White Lotus' Filming In Cannes As Season 4 Production Enters Final Stretch</div>
+<div class="card-title">Netflix France: "€1 ad-investment generates €7.20 in incremental sales"</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/white-lotus-season-4-production-ca…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Narges Rashidi (ganadora BAFTA) firma con TFC Management</div>
-<a class="card" href="https://deadline.com/2026/10/narges-rashidi-tfc-management-1237155996/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">BAFTA Winner Narges Rashidi Signs With TFC Management</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">13 oct</span>
-<span class="card-url">deadline.com/2026/10/narges-rashidi-tfc-management-1237…</span>
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">advanced-television.com/2026/10/15/netflix-france-e1-ad…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -376,18 +309,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e67e22">IA</div>
+<div class="section-label" style="color:#9b59b6">REGULACIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Empleado de OpenAI arrestado por plantar dispositivo grabador en sala de conferencias</div>
-<a class="card" href="https://techcrunch.com/2026/10/13/fbi-arrests-openai-employee-accused-of-planting-hidden-recording-device-in-conference-room/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Cultura del UK lista intervenir en compra Sky-ITV por pluralismo mediático</div>
+<a class="card" href="https://deadline.com/2026/10/sky-itv-culture-sec-lisa-nandy-minded-to-intervene-1237157983/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">FBI arrests OpenAI employee accused of planting hidden recording device in conference room</div>
+<div class="card-title">Sky-ITV: UK Culture Secretary "Minded To Intervene" Over $2.1B Merger</div>
 <div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">13 oct</span>
-<span class="card-url">techcrunch.com/2026/10/13/fbi-arrests-openai-employee-a…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">deadline.com/2026/10/sky-itv-culture-sec-lisa-nandy-min…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -396,32 +329,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Juez ordena a OpenAI entregar registros de contratación en caso de secretos comerciales de Apple</div>
-<a class="card" href="https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Canal+ Polska bajo investigación por disponibilidad del paquete futbolístico</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/canal-polska-faces-investigation-over-football-subscriptions/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Judge orders OpenAI to turn over hiring records in Apple trade secrets case</div>
+<div class="card-title">Canal+ Polska faces investigation over football subscriptions</div>
 <div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">13 oct</span>
-<span class="card-url">techcrunch.com/2026/10/13/judge-orders-openai-to-turn-o…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Facebook otorga mayor control sobre algoritmo a usuarios</div>
-<a class="card" href="https://techcrunch.com/2026/10/13/facebook-is-giving-users-more-control-over-their-algorithm/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
-<div class="card-body">
-<div class="card-title">Facebook is giving users more control over their algorithm</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">13 oct</span>
-<span class="card-url">techcrunch.com/2026/10/13/facebook-is-giving-users-more…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/canal-polska-faces-inves…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -432,12 +348,29 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#3498db">REDES SOCIALES Y CONTENIDOS</div>
+<div class="section-label" style="color:#e67e22">REDES SOCIALES Y CONTENIDOS</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #3498db">TikTok Shop impulsa éxito mediante creadores pequeños y mayor volumen de videos</div>
+<div class="group-title" style="border-left:3px solid #e67e22">'South Park' S29 parodia Sephora backrooms y tendencias looksmaxxing</div>
+<a class="card" href="https://variety.com/2026/tv/news/south-park-season-29-sephora-backrooms-aura-battle-1236909613/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
+<div class="card-body">
+<div class="card-title">'South Park': Stan Discovers Sephora's Backrooms Before Ike Aura Battles a Looksmaxxing Chad</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">variety.com/2026/tv/news/south-park-season-29-sephora-b…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">TikTok Shop despunta con pequeños creadores y volumen de videos</div>
 <a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-tiktok-shop-success-small-creators-more-videos/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#3498db"></div>
+<div class="card-accent" style="background:#e67e22"></div>
 <div class="card-body">
 <div class="card-title">Future of TV Briefing: TikTok Shop success = small creators + more videos</div>
 <div class="card-meta">
@@ -451,16 +384,111 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#27ae60">PUBLICIDAD</div>
+
 <div class="group">
-<div class="group-title" style="border-left:3px solid #3498db">Good News Network vendida a grupo liderado por co-fundador de Whalar</div>
-<a class="card" href="https://deadline.com/2026/10/good-news-network-sold-gnn-group-formed-1237155562/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#3498db"></div>
+<div class="group-title" style="border-left:3px solid #27ae60">smartclip y M6 Unlimited desarrollan workflow IA para audio ads</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/15/smartclip-and-m6-unlimited-develop-ai-workflow-for-audio-advertising/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Good News Network Sold To Group Including Whalar Co-Founder James Street</div>
+<div class="card-title">smartclip and M6 Unlimited develop AI workflow for audio advertising</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/15/smartclip-and-m6-unlimit…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Guardian eleva ingresos publicitarios online simplificando procesos y compartiendo datos</div>
+<a class="card" href="https://pressgazette.co.uk/marketing/guardian-increases-ad-inventory-revenue-new-commercial-strategy/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Guardian boosted online ad revenue by simplifying process and sharing reader data</div>
+<div class="card-meta">
+<span class="card-source">Press Gazette (UK)</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">pressgazette.co.uk/marketing/guardian-increases-ad-inve…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Editores debaten medición de valor de audiencia en London Media Strategies</div>
+<a class="card" href="https://digiday.com/media/media-briefing-overheard-from-publishers-at-digiday-london-media-strategies-town-hall/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Media Briefing: Overheard from publishers at Digiday London Media Strategies Town Hall</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">digiday.com/media/media-briefing-overheard-from-publish…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Wirecutter diversifica ingresos más allá de comisiones de afiliados ante IA</div>
+<a class="card" href="https://digiday.com/media/inside-wirecutters-push-to-diversify-beyond-affiliate-revenue-as-ai-reshapes-discovery/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Inside Wirecutter's push to diversify beyond affiliate revenue as AI reshapes discovery</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">digiday.com/media/inside-wirecutters-push-to-diversify-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#16a085">ESTUDIOS E INFORMES</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">Tendencias clave del Mipcom 2026: YouTube, consolidación y 'Baywatch'</div>
+<a class="card" href="https://deadline.com/2026/10/mipcom-2026-takeaways-baywatch-skydance-banijay-youtube-1237157888/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">MIPCOM 2026 Takeaways: Surfing The New Wave Of TV With YouTube, 'Baywatch', Skydance, Banijay & More</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">15 oct</span>
+<span class="card-url">deadline.com/2026/10/mipcom-2026-takeaways-baywatch-sky…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #16a085">YouTube Music etiqueta contenido generado con IA a medida que inunda plataformas</div>
+<a class="card" href="https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#16a085"></div>
+<div class="card-body">
+<div class="card-title">YouTube Music launches new labels as AI-generated music floods streaming platforms</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
 <span class="card-sep">·</span><span class="card-date">14 oct</span>
-<span class="card-url">deadline.com/2026/10/good-news-network-
+<span class="card-url">techcrunch.com/2026/10/14/youtube-music-launches-new-la…
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
