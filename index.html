@@ -50,9 +50,6 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -88,7 +85,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>26/10/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>27/10/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -102,27 +99,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
-</div>
-<div class="toast" id="toast"></div>
-
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix celebra 10 años en Corea con avances en Squid Game y contenido local</div>
-<a class="card" href="https://www.hollywoodreporter.com/business/business-news/ted-sarand-seoul-netflix-10-years-korea-1236739801/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix celebra documental sobre Matthew Perry en plataforma; 'Friends' llora en funeral</div>
+<a class="card" href="https://variety.com/2026/tv/news/friends-cast-matthew-perry-funeral-casket-1236931479/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Ted Sarandos Swoops Into Seoul as Netflix Celebrates 10 Years in Korea</div>
+<div class="card-title">'Friends' Cast Entered Matthew Perry's Funeral Holding Hands and Cried Around the Casket, Netflix Documentary Reveals</div>
 <div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">hollywoodreporter.com/business/business-news/ted-sarand…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">variety.com/2026/tv/news/friends-cast-matthew-perry-fun…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -131,15 +122,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Disney+ incluido en acuerdos de compra de RTÉ y BBC para 'The Walsh Sisters'</div>
-<a class="card" href="https://deadline.com/2026/10/disney-plus-the-walsh-sisters-marian-keyes-rte-bbc-series-1237172919/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">HBO anuncia casting de Harry Potter: James, Lily Potter y Charlie Weasley confirmados</div>
+<a class="card" href="https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Disney+ Among Buyers For RTÉ &amp; BBC Drama 'The Walsh Sisters'</div>
+<div class="card-title">'Harry Potter' HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character's Screen Debut</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">deadline.com/2026/10/disney-plus-the-walsh-sisters-mari…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">variety.com/2026/tv/news/harry-potter-hbo-series-casts-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -148,15 +139,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">UKTV se muda a Television Centre en primavera de 2027</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/26/uktv-to-move-to-television-centre-in-spring-2027/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Disney+ acuerda lanzar Channel 4 en UK e Irlanda en 2027; acuerdo histórico</div>
+<a class="card" href="https://variety.com/2026/tv/global/disney-landmark-content-deal-uk-channel-4-1236931195/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">UKTV to move to Television Centre in spring 2027</div>
+<div class="card-title">Disney+ Strikes Landmark Content Deal With U.K.'s Channel 4 That Streamer Says Is Among Its 'Most Significant' Globally</div>
 <div class="card-meta">
-<span class="card-source">Broadband TV News</span>
+<span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/26/uktv-to-move-to-televisi…</span>
+<span class="card-url">variety.com/2026/tv/global/disney-landmark-content-deal…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -165,15 +156,32 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Reuters asume archivo de ITN y Sky News; acceso de 37 años de contenido</div>
-<a class="card" href="https://pressgazette.co.uk/news/reuters-adds-37-years-of-sky-news-content-to-its-video-archive/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Mirzapur' lidera una década de streaming indio; comisiones caen por segundo año</div>
+<a class="card" href="https://variety.com/2026/tv/news/mirzapur-indian-streaming-commissions-fall-imdb-report-1236931765/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Reuters adds 37 years of Sky News content to its video archive</div>
+<div class="card-title">'Mirzapur' Tops a Decade of Indian Streaming as New Commissions Fall, IMDb Report Finds</div>
 <div class="card-meta">
-<span class="card-source">Press Gazette</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">pressgazette.co.uk/news/reuters-adds-37-years-of-sky-ne…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">variety.com/2026/tv/news/mirzapur-indian-streaming-comm…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Productores de 'Tokyo Vice' y Netflix piden reforma al sistema de incentivos japonés</div>
+<a class="card" href="https://variety.com/2026/film/festivals/tokyo-vice-producer-netflix-exec-urge-japan-incentive-reform-mpa-1236931907/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'Tokyo Vice' Producer, Netflix Executive Urge Changes to Japan's Production Incentive at MPA Seminar</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">variety.com/2026/film/festivals/tokyo-vice-producer-net…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -184,18 +192,86 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">RESULTADOS FINANCIEROS</div>
+<div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Salesforce adquiere Braze por $5.7B: promesas y riesgos en marketing unificado</div>
-<a class="card" href="https://digiday.com/marketing/salesforces-5-7-billion-braze-deal-puts-marketers-at-an-ecosystem-crossroads/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix documental 'The One About Matthew Perry' retrata adición con sinceridad pero exceso</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/the-one-about-matthew-perry-review-netflix-1236931448/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Salesforce's $5.7 billion Braze deal puts marketers at an ecosystem crossroads</div>
+<div class="card-title">Netflix Docuseries 'The One About Matthew Perry' Is a Tragic, Mournful Portrait of Addiction: TV Review</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">variety.com/2026/tv/reviews/the-one-about-matthew-perry…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Tovah Feldshuh responde a comentarios proPalestina de Adam Brody en 'Nobody Wants This'</div>
+<a class="card" href="https://variety.com/2026/tv/news/nobody-wants-this-tovah-feldshuh-adam-brodys-palestine-1236931666/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Nobody Wants This' Star Tovah Feldshuh Responds to Adam Brody's Palestine Support</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">digiday.com/marketing/salesforces-5-7-billion-braze-dea…</span>
+<span class="card-url">variety.com/2026/tv/news/nobody-wants-this-tovah-feldsh…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Hilary Rosen nombrada presidenta de BAFTA; sucede a Sara Putt</div>
+<a class="card" href="https://www.hollywoodreporter.com/business/business-news/hilary-rosen-named-bafta-chair-sara-putt-deputy-film-tv-1236740653/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Hilary Rosen Named BAFTA Chair</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">hollywoodreporter.com/business/business-news/hilary-ros…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Julian Fellowes agradece a Casey Bloys por defender 'The Gilded Age' desde los inicios</div>
+<a class="card" href="https://deadline.com/2026/10/gilded-age-julian-fellowes-hbo-casey-bloys-premiere-1237205924/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">'Gilded Age' Creator Julian Fellowes Calls HBO's Casey Bloys "Our Protector &amp; Our Defender From Very Early Days"</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">deadline.com/2026/10/gilded-age-julian-fellowes-hbo-cas…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Meghan Markle será co-anfitriona de 'Junior MasterChef Australia'</div>
+<a class="card" href="https://deadline.com/2026/10/meghan-markle-junior-masterchef-australia-co-host-1237206038/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Meghan Markle To Co-Host 'Junior MasterChef Australia'</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">deadline.com/2026/10/meghan-markle-junior-masterchef-au…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -206,18 +282,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#9b59b6">IA Y TECNOLOGÍA</div>
+<div class="section-label" style="color:#9b59b6">REDES SOCIALES Y CONTENIDO</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Anthropic prepara salida a bolsa: prospecto S-1 revela planes de "revolucionar" cada área humana</div>
-<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Jay-Z encabezará el Super Bowl LXI halftime show el 14 de febrero de 2027</div>
+<a class="card" href="https://deadline.com/2026/10/jay-z-super-bowl-halftime-official-nfl-apple-1237205883/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Anthropic's IPO filing lays out a plan to 'revolutionize every area of human endeavor' with AI</div>
+<div class="card-title">Jay Z &amp; Apple Make It Official! Hova's Headlining The Super Bowl Halftime Show</div>
 <div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">theverge.com/ai-artificial-intelligence/1018476/anthrop…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">deadline.com/2026/10/jay-z-super-bowl-halftime-official…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -226,83 +302,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Meta retrasa cambios de T&C comerciales ante presión coordinada de editores</div>
-<a class="card" href="https://digiday.com/media/metas-new-scraping-terms-galvanize-publishers-into-collective-action/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Netflix contrata a Steve Wilson de Apple para liderar adquisiciones de podcasts</div>
+<a class="card" href="https://deadline.com/2026/10/netflix-apple-exec-steve-wilson-podcast-acquisitions-1237205867/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Meta delays rollout of updated commercial terms amid publishers' collective pushback</div>
+<div class="card-title">Netflix Taps Former Apple Exec Steve Wilson To Lead Podcast Acquisitions</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">digiday.com/media/metas-new-scraping-terms-galvanize-pu…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">O2 y Nokia despliegan IA en red 5G en Paddington: mejora 20% en eficiencia</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/26/o2-and-nokia-trial-ai-to-boost-5g-capacity-at-paddington/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">O2 and Nokia trial AI to boost 5G capacity at Paddington</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/26/o2-and-nokia-trial-ai-to…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Clickout Media despide periodistas pero revive bylines con IA tras penalidades Google</div>
-<a class="card" href="https://pressgazette.co.uk/news/clickout-media-makes-journalists-redundant-but-bylines-revived-with-ai/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Clickout Media makes journalists redundant but bylines revived with AI</div>
-<div class="card-meta">
-<span class="card-source">Press Gazette</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">pressgazette.co.uk/news/clickout-media-makes-journalist…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Kevin Roose publica 'The AGI Chronicles': transición explosiva de la industria IA</div>
-<a class="card" href="https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Kevin Roose is AGI-pilled. Why aren't you?</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">theverge.com/podcast/1018264/kevin-roose-the-agi-chroni…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">¿Puede la IA resolver crisis COBOL? OpenAI ve oportunidad en código heredado</div>
-<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Can AI help solve the COBOL code crisis?</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">theverge.com/ai-artificial-intelligence/1018434/cobol-m…</span>
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">deadline.com/2026/10/netflix-apple-exec-steve-wilson-po…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -316,15 +324,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#27ae60">PUBLICIDAD Y AD-TECH</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Pinterest abre inventario a compradores programáticos con Magnite como principal distribuidor</div>
-<a class="card" href="https://www.adweek.com/programmatic/pinterest-opens-its-inventory-to-programmatic-buyers-with-magnite-as-its-main-pipe/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #27ae60">Anthropic se prepara para salir a bolsa: ingresos saltan 15 veces, estrategia AI en inversión</div>
+<a class="card" href="https://www.adweek.com/media/anthropic-goes-for-the-public-markets-as-revenue-jumps-nearly-15-fold/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Pinterest Opens Its Inventory to Programmatic Buyers, With Magnite as Its Main Pipe</div>
+<div class="card-title">Anthropic Goes for the Public Markets as Revenue Jumps Nearly 15-Fold</div>
 <div class="card-meta">
 <span class="card-source">Adweek</span>
 <span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">adweek.com/programmatic/pinterest-opens-its-inventory-t…</span>
+<span class="card-url">adweek.com/media/anthropic-goes-for-the-public-markets-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -333,15 +341,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Gasto político dificulta planes de vacaciones para anunciantes regionales en CTV</div>
-<a class="card" href="https://digiday.com/media-buying/midterm-political-spending-throws-spanner-into-regional-advertiser-holiday-plans/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #27ae60">Stagwell adquiere Freestar para consolidar compra y venta de anuncios en un holdco</div>
+<a class="card" href="https://digiday.com/media-buying/stagwell-buys-freestar-putting-publisher-ad-sales-inside-a-holdco/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Midterm political spending throws spanner into regional advertiser holiday plans</div>
+<div class="card-title">Stagwell buys Freestar, putting publisher ad sales inside a holdco</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
 <span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">digiday.com/media-buying/midterm-political-spending-thr…</span>
+<span class="card-url">digiday.com/media-buying/stagwell-buys-freestar-putting…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -350,32 +358,83 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Motherly apuesta por video social y eventos en vivo al caer tráfico de búsqueda</div>
-<a class="card" href="https://www.adweek.com/media/motherly-rebuild-video-community/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #27ae60">Agencias independientes se quejan de costes DSP mientras la IA revoluciona compra de medios</div>
+<a class="card" href="https://digiday.com/podcasts/inside-indie-agencies-dsp-gripes-and-the-rise-of-agentic-media-buying/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">As Search Traffic Falls, Motherly Bets on Social Video and Live Events</div>
+<div class="card-title">Inside indie agencies' DSP gripes and the rise of agentic media buying</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">digiday.com/podcasts/inside-indie-agencies-dsp-gripes-a…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">The Hill añade herramientas electorales interactivas a oferta premium antes de comicios</div>
+<a class="card" href="https://digiday.com/media/the-hill-adds-interactive-election-tools-to-subscription-offering-ahead-of-the-midterms/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">The Hill adds interactive election tools to subscription offering ahead of the midterms</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">digiday.com/media/the-hill-adds-interactive-election-to…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Cómo el bloqueo de identidad de Apple impacta el dinero publicitario de editores</div>
+<a class="card" href="https://digiday.com/marketing/in-graphic-detail-what-apples-identity-block-means-for-the-ad-money/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">In Graphic Detail: What Apple's identity block means for the ad money</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">digiday.com/marketing/in-graphic-detail-what-apples-ide…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Anthropic's factura publicitaria se dispara, según prospecto de IPO</div>
+<a class="card" href="https://digiday.com/marketing/anthropics-ad-bill-is-soaring-according-to-ipo-filing/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Anthropic's ad bill is soaring, according to IPO filing</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">digiday.com/marketing/anthropics-ad-bill-is-soaring-acc…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Skydance presenta nuevo equipo de liderazgo publicitario tras fusión Paramount-WBD</div>
+<a class="card" href="https://www.adweek.com/convergent-tv/skydance-ads-boss-reveals-new-leadership-team/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Skydance Ads Boss Reveals New Leadership Team</div>
 <div class="card-meta">
 <span class="card-source">Adweek</span>
 <span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">adweek.com/media/motherly-rebuild-video-community/</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Estudio: anuncios VOD generan ventas medibles a corto plazo en streaming</div>
-<a class="card" href="https://www.advanced-television.com/2026/10/26/study-vod-ads-deliver-measurable-short-term-sales/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Study: VoD ads deliver measurable short-term sales</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">advanced-television.com/2026/10/26/study-vod-ads-delive…</span>
+<span class="card-url">adweek.com/convergent-tv/skydance-ads-boss-reveals-new-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -386,18 +445,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e67e22">CTV Y DISPOSITIVOS CONECTADOS</div>
+<div class="section-label" style="color:#e67e22">ESTUDIOS E INFORMES</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Instagram expande aplicación TV a Apple TV con contenido exclusivo</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/26/instagram-expands-tv-app-to-apple-tv/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e67e22">Politico triplica ingresos de partnership con conferencias: eventos presenciales impulsan monetización</div>
+<a class="card" href="https://pressgazette.co.uk/publishers/digital-journalism/politico-pub-party-conference-pop-ups-triple-partnership-revenue-in-one-year/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e67e22"></div>
 <div class="card-body">
-<div class="card-title">Instagram expands TV app to Apple TV</div>
+<div class="card-title">Politico Pub party conference pop-ups triple partnership revenue in one year</div>
 <div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/26/instagram-expands-tv-app…</span>
+<span class="card-source">Press Gazette</span>
+<span class="card-sep">·</span><span class="card-date">27 oct</span>
+<span class="card-url">pressgazette.co.uk/publishers/digital-journalism/politi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -406,68 +465,13 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Apple lanza iPad Mini con pantalla OLED de 8.5 pulgadas más grande</div>
-<a class="card" href="https://www.theverge.com/tech/1017801/ipad-mini-oled-display-apple-announce" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e67e22">Más de 100 historias sobre Harry y Meghan provenían de casinos online fraudulentos</div>
+<a class="card" href="https://pressgazette.co.uk/news/more-than-100-harry-and-meghan-stories-came-from-online-casinos/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e67e22"></div>
 <div class="card-body">
-<div class="card-title">Apple updates the iPad Mini with a larger OLED display</div>
+<div class="card-title">More than 100 Harry and Meghan stories 'came from online casinos'</div>
 <div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">theverge.com/tech/1017801/ipad-mini-oled-display-apple-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#16a085">MEDIOS Y TELEVISIÓN</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Global expande ofertas Plus: seis podcasts premium ya disponibles ad-free</div>
-<a class="card" href="https://www.advanced-television.com/2026/10/26/global-expands-plus-offering-with-new-podcast-subscriptions/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">Global expands Plus offering with new podcast subscriptions</div>
-<div class="card-meta">
-<span class="card-source">Advanced Television</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">advanced-television.com/2026/10/26/global-expands-plus-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Reclamaciones pay-TV caen; EE y Virgin Media siguen siendo los más denunciados</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/10/26/pay-tv-complaints-fall-as-ee-and-virgin-media-remain-most-complained-about/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">Pay-TV complaints fall as EE and Virgin Media remain most complained about</div>
-<div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">26 oct</span>
-<span class="card-url">broadbandtvnews.com/2026/10/26/pay-tv-complaints-fall-a…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #16a085">Protección copyright y desafíos de piratería audiovisual en debate de conferencia</div>
-<a class="card" href="https://www.advanced-television.com/2026/10/26/av-conference-highlights-copyright-protection-challenges/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#16a085"></div>
-<div class="card-body">
-<div class="card-title">AV conference highlights copyright protection challenges</div>
-<div class="card-meta
+<span class="card-
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
