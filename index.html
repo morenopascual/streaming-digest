@@ -50,9 +50,6 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
-.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
-.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
-.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -88,7 +85,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>28/10/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>29/10/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -101,28 +98,55 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
-
-<div class="save-bar" id="save-bar">
-  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
-  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
-</div>
-<div class="toast" id="toast"></div>
-
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Amazon MGM Studios duplica inversión en Japón para cumplir estándares globales</div>
-<a class="card" href="https://variety.com/2026/film/markets-festivals/amazon-mgm-studios-japan-doubling-investment-global-standards-1236933235/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">RedBird y Sound Ventures lanzan fondo de $1.000M para tech, media y cultura</div>
+<a class="card" href="https://variety.com/2026/biz/news/gerry-cardinale-redbird-guy-oseary-sound-ventures-investment-fund-1236934092/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Amazon MGM Studios Japan 'Doubling' Investment to Meet Global Standards, Local Chief Buddy Marini Reveals at Tokyo Market</div>
+<div class="card-title">Gerry Cardinale's RedBird and Guy Oseary's Sound Ventures Team on $1 Billion Fund Targeting Tech, Media and Culture Investments</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">variety.com/2026/biz/news/gerry-cardinale-redbird-guy-o…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">'The Diplomat' renovada para temporada 5 en Netflix</div>
+<a class="card" href="https://variety.com/2026/tv/news/the-diplomat-renewed-season-5-netflix-1236933737/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'The Diplomat' Renewed for Season 5 at Netflix</div>
+<div class="card-meta">
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">variety.com/2026/tv/news/the-diplomat-renewed-season-5-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Alfonso Cuarón: nuevos fichajes para 'Ascension' en Apple TV</div>
+<a class="card" href="https://variety.com/2026/tv/news/alfonso-cuaron-apple-tv-ascension-cast-1236933558/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Alfonso Cuaron's Apple TV Cult Series 'Ascension' Adds Amanda Plummer, Christopher Chung, T'Nia Miller</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
 <span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/film/markets-festivals/amazon-mgm-stud…</span>
+<span class="card-url">variety.com/2026/tv/news/alfonso-cuaron-apple-tv-ascens…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -131,49 +155,49 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Upgraded 2' en rodaje en Venecia con Camila Mendes y Leslie Bibb</div>
-<a class="card" href="https://variety.com/2026/film/global/camila-mendes-leslie-bibb-upgraded-2-venice-1236931945/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Sweetpea': Ella Purnell regresa en tráiler completo S2</div>
+<a class="card" href="https://deadline.com/2026/10/sweetpea-season-2-trailer-ella-purnell-1237049663/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Camila Mendes, Leslie Bibb Shooting 'Upgraded 2' in Venice, Where Biennale Art Show Is Part of Rom-Com's Storyline</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/film/global/camila-mendes-leslie-bibb-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Transplant' de Netflix: Joseph Kay firma acuerdo global con la plataforma</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/transplant-creator-joseph-kay-netflix-1236741252/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Transplant' Creator Joseph Kay Sets Overall Deal at Netflix</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-news/transplant-creator-jos…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video Germany contrata a Sasha Bühler (ex Netflix) como jefa de originales</div>
-<a class="card" href="https://deadline.com/2026/10/prime-video-hires-sasha-buhler-germany-originals-1237206896/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Prime Video Germany Names Former Netflix Film Exec Sasha Bühler As Originals Chief</div>
+<div class="card-title">'Sweetpea': Ella Purnell Is Back In Killer Role As Full Trailer Drops For Season 2 Of Sky And Starz Series</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/prime-video-hires-sasha-buhler-ger…</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">deadline.com/2026/10/sweetpea-season-2-trailer-ella-pur…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Channel 4 ficha a Adam Adler como director creativo</div>
+<a class="card" href="https://deadline.com/2026/10/adam-adler-joins-channel-4-productions-the-cube-1237207215/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">'The Cube' Creator Adam Adler Joins Channel 4's Production Biz As Creative Director</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">deadline.com/2026/10/adam-adler-joins-channel-4-product…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Skydance-owned 5 adquiere derechos de 'Wentworth: Halfway Home' en UK</div>
+<a class="card" href="https://deadline.com/2026/10/wentworth-sequel-series-5-uk-deal-1237207207/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Skydance-Owned 5 Buys UK Rights To 'Wentworth' Sequel Series</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">deadline.com/2026/10/wentworth-sequel-series-5-uk-deal-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -184,18 +208,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
+<div class="section-label" style="color:#e74c3c">RESULTADOS FINANCIEROS</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Jennifer Lopez lanzará 'Proof of Love': canción de alegría que aborda el dolor de la pérdida</div>
-<a class="card" href="https://variety.com/2026/music/columns/jennifer-lopez-new-single-proof-of-love-song-1236932416/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">TelevisaUnivision Q3 impulsado por Mundial en México e ingresos streaming</div>
+<a class="card" href="https://variety.com/2026/tv/news/televisaunivsion-q3-world-cup-mexico-streaming-1236933808/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Jennifer Lopez to Release New Single 'Proof of Love': 'It's a Happy Dance Song' That Also Addresses 'Pain and Grief When Someone's Gone' (EXCLUSIVE)</div>
+<div class="card-title">TelevisaUnivision Q3 Buoyed by World Cup in Mexico, Streaming Revenue</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/music/columns/jennifer-lopez-new-singl…</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">variety.com/2026/tv/news/televisaunivsion-q3-world-cup-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -204,117 +228,71 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">El concierto de despedida de Alan Jackson se emitirá en NBC el 8 de diciembre</div>
-<a class="card" href="https://variety.com/2026/music/news/alan-jacksons-farewell-concert-sets-release-1236932620/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Disney+ y Netflix adquieren 65% de contenido no-inglés</div>
+<a class="card" href="https://deadline.com/2026/10/disney-netflix-non-english-acquisitions-ampere-analysis-1237208043/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Alan Jackson's Farewell Concert Sets December Release on NBC</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/music/news/alan-jacksons-farewell-conc…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Director Ueda Shinichiro ('One Cut of the Dead'): de microdrama a largometraje con 'Earthlings in Love'</div>
-<a class="card" href="https://variety.com/2026/film/festivals/one-cut-of-the-dead-director-microdrama-feature-earthlings-in-love-1236933285/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">'One Cut of the Dead' Director Ueda Shinichiro on Turning a Microdrama Into Tokyo Feature 'Earthlings in Love'</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/film/festivals/one-cut-of-the-dead-dir…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Melanie Lynskey protagonizará 'Mushroom Murders' en Paramount+</div>
-<a class="card" href="https://variety.com/2026/tv/news/melanie-lynskey-erin-patterson-mushroom-murders-series-1236932452/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Melanie Lynskey to Play Erin Patterson in 'Mushroom Murders' Limited Series at Paramount+</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/tv/news/melanie-lynskey-erin-patterson…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Amy Poehler aconseja a Noah Wyle sobre romance en 'The Pitt'</div>
-<a class="card" href="https://variety.com/2026/tv/news/amy-poehler-the-pitt-noah-wyle-romance-1236932537/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Amy Poehler Tells Noah Wyle 'The Pitt' Needs More Romance: If You're 'Gonna Show the Guts, You Gotta Show Some Butts'</div>
-<div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/tv/news/amy-poehler-the-pitt-noah-wyle…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Zainab Johnson, cómica de Netflix apoyada por Michelle Obama, habla sobre su nuevo especial</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-features/zainab-johnson-netflix-special-produced-by-michelle-obama-1236740809/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">How "Toxically Optimistic" Zainab Johnson Found a Fan (and Hype Woman) in Michelle Obama</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-features/zainab-johnson-net…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Nick Mohammed, el "hombre más amable" de cine británico, sobre 'War' en Sky</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-features/nick-mohammed-interview-war-celebrity-traitors-ted-lasso-tv-1236740663/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">"Don't Get Me Wrong, I'm Not Without Ego!": How Nick Mohammed Earned His Rep as the Nicest Man in British Film and TV</div>
-<div class="card-meta">
-<span class="card-source">The Hollywood Reporter</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">hollywoodreporter.com/tv/tv-features/nick-mohammed-inte…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Peter Medak, director de 'The Ruling Class' y 'Romeo Is Bleeding', fallece a los 88 años</div>
-<a class="card" href="https://deadline.com/2026/10/peter-medak-dead-1237207019/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Peter Medak Dies: 'The Ruling Class' &amp; 'Romeo Is Bleeding' Director Was 88</div>
+<div class="card-title">Disney+ &amp; Netflix Hoover Up Non-English Acquisitions As Fervor For Japanese &amp; Korean Content Continues – Ampere</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">deadline.com/2026/10/disney-netflix-non-english-acquisi…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#27ae60">PUBLICIDAD</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Walmart abre audiencias de comprador en plataforma CTV Vibe</div>
+<a class="card" href="https://www.adweek.com/media/months-after-buying-vibe-walmart-opens-shopper-audiences-to-ctv-advertisers/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Walmart Opens Shopper Audiences to Advertisers on Its CTV Platform, Vibe</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">adweek.com/media/months-after-buying-vibe-walmart-opens…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Cómo K-Beauty redefinió el lenguaje del marketing de belleza</div>
+<a class="card" href="https://www.adweek.com/brand-marketing/how-k-beauty-made-skincare-the-language-of-beauty-marketing/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">How K-Beauty Made Skincare the Language of Beauty Marketing</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">adweek.com/brand-marketing/how-k-beauty-made-skincare-t…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Google Stock cae mientras IA Mode presiona crecimiento de anuncios Search</div>
+<a class="card" href="https://www.adweek.com/media/google-stock-sinks-as-ai-mode-pressures-search-ad-growth/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Google Stock Sinks as AI Mode Pressures Search Ad Growth</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
 <span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/peter-medak-dead-1237207019/</span>
+<span class="card-url">adweek.com/media/google-stock-sinks-as-ai-mode-pressure…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -323,15 +301,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">BBC "decepcionada" mientras el personal planea votación de huelga por despidos</div>
-<a class="card" href="https://deadline.com/2026/10/bbc-disappointed-staff-industrial-action-vote-job-cuts-1237206978/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #27ae60">Previsión: Condé Nast Q4 se quedará corta en $35M en negocio de anuncios</div>
+<a class="card" href="https://www.adweek.com/media/conde-nast-ad-business-forecast-35-million/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">BBC "Disappointed" As Staff Plan Industrial Action Vote Over Job Cuts</div>
+<div class="card-title">Condé Nast's Q4 Ad Business Is Forecast to Fall Short by Over $35 Million</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">Adweek</span>
 <span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/bbc-disappointed-staff-industrial-…</span>
+<span class="card-url">adweek.com/media/conde-nast-ad-business-forecast-35-mil…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -339,16 +317,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#9b59b6">IA</div>
+
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">'Reacher', 'Neagley', 'Lioness' lideran septiembre en streaming: Paramount TV Studios domina</div>
-<a class="card" href="https://variety.com/2026/tv/news/reacher-neagley-lioness-paramount-tv-studios-ratings-1236932468/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Google abre Gemini y Search a más apps con plataforma para agentes IA</div>
+<a class="card" href="https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">'Reacher,' 'Neagley,' 'Lioness' Give Paramount TV Studios Three of September's Four Most-Streamed Original Series</div>
+<div class="card-title">As AI agents reshape the web, Google opens Gemini and Search to more apps</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
+<span class="card-source">TechCrunch</span>
 <span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/tv/news/reacher-neagley-lioness-paramo…</span>
+<span class="card-url">techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -357,15 +340,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Politico planea cobertura en vivo de elecciones de mitérmino en streaming</div>
-<a class="card" href="https://variety.com/2026/tv/news/politico-live-video-midterm-elections-dasha-burns-1236932543/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Amazon actualiza Alexa para gestionar listas de compra y suscripciones</div>
+<a class="card" href="https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Politico Plans Live Video Coverage of Midterm Elections</div>
+<div class="card-title">Amazon updates Alexa to help you manage shopping lists, subscriptions, and update delivery instructions</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">27 oct</span>
-<span class="card-url">variety.com/2026/tv/news/politico-live-video-midterm-el…</span>
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -374,32 +357,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Director de 'The One About Matthew Perry': ganarse la confianza de su hermana y explicar su muerte</div>
-<a class="card" href="https://variety.com/2026/tv/news/matthew-perry-documentary-director-sister-mia-explaining-his-death-1236931602/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Adam Mosseri advierte: negatividad sobre IA "va a empeorar"</div>
+<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">'The One About Matthew Perry' Director on Gaining His Sister's Trust, Explaining How He Died and More</div>
+<div class="card-title">Adam Mosseri says negativity around AI is 'going to get worse'</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">27 oct</span>
-<span class="card-url">variety.com/2026/tv/news/matthew-perry-documentary-dire…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Eric Roberts protagoniza drama vertical 'It's My Party And I'll Die If I Want To'</div>
-<a class="card" href="https://deadline.com/2026/10/eric-roberts-vertical-drama-its-my-party-new-short-media-1237206266/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Eric Roberts, Merrick Hanna &amp; Neela Jolene Starring In Vertical Drama 'It's My Party And I'll Die If I Want To'</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">The Verge</span>
 <span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/eric-roberts-vertical-drama-its-my…</span>
+<span class="card-url">theverge.com/ai-artificial-intelligence/1021644/adam-mo…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -408,15 +374,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Sphere Media y Paul Barbeau se unen para traer drama televisivo a Quebec</div>
-<a class="card" href="https://deadline.com/2026/10/sphere-media-paul-barbeau-quebec-tv-scripted-drama-1237206962/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">Apple finalmente combina pantalla táctil en MacBook Pro</div>
+<a class="card" href="https://www.theverge.com/report/1022013/apple-touchscreen-macbook-pro-toaster-refrigerator" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Sphere Media &amp; Paul Barbeau Team Up To Bring TV Drama To Quebec</div>
+<div class="card-title">Apple finally combined a toaster and a refrigerator</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/sphere-media-paul-barbeau-quebec-t…</span>
+<span class="card-source">The Verge</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">theverge.com/report/1022013/apple-touchscreen-macbook-p…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -424,16 +390,21 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#e67e22">ESTUDIOS E INFORMES</div>
+
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Kristen Brancaccio dirigirá adaptaciones de 'Summer Session' para microdrama y cine</div>
-<a class="card" href="https://deadline.com/2026/10/summer-session-clarence-hammond-microdrama-feature-film-1237206927/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #e67e22">Influencers en política: las elecciones de 2026 podrían marcar un punto de inflexión</div>
+<a class="card" href="https://digiday.com/marketing/why-the-2026-midterms-could-mark-a-turning-point-for-influencers-in-political-campaigns/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
 <div class="card-body">
-<div class="card-title">Kristen Brancaccio To Direct Microdrama &amp; Feature Adaptations Of Claren Hammond's Short Story 'Summer Session'</div>
+<div class="card-title">Why the 2026 midterms could mark a turning point for influencers in political campaigns</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">deadline.com/2026/10/summer-session-clarence-hammond-mi…</span>
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">digiday.com/marketing/why-the-2026-midterms-could-mark-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -442,11 +413,67 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Banijay Rights nombra CFO mientras John Wagener se retira tras 20 años</div>
-<a class="card" href="https://deadline.com/2026/10/banijay-rights-cfo-john-richards-john-wagener-exits-1237206920/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
+<div class="group-title" style="border-left:3px solid #e67e22">Editores venden suscripciones a audiencias menores: prueba con elecciones de mitérmino</div>
+<a class="card" href="https://digiday.com/media/media-briefing-publishers-are-selling-more-subscriptions-to-smaller-audiences-the-midterms-are-the-next-test/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
 <div class="card-body">
-<div class="card-title">Banijay Rights Names CFO As John
+<div class="card-title">Media Briefing: Publishers are selling more subscriptions to smaller audiences. The midterms are the next test.</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">digiday.com/media/media-briefing-publishers-are-selling…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">CTV advertising tiene problema con etiquetas de género</div>
+<a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-ctv-advertising-has-a-genre-label-problem/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
+<div class="card-body">
+<div class="card-title">Future of TV Briefing: CTV advertising has a genre-label problem</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">28 oct</span>
+<span class="card-url">digiday.com/future-of-tv/future-of-tv-briefing-ctv-adve…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e67e22">RAJARs Q3 2026: TalkSport lidera crecimiento con Mundial, BBC en declive</div>
+<a class="card" href="https://pressgazette.co.uk/media-audience-and-business-data/media_metrics/rajars-q3-2026-news-uk-stations-record-strongest-growth/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e67e22"></div>
+<div class="card-body">
+<div class="card-title">RAJARs Q3 2026: World Cup helps Talksport lead growth as BBC decline continues</div>
+<div class="card-meta">
+<span class="card-source">Press Gazette (UK)</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">pressgazette.co.uk/media-audience-and-business-data/med…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="analysis">
+<div class="analysis-header">📊 Análisis del día</div>
+
+<div class="analysis-row">
+<div class="analysis-label">Temas del día</div>
+<div class="analysis-text">
+<strong>1. Renovaciones y ficciones de calidad:</strong> Netflix consolida su liderazgo con la renovación de 'The Diplomat' S5 y el fichaje de Joseph Kay (Apple TV 'Ascension', 'Sweetpea' en Sky/Starz reafirman la apuesta por dramaturgia de alto presupuesto.<br><br>
+<strong>2. Contenido no-anglófono como motor:</strong> Netflix (65%) y Disney+ (50%) duplican adquisiciones de contenido no-inglés. TelevisaUnivision y ViX explotan eventos como el Mundial; la demanda de K-drama y contenido japonés redefine estrategias de catálogo.<br><br>
+<strong>3. Alianzas de
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
