@@ -43,6 +43,9 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 .save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
 .save-bar.visible{display:flex}
 .save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
@@ -85,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>29/10/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>30/10/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -98,21 +101,27 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
 <div class="toast" id="toast"></div>
+
+<div class="save-bar" id="save-bar">
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+</div>
+<div class="toast" id="toast"></div>
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">RedBird y Sound Ventures lanzan fondo de $1.000M para tech, media y cultura</div>
-<a class="card" href="https://variety.com/2026/biz/news/gerry-cardinale-redbird-guy-oseary-sound-ventures-investment-fund-1236934092/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">FlareFlow lanza en Tailandia el 2 nov a través de AIS Play</div>
+<a class="card" href="https://variety.com/2026/tv/news/microdrama-platform-flareflow-thailand-launch-ais-play-1236934882/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Gerry Cardinale's RedBird and Guy Oseary's Sound Ventures Team on $1 Billion Fund Targeting Tech, Media and Culture Investments</div>
+<div class="card-title">Microdrama Platform FlareFlow Sets Thailand Launch on AIS Play (EXCLUSIVE)</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">variety.com/2026/biz/news/gerry-cardinale-redbird-guy-o…</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">variety.com/2026/tv/news/microdrama-platform-flareflow-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -121,15 +130,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'The Diplomat' renovada para temporada 5 en Netflix</div>
-<a class="card" href="https://variety.com/2026/tv/news/the-diplomat-renewed-season-5-netflix-1236933737/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Nocturne' en Apple TV+: thriller serial killer con Liev Schreiber y Stephen Graham</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/nocturne-review-apple-tv-1236929731/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'The Diplomat' Renewed for Season 5 at Netflix</div>
+<div class="card-title">Liev Schreiber and Stephen Graham Lead Apple TV's Gripping Serial Killer Thriller 'Nocturne': TV Review</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">variety.com/2026/tv/news/the-diplomat-renewed-season-5-…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">variety.com/2026/tv/reviews/nocturne-review-apple-tv-12…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -138,15 +147,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Alfonso Cuarón: nuevos fichajes para 'Ascension' en Apple TV</div>
-<a class="card" href="https://variety.com/2026/tv/news/alfonso-cuaron-apple-tv-ascension-cast-1236933558/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">'Eavesdropping': rom-com serial en video social desafía futuro de ficción en redes</div>
+<a class="card" href="https://variety.com/2026/tv/news/eavesdropping-kaleigh-howland-nicolas-ayalo-sullivan-1236934845/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Alfonso Cuaron's Apple TV Cult Series 'Ascension' Adds Amanda Plummer, Christopher Chung, T'Nia Miller</div>
+<div class="card-title">Rom-Com 'Eavesdropping' Tests the Future of Scripted Social Video</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">variety.com/2026/tv/news/alfonso-cuaron-apple-tv-ascens…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">variety.com/2026/tv/news/eavesdropping-kaleigh-howland-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -155,15 +164,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">'Sweetpea': Ella Purnell regresa en tráiler completo S2</div>
-<a class="card" href="https://deadline.com/2026/10/sweetpea-season-2-trailer-ella-purnell-1237049663/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix noviembre: qué ver en la plataforma</div>
+<a class="card" href="https://variety.com/feature/whats-on-netflix-movies-shows-1203517873/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'Sweetpea': Ella Purnell Is Back In Killer Role As Full Trailer Drops For Season 2 Of Sky And Starz Series</div>
+<div class="card-title">What to Watch on Netflix in November 2026</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">deadline.com/2026/10/sweetpea-season-2-trailer-ella-pur…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">variety.com/feature/whats-on-netflix-movies-shows-12035…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -172,15 +181,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Channel 4 ficha a Adam Adler como director creativo</div>
-<a class="card" href="https://deadline.com/2026/10/adam-adler-joins-channel-4-productions-the-cube-1237207215/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Disney+ noviembre: películas y series de Navidad</div>
+<a class="card" href="https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'The Cube' Creator Adam Adler Joins Channel 4's Production Biz As Creative Director</div>
+<div class="card-title">What to Watch on Disney+ in November 2026</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">deadline.com/2026/10/adam-adler-joins-channel-4-product…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">variety.com/feature/whats-on-disney-plus-new-shows-movi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -189,15 +198,100 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Skydance-owned 5 adquiere derechos de 'Wentworth: Halfway Home' en UK</div>
-<a class="card" href="https://deadline.com/2026/10/wentworth-sequel-series-5-uk-deal-1237207207/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Matthew Weiner abandona 'The Chairman' de Eddie Murphy en Peacock</div>
+<a class="card" href="https://deadline.com/2026/10/matthew-weiner-leaving-eddie-murphy-the-chairman-peacock-1237209187/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Skydance-Owned 5 Buys UK Rights To 'Wentworth' Sequel Series</div>
+<div class="card-title">Matthew Weiner Exits Eddie Murphy Peacock Series 'The Chairman' As Showrunner</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">deadline.com/2026/10/matthew-weiner-leaving-eddie-murph…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Poorna Jagannathan se une a piloto 'Young Americans' de Hulu</div>
+<a class="card" href="https://deadline.com/2026/10/poorna-jagannathan-cast-hulu-young-americans-pilot-1237209103/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Poorna Jagannathan Joins Hulu's 'Young Americans' Pilot, Natalia Leite To Direct</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">deadline.com/2026/10/poorna-jagannathan-cast-hulu-young…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Channing Dungey supervisa producción de TV internacional de WB bajo Skydance</div>
+<a class="card" href="https://deadline.com/2026/10/channing-dungey-warner-bros-international-tv-production-1237208993/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Channing Dungey To Oversee Warner Bros. International TV Production As Division Moves Under Skydance TV Studios</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
 <span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">deadline.com/2026/10/wentworth-sequel-series-5-uk-deal-…</span>
+<span class="card-url">deadline.com/2026/10/channing-dungey-warner-bros-intern…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Skydance TV &amp; DTC: JB Perrette revela equipo ejecutivo</div>
+<a class="card" href="https://deadline.com/2026/10/skydance-streaming-tv-jb-perrette-executives-hbo-max-paramount-plus-1237208903/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Skydance TV &amp; DTC Co-Chair JB Perrette Unveils Leadership Team, Executive Departures</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">deadline.com/2026/10/skydance-streaming-tv-jb-perrette-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Skydance International designa cuatro líderes regionales</div>
+<a class="card" href="https://deadline.com/2026/10/skydance-international-regional-leads-georgiou-exiting-1237209311/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Skydance International Sets Its Four Regional Leads: Andrew Georgiou Exiting Europe &amp; Africa Role</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">deadline.com/2026/10/skydance-international-regional-le…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Viaplay completa venta de operaciones holandesas a Videoland por €142M</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/30/viaplay-completes-e142m-sale-of-dutch-operations-to-videoland/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Viaplay completes €142m sale of Dutch operations to Videoland</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/30/viaplay-completes-e142m-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -211,15 +305,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">RESULTADOS FINANCIEROS</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">TelevisaUnivision Q3 impulsado por Mundial en México e ingresos streaming</div>
-<a class="card" href="https://variety.com/2026/tv/news/televisaunivsion-q3-world-cup-mexico-streaming-1236933808/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Prime Video genera ingresos por "decenas de miles de millones": Andy Jassy</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/30/prime-video-revenue-running-at-tens-of-billions-says-jassy/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">TelevisaUnivision Q3 Buoyed by World Cup in Mexico, Streaming Revenue</div>
+<div class="card-title">Prime Video revenue running at 'tens of billions', says Jassy</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">variety.com/2026/tv/news/televisaunivsion-q3-world-cup-…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/30/prime-video-revenue-runn…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -228,15 +322,83 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Disney+ y Netflix adquieren 65% de contenido no-inglés</div>
-<a class="card" href="https://deadline.com/2026/10/disney-netflix-non-english-acquisitions-ampere-analysis-1237208043/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Crecimiento TF1+ no compensa caída de ingresos publicitarios de €100M</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/30/tf1-growth-fails-to-offset-advertising-downturn/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Disney+ &amp; Netflix Hoover Up Non-English Acquisitions As Fervor For Japanese &amp; Korean Content Continues – Ampere</div>
+<div class="card-title">TF1+ growth fails to offset advertising downturn</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">broadbandtvnews.com/2026/10/30/tf1-growth-fails-to-offs…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">ProSiebenSat.1 incrementa EBITDA €159M pese caída de ingresos</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/10/29/prosiebensat-1-raises-ebitda-by-e159-million-despite-falling-revenues/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">ProSiebenSat.1 raises EBITDA by €159 million despite falling revenues</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
 <span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">deadline.com/2026/10/disney-netflix-non-english-acquisi…</span>
+<span class="card-url">broadbandtvnews.com/2026/10/29/prosiebensat-1-raises-eb…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Amazon reporta ganancias en cloud pero no cumple expectativas en Q3</div>
+<a class="card" href="https://techcrunch.com/2026/10/29/amazon-reported-booming-cloud-revenue-but-otherwise-missed-expectations/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Amazon reported booming cloud revenue but otherwise missed expectations</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">techcrunch.com/2026/10/29/amazon-reported-booming-cloud…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Andy Jassy: AWS será negocio de $1T pero primero invertirá agresivamente</div>
+<a class="card" href="https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">AWS will be a $1T business, Jassy says — but first, it will spend big</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">29 oct</span>
+<span class="card-url">techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jas…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Amazon Ads alcanza €20B en Q3 apostando por IA agentic</div>
+<a class="card" href="https://digiday.com/media-buying/amazons-ads-nears-20-billion-in-q3-as-it-bets-on-agentic-ai-to-fuel-further-growth/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Amazon's Ads nears $20 billion in Q3 as it bets on agentic AI to fuel further growth</div>
+<div class="card-meta">
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">digiday.com/media-buying/amazons-ads-nears-20-billion-i…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -250,15 +412,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#27ae60">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Walmart abre audiencias de comprador en plataforma CTV Vibe</div>
-<a class="card" href="https://www.adweek.com/media/months-after-buying-vibe-walmart-opens-shopper-audiences-to-ctv-advertisers/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #27ae60">Amazon afirma agentes IA externos no dañan negocio publicitario</div>
+<a class="card" href="https://www.adweek.com/commerce/amazon-says-external-ai-agents-arent-hurting-its-ad-business/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Walmart Opens Shopper Audiences to Advertisers on Its CTV Platform, Vibe</div>
+<div class="card-title">Amazon Says External AI Agents Aren't Hurting Its Ad Business</div>
 <div class="card-meta">
 <span class="card-source">Adweek</span>
 <span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">adweek.com/media/months-after-buying-vibe-walmart-opens…</span>
+<span class="card-url">adweek.com/commerce/amazon-says-external-ai-agents-aren…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -267,144 +429,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Cómo K-Beauty redefinió el lenguaje del marketing de belleza</div>
-<a class="card" href="https://www.adweek.com/brand-marketing/how-k-beauty-made-skincare-the-language-of-beauty-marketing/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #27ae60">Bloqueo Safari de Apple da nuevo argumento a WPP para InfoSum</div>
+<a class="card" href="https://digiday.com/media-buying/apples-safari-block-hands-wpp-a-fresh-case-for-infosum/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">How K-Beauty Made Skincare the Language of Beauty Marketing</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">adweek.com/brand-marketing/how-k-beauty-made-skincare-t…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Google Stock cae mientras IA Mode presiona crecimiento de anuncios Search</div>
-<a class="card" href="https://www.adweek.com/media/google-stock-sinks-as-ai-mode-pressures-search-ad-growth/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Google Stock Sinks as AI Mode Pressures Search Ad Growth</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">adweek.com/media/google-stock-sinks-as-ai-mode-pressure…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Previsión: Condé Nast Q4 se quedará corta en $35M en negocio de anuncios</div>
-<a class="card" href="https://www.adweek.com/media/conde-nast-ad-business-forecast-35-million/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Condé Nast's Q4 Ad Business Is Forecast to Fall Short by Over $35 Million</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">adweek.com/media/conde-nast-ad-business-forecast-35-mil…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#9b59b6">IA</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Google abre Gemini y Search a más apps con plataforma para agentes IA</div>
-<a class="card" href="https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">As AI agents reshape the web, Google opens Gemini and Search to more apps</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Amazon actualiza Alexa para gestionar listas de compra y suscripciones</div>
-<a class="card" href="https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Amazon updates Alexa to help you manage shopping lists, subscriptions, and update delivery instructions</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Adam Mosseri advierte: negatividad sobre IA "va a empeorar"</div>
-<a class="card" href="https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Adam Mosseri says negativity around AI is 'going to get worse'</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">theverge.com/ai-artificial-intelligence/1021644/adam-mo…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Apple finalmente combina pantalla táctil en MacBook Pro</div>
-<a class="card" href="https://www.theverge.com/report/1022013/apple-touchscreen-macbook-pro-toaster-refrigerator" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">Apple finally combined a toaster and a refrigerator</div>
-<div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">theverge.com/report/1022013/apple-touchscreen-macbook-p…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#e67e22">ESTUDIOS E INFORMES</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Influencers en política: las elecciones de 2026 podrían marcar un punto de inflexión</div>
-<a class="card" href="https://digiday.com/marketing/why-the-2026-midterms-could-mark-a-turning-point-for-influencers-in-political-campaigns/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
-<div class="card-body">
-<div class="card-title">Why the 2026 midterms could mark a turning point for influencers in political campaigns</div>
+<div class="card-title">Apple's Safari block hands WPP a fresh case for InfoSum</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">digiday.com/marketing/why-the-2026-midterms-could-mark-…</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">digiday.com/media-buying/apples-safari-block-hands-wpp-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -413,67 +446,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">Editores venden suscripciones a audiencias menores: prueba con elecciones de mitérmino</div>
-<a class="card" href="https://digiday.com/media/media-briefing-publishers-are-selling-more-subscriptions-to-smaller-audiences-the-midterms-are-the-next-test/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
+<div class="group-title" style="border-left:3px solid #27ae60">Anuncios de la semana: 9 campañas que capturaron atención</div>
+<a class="card" href="https://www.adweek.com/creativity/ads-of-the-week-9-campaigns-that-caught-our-eye-from-walmart-to-sephora/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
 <div class="card-body">
-<div class="card-title">Media Briefing: Publishers are selling more subscriptions to smaller audiences. The midterms are the next test.</div>
+<div class="card-title">Ads of the Week: 9 Campaigns That Caught Our Eye, From Walmart to Sephora</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">digiday.com/media/media-briefing-publishers-are-selling…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">CTV advertising tiene problema con etiquetas de género</div>
-<a class="card" href="https://digiday.com/future-of-tv/future-of-tv-briefing-ctv-advertising-has-a-genre-label-problem/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
-<div class="card-body">
-<div class="card-title">Future of TV Briefing: CTV advertising has a genre-label problem</div>
-<div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">28 oct</span>
-<span class="card-url">digiday.com/future-of-tv/future-of-tv-briefing-ctv-adve…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e67e22">RAJARs Q3 2026: TalkSport lidera crecimiento con Mundial, BBC en declive</div>
-<a class="card" href="https://pressgazette.co.uk/media-audience-and-business-data/media_metrics/rajars-q3-2026-news-uk-stations-record-strongest-growth/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e67e22"></div>
-<div class="card-body">
-<div class="card-title">RAJARs Q3 2026: World Cup helps Talksport lead growth as BBC decline continues</div>
-<div class="card-meta">
-<span class="card-source">Press Gazette (UK)</span>
-<span class="card-sep">·</span><span class="card-date">29 oct</span>
-<span class="card-url">pressgazette.co.uk/media-audience-and-business-data/med…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="analysis">
-<div class="analysis-header">📊 Análisis del día</div>
-
-<div class="analysis-row">
-<div class="analysis-label">Temas del día</div>
-<div class="analysis-text">
-<strong>1. Renovaciones y ficciones de calidad:</strong> Netflix consolida su liderazgo con la renovación de 'The Diplomat' S5 y el fichaje de Joseph Kay (Apple TV 'Ascension', 'Sweetpea' en Sky/Starz reafirman la apuesta por dramaturgia de alto presupuesto.<br><br>
-<strong>2. Contenido no-anglófono como motor:</strong> Netflix (65%) y Disney+ (50%) duplican adquisiciones de contenido no-inglés. TelevisaUnivision y ViX explotan eventos como el Mundial; la demanda de K-drama y contenido japonés redefine estrategias de catálogo.<br><br>
-<strong>3. Alianzas de
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">30 oct</span>
+<span class="card-url">adweek.com
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
