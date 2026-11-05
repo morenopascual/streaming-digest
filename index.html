@@ -50,6 +50,9 @@ body.select-mode .card:hover{background:#f0f6ff}
 .btn-save:disabled{opacity:.5;cursor:default}
 .toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
 .toast.show{opacity:1}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
 </style>
 <style>
 /* ── Header layout ── */
@@ -85,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>04/11/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>05/11/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -99,10 +102,13 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
+
+
 <div class="save-bar" id="save-bar">
   <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
   <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
 </div>
+
 <div class="toast" id="toast"></div>
 
 <div class="container">
@@ -111,32 +117,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'The Greatest' con Muhammad Ali y actor revelación Jaalen Best</div>
-<a class="card" href="https://variety.com/2026/tv/reviews/the-greatest-review-prime-video-muhammad-ali-1236935457/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: 'Criminal' con Charlie Hunnam — 13 enero</div>
+<a class="card" href="https://deadline.com/2026/11/criminal-prime-video-trailer-charlie-hunnam-1237214282/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Prime Video's Superb Muhammad Ali Series 'The Greatest' Makes a Star Out of Newcomer Jaalen Best: TV Review</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/tv/reviews/the-greatest-review-prime-v…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'Trinity' con Gugu Mbatha-Raw y Richard Madden — 1 dic</div>
-<a class="card" href="https://deadline.com/2026/11/trinity-release-date-netflix-photos-trailer-1237212652/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'Trinity' Sets Release Date At Netflix; First Look & Trailer</div>
+<div class="card-title">Charlie Hunnam's 'Criminal' Sets Prime Video Release Date; Teaser & First-Look Images Unveiled</div>
 <div class="card-meta">
 <span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">deadline.com/2026/11/trinity-release-date-netflix-photo…</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">deadline.com/2026/11/criminal-prime-video-trailer-charl…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -145,83 +134,66 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">ITV: 'Gone' S2 suma a Keeley Hawes junto a Eve Myles (George Kay)</div>
-<a class="card" href="https://deadline.com/2026/11/itv-gone-season-2-keeley-hawes-eve-myles-george-kay-1237212082/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Instagram Edits ahora en desktop: compite con CapCut</div>
+<a class="card" href="https://techcrunch.com/2026/11/05/instagram-brings-edits-to-desktop-to-take-on-capcut/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">'The Assassin' Star Keeley Hawes Joins Season 2 Of George Kay's ITV Thriller 'Gone'</div>
-<div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">deadline.com/2026/11/itv-gone-season-2-keeley-hawes-eve…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix: 'Prep' de Curtis Sittenfeld con Nicole Taylor confirmada</div>
-<a class="card" href="https://variety.com/2026/tv/news/netflix-ya-drama-prep-curtis-sittenfeld-novel-nicole-taylor-1236938734/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Netflix Orders YA Drama 'Prep' Based on Curtis Sittenfeld Novel From Nicole Taylor</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">3 nov</span>
-<span class="card-url">variety.com/2026/tv/news/netflix-ya-drama-prep-curtis-s…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Paramount+ drama: parcela se redistribuye entre HBO tras fusión Skydance</div>
-<a class="card" href="https://deadline.com/2026/11/paramount-plus-drama-slate-sarah-aubrey-francesca-orsi-1237212518/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Paramount+ Drama Slate: Series Moving To HBO, Sarah Aubrey & Francesca Orsi Sharing Oversight Among Options Explored Post-Merger</div>
-<div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">deadline.com/2026/11/paramount-plus-drama-slate-sarah-a…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">EloElo (StoryTV India): $80M Series C de NBCUniversal y Hornbill</div>
-<a class="card" href="https://variety.com/2026/tv/news/nbcuniversal-microdrama-story-tv-eloelo-80-million-1236938992/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">NBCUniversal, Hornbill Capital Back EloElo, Parent of Indian Microdrama Platform Story TV, in $80 Million Funding Round</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/tv/news/nbcuniversal-microdrama-story-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Titan OS: $46M para expandir smart TV OS internacionalmente</div>
-<a class="card" href="https://techcrunch.com/2026/11/04/titan-os-raises-46-million-to-expand-its-smart-tv-os-internationally/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">Titan OS raises $46 million to expand its smart TV OS internationally</div>
+<div class="card-title">Instagram brings Edits to desktop to take on CapCut</div>
 <div class="card-meta">
 <span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">techcrunch.com/2026/11/04/titan-os-raises-46-million-to…</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">techcrunch.com/2026/11/05/instagram-brings-edits-to-des…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">VueWho: nuevo canal FAST de microdramas de KSA Entertainment</div>
+<a class="card" href="https://tvnewscheck.com/programming/article/vuewho-launches-as-new-fast-channel-for-micro-dramas/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">VueWho Launches As New FAST Channel For Micro Dramas</div>
+<div class="card-meta">
+<span class="card-source">TVNewsCheck</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">tvnewscheck.com/programming/article/vuewho-launches-as…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Vodafone lanza Pro 4 con WiFi 7 y 8Gbps en red CityFibre</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/05/vodafone-launches-pro-4-with-wifi-7-and-8gbps-broadband/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Vodafone launches Pro 4 with WiFi 7 and 8Gbps broadband</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/05/vodafone-launches-pro-4…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Roku Outcomes: suite ML para optimización de CTV performance</div>
+<a class="card" href="https://www.advanced-television.com/2026/11/05/roku-introduces-roku-outcomes/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Roku Introduces Roku Outcomes</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">www.advanced-television.com/2026/11/05/roku-introduces-r…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -232,18 +204,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#e74c3c">REGULACIÓN</div>
+<div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Sky-ITV: Reino Unido abre investigación formal tras intervención ministra Cultura</div>
-<a class="card" href="https://variety.com/2026/tv/global/skys-itv-culture-secretary-public-interest-notice-1236939191/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Brands en ChatGPT: presencia creciente pero conversión difícil de probar</div>
+<a class="card" href="https://www.adweek.com/media/adweek-tech-advantage-brands-are-showing-up-in-chatgpt-proving-it-pays-is-harder/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Sky's ITV Acquisition Hits Roadblock as Culture Secretary Issues Public Interest Intervention Notice</div>
+<div class="card-title">ADWEEK Tech Advantage: Brands Are Showing Up in ChatGPT. Proving It Pays Is Harder.</div>
 <div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/tv/global/skys-itv-culture-secretary-p…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">adweek.com/media/adweek-tech-advantage-brands-are-showi…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -252,15 +224,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Sky-ITV: CMA y Ofcom analizan deal de £1.6B (~$2.2B) hasta enero</div>
-<a class="card" href="https://deadline.com/2026/11/sky-itv-deal-formal-investigation-lisa-nandy-competition-1237213061/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">ChatGPT ads: 6,000 brands pero problemas de conversión persistentes</div>
+<a class="card" href="https://digiday.com/marketing/in-graphic-detail-chatgpt-s-ad-growth-is-outrunning-the-proof-that-it-works/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Sky-ITV: UK Competition Bodies Given Greenlight To Investigate $2.2B Deal By Culture Secretary</div>
+<div class="card-title">In graphic detail: Six thousand brands later, ChatGPT ads still have a conversion problem</div>
 <div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">deadline.com/2026/11/sky-itv-deal-formal-investigation-…</span>
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">digiday.com/marketing/in-graphic-detail-chatgpt-s-ad-gr…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -269,37 +241,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Meta contra publishers: términos IA scraping tensionan relaciones</div>
-<a class="card" href="https://pressgazette.co.uk/news/meta-terms-publishers-nma-ceo/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Amazon 'Joy Delivered': campaña navideña sin product showcase</div>
+<a class="card" href="https://www.adweek.com/creativity/amazons-joy-delivered-holiday-ad-swaps-product-showcase-for-a-heartfelt-homecoming/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Meta 'holding publishers over a barrel', says News Media Association chief</div>
+<div class="card-title">Amazon's 'Joy Delivered' Holiday Ad Swaps Product Showcase for a Heartfelt Homecoming</div>
 <div class="card-meta">
-<span class="card-source">Press Gazette (UK)</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">pressgazette.co.uk/news/meta-terms-publishers-nma-ceo/</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#9b59b6">CULTURA Y POLÉMICA</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Tienda 'Harry Potter' en Oxford Street: manifestantes trans protestan</div>
-<a class="card" href="https://variety.com/2026/film/global/harry-potter-store-opening-trans-rights-protesters-london-1236939173/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">'Harry Potter' Store Opening in London Draws Trans Rights Protesters Amid J.K. Rowling Controversy</div>
-<div class="card-meta">
-<span class="card-source">Variety – Film</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/film/global/harry-potter-store-opening…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">adweek.com/creativity/amazons-joy-delivered-holiday-ad-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -308,71 +258,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Dylan Sprouse: cheque de residuos de 'Suite Life' fue por 5 centavos</div>
-<a class="card" href="https://variety.com/2026/tv/news/dylan-sprouse-residual-check-suite-life-of-zack-and-cody-1236939089/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
+<div class="group-title" style="border-left:3px solid #e74c3c">Scene-level targeting CTV: guía patrocinada por Wurl</div>
+<a class="card" href="https://digiday.com/sponsored/wtf-scene-level-targeting-ctv/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Dylan Sprouse Says the Only Residual Check He's Received for 'The Suite Life of Zack and Cody' Was 'Five Cents': 'I'm Not Joking'</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/tv/news/dylan-sprouse-residual-check-s…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#27ae60">ESTUDIOS E INFORMES</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">BAFTA Breakthrough 2026: 21 talentos emergentes en film, TV y games</div>
-<a class="card" href="https://variety.com/2026/film/news/bafta-breakthrough-2026-other-bennet-sister-ella-bruccoleri-1236938267/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">BAFTA Unveils 2026 Breakthrough U.K. Cohort, Including 'The Other Bennet Sister' Star Ella Bruccoleri</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/film/news/bafta-breakthrough-2026-othe…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Thessaloniki Film Festival: brazo industrial expande alianzas europeas</div>
-<a class="card" href="https://variety.com/2026/film/global/thessaloniki-industry-regional-talent-partnerships-europe-1236939104/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">How Thessaloniki's Industry Arm Continues to Launch Regional Talent, Widen Its Focus With Partnerships 'Across Europe and Beyond'</div>
-<div class="card-meta">
-<span class="card-source">Variety – Film</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">variety.com/2026/film/global/thessaloniki-industry-regi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Creator Marketing Index 2026: guía de Digiday para campaigns sociales</div>
-<a class="card" href="https://digiday.com/marketing/digiday-research-2026-creator-marketing-index-a-brand-guide-to-social-media-campaigns/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Digiday+ Research 2026 Creator Marketing Index: A brand guide to social media campaigns</div>
+<div class="card-title">WTF is scene-level targeting for CTV?</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
 <span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">digiday.com/marketing/digiday-research-2026-creator-mar…</span>
+<span class="card-url">digiday.com/sponsored/wtf-scene-level-targeting-ctv/?ut…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -382,98 +276,201 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 </div>
 
-<div class="analysis">
-<div class="analysis-header">Análisis</div>
+<div class="section">
+<div class="section-label" style="color:#9b59b6">IA</div>
 
-<div class="analysis-row">
-<div class="analysis-label">Temas del día</div>
-<div class="analysis-text">
-<strong>1. Consolidación de plataformas:</strong> Netflix y Prime Video lideran con estrenos de calidad (Trinity, The Greatest); NBCUniversal invierte $80M en microdramas indios (StoryTV). Paramount+ redistribuye su parcela de drama hacia HBO tras fusión Skydance-Warner Bros.<br><br>
-<strong>2. Turbulencia regulatoria UK:</strong> Sky-ITV enfrenta investigación formal de CMA y Ofcom tras intervención de ministra de Cultura Lisa Nandy; Meta tensiona relaciones con publishers por términos de scraping IA.<br><br>
-<strong>3. Talento y presupuestos globales:</strong> BAFTA reconoce 21 creativos emergentes; festivales como Thessaloniki expanden alianzas europeas. Whit Stillman reinicia cine tras década con 'A Night at Claridge's'.<br><br>
-<strong>4. Controversia cultural:</strong> Tienda Harry Potter en Oxford Street disrupted por manifestantes trans; Dylan Sprouse denuncia residuos ridículos ($0.05) de 'Suite Life' Disney.<br><br>
-<strong>5. Expansión de OS inteligentes:</strong> Titan OS recauda $46M; EloElo suma $80M para escalar en Asia. El ecosistema CTV sigue atrayendo inversión masiva.
+<div class="group">
+<div class="group-title" style="border-left:3px solid #9b59b6">Anthropic y AP: primer acuerdo de licensing de contenido periodístico</div>
+<a class="card" href="https://www.adweek.com/media/anthropic-licensing-deal-ap-election/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
+<div class="card-body">
+<div class="card-title">Anthropic Strikes Its First Licensing Deal, With the AP, for Election Coverage</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">4 nov</span>
+<span class="card-url">adweek.com/media/anthropic-licensing-deal-ap-election/</span>
+<span class="card-ext">↗</span>
 </div>
 </div>
-
-<div class="analysis-row">
-<div class="analysis-label">Para seguir (Atresmedia)</div>
-<div class="analysis-text">
-<strong>→ Oportunidad de contenido premium:</strong> Tendencia global de series prestige en SVOD (Trinity, The Greatest). Atresplayer puede reforzar su oferta de drama británico e iberoamericano de alto perfil, diferenciándose de volumen masivo.<br><br>
-<strong>→ Alianzas internacionales:</strong> EloElo/StoryTV muestra potencial de microdramas en Asia y mercados emergentes. Explorar partnerships con productoras locales en España/LatAm para maximizar distribución y licencias.<br><br>
-<strong>→ Regulación UK:</strong> Investigación Sky-ITV anticipa presión sobre consolidaciones audiovisuales. Monitorear precedentes regulatorios que podrían afectar M&A y modelos AVOD/SVOD en Europa.
-</div>
+<div class="card-check"></div>
+</a>
 </div>
 
+<div class="group">
+<div class="group-title" style="border-left:3px solid #9b59b6">Meta adquiere Conductor: startup de agents para software teams</div>
+<a class="card" href="https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
+<div class="card-body">
+<div class="card-title">Meta acquires AI coding startup Conductor</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">4 nov</span>
+<span class="card-url">techcrunch.com/2026/11/04/meta-acquires-ai-coding-start…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #9b59b6">Apple recorta presupuesto de IA para equipos de ingeniería</div>
+<a class="card" href="https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
+<div class="card-body">
+<div class="card-title">Apple is reportedly cutting budgets for its internal AI usage</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">techcrunch.com/2026/11/04/apple-is-reportedly-cutting-b…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
 </div>
 
 </div>
 
-<script>
-document.querySelectorAll('.card').forEach(function(card) {
-  if (!card.querySelector('.card-check')) {
-    var chk = document.createElement('div');
-    chk.className = 'card-check';
-    card.appendChild(chk);
-  }
-});
+<div class="section">
+<div class="section-label" style="color:#27ae60">RESULTADOS FINANCIEROS</div>
 
-document.addEventListener('click', function(e) {
-  var card = e.target.closest('.card');
-  if (!card || !document.body.classList.contains('select-mode')) return;
-  e.preventDefault();
-  card.classList.toggle('selected');
-  updateSaveBar();
-}, true);
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">IMAX: récord de revenue y profit en Q3 gracias a 'The Odyssey'</div>
+<a class="card" href="https://www.hollywoodreporter.com/business/business-news/imax-third-quarter-1236747892/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Imax Posts Record Revenue, Profit Growth With 'The Odyssey' in Third Quarter</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">hollywoodreporter.com/business/business-news/imax-third…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
 
-function updateSaveBar() {
-  var n   = document.querySelectorAll('.card.selected').length;
-  var txt = document.getElementById('save-bar-text');
-  var btn = document.getElementById('btn-save');
-  var bar = document.getElementById('save-bar');
-  if (txt) txt.textContent = n + (n === 1 ? ' noticia seleccionada' : ' noticias seleccionadas');
-  if (btn) btn.disabled = n === 0;
-  if (bar) bar.classList.toggle('visible', n > 0);
-}
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Sony Pictures: 'Spider-Man: Brand New Day' impulsa ganancias a $581M</div>
+<a class="card" href="https://deadline.com/2026/11/sony-q2-earnings-spider-man-brand-new-day-1237214122/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">'Spider-Man: Brand New Day' Propels Sony Pictures To Huge Q2 Profit Boost</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">deadline.com/2026/11/sony-q2-earnings-spider-man-brand-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
 
-function toggleSelect() {
-  var active = document.body.classList.toggle('select-mode');
-  var btn = document.getElementById('btn-select');
-  if (btn) btn.classList.toggle('active', active);
-  if (!active) {
-    document.querySelectorAll('.card.selected').forEach(function(c) { c.classList.remove('selected'); });
-    updateSaveBar();
-  }
-}
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Deutsche Telekom: suma 8,000 clientes MagentaTV en Q3 2026</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/05/deutsche-telekom-adds-8000-tv-customers-in-germany-in-q3/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Deutsche Telekom adds 8,000 TV customers in Germany in Q3</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/05/deutsche-telekom-adds-80…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
 
-function saveToBoard() {
-  var items = [];
-  document.querySelectorAll('.card.selected').forEach(function(card) {
-    items.push({
-      title:  (card.querySelector('.card-title')  || {}).textContent || '',
-      url:    card.href || '',
-      source: (card.querySelector('.card-source') || {}).textContent || '',
-      date:   (card.querySelector('.card-date')   || {}).textContent || '',
-      saved:  new Date().toISOString(),
-    });
-  });
-  var board = JSON.parse(localStorage.getItem('digestBoard') || '[]');
-  board = items.concat(board);
-  localStorage.setItem('digestBoard', JSON.stringify(board));
-  showToast(items.length + (items.length === 1 ? ' noticia guardada' : ' noticias guardadas'));
-  document.body.classList.remove('select-mode');
-  var btn = document.getElementById('btn-select');
-  if (btn) btn.classList.remove('active');
-  document.querySelectorAll('.card.selected').forEach(function(c) { c.classList.remove('selected'); });
-  updateSaveBar();
-}
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Titan OS: $46M en financiamiento para expansión internacional</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/05/titan-os-raises-46m-through-equity-and-blackrock-managed-credit-facility/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Titan OS raises $46m through equity and BlackRock-managed credit facility</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/05/titan-os-raises-46m-thro…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
 
-function triggerUpdate() {
-  var btn = document.getElementById('update-btn');
-  if (btn) { btn.disabled = true; btn.textContent = '↻ Actualizando…'; }
-  fetch('https://api.github.com/repos/morenopascual/streaming-digest/actions/workflows/update-digest.yml/dispatches', {
-    method: 'POST',
-    headers: { 'Accept': 'application/vnd.github.v3+json',
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">SES: media business estable Q3, renovals Sky y Canal+ fundamentales</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/05/ses-media-decline-slows-as-sky-and-canal-renewals-underpin-business/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">SES media decline slows as Sky and Canal+ renewals underpin business</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/05/ses-media-decline-slows-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">Xperi (TiVo): revenue $114M en Q3, media +102% pero consumer -28%</div>
+<a class="card" href="https://www.advanced-television.com/2026/11/05/xperi-tivo-one-driving-growth/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">Xperi: "TiVo One driving growth"</div>
+<div class="card-meta">
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">www.advanced-television.com/2026/11/05/xperi-tivo-one-drivi…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #27ae60">NYT: suma 420,000 suscriptores digitales en 3 meses</div>
+<a class="card" href="https://pressgazette.co.uk/media_business/new-york-times-boosts-digital-subscribers-by-420000-in-three-months/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#27ae60"></div>
+<div class="card-body">
+<div class="card-title">New York Times boosts digital subscribers by 420,000 in three months</div>
+<div class="card-meta">
+<span class="card-source">Press Gazette (UK)</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">pressgazette.co.uk/media_business/new-york-times-boosts…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#1abc9c">MEDIOS Y TELEVISIÓN</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1abc9c">'Married at First Sight UK' cancelada por Channel 4 tras denuncias</div>
+<a class="card" href="https://deadline.com/2026/11/channel-4-cancels-married-at-first-sight-uk-rape-1237214149/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#1abc9c"></div>
+<div class="card-body">
+<div class="card-title">Channel 4 Cancels 'Married At First Sight UK' After Rape Allegations</div>
+<div class="card-meta">
+<span class="card-source">Deadline – TV</span>
+<span class="card-sep">·</span><span class="card-date">5 nov</span>
+<span class="card-url">deadline.com/2026/11/channel-4-cancels-married-at-first…</span>
+<span class="card-ext">↗</span>
+</div>
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
