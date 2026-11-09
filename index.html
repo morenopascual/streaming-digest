@@ -43,6 +43,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.save-bar.visible{display:flex}
+.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
+.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -78,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>06/11/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>09/11/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -92,21 +102,27 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 <div class="toast" id="toast"></div>
 
+<div class="save-bar" id="save-bar">
+  <span class="save-bar-text" id="save-bar-text">0 noticias seleccionadas</span>
+  <button class="btn-save" id="btn-save" onclick="saveToBoard()" disabled>Guardar en tablero →</button>
+</div>
+<div class="toast" id="toast"></div>
+
 <div class="container">
 
 <div class="section">
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Fox cierra adquisición de Roku por $22 mil millones</div>
-<a class="card" href="https://variety.com/2026/tv/news/fox-closes-roku-acquisition-1236941275/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix fichaje: Maya Jama abandona Love Island UK tras 9 temporadas</div>
+<a class="card" href="https://variety.com/2026/tv/global/maya-jama-signs-netflix-deal-new-projects-love-island-uk-exit-1236941985/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Fox Closes $22 Billion Roku Takeover</div>
+<div class="card-title">Maya Jama Strikes Deal With Netflix (EXCLUSIVE)</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">variety.com/2026/tv/news/fox-closes-roku-acquisition-12…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">variety.com/2026/tv/global/maya-jama-signs-netflix-deal…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -115,15 +131,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">ITVX supera récord anual 2025 en 10 meses con 3.6B streams</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/itvx-passes-annual-streaming-record-as-fast-offering-expands/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Netflix estrenos semana: Steps (20 nov), Gordon (18 nov)</div>
+<a class="card" href="https://variety.com/2026/tv/global/gordon-netflix-pablo-trapero-rodrigo-de-la-serna-1236943118/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">ITVX passes annual streaming record as FAST offering expands</div>
+<div class="card-title">'Gordon,' From Netflix, Pablo Trapero and Rodrigo de la Serna, Shapes Up as One of 2026's Most Anticipated Latin American Series</div>
 <div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/itvx-passes-annual-strea…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">variety.com/2026/tv/global/gordon-netflix-pablo-trapero…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -132,15 +148,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">YouTube Premium es top 5 en 7 mercados de Europa Central</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/youtube-premium-joins-cees-top-five-paid-video-services/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Gwyneth Paltrow: The Goop Guide llega a Netflix + Spotify</div>
+<a class="card" href="https://variety.com/2026/tv/news/gwyneth-paltrow-goop-guide-netflix-spotify-video-podcast-1236941245/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">YouTube Premium joins CEE's top five paid video services</div>
+<div class="card-title">Gwyneth Paltrow's 'Goop Guide' Show Coming to Netflix and Spotify</div>
 <div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/youtube-premium-joins-ce…</span>
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">variety.com/2026/tv/news/gwyneth-paltrow-goop-guide-net…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -149,15 +165,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Vodafone TV lanza primera campaña en UK con 'Welcome Unboxed'</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/vodafone-tv-launches-first-uk-campaign/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Prime Video: Maxton Hall final season (9 dic) con trailer</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/maxton-hall-season-three-trailer-prime-video-1236750849/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Vodafone TV launches first UK campaign</div>
+<div class="card-title">Prime Video Unveils 'Maxton Hall' Final Season Trailer</div>
 <div class="card-meta">
-<span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/vodafone-tv-launches-fir…</span>
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-news/emily-watson-jo…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -166,15 +182,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Sky extiende visualización Real Time a todos los canales Sky Sports</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/sky-extends-real-time-viewing-across-all-sky-sports-channels/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Fox cierra compra de Roku por $22 mil millones con compromisos neutralidad</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/09/fox-completes-roku-takeover-with-pledges-on-platform-neutrality/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Sky extends Real Time viewing across all Sky Sports channels</div>
+<div class="card-title">Fox completes Roku takeover with pledges on platform neutrality</div>
 <div class="card-meta">
 <span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/sky-extends-real-time-vi…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/09/fox-completes-roku-takeo…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -183,15 +199,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">AGCOM: nuevas reglas para TV híbrida y distribución streaming</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/agcom-proposes-new-rules-for-hybrid-tv-and-streaming-delivery/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">One Hungary suma 3 canales y acceso Network4 Go streaming</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/09/one-hungary-adds-three-channels-and-network4-streaming-access/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">AGCOM proposes new rules for hybrid TV and streaming delivery</div>
+<div class="card-title">One Hungary adds three channels and Network4 streaming access</div>
 <div class="card-meta">
 <span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/agcom-proposes-new-rules…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/09/one-hungary-adds-three-c…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -200,15 +216,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Plus y Polsat Box lanzan bundle de 4 servicios streaming por PLN 55</div>
-<a class="card" href="https://www.broadbandtvnews.com/2026/11/06/plus-and-polsat-box-bundle-four-streaming-services-for-pln-55/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Ooredoo elige Bango para bundling streaming en MENA y SE Asia</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/09/ooredoo-selects-bango-for-subscription-bundling-across-its-markets/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Polsat Plus and Polsat Box bundle four streaming services for PLN 55</div>
+<div class="card-title">Ooredoo selects Bango for subscription bundling across its markets</div>
 <div class="card-meta">
 <span class="card-source">Broadband TV News</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">broadbandtvnews.com/2026/11/06/plus-and-polsat-box-bund…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/09/ooredoo-selects-bango-fo…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -222,15 +238,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Amazon permite enviar textos a su asistente de compras con anuncios integrados</div>
-<a class="card" href="https://digiday.com/media-buying/amazons-shopping-agent-now-takes-orders-by-text-with-sponsored-product-ads-in-the-replies/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Meo Portugal relanza anuncios TV no saltables en grabaciones CTV con ADDS+</div>
+<a class="card" href="https://www.advanced-television.com/2026/11/09/portugal-meo-relaunches-non-skippable-tv-ads/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Amazon's shopping agent now takes orders by text, with Sponsored Product ads in the replies</div>
+<div class="card-title">Portugal: Meo relaunches non-skippable TV ads</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">digiday.com/media-buying/amazons-shopping-agent-now-tak…</span>
+<span class="card-source">Advanced Television</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">advanced-television.com/2026/11/09/portugal-meo-relaunc…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -239,15 +255,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Scene-level targeting: guía de targeting contextual en CTV</div>
-<a class="card" href="https://digiday.com/sponsored/wtf-scene-level-targeting-ctv/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Disney: campaña navideña con caballo invisible 'The Invisible Horse'</div>
+<a class="card" href="https://www.adweek.com/brand-marketing/disney-hitches-its-holiday-campaign-to-an-invisible-horse/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">WTF is scene-level targeting for CTV?</div>
+<div class="card-title">Disney Hitches Its Holiday Campaign to an Invisible Horse</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">4 nov</span>
-<span class="card-url">digiday.com/sponsored/wtf-scene-level-targeting-ctv/?ut…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">adweek.com/brand-marketing/disney-hitches-its-holiday-c…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -256,15 +272,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Ad-tech: división entre ganadores (CTV) y perdedores (open web)</div>
-<a class="card" href="https://digiday.com/media/by-the-numbers-ad-techs-widening-divide-as-applovin-surges-and-rivals-struggle-in-q3/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Amazon Workspace AI: primer campaña publicitaria de herramienta oficina</div>
+<a class="card" href="https://www.adweek.com/brand-marketing/amazons-ai-workspace-tool-gets-its-first-ad-campaign/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">By the numbers: Ad tech's widening divide, as AppLovin surges and rivals struggle in Q3</div>
+<div class="card-title">Amazon's AI Workspace Tool Gets Its First Ad Campaign</div>
 <div class="card-meta">
-<span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">digiday.com/media/by-the-numbers-ad-techs-widening-divi…</span>
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">adweek.com/brand-marketing/amazons-ai-workspace-tool-ge…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -273,15 +289,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">ChatGPT ads: 6,000 marcas pero persisten problemas de conversión</div>
-<a class="card" href="https://digiday.com/marketing/in-graphic-detail-chatgpt-s-ad-growth-is-outrunning-the-proof-that-it-works/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">ChatGPT Analytics: dashboard que muestra menciones de marcas en respuestas</div>
+<a class="card" href="https://digiday.com/marketing/chatgpt-is-about-to-show-brands-their-mention-count/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">In graphic detail: Six thousand brands later, ChatGPT ads still have a conversion problem</div>
+<div class="card-title">ChatGPT is about to show brands their mention count</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">5 nov</span>
-<span class="card-url">digiday.com/marketing/in-graphic-detail-chatgpt-s-ad-gr…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">digiday.com/marketing/chatgpt-is-about-to-show-brands-t…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -290,15 +306,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Crecimiento de ingresos editoriales desafía caída de tráfico</div>
-<a class="card" href="https://digiday.com/media/media-briefing-publishers-revenue-growth-defies-traffic-declines-but-tougher-comparisons-loom/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Google y editores: CMA opt-out vs AI Overviews mejorados</div>
+<a class="card" href="https://digiday.com/media/as-publishers-await-click-data-googles-ai-visibility-push-complicates-the-opt-out-decision/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Media Briefing: Publishers' revenue growth defies traffic declines, but tougher comparisons loom</div>
+<div class="card-title">As publishers await click data, Google's AI visibility push complicates the opt-out decision</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">5 nov</span>
-<span class="card-url">digiday.com/media/media-briefing-publishers-revenue-gro…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">digiday.com/media/as-publishers-await-click-data-google…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -312,32 +328,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#9b59b6">IA</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Studio Toei (Kamen Rider) establece normas para IA generativa</div>
-<a class="card" href="https://variety.com/2026/tv/markets-festivals/kamen-rider-studio-toei-generative-ai-rules-2027-game-slate-1236941104/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Meta expande IA para edad en Instagram globalmente</div>
+<a class="card" href="https://techcrunch.com/2026/11/09/meta-expands-instagrams-ai-age-guessing-tech-globally/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">'Kamen Rider' Studio Toei Frames Generative AI Rules, Sets First Video Games for 2027</div>
-<div class="card-meta">
-<span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">variety.com/2026/tv/markets-festivals/kamen-rider-studi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">OpenAI: presidenta cree empresa podría estar lista para IPO en 2027</div>
-<a class="card" href="https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
-<div class="card-body">
-<div class="card-title">OpenAI president Greg Brockman says company could be IPO ready in 2027</div>
+<div class="card-title">Meta expands Instagram's AI age-guessing tech globally</div>
 <div class="card-meta">
 <span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">5 nov</span>
-<span class="card-url">techcrunch.com/2026/11/05/openai-president-greg-brockma…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">techcrunch.com/2026/11/09/meta-expands-instagrams-ai-ag…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -346,15 +345,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Meta lanza video chat con avatar IA Muse personalizable</div>
-<a class="card" href="https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Drops: nueva app música descubrimiento con snippets 10-30 seg</div>
+<a class="card" href="https://techcrunch.com/2026/11/09/meet-drops-the-new-music-app-bringing-back-the-fun-of-sharing-songs-with-friends/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Meta says US users can now video chat with their Muse AI avatar</div>
+<div class="card-title">Meet Drops, the new music app bringing back the fun of sharing songs with friends</div>
 <div class="card-meta">
 <span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">5 nov</span>
-<span class="card-url">techcrunch.com/2026/11/05/meta-says-us-users-can-now-vi…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">techcrunch.com/2026/11/09/meet-drops-the-new-music-app-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -363,71 +362,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">OpenAI lanza nuevo modelo de ciberseguridad</div>
-<a class="card" href="https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #9b59b6">Automattic Spacefast: plataforma vibe-coding para apps</div>
+<a class="card" href="https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">OpenAI released a new cybersecurity model. Is that enough?</div>
+<div class="card-title">Automattic debuts a platform to deploy vibe-coding apps amid a changing internet</div>
 <div class="card-meta">
 <span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">5 nov</span>
-<span class="card-url">techcrunch.com/2026/11/05/openai-released-a-new-cyberse…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-</div>
-
-<div class="section">
-<div class="section-label" style="color:#27ae60">RESULTADOS FINANCIEROS</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">JioHotstar 'Bigg Boss 20': 1 mil millones de horas en 60 días</div>
-<a class="card" href="https://deadline.com/2026/11/jiohotstar-big-boss-season-20-1-billion-hours-watch-time-1237215358/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">JioHotstar's 'Big Boss' Season 20 Passes 1 Billion Hours Of Watch-Time</div>
-<div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">deadline.com/2026/11/jiohotstar-big-boss-season-20-1-bi…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">USA: 165,000 empleos en octubre; sector entretenimiento en alza</div>
-<a class="card" href="https://deadline.com/2026/11/jobs-october-entertainment-1237215408/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">U.S. Added 165,000 Jobs In October; Entertainment Employment Rises</div>
-<div class="card-meta">
-<span class="card-source">Deadline Hollywood</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">deadline.com/2026/11/jobs-october-entertainment-1237215…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">Disney TV: reestructuración en marcha con recortes hasta 20%</div>
-<a class="card" href="https://deadline.com/2026/11/disney-tv-restructuring-speculation-layoffs-debra-oconnell-1237214926/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">Disney TV Reorg Chatter Heats Up As Next Wave Of Layoffs Draws Near</div>
-<div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">deadline.com/2026/11/disney-tv-restructuring-speculatio…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">techcrunch.com/2026/11/09/automattic-debuts-a-platform-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -441,15 +384,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#1abc9c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #1abc9c">Stripe Ratings: Russell Brand hallado culpable; productora cómica abandonada</div>
-<a class="card" href="https://deadline.com/2026/11/russell-brand-jack-bayles-dropped-bbc-apple-sexual-assault-1237214442/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #1abc9c">DC Studios shock: Gunn y Safran salen; Jeremy Latcham releva</div>
+<a class="card" href="https://www.hollywoodreporter.com/movies/movie-news/dc-studios-shocker-james-gunn-peter-safran-stepping-1236750902/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#1abc9c"></div>
 <div class="card-body">
-<div class="card-title">British Comedy Producer Who "Laughed" During Russell Brand Assault Dropped From BBC &amp; Apple Shows</div>
+<div class="card-title">DC Studios Shocker: James Gunn, Peter Safran Stepping Down with Marvel Alum Jeremy Latcham to Take Over</div>
 <div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">deadline.com/2026/11/russell-brand-jack-bayles-dropped-…</span>
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">hollywoodreporter.com/movies/movie-news/dc-studios-shoc…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -458,32 +401,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #1abc9c">Sky y RTÉ reciben amenazas de seguridad; evacuación de personal</div>
-<a class="card" href="https://deadline.com/2026/11/sky-rte-receive-security-threats-1237215400/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #1abc9c">Russell Brand hallado culpable; Channel 4 acusada de ocultar asalto</div>
+<a class="card" href="https://www.variety.com/2026/tv/global/russell-brand-channel-4-brushed-under-carpet-1236943037/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#1abc9c"></div>
 <div class="card-body">
-<div class="card-title">Comcast's Sky Receives Security Threat After RTE Evacuates Staff</div>
-<div class="card-meta">
-<span class="card-source">Deadline – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">deadline.com/2026/11/sky-rte-receive-security-threats-1…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #1abc9c">CNBC: Jim Cramer expande su 'Investing Club' con tier premium 2027</div>
-<a class="card" href="https://variety.com/2026/tv/news/jim-cramer-cnbc-creator-media-tv-news-contract-1236941224/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#1abc9c"></div>
-<div class="card-body">
-<div class="card-title">Jim Cramer Leads CNBC Into Creator-Media Era</div>
+<div class="card-title">Russell Brand Victim Says When She Told Channel 4 Managers About Assault 'It Was Brushed Under the Carpet'</div>
 <div class="card-meta">
 <span class="card-source">Variety – TV</span>
-<span class="card-sep">·</span><span class="card-date">6 nov</span>
-<span class="card-url">variety.com/2026/tv/news/jim-cramer-cnbc-creator-media-…</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">variety.com/2026/tv/global/russell-brand-channel-4-brus…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -492,9 +418,57 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #1abc9c">Apple TV renueva 'Knife Edge: Chasing Michelin Stars' por temporada 3</div>
-<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/knife-edge-chasing-michelin-stars-season-3-1236749097/" target="_blank" rel="noopener">
-<div class="card-accent" style="background
+<div class="group-title" style="border-left:3px solid #1abc9c">Gary Gulman: HBO special 'Grandiloquent' en diciembre</div>
+<a class="card" href="https://www.variety.com/2026/tv/news/gary-gulman-hbo-comedy-special-grandiloquent-1236943032/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#1abc9c"></div>
+<div class="card-body">
+<div class="card-title">Gary Gulman Sets HBO Comedy Special 'Grandiloquent' (EXCLUSIVE)</div>
+<div class="card-meta">
+<span class="card-source">Variety – TV</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">variety.com/2026/tv/news/gary-gulman-hbo-comedy-special…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1abc9c">Clio Creator Awards: Terry Crews anfitrión 18 nov en Dolby Theatre</div>
+<a class="card" href="https://www.adweek.com/social-marketing/terry-crews-clio-creator-awards/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#1abc9c"></div>
+<div class="card-body">
+<div class="card-title">Terry Crews to Host the Inaugural Clio Creator Awards</div>
+<div class="card-meta">
+<span class="card-source">Adweek</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">adweek.com/social-marketing/terry-crews-clio-creator-aw…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #1abc9c">BritBox: 'The Other Elliot Sister' greenlit; saga Austen</div>
+<a class="card" href="https://www.hollywoodreporter.com/tv/tv-news/the-other-elliot-sister-bennet-britbox-anthology-series-tv-1236750743/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#1abc9c"></div>
+<div class="card-body">
+<div class="card-title">'The Other Elliot Sister' Greenlit at BritBox With Launch of Austen Anthology Franchise (Exclusive)</div>
+<div class="card-meta">
+<span class="card-source">The Hollywood Reporter</span>
+<span class="card-sep">·</span><span class="card-date">9 nov</span>
+<span class="card-url">hollywoodreporter.com/tv/tv-news/the-other-elliot-siste…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+</div
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
