@@ -43,6 +43,16 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 .btn-select.active{background:#007aff;color:#fff}
 body.select-mode .card{user-select:none}
 body.select-mode .card:hover{background:#f0f6ff}
+.site-header{background:#fff;border-bottom:1px solid #e5e5ea;padding:16px 20px;position:sticky;top:0;z-index:10;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px}
+.site-header h1{font-size:19px;font-weight:700;letter-spacing:-.2px}
+.site-header p{font-size:13px;color:#8e8e93;margin-top:3px}
+.save-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #e5e5ea;padding:12px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -2px 12px rgba(0,0,0,.08)}
+.save-bar.visible{display:flex}
+.save-bar-text{font-size:14px;color:#3a3a3c;font-weight:500}
+.btn-save{background:#007aff;color:#fff;padding:10px 20px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-save:disabled{opacity:.5;cursor:default}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:500;opacity:0;transition:opacity .25s;pointer-events:none;z-index:100;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 <style>
 /* ── Header layout ── */
@@ -78,7 +88,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="site-header">
   <div>
     <h1>Digest Streaming &amp; VOD</h1>
-    <p>11/11/2026 &nbsp;·&nbsp; Atresmedia</p>
+    <p>12/11/2026 &nbsp;·&nbsp; Atresmedia</p>
   </div>
   <div style="display:flex;gap:8px;flex-shrink:0">
     <a href="board.html" class="btn-update" style="background:#f2f2f7;color:#1c1c1e">📋 Tablero</a>
@@ -104,15 +114,49 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#2980b9">PLATAFORMAS Y SECTOR</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix drama YA 'The Body': extravagancia queer Y2K de Quinn Shephard</div>
-<a class="card" href="https://variety.com/2026/tv/reviews/the-body-review-netflix-1236943535/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Alix Earle 'Earle Meets World' renovada para Season 2 en Netflix</div>
+<a class="card" href="https://deadline.com/2026/11/alix-earle-meets-world-renewed-season-2-netflix-1237221225/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">Netflix's Genre-Bending YA Drama 'The Body' Is a Queer Y2K Extravaganza: TV Review</div>
+<div class="card-title">Alix Earle Reality Series 'Earle Meets World' Renewed For Season 2 At Netflix</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">deadline.com/2026/11/alix-earle-meets-world-renewed-sea…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Apple TV+ 'She's Fine': Elizabeth Banks serie estreno 27 enero</div>
+<a class="card" href="https://deadline.com/2026/11/shes-fine-release-date-apple-tv-elizabeth-banks-1237221546/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Elizabeth Banks Comedy Series 'She's Fine' Gets January Release Date At Apple TV</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">deadline.com/2026/11/shes-fine-release-date-apple-tv-el…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #2980b9">Peacock 'The Good Daughter': Rose Byrne y Meghann Fahy thriller</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/the-good-daughter-review-rose-byrne-meghann-fahy-1236943876/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#2980b9"></div>
+<div class="card-body">
+<div class="card-title">Rose Byrne and Meghann Fahy Form a Twisted, Heartfelt Sisterhood in Peacock's Mystery Thriller 'The Good Daughter': TV Review</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">variety.com/2026/tv/reviews/the-body-review-netflix-123…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">variety.com/2026/tv/reviews/the-good-daughter-review-ro…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -121,66 +165,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">MGM+ encarga 'The American Heiress' con Julianna Margulies (Gilded Age)</div>
-<a class="card" href="https://deadline.com/2026/11/mgm-the-american-heiress-julianna-margulies-1237220114/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #2980b9">Hulu 'The Secret Lives of Mormon Wives' spinoff 'Orange County'</div>
+<a class="card" href="https://variety.com/2026/tv/reviews/the-secret-lives-of-mormon-wives-orange-county-review-hulu-1236938899/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#2980b9"></div>
 <div class="card-body">
-<div class="card-title">MGM+ Greenlights Gilded Age-Era Series 'The American Heiress' Starring Julianna Margulies</div>
+<div class="card-title">'The Secret Lives of Mormon Wives' Spinoff 'Orange County' Reheats Influencer Beef With Better Scenery: TV Review</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/mgm-the-american-heiress-julianna-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">BBC Sherwood termina tras season 3 con James Graham</div>
-<a class="card" href="https://deadline.com/2026/11/sherwood-bbc-drama-ending-season-3-james-graham-1237220307/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">James Graham's BBC Drama 'Sherwood' To End After Season 3</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/sherwood-bbc-drama-ending-season-3…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Netflix 'The Empress' cierra con spin-off potencial, showrunner Eyssen a 'Witches'</div>
-<a class="card" href="https://deadline.com/2026/11/the-empress-netflix-season-3-katharina-eyssen-interview-1237217123/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'The Empress' Creator Katharina Eyssen On Feeling A "Mix Of Emotions" As Netflix Hit Ends, Spin-Off Potential &amp; Upcoming Series 'Witches'</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/the-empress-netflix-season-3-katha…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #2980b9">Hulu 'The Circle' S8: Layla Taylor, Hannah Brown y celebs para noviembre 17</div>
-<a class="card" href="https://deadline.com/gallery/the-circle-season-8-cast-photos-hulu/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#2980b9"></div>
-<div class="card-body">
-<div class="card-title">'The Circle' Season 8 Cast Photos: 'Secret Lives Of Mormon Wives' Layla Taylor, 'Bachelor' Nation's Hannah Brown &amp; More</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/gallery/the-circle-season-8-cast-photos-hu…</span>
+<span class="card-source">Variety</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">variety.com/2026/tv/reviews/the-secret-lives-of-mormon-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -194,15 +187,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#e74c3c">MEDIOS Y TELEVISIÓN</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">ITV venta a Sky avanza: retoca £25M gasto Q4 por caída publicidad UK</div>
-<a class="card" href="https://variety.com/2026/tv/news/itv-sky-sale-progressing-cuts-q4-content-spend-1236944980/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Mariska Hargitay 'Law & Order: SVU' llega a 600 episodios</div>
+<a class="card" href="https://variety.com/2026/tv/news/mariska-hargitay-law-and-order-svu-600-episodes-1236945461/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">ITV's Sale to Sky 'Progressing as Planned' as Broadcaster Cuts Fourth-Quarter Content Spend Amid U.K. Ad Slump</div>
+<div class="card-title">Mariska Hargitay on Filming 600 Episodes of 'Law & Order: SVU,' Benson's New Journey and Revisiting Her 'Intense History' With Stabler</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">variety.com/2026/tv/news/itv-sky-sale-progressing-cuts-…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">variety.com/2026/tv/news/mariska-hargitay-law-and-order…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -211,15 +204,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Channel 4 borra David Walliams: tras acusaciones de conducta inapropiada</div>
-<a class="card" href="https://deadline.com/2026/11/channel-4-deletes-david-walliams-shows-1237220221/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">BBC 'Line of Duty' Season 7: regresa Arnott, Fleming y Hastings</div>
+<a class="card" href="https://deadline.com/2026/11/line-of-duty-bbc-season-7-first-look-images-1237221458/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Channel 4 Becomes Latest Network To Delete David Walliams Shows</div>
+<div class="card-title">'Line Of Duty': Arnott, Fleming & Hastings Return To Service In First Look At Season 7 Of BBC's Record-Setting Cop Drama</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/channel-4-deletes-david-walliams-s…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">deadline.com/2026/11/line-of-duty-bbc-season-7-first-lo…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -228,15 +221,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Jonathan Ross: explica broma "sin gusto" sobre David Walliams 2004</div>
-<a class="card" href="https://deadline.com/2026/11/david-walliams-jonathan-ross-statement-comedy-awards-joke-1237220082/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">Adjoa Andoh (Bridgerton) co-crea drama ITV 'Protect and Serve'</div>
+<a class="card" href="https://deadline.com/2026/11/adjoa-andoh-starring-itv-drama-protect-and-serve-1237220384/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Jonathan Ross Explains Backstory Behind "Tasteless" David Walliams Joke</div>
+<div class="card-title">'Bridgerton' Star Adjoa Andoh Co-Creating & Starring In ITV Detective Drama 'Protect And Serve'</div>
 <div class="card-meta">
 <span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/david-walliams-jonathan-ross-state…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">deadline.com/2026/11/adjoa-andoh-starring-itv-drama-prote…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -245,49 +238,32 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Brenda Song ('Suite Life'): "sobrecargada y mal pagada", se desmayó en set</div>
-<a class="card" href="https://variety.com/2026/tv/news/brenda-song-suite-life-of-zack-and-cody-1236944810/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #e74c3c">BBC director-general enfrenta críticas por cultura "reverencia" a estrellas</div>
+<a class="card" href="https://deadline.com/2026/11/bbc-boss-tv-behind-others-russell-brand-david-walliams-1237221517/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#e74c3c"></div>
 <div class="card-body">
-<div class="card-title">Brenda Song Says She Was 'Overworked' and 'Underpaid' on 'The Suite Life of Zack and Cody,' Recalls Fainting on Set: I Thought, 'Am I Having a Panic Attack?'</div>
+<div class="card-title">BBC Boss Challenged By Staff Over Culture Of "Reverence" Towards Powerful Stars</div>
+<div class="card-meta">
+<span class="card-source">Deadline</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">deadline.com/2026/11/bbc-boss-tv-behind-others-russell-…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #e74c3c">Netflix documental Russell Brand días después de condena por violación</div>
+<a class="card" href="https://variety.com/2026/tv/news/russell-brand-documentary-jimmy-savile-producers-netflix-1236945930/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#e74c3c"></div>
+<div class="card-body">
+<div class="card-title">Russell Brand Documentary From 'Jimmy Savile: A British Horror Story' Producers Set at Netflix Days After Rape Sentencing</div>
 <div class="card-meta">
 <span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">variety.com/2026/tv/news/brenda-song-suite-life-of-zack…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">Netflix rechaza remover especial Russell Brand tras condena sexual</div>
-<a class="card" href="https://deadline.com/2026/11/netflix-refuses-to-remove-russell-brand-special-1237220159/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">Netflix Refuses To Remove Russell Brand Stand-Up Special Featuring Crude Sex Joke</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/netflix-refuses-to-remove-russell-…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #e74c3c">MAFS UK escándalo impacta versiones Australia, US tras informe abuso</div>
-<a class="card" href="https://deadline.com/2026/11/married-at-first-sight-uk-scandal-impact-america-oz-versions-1237220110/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#e74c3c"></div>
-<div class="card-body">
-<div class="card-title">How The 'Married At First Sight UK' Scandal Has Impacted Hit Show Around The World</div>
-<div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/married-at-first-sight-uk-scandal-…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">variety.com/2026/tv/news/russell-brand-documentary-jimm…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -299,23 +275,6 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 
 <div class="section">
 <div class="section-label" style="color:#27ae60">REDES SOCIALES</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #27ae60">X lanza clipping nativo para impulsar engagement de influencers</div>
-<a class="card" href="https://techcrunch.com/2026/11/10/x-launches-its-own-clipping-feature-to-spur-influencer-engagement/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#27ae60"></div>
-<div class="card-body">
-<div class="card-title">X launches its own clipping feature to spur influencer engagement</div>
-<div class="card-meta">
-<span class="card-source">TechCrunch</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">techcrunch.com/2026/11/10/x-launches-its-own-clipping-f…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
 
 <div class="group">
 <div class="group-title" style="border-left:3px solid #27ae60">TikTok Shop: tier premium para 1M shoppers top US</div>
@@ -357,15 +316,15 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 <div class="section-label" style="color:#f39c12">PUBLICIDAD</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Entertainment 360 adquiere Brigade: influencer firm con Margot Robbie, Jeremy Allen White</div>
-<a class="card" href="https://deadline.com/2026/11/entertainment-360-acquires-max-stein-brigade-1237220289/" target="_blank" rel="noopener">
+<div class="group-title" style="border-left:3px solid #f39c12">LinkedIn CTV: B2B ad targeting llega a UK connected TVs</div>
+<a class="card" href="https://digiday.com/marketing/linkedin-brings-its-b2b-ad-targeting-to-u-k-connected-tvs/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#f39c12"></div>
 <div class="card-body">
-<div class="card-title">Entertainment 360 Acquires Max Stein's Brigade</div>
+<div class="card-title">LinkedIn brings its B2B ad targeting to U.K. connected TVs</div>
 <div class="card-meta">
-<span class="card-source">Deadline</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">deadline.com/2026/11/entertainment-360-acquires-max-ste…</span>
+<span class="card-source">Digiday</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">digiday.com/marketing/linkedin-brings-its-b2b-ad-target…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -374,24 +333,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Netflix arte: celebra descubrimiento shows tras big hits</div>
-<a class="card" href="https://www.adweek.com/brand-marketing/this-arty-netflix-campaign-sells-you-on-the-shows-you-didnt-know-youd-love/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#f39c12"></div>
-<div class="card-body">
-<div class="card-title">This Arty Netflix Campaign Sells You on the Shows You Didn't Know You'd Love</div>
-<div class="card-meta">
-<span class="card-source">Adweek</span>
-<span class="card-sep">·</span><span class="card-date">10 nov</span>
-<span class="card-url">adweek.com/brand-marketing/this-arty-netflix-campaign-s…</span>
-<span class="card-ext">↗</span>
-</div>
-</div>
-<div class="card-check"></div>
-</a>
-</div>
-
-<div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">OpenAI business profiles: brands visibilidad gratis en ChatGPT + datos</div>
+<div class="group-title" style="border-left:3px solid #f39c12">OpenAI business agents: marcas visibilidad gratis en ChatGPT + datos</div>
 <a class="card" href="https://digiday.com/marketing/openais-new-business-agents-give-brands-a-free-way-into-the-conversation-its-also-selling-as-an-ad/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#f39c12"></div>
 <div class="card-body">
@@ -408,7 +350,7 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Mars futuro-prueba impulse buys: IA grocery agents + tiendas inmersivas</div>
+<div class="group-title" style="border-left:3px solid #f39c12">Mars futuro-prueba impulse buys: agentes IA + tiendas inmersivas</div>
 <a class="card" href="https://digiday.com/marketing/mars-wants-to-future-proof-impulse-buys-as-ai-poised-to-take-over-more-grocery-runs/" target="_blank" rel="noopener">
 <div class="card-accent" style="background:#f39c12"></div>
 <div class="card-body">
@@ -424,16 +366,38 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </a>
 </div>
 
+</div>
+
+<div class="section">
+<div class="section-label" style="color:#9b59b6">IA</div>
+
 <div class="group">
-<div class="group-title" style="border-left:3px solid #f39c12">Amazon FTC: juicio subastas pone foco confianza advertising agentic</div>
-<a class="card" href="https://digiday.com/media-buying/ad-tech-briefing-amazons-auction-trial-puts-agentic-advertisings-trust-problem-in-focus/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#f39c12"></div>
+<div class="group-title" style="border-left:3px solid #9b59b6">OpenAI revenue Q3 2026 cruza $10B por primera vez</div>
+<a class="card" href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
 <div class="card-body">
-<div class="card-title">Ad Tech Briefing: Amazon's auction trial puts agentic advertising's trust problem in focus</div>
+<div class="card-title">OpenAI's quarterly revenue reportedly crosses $10B for the first time</div>
+<div class="card-meta">
+<span class="card-source">TechCrunch</span>
+<span class="card-sep">·</span><span class="card-date">11 nov</span>
+<span class="card-url">techcrunch.com/2026/11/11/openais-quarterly-revenue-rep…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #9b59b6">Yahoo primer licenciatario: modelo licensing IA colectivo tipo Spotify</div>
+<a class="card" href="https://digiday.com/media/yahoo-becomes-first-licensee-of-spotify-like-collective-ai-content-licensing-model/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#9b59b6"></div>
+<div class="card-body">
+<div class="card-title">Yahoo becomes first licensee of 'Spotify-like' collective AI content licensing model</div>
 <div class="card-meta">
 <span class="card-source">Digiday</span>
-<span class="card-sep">·</span><span class="card-date">10 nov</span>
-<span class="card-url">digiday.com/media-buying/ad-tech-briefing-amazons-aucti…</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">digiday.com/media/yahoo-becomes-first-licensee-of-spoti…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -444,18 +408,18 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="section">
-<div class="section-label" style="color:#9b59b6">IA</div>
+<div class="section-label" style="color:#3498db">CTV</div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">VisionQuest finale: teaser return Scarlet Witch (Elizabeth Olsen) en Avengers Doomsday</div>
-<a class="card" href="https://variety.com/2026/film/news/visionquest-elizabeth-olsen-avengers-doomsday-scarlet-witch-1235365599/" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
+<div class="group-title" style="border-left:3px solid #3498db">HBO Max alcanza 3.1M hogares UK con subscripciones streaming solapadas</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/12/hbo-max-reaches-3-1m-uk-homes-as-streaming-subscriptions-overlap-grows/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#3498db"></div>
 <div class="card-body">
-<div class="card-title">MCU Surprise: 'VisionQuest' Finale Teases the Return of [SPOILER] in 'Avengers: Doomsday'</div>
+<div class="card-title">HBO Max reaches 3.1m UK homes as streaming subscriptions overlap grows</div>
 <div class="card-meta">
-<span class="card-source">Variety</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">variety.com/2026/film/news/visionquest-elizabeth-olsen-…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/12/hbo-max-reaches-3-1m-uk-…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
@@ -464,19 +428,43 @@ body.select-mode .card-check{display:flex;align-items:center;justify-content:cen
 </div>
 
 <div class="group">
-<div class="group-title" style="border-left:3px solid #9b59b6">Adobe Max: agents agentic, Firefly + herramientas remoción objetos/blemishes</div>
-<a class="card" href="https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai" target="_blank" rel="noopener">
-<div class="card-accent" style="background:#9b59b6"></div>
+<div class="group-title" style="border-left:3px solid #3498db">Samsung Ads: formatos interactivos TV Plus + home screen</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/12/samsung-ads-adds-interactive-formats-across-tv-plus-and-home-screen/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#3498db"></div>
 <div class="card-body">
-<div class="card-title">Adobe's AI experiments let you walk around in photos and interview your characters</div>
+<div class="card-title">Samsung Ads adds interactive formats across TV Plus and home screen</div>
 <div class="card-meta">
-<span class="card-source">The Verge</span>
-<span class="card-sep">·</span><span class="card-date">11 nov</span>
-<span class="card-url">theverge.com/tech/1031505/adobe-max-2026-sneaks-experim…</span>
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/12/samsung-ads-adds-interac…</span>
 <span class="card-ext">↗</span>
 </div>
 </div>
-<div class="
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #3498db">V propone moneda advertising screen-size para smart TVs</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/12/v-proposes-screen-size-advertising-currency-for-smart-tvs/" target="_blank" rel="noopener">
+<div class="card-accent" style="background:#3498db"></div>
+<div class="card-body">
+<div class="card-title">V proposes screen-size advertising currency for smart TVs</div>
+<div class="card-meta">
+<span class="card-source">Broadband TV News</span>
+<span class="card-sep">·</span><span class="card-date">12 nov</span>
+<span class="card-url">broadbandtvnews.com/2026/11/12/v-proposes-screen-size-a…</span>
+<span class="card-ext">↗</span>
+</div>
+</div>
+<div class="card-check"></div>
+</a>
+</div>
+
+<div class="group">
+<div class="group-title" style="border-left:3px solid #3498db">Tet+ expande distribución smart TV mediante Titan OS</div>
+<a class="card" href="https://www.broadbandtvnews.com/2026/11/12/tet-expands-smart-tv-distribution-through-titan-os/" target="_blank" rel="noopener">
+<div class="card-accent" style="background
 <script>
 /* ── Añadir card-check a todas las cards que no lo tengan ── */
 document.querySelectorAll('.card').forEach(function(card) {
