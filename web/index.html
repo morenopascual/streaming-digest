@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <!--AC2_RUNTIME-->
+  <title>Ac2ality Digest</title>
+  <meta name="description" content="Digest diario de noticias para la redacción de Ac2ality." />
+  <meta name="theme-color" content="#07101E" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- iPhone / iPad: instalable como app desde Safari → Compartir → Añadir a pantalla de inicio -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ac2ality" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-logo" aria-label="ac2ality">ac<span>2</span>ality</div>
+        <div class="brand-text">
+          <h1>Digest de noticias</h1>
+          <button class="freshness" id="freshness" type="button" title="Ver estado de las fuentes">
+            <span class="freshness-dot"></span>
+            <span id="freshness-text">Cargando…</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" id="saved-btn" type="button" aria-label="Noticias guardadas" title="Guardadas">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+          <span class="badge" id="saved-badge" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="theme-btn" type="button" aria-label="Cambiar tema" title="Tema claro / oscuro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="btn btn-refresh" id="refresh-btn" type="button">
+          <svg class="refresh-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+          <span id="refresh-label">Actualizar</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra mínima de progreso (cuando el panel de carga está minimizado) -->
+    <button class="mini-progress" id="mini-progress" type="button" hidden>
+      <span class="mini-progress-bar"><span id="mini-progress-fill"></span></span>
+      <span class="mini-progress-text" id="mini-progress-text">Actualizando…</span>
+    </button>
+  </header>
+
+  <nav class="tabs-wrap" aria-label="Categorías">
+    <div class="tabs" id="category-tabs" role="tablist"></div>
+  </nav>
+
+  <main class="page">
+    <section class="toolbar" aria-label="Búsqueda y filtros">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search-input" type="search" placeholder="Buscar titular, fuente o palabra clave" autocomplete="off" />
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </label>
+
+      <div class="toolbar-group">
+        <div class="segmented" role="group" aria-label="Sensibilidad">
+          <button type="button" data-sensitive="" class="active">Todas</button>
+          <button type="button" data-sensitive="no">Sin sensibles</button>
+          <button type="button" data-sensitive="yes">⚠ Sensibles</button>
+        </div>
+
+        <select class="select" id="sort-filter" aria-label="Orden">
+          <option value="score">Más relevantes</option>
+          <option value="date">Más recientes</option>
+          <option value="source">Por fuente</option>
+        </select>
+
+        <select class="select" id="source-filter" aria-label="Fuente">
+          <option value="">Todas las fuentes</option>
+        </select>
+
+        <div class="segmented" role="group" aria-label="Vista">
+          <button type="button" data-view="grid" class="active" title="Tarjetas">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </button>
+          <button type="button" data-view="list" title="Lista compacta">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="stats" aria-label="Resumen"></section>
+
+    <div class="status-row">
+      <div id="status-text" aria-live="polite"></div>
+      <div class="status-actions">
+        <button class="link-btn" id="select-all-btn" type="button">Seleccionar visibles</button>
+        <button class="link-btn" id="clear-filters-btn" type="button" hidden>Quitar filtros</button>
+      </div>
+    </div>
+
+    <section id="content" class="content" aria-live="polite">
+      <div class="skeleton-grid">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+  </main>
+
+  <!-- Barra de acciones de selección -->
+  <div class="action-bar" id="action-bar" aria-live="polite">
+    <div class="action-bar-inner">
+      <div class="action-count"><strong id="selected-count">0</strong> <span id="selected-label">seleccionadas</span></div>
+      <div class="action-buttons">
+        <button class="btn btn-ghost" id="copy-btn" type="button">Copiar</button>
+        <button class="btn btn-ghost" id="save-btn" type="button">Guardar</button>
+        <button class="btn btn-ghost" id="md-btn" type="button">Markdown</button>
+        <button class="btn btn-ghost" id="json-btn" type="button">JSON</button>
+        <button class="btn btn-close" id="deselect-btn" type="button" aria-label="Quitar selección">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel de actualización -->
+  <div class="overlay" id="refresh-overlay" hidden>
+    <div class="sheet refresh-sheet" role="dialog" aria-modal="true" aria-labelledby="refresh-title">
+      <div class="refresh-head">
+        <div class="ring" id="ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="ring-track" cx="60" cy="60" r="52"/>
+            <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="52"/>
+          </svg>
+          <div class="ring-center">
+            <span class="ring-value" id="ring-value">0%</span>
+            <svg class="ring-check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+          </div>
+        </div>
+        <div class="refresh-copy">
+          <h2 id="refresh-title">Buscando noticias</h2>
+          <p id="refresh-sub">Conectando con las fuentes…</p>
+          <div class="refresh-counters">
+            <div><strong id="rc-sources">0/0</strong><span>fuentes</span></div>
+            <div><strong id="rc-articles">0</strong><span>noticias halladas</span></div>
+            <div><strong id="rc-time">0 s</strong><span>transcurrido</span></div>
+          </div>
+        </div>
+      </div>
+
+      <ol class="steps" id="refresh-steps">
+        <li data-step="fetch"><span></span>Descargar fuentes</li>
+        <li data-step="process"><span></span>Clasificar y quitar duplicados</li>
+        <li data-step="done"><span></span>Listo para leer</li>
+      </ol>
+
+      <div class="source-grid" id="source-grid"></div>
+
+      <div class="refresh-foot">
+        <button class="btn btn-ghost" id="minimize-btn" type="button">Seguir leyendo mientras tanto</button>
+        <button class="btn btn-primary" id="refresh-close-btn" type="button" hidden>Ver noticias</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel lateral: guardadas / fuentes / ayuda -->
+  <div class="overlay overlay-side" id="drawer-overlay" hidden>
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-head">
+        <h2 id="drawer-title">Panel</h2>
+        <button class="icon-btn" id="drawer-close" type="button" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

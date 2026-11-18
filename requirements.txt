@@ -1,0 +1,4 @@
+# Motor de noticias (GitHub Actions y app de escritorio)
+feedparser>=6.0
+tzdata>=2024.1
+certifi>=2024.2

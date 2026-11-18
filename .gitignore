@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+build/
+dist/
+build_web/
+_site/
+.claude/
+*.spec.bak

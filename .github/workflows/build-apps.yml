@@ -1,0 +1,74 @@
+name: Compilar apps de escritorio
+
+# Genera los instaladores autocontenidos:
+#   · Windows → Ac2ality-Digest-Windows.zip  (carpeta "Ac2ality Digest" con el .exe)
+#   · macOS   → Ac2ality-Digest-macOS.zip    (contiene "Ac2ality Digest.app", Intel y Apple Silicon)
+# Lánzalo a mano desde la pestaña Actions o creando una etiqueta v2.0.0, v2.0.1…
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            name: Windows
+          - os: macos-15        # Apple Silicon (M1–M4)
+            name: macOS-AppleSilicon
+          - os: macos-15-intel  # Mac con procesador Intel
+            name: macOS-Intel
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Dependencias
+        run: python -m pip install -r requirements-desktop.txt
+
+      - name: Iconos
+        run: python scripts/make_icons.py
+
+      - name: Compilar
+        run: python -m PyInstaller app/ac2ality.spec --noconfirm --clean
+
+      - name: Empaquetar (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path "dist/Ac2ality Digest" -DestinationPath "dist/Ac2ality-Digest-${{ matrix.name }}.zip"
+
+      - name: Empaquetar (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          codesign --force --deep --sign - "dist/Ac2ality Digest.app"
+          ditto -c -k --keepParent "dist/Ac2ality Digest.app" "dist/Ac2ality-Digest-${{ matrix.name }}.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Ac2ality-Digest-${{ matrix.name }}
+          path: dist/*.zip
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - name: Publicar release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/*.zip
+          generate_release_notes: true

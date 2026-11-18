@@ -1,0 +1,5 @@
+# App de escritorio (Windows / macOS) y su empaquetado
+-r requirements.txt
+pywebview>=5.0
+pyinstaller>=6.6
+pillow>=10.0
